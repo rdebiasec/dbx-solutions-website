@@ -1,0 +1,352 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "solutions": "Casos de uso",
+    "smb": "Programas SMB",
+    "process": "Proceso",
+    "proof": "Resultados",
+    "contact": "Contacto"
+  },
+  "labels": {
+    "valueEquation": "ECUACIÓN DE VALOR",
+    "timeToProd": "TIME TO PROD",
+    "stack": "STACK",
+    "languageToggle": "Selector de idioma"
+  },
+  "hero": {
+    "eyebrow": "SOLUCIONES GENAI CX",
+    "headline": "Diseña, implementa, opera y mide recorridos de servicio potenciados por IA.",
+    "body": "DBX Solutions se integra como una fuerza de tareas CX de servicio completo para organizaciones empresariales y SMB de alto crecimiento, aportando un equipo distribuido de arquitectos, ingenieros y operadores que cubre descubrimiento, implementación y gobernanza post-lanzamiento.",
+    "points": [
+      "IA conversacional y agentica en canales de voz y digitales",
+      "Rigor empresarial dimensionado tanto para Fortune 50 como para SMB",
+      "Integraciones CRM, CCaaS y datos personalizados sin transferencias",
+      "Playbooks de gobernanza que mantienen la adopción encaminada"
+    ],
+    "ctaPrimary": "Agenda sesión",
+    "ctaSecondary": "Descarga brief",
+    "value": {
+      "equation": "Estrategia × Entrega × Gobernanza",
+      "time": "< 6 semanas",
+      "stack": "OpenAI, AWS, Salesforce, Genesys",
+      "noteLabel": "Time to Prod",
+      "noteText": "= tiempo entre kickoff y la primera ola de automatización en producción."
+    },
+    "stats": [
+      { "label": "Arquitectura CX", "value": "15+ años" },
+      { "label": "Implementaciones más rápidas", "value": "30%" },
+      { "label": "Reducción de ramp-up", "value": "20%" }
+    ],
+    "badges": [
+      "Diseño GenAI y agentico",
+      "Integración CRM + CCaaS",
+      "Entrega LATAM & Norteamérica",
+      "Aceleradores SMB",
+      "Soporte multilenguaje",
+      "Resultados medibles"
+    ],
+    "utility": "Programas CX para empresas y SMB en NA · LATAM · EMEA.",
+    "bookNow": "Reservar"
+  },
+  "trust": {
+    "label": "Programas entregados para líderes en:",
+    "industries": [
+      "Servicios financieros",
+      "Salud",
+      "Retail & DTC",
+      "Viajes",
+      "Sector público"
+    ]
+  },
+  "services": {
+    "eyebrow": "QUÉ ENTREGAMOS",
+    "title": "Tres pilares que impulsan la modernización CX.",
+    "description": "Cada pilar es modular: contrata a DBX Solutions para el ciclo completo o cubre huecos específicos en tu programa.",
+    "listLabel": "Incluye",
+    "cards": [
+      {
+        "title": "Advisory Lab",
+        "description": "Estrategia, descubrimiento y modelado ROI para priorizar apuestas.",
+        "timeline": "0–4 semanas",
+        "outputs": "Mapa de oportunidades GenAI, backlog priorizado",
+        "artifacts": "Guardarraíles de gobernanza, blueprint de integración",
+        "kpi": "Confianza en roadmap +30%",
+        "items": [
+          "Workshops ejecutivos y mapeo de journeys",
+          "Auditorías de stack tecnológico",
+          "Diseño de POC con medidas de seguridad"
+        ]
+      },
+      {
+        "title": "Build Studio",
+        "description": "Diseño e implementación práctica en canales de voz y digitales.",
+        "timeline": "4–12 semanas",
+        "outputs": "Flujos listos para producción, observabilidad",
+        "artifacts": "Casos de seguridad, contratos de datos, QA scorecards",
+        "kpi": "Velocidad de automatización +40%",
+        "items": [
+          "Desarrollo de bots y copilotos",
+          "Integración CRM, CCaaS y datos",
+          "Instrumentación, analítica y QA"
+        ]
+      },
+      {
+        "title": "Operate Office",
+        "description": "Gobernanza post-lanzamiento, habilitación y optimización.",
+        "timeline": "Trimestral",
+        "outputs": "Runbooks, tableros de madurez e iteraciones",
+        "artifacts": "Cockpit de KPI, rutas de escalamiento, kits de entrenamiento",
+        "kpi": "Adopción +25%",
+        "items": [
+          "Runbooks, training y gestión del cambio",
+          "Health checks y seguimiento ROI",
+          "Liderazgo PS fraccional"
+        ]
+      }
+    ]
+  },
+  "solutions": {
+    "eyebrow": "PORTAFOLIO DE SOLUCIONES",
+    "title": "Resultados empaquetados combinables.",
+    "description": "Cada tarjeta representa un play repetible perfeccionado en grandes empresas.",
+    "cards": [
+      {
+        "pill": "Deflect & Resolve",
+        "timeline": "Piloto: 8 semanas",
+        "title": "Mesa de servicio automatizada",
+        "body": "Flujos que autentican, entregan respuestas y escalan con contexto completo.",
+        "kpi": "FCR +18%"
+      },
+      {
+        "pill": "Revenue Assist",
+        "timeline": "Lanzamiento: 6 semanas",
+        "title": "Venta guiada y retención",
+        "body": "Copilotos que recomiendan ofertas, entrenan agentes y ejecutan flujos en CRM.",
+        "kpi": "Upsell +12%"
+      },
+      {
+        "pill": "Operations",
+        "timeline": "Despliegue: 10 semanas",
+        "title": "Automatización back-office",
+        "body": "Triaging de casos, captura de datos y notificaciones en ERP, tickets y APIs.",
+        "kpi": "Esfuerzo manual −35%"
+      },
+      {
+        "pill": "Voice of Customer",
+        "timeline": "Sprint: 5 semanas",
+        "title": "Feedback y analítica",
+        "body": "Orquestación de encuestas, pipelines de insights y dashboards ligados al negocio.",
+        "kpi": "Latencia de insights −50%"
+      }
+    ]
+  },
+  "smb": {
+    "eyebrow": "PROGRAMAS SMB",
+    "title": "Aceleradores para equipos pequeños y medianos.",
+    "description": "Compromisos modulares para CX, RevOps y soporte con recursos ajustados.",
+    "cards": [
+      {
+        "pill": "CX Starter Pack",
+        "title": "Impulso de 90 días",
+        "body": "Descubrimiento rápido, librerías de intents y paquetes para HubSpot, Zendesk o Freshworks.",
+        "timeline": "Alcance fijo · 12 semanas"
+      },
+      {
+        "pill": "Co-managed Launch",
+        "title": "Pod de entrega compartido",
+        "body": "Mezcla tu equipo interno con ingenieros DBX para diseñar y gobernar journeys.",
+        "timeline": "Pod dedicado"
+      },
+      {
+        "pill": "Growth Retainer",
+        "title": "PS fraccional + analítica",
+        "body": "Sprints mensuales que priorizan roadmap, métricas y cambio organizacional.",
+        "timeline": "Suscripción mensual"
+      }
+    ],
+    "ctaPrimary": "Revisar aceleradores SMB",
+    "ctaSecondary": "Enviar brief SMB"
+  },
+  "industries": {
+    "eyebrow": "PLAYBOOKS POR INDUSTRIA",
+    "title": "Blueprints para tu vertical.",
+    "cards": [
+      {
+        "pill": "Servicios financieros",
+        "timeline": "Listo para auditoría",
+        "title": "Triage de fraude + mensajería segura",
+        "body": "Estatus de préstamos, coaching de cobranzas y servicio cifrado con trazabilidad.",
+        "kpi": "Tiempo de chargeback −42%",
+        "compliance": "Cumplimiento: PCI, SOC2",
+        "stack": ["Salesforce", "Genesys", "Azure OpenAI"]
+      },
+      {
+        "pill": "Salud",
+        "timeline": "Seguro HIPAA",
+        "title": "Copilotos de navegación de atención",
+        "body": "Intake, verificación de beneficios, recordatorios y routing omnicanal con PHI protegido.",
+        "kpi": "No-show −18%",
+        "compliance": "Cumplimiento: HIPAA, HITRUST",
+        "stack": ["Twilio", "Epic", "Bedrock"]
+      },
+      {
+        "pill": "Retail & DTC",
+        "timeline": "Listo para picos",
+        "title": "Comercio conversacional",
+        "body": "Gestión de pedidos, lealtad y garantías conectadas a inventario en tiempo real.",
+        "kpi": "Ticket promedio +9%",
+        "compliance": "Cumplimiento: GDPR, CCPA",
+        "stack": ["Shopify", "Klaviyo", "OpenAI"]
+      },
+      {
+        "pill": "Viajes & Hospitalidad",
+        "timeline": "Multilenguaje",
+        "title": "Control tower para irregularidades",
+        "body": "Atención de itinerarios, comunicaciones por disrupciones y concierge de lealtad 24/7.",
+        "kpi": "Tiempo de rebooking −55%",
+        "compliance": "Cumplimiento: DOT, GDPR",
+        "stack": ["ServiceNow", "Five9", "Vertex AI"]
+      }
+    ]
+  },
+  "process": {
+    "eyebrow": "MODELO DE EJECUCIÓN",
+    "title": "Cuatro fases controladas al detalle.",
+    "body": "Sin handoffs. DBX Solutions mantiene la responsabilidad de principio a fin.",
+    "steps": [
+      {
+        "title": "Discovery",
+        "body": "Entrevistas, diagnósticos de datos y priorización ROI.",
+        "chip": "Signals listos en 10 días"
+      },
+      {
+        "title": "Design",
+        "body": "Flujos, guardarraíles y POCs validados con stakeholders.",
+        "chip": "Paquete de evidencia POC"
+      },
+      {
+        "title": "Build & Integrate",
+        "body": "Implementación multicanal con observabilidad integrada.",
+        "chip": "Stack de observabilidad + QA"
+      },
+      {
+        "title": "Measure & Adopt",
+        "body": "Enablement, runbooks y gobernanza para fijar resultados y preparar la siguiente ola.",
+        "chip": "Quarterly Business Reviews"
+      }
+    ],
+    "optionsEyebrow": "OPCIONES DE PARTICIPACIÓN",
+    "optionsTitle": "Integra DBX Solutions donde haga falta.",
+    "options": [
+      {
+        "title": "Acceleration Sprint",
+        "body": "War room de 3 semanas para desbloquear iniciativas CX GenAI.",
+        "tag": "Tarifa fija",
+        "kpi": "Entrega: 15 días"
+      },
+      {
+        "title": "Fractional PS Lead",
+        "body": "Liderazgo PS part-time para guiar roadmap y gobernanza.",
+        "tag": "Retainer mensual",
+        "kpi": "20 h / mes"
+      },
+      {
+        "title": "Launch Assurance",
+        "body": "Revisiones de readiness, risk desk y plan día 0.",
+        "tag": "Bloque de 2 semanas",
+        "kpi": "Scorecard de auditoría"
+      },
+      {
+        "title": "Advisory Retainer",
+        "body": "Socio estratégico trimestral para priorizar roadmap y reportes ejecutivos.",
+        "tag": "Trimestral",
+        "kpi": "Decks listos para C-level"
+      }
+    ]
+  },
+  "proof": {
+    "eyebrow": "RESULTADOS & CONFIANZA",
+    "title": "Evidencia de impacto real.",
+    "stats": [
+      { "value": "4.8 / 5", "label": "Calificación promedio de stakeholders" },
+      { "value": "90%+", "label": "NPS mantenido" },
+      { "value": "10 semanas", "label": "Piloto a lanzamiento típico" },
+      { "value": "3 regiones", "label": "LATAM · NA · EMEA" }
+    ],
+    "marquee": [
+      "Retail Fortune 50",
+      "Telco global",
+      "Fintech LATAM",
+      "Red de salud",
+      "Super-App de viajes",
+      "PMO sector público"
+    ],
+    "testimonials": [
+      {
+        "quote": "DBX alineó ingeniería, delivery y customer success. Lanzamos IA conversacional antes de lo planeado con gobernanza confiable.",
+        "author": "VP CX — Retail global"
+      },
+      {
+        "quote": "Reactivaron un programa detenido y en dos sesiones alinearon compliance, datos y CX. Logramos 28% de deflexión sin afectar CSAT.",
+        "author": "Head de Contact Center — Banco digital"
+      }
+    ]
+  },
+  "founder": {
+    "introEyebrow": "CONSULTOR PRINCIPAL",
+    "name": "Ricardo De Biase",
+    "body": "Arquitecto de soluciones y líder PS con base en ingeniería de redes y una década entregando CX impulsado por IA en Américas y EMEA.",
+    "badges": ["AWS SA Pro", "MCSE", "Genesys PS", "ITIL"],
+    "bullets": [
+      "Arquitecto de programas IA + automatización desde 2012",
+      "Maestría en IT Management; doble licenciatura en TI y Redes",
+      "Certificado AWS SA & MCSE",
+      "Cubre proyectos en inglés, español y portugués"
+    ],
+    "cta": "Descargar credenciales →",
+    "whyEyebrow": "POR QUÉ DBX SOLUTIONS",
+    "why": [
+      "Un responsable de descubrimiento a adopción",
+      "Rigor enterprise con velocidad boutique",
+      "Agnóstico a plataformas (CRM, CCaaS, GenAI)",
+      "Entrega global en entornos regulados"
+    ]
+  },
+  "contact": {
+    "eyebrow": "PRÓXIMO PASO",
+    "title": "¿Listo para diseñar tu próxima ola de automatización?",
+    "body": "Envíanos un brief o agenda directo. Cada solicitud recibe respuesta en un día hábil.",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo corporativo",
+      "message": "Iniciativa / reto",
+      "placeholderName": "Alex Rivera",
+      "placeholderEmail": "alex@marca.com",
+      "placeholderMessage": "Ej.: Copiloto agentico multilenguaje en chat + voz.",
+      "submit": "Enviar brief"
+    },
+    "calendly": {
+      "eyebrow": "CALENDARIO EN VIVO",
+      "title": "Sesión de trabajo 45 min",
+      "body": "Inserta Calendly para reservar al instante con disponibilidad real.",
+      "cta": "Abrir Calendly"
+    },
+    "secondary": [
+      { "label": "WhatsApp", "href": "https://wa.me/13212874509" },
+      { "label": "Email", "href": "mailto:rdebiasec@gmail.com" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/ricardo-de-biase" }
+    ],
+    "contacts": [
+      "Orlando, FL · GMT-5",
+      "rdebiasec@gmail.com",
+      "+1 (321) 287-4509",
+      "linkedin.com/in/ricardo-de-biase"
+    ],
+    "badges": ["AWS Partner", "Consultor Salesforce", "NVIDIA Inception", "Genesys PS Ally"]
+  },
+  "footer": {
+    "notice": "© 2025 DBX Solutions — Vista previa",
+    "warning": "Eliminar al finalizar · No usar en producción"
+  }
+}
+
