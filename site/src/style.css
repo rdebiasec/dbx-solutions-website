@@ -4,7 +4,7 @@
   --accent: #4fd1c5;
   --accent-soft: rgba(79, 209, 197, 0.15);
   --text: #eef1ff;
-  --muted: rgba(238, 241, 255, 0.65);
+  --muted: rgba(238, 241, 255, 0.78);
 }
 
 * {
@@ -49,9 +49,14 @@ header {
 }
 
 .logo {
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  font-size: 1.78rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 72px;
+  width: auto;
 }
 
 .header-actions {
@@ -456,7 +461,7 @@ details[open] {
 }
 
 .solution-grid .card:nth-child(odd) {
-  transform: translateY(0.65rem);
+  transform: translateY(0);
 }
 
 .card-header {
@@ -628,6 +633,41 @@ details[open] {
   font-style: normal;
   margin-top: 1rem;
   color: var(--text);
+}
+
+.testimonial-company {
+  display: block;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.proof-cta {
+  margin-top: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(79, 209, 197, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(79, 209, 197, 0.2);
+}
+
+.proof-cta p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.urgency-note {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 200, 87, 0.15);
+  border: 1px solid rgba(255, 200, 87, 0.3);
+  border-radius: 8px;
+  color: #ffc857;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
 }
 
 .proof-grid {

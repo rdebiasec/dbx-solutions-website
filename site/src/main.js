@@ -27,6 +27,8 @@ const pad = (num) => String(num).padStart(2, '0')
 
 const merge = (base, override) => ({ ...base, ...(override || {}) })
 
+const CALENDAR_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1ZsDyacDZ8oSqHZCMshx3wV8SzGw3MA9KL4hjcU3OIMLJ-3QFRfiV2OjLTn0nKqz526eI3zQk1?gv=true'
+
 function getLocale() {
   const stored = localStorage.getItem(storageKey)
   if (stored && locales[stored]) return stored
@@ -55,7 +57,7 @@ function renderLangToggle(labels, lang) {
 function renderHeader(nav, labels, hero, lang) {
   return `
     <header>
-      <span class="logo">DBX SOLUTIONS</span>
+      <a href="#top" class="logo"><img src="/logo.png" alt="DBX Solutions" /></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
         <span class="sr-only">Toggle navigation</span>
         <span class="nav-toggle-bar"></span>
@@ -71,7 +73,7 @@ function renderHeader(nav, labels, hero, lang) {
         <a href="#contact">${nav.contact}</a>
       </nav>
       <div class="header-actions">
-        <a class="btn btn-primary header-book" href="https://calendly.com/rdebiase/45min" target="_blank" rel="noopener noreferrer">${hero.bookNow}</a>
+        <a class="btn btn-primary header-book" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${hero.bookNow}</a>
         ${renderLangToggle(labels, lang)}
       </div>
     </header>
@@ -89,7 +91,7 @@ function renderHero(t, labels) {
           ${t.hero.points.map((item) => `<li>${item}</li>`).join('')}
         </ul>
         <div class="actions">
-          <a class="btn btn-primary" href="https://calendly.com/rdebiase/45min" target="_blank" rel="noopener noreferrer">${t.hero.ctaPrimary}</a>
+          <a class="btn btn-primary" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.hero.ctaPrimary}</a>
           <a class="btn btn-secondary" href="#contact">${t.hero.ctaSecondary}</a>
         </div>
         <div class="value-equation">
@@ -123,17 +125,6 @@ function renderHero(t, labels) {
         <div class="badge-grid">
           ${t.hero.badges.map((badge) => `<span class="badge">${badge}</span>`).join('')}
         </div>
-      </div>
-    </section>
-  `
-}
-
-function renderTrust(t) {
-  return `
-    <section class="trust-bar">
-      <p style="color:var(--muted);">${t.trust.label}</p>
-      <div class="logo-strip">
-        ${t.trust.industries.map((label) => `<span class="logo-pill">${label}</span>`).join('')}
       </div>
     </section>
   `
@@ -227,7 +218,7 @@ function renderSMB(t) {
           .join('')}
       </div>
       <div class="actions" style="margin-top:1.75rem;">
-        <a class="btn btn-primary" href="https://calendly.com/rdebiase/45min" target="_blank" rel="noopener noreferrer">${t.smb.ctaPrimary}</a>
+        <a class="btn btn-primary" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.smb.ctaPrimary}</a>
         <a class="btn btn-secondary" href="mailto:rdebiasec@gmail.com">${t.smb.ctaSecondary}</a>
       </div>
     </section>
@@ -355,43 +346,20 @@ function renderProof(t) {
             .map(
               (testimonial) => `
           <div class="testimonial-card">
-            “${testimonial.quote}”
+            "${testimonial.quote}"
             <strong>${testimonial.author}</strong>
+            ${testimonial.company ? `<span class="testimonial-company">${testimonial.company}</span>` : ''}
           </div>`
             )
             .join('')}
         </div>
       </div>
-    </section>
-  `
-}
-
-function renderFounder(t) {
-  return `
-    <section id="founder" class="two-col">
-      <div class="founder-card">
-        <div class="founder-header">
-          <div class="headshot-placeholder">RDB</div>
-  <div>
-            <span class="eyebrow">${t.founder.introEyebrow}</span>
-            <h3>${t.founder.name}</h3>
-          </div>
-        </div>
-        <p>${t.founder.body}</p>
-        <div class="credential-badges">
-          ${t.founder.badges.map((badge) => `<span>${badge}</span>`).join('')}
-        </div>
-        <ul class="list-dots">
-          ${t.founder.bullets.map((bullet) => `<li>${bullet}</li>`).join('')}
-        </ul>
-        <a class="founder-cta" href="#contact">${t.founder.cta}</a>
+      ${t.proof.cta ? `
+      <div class="proof-cta">
+        <p>${t.proof.cta}</p>
+        <a class="btn btn-primary" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.proof.ctaButton}</a>
       </div>
-    <div class="card">
-        <span class="eyebrow">${t.founder.whyEyebrow}</span>
-        <ul class="list-dots">
-          ${t.founder.why.map((item) => `<li>${item}</li>`).join('')}
-        </ul>
-      </div>
+      ` : ''}
     </section>
   `
 }
@@ -402,6 +370,7 @@ function renderContact(t) {
       <span class="eyebrow">${t.contact.eyebrow}</span>
       <h2>${t.contact.title}</h2>
       <p>${t.contact.body}</p>
+      ${t.contact.urgency ? `<p class="urgency-note">${t.contact.urgency}</p>` : ''}
       <div class="cta-grid">
         <form class="lead-form">
           <div>
@@ -422,7 +391,7 @@ function renderContact(t) {
           <span class="eyebrow" style="margin-bottom:0;">${t.contact.calendly.eyebrow}</span>
           <h3 style="margin:0;">${t.contact.calendly.title}</h3>
           <p style="color:var(--muted);">${t.contact.calendly.body}</p>
-          <a class="btn btn-secondary" href="https://calendly.com/rdebiase/45min" target="_blank" rel="noopener noreferrer">${t.contact.calendly.cta}</a>
+          <a class="btn btn-secondary" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.contact.calendly.cta}</a>
         </div>
       </div>
       <div class="secondary-actions">
@@ -462,14 +431,12 @@ function render(locale) {
     <div class="wrapper" data-locale="${locale}">
       ${renderHeader(nav, labels, t.hero, locale)}
       ${renderHero(t, labels)}
-      ${renderTrust(t)}
       ${renderServices(t)}
       ${renderSolutions(t)}
       ${renderSMB(t)}
       ${renderIndustries(t)}
       ${renderProcess(t)}
       ${renderProof(t)}
-      ${renderFounder(t)}
       ${renderContact(t)}
       ${renderFooter(t)}
   </div>
@@ -512,4 +479,3 @@ function render(locale) {
 }
 
 render(getLocale())
-

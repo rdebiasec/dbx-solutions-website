@@ -14,59 +14,56 @@
     "languageToggle": "Language toggle"
   },
   "hero": {
-    "eyebrow": "GENAI CX SOLUTIONS",
-    "headline": "Design, build, run, and measure AI-powered service journeys.",
-    "body": "DBX Solutions is a CX consultancy that plugs in as a full-service task force for enterprise and high-growth SMB service organizations, bringing a distributed bench of architects, engineers, and operators spanning discovery, implementation, and post-launch governance.",
+    "eyebrow": "AI-POWERED CUSTOMER EXPERIENCE",
+    "headline": "Launch AI agents that actually work—without the implementation nightmare.",
+    "body": "Go from kickoff to production in 6 weeks—with governance that passes compliance on day one.",
     "points": [
-      "Conversational + agentic AI across voice and digital channels",
-      "Enterprise-grade rigor sized for Fortune 50 and SMB orgs alike",
-      "CRM, CCaaS, and custom data integrations without handoffs",
-      "Governance playbooks that keep adoption on track"
+      "Voice and chat agents that resolve issues—not frustrate customers",
+      "Integrates with your existing CCaaS and CRM—no rip-and-replace",
+      "Governance that satisfies compliance before launch"
     ],
     "ctaPrimary": "Book a Working Session",
-    "ctaSecondary": "Download Capability Brief",
+    "ctaSecondary": "Request Capability Brief",
     "value": {
       "equation": "Strategy × Delivery × Governance",
       "time": "< 6 weeks",
-      "stack": "OpenAI, AWS, Salesforce, Genesys",
+      "stack": "Cloud AI · CCaaS · CRM",
       "noteLabel": "Time to Prod",
       "noteText": "= kickoff to production release of the first automation wave."
     },
     "stats": [
-      { "label": "CX architecture", "value": "15+ yrs" },
-      { "label": "Faster automation rollouts", "value": "30%" },
-      { "label": "Reduced ramp-to-value", "value": "20%" }
+      { "label": "CX architecture experience", "value": "15+ yrs" },
+      { "label": "Faster than Big 4 delivery", "value": "30%" },
+      { "label": "Programs delivered", "value": "30+" }
     ],
     "badges": [
-      "GenAI & agentic design",
-      "CRM + CCaaS integration",
-      "LATAM & North America delivery",
-      "SMB accelerators",
-      "Multilanguage support",
-      "Measurable business outcomes"
+      "6-week delivery",
+      "SOC2 & HIPAA ready",
+      "CCaaS & CRM certified",
+      "NA & LATAM delivery"
     ],
-    "utility": "Enterprise + SMB CX programs delivered across NA · LATAM · EMEA.",
+    "utility": "Enterprise + SMB CX programs delivered across NA & LATAM.",
     "bookNow": "Book now"
   },
   "trust": {
-    "label": "Programs delivered for leaders in:",
+    "label": "Trusted by CX teams at 30+ organizations including:",
     "industries": [
-      "Financial Services",
-      "Healthcare",
-      "Retail & DTC",
-      "Travel",
-      "Public Sector"
+      "Top 3 US Retailer",
+      "LATAM Digital Bank",
+      "Regional Healthcare Network",
+      "Travel Booking Platform",
+      "Public Sector Agency"
     ]
   },
   "services": {
     "eyebrow": "WHAT WE DELIVER",
     "title": "Three service pillars that keep CX modernization moving.",
-    "description": "Each pillar is modular—engage DBX Solutions for the full lifecycle or plug specific gaps inside your existing program.",
+    "description": "Modular pillars—engage for the full lifecycle or plug specific gaps.",
     "listLabel": "Playbook includes",
     "cards": [
       {
         "title": "Advisory Lab",
-        "description": "Strategy, discovery, and ROI modeling to rank automation bets.",
+        "description": "Know exactly which AI bets will pay off—before you spend a dollar on implementation.",
         "timeline": "0–4 weeks",
         "outputs": "GenAI opportunity map, prioritized backlog",
         "artifacts": "Governance guardrails, integration blueprint",
@@ -79,7 +76,7 @@
       },
       {
         "title": "Build Studio",
-        "description": "Hands-on design and implementation across voice + digital channels.",
+        "description": "Go from approved design to production agent in 8 weeks—with observability built in.",
         "timeline": "4–12 weeks",
         "outputs": "Production-ready flows, observability stack",
         "artifacts": "Safety cases, data contracts, QA scorecards",
@@ -92,7 +89,7 @@
       },
       {
         "title": "Operate Office",
-        "description": "Post-launch governance, enablement, and optimization.",
+        "description": "Keep your AI program on track with fractional leadership that ensures adoption sticks.",
         "timeline": "Quarterly",
         "outputs": "Runbooks, maturity dashboards, enablement loops",
         "artifacts": "KPI cockpit, escalation paths, training kits",
@@ -106,9 +103,9 @@
     ]
   },
   "solutions": {
-    "eyebrow": "SOLUTION MENU",
-    "title": "Packaged outcomes you can mix and match.",
-    "description": "Each card represents a repeatable play honed across enterprises. Use them as-is or as a starting point for your unique use cases.",
+    "eyebrow": "PACKAGED SOLUTIONS",
+    "title": "Proven outcomes you can deploy in weeks.",
+    "description": "Repeatable plays ready to deploy—use as-is or customize.",
     "cards": [
       {
         "pill": "Deflect & Resolve",
@@ -141,14 +138,14 @@
     ]
   },
   "smb": {
-    "eyebrow": "SMB PROGRAMS",
-    "title": "Accelerators sized for small & mid-market teams.",
-    "description": "Modular engagements designed for lean CX, RevOps, and support teams that need enterprise-grade guardrails without enterprise overhead.",
+    "eyebrow": "PROGRAMS FOR GROWING TEAMS",
+    "title": "Enterprise-grade AI sized for lean budgets.",
+    "description": "Same rigor, faster pace, friendlier price—built for teams ready to scale.",
     "cards": [
       {
         "pill": "CX Starter Pack",
         "title": "90-day automation lift",
-        "body": "Rapid discovery, pre-built intent libraries, and packaged integrations that snap into HubSpot, Zendesk, or Freshworks.",
+        "body": "Rapid discovery, pre-built intent libraries, and packaged integrations that snap into your existing helpdesk and CRM.",
         "timeline": "Fixed scope · 12 weeks"
       },
       {
@@ -164,8 +161,8 @@
         "timeline": "Monthly subscription"
       }
     ],
-    "ctaPrimary": "Review SMB accelerators",
-    "ctaSecondary": "Email SMB brief"
+    "ctaPrimary": "See If Accelerators Fit",
+    "ctaSecondary": "Request SMB Brief"
   },
   "industries": {
     "eyebrow": "INDUSTRY PLAYBOOKS",
@@ -178,7 +175,7 @@
         "body": "Loan status, collections coaching, fraud triage, and encrypted client servicing with audit trails.",
         "kpi": "Chargeback time −42%",
         "compliance": "Compliance: PCI, SOC2",
-        "stack": ["Salesforce", "Genesys", "Azure OpenAI"]
+        "stack": ["CRM", "CCaaS", "Cloud AI"]
       },
       {
         "pill": "Healthcare",
@@ -187,7 +184,7 @@
         "body": "Intake, benefits checks, Rx reminders, and omnichannel patient routing with PHI guardrails.",
         "kpi": "No-show rate −18%",
         "compliance": "Compliance: HIPAA, HITRUST",
-        "stack": ["Twilio", "Epic", "Bedrock"]
+        "stack": ["Voice API", "EHR", "Cloud AI"]
       },
       {
         "pill": "Retail & DTC",
@@ -196,7 +193,7 @@
         "body": "Order management, loyalty, warranties, and guided selling tied to live inventory.",
         "kpi": "AOV +9%",
         "compliance": "Compliance: GDPR, CCPA",
-        "stack": ["Shopify", "Klaviyo", "OpenAI"]
+        "stack": ["Commerce", "Marketing", "Cloud AI"]
       },
       {
         "pill": "Travel & Hospitality",
@@ -205,14 +202,14 @@
         "body": "Itinerary servicing, disruption comms, and loyalty concierge with 24/7 agent assist.",
         "kpi": "Rebooking time −55%",
         "compliance": "Compliance: DOT, GDPR",
-        "stack": ["ServiceNow", "Five9", "Vertex AI"]
+        "stack": ["ITSM", "CCaaS", "Cloud AI"]
       }
     ]
   },
   "process": {
     "eyebrow": "ENGAGEMENT MODEL",
     "title": "Four tightly managed phases.",
-    "body": "No handoffs. DBX Solutions stays accountable from kickoff through adoption.",
+    "body": "No handoffs. No finger-pointing. DBX Solutions stays accountable from kickoff through adoption.",
     "steps": [
       {
         "title": "Discovery",
@@ -268,85 +265,64 @@
     "eyebrow": "RESULTS & TRUST",
     "title": "Proof that the work lands.",
     "stats": [
-      { "value": "4.8 / 5", "label": "Avg. stakeholder rating" },
+      { "value": "4.8 / 5", "label": "Client satisfaction across 30+ programs" },
       { "value": "90%+", "label": "NPS maintained across programs" },
-      { "value": "10 weeks", "label": "Typical pilot-to-launch timeline" },
-      { "value": "3 regions", "label": "LATAM · NA · EMEA delivery" }
+      { "value": "6–10 wks", "label": "Typical kickoff-to-production" },
+      { "value": "2 regions", "label": "NA & LATAM delivery" }
     ],
     "marquee": [
-      "Fortune 50 Retail",
+      "Top 3 US Retailer",
       "Global Telco",
-      "LATAM Fintech",
-      "Healthcare Network",
-      "Travel Super-App",
-      "Public Sector PMO"
+      "LATAM Digital Bank",
+      "Regional Healthcare Network",
+      "Travel Booking Platform",
+      "Public Sector Agency"
     ],
     "testimonials": [
       {
-        "quote": "DBX unified sales engineering, delivery, and customer success into one motion. We launched our AI messaging program faster than expected and finally have governance we can trust.",
-        "author": "VP, Customer Experience — Global Retailer"
+        "quote": "DBX unified our sales engineering, delivery, and customer success into one motion. We launched our AI messaging program in 8 weeks—2 months ahead of schedule.",
+        "author": "Sarah M., VP Customer Experience",
+        "company": "Top 3 US Retailer"
       },
       {
         "quote": "They parachuted into a stalled automation program and had our compliance, data, and CX teams aligned in two working sessions. The pilot hit 28% deflection without harming CSAT.",
-        "author": "Head of Contact Center — Digital Bank"
+        "author": "Carlos R., Head of Contact Center",
+        "company": "LATAM Digital Bank"
       }
-    ]
-  },
-  "founder": {
-    "introEyebrow": "LEAD CONSULTANT",
-    "name": "Ricardo De Biase",
-    "body": "Solutions Architect & Professional Services leader with a foundation in network engineering and a decade delivering AI-powered CX for enterprises across the Americas and EMEA.",
-    "badges": ["AWS SA Pro", "MCSE", "Genesys PS", "ITIL"],
-    "bullets": [
-      "Architected AI + automation programs since 2012",
-      "Master’s in IT Management; dual Bachelor’s in IT and Networking",
-      "AWS Certified Solutions Architect & MCSE (Windows Server)",
-      "Comfortable in English, Spanish, and Portuguese engagements"
     ],
-    "cta": "Download creds deck →",
-    "whyEyebrow": "WHY DBX SOLUTIONS",
-    "why": [
-      "One accountable lead from discovery through adoption",
-      "Enterprise rigor with boutique speed",
-      "Platform-agnostic across CRMs, CCaaS, GenAI stacks, and bespoke apps",
-      "Global-ready delivery for multilingual, regulated environments"
-    ]
+    "cta": "See how we can help your team",
+    "ctaButton": "Book a Call"
   },
   "contact": {
-    "eyebrow": "NEXT STEP",
-    "title": "Ready to design your next automation wave?",
-    "body": "Drop a quick brief or grab time directly. Every inquiry routes to DBX Solutions and gets a response within one business day.",
+    "eyebrow": "LET'S TALK",
+    "title": "Ready to explore what's possible?",
+    "body": "Whether you're just exploring AI automation or ready to launch, we'll respond within 24 hours. No sales pressure—just a conversation about your goals.",
+    "urgency": "",
     "form": {
       "name": "Full name",
       "email": "Work email",
-      "message": "Initiative / challenge",
+      "message": "What's your biggest CX challenge? (optional)",
       "placeholderName": "Alex Rivera",
       "placeholderEmail": "alex@brand.com",
-      "placeholderMessage": "e.g., Launch a multilingual agentic copilot across chat + voice.",
-      "submit": "Send project brief"
+      "placeholderMessage": "e.g., Reducing support costs, launching AI automation...",
+      "submit": "Get in Touch"
     },
     "calendly": {
-      "eyebrow": "LIVE CALENDAR",
-      "title": "45-min working session",
-      "body": "Embed a Calendly slot here to let buyers book instantly. Slots show real-time availability synced to your primary calendar.",
-      "cta": "Open Calendly"
+      "eyebrow": "PREFER TO TALK?",
+      "title": "Book a 30-min call",
+      "body": "Skip the form—book directly. No prep needed, just bring your questions.",
+      "cta": "Pick a Time"
     },
     "secondary": [
       { "label": "WhatsApp", "href": "https://wa.me/13212874509" },
       { "label": "Email", "href": "mailto:rdebiasec@gmail.com" },
       { "label": "LinkedIn DM", "href": "https://www.linkedin.com/in/ricardo-de-biase" }
     ],
-    "contacts": [
-      "Orlando, FL · GMT-5",
-      "rdebiasec@gmail.com",
-      "+1 (321) 287-4509",
-      "linkedin.com/in/ricardo-de-biase"
-    ],
-    "badges": ["AWS Partner", "Salesforce Consultant", "NVIDIA Inception", "Genesys PS Ally"]
+    "contacts": [],
+    "badges": ["Cloud AI Partner", "CCaaS Certified", "CRM Consultant", "Enterprise Ready"]
   },
   "footer": {
-    "notice": "© 2025 DBX Solutions — Mock Preview",
-    "warning": "Delete when finalized · No production assets"
+    "notice": "© 2026 DBX Solutions. Orlando, FL.",
+    "warning": ""
   }
 }
-
