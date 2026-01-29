@@ -15,7 +15,7 @@
   },
   "hero": {
     "eyebrow": "AI-POWERED CUSTOMER EXPERIENCE",
-    "headline": "Launch AI agents that actually work—without the implementation nightmare.",
+    "headline": "Turn AI CX strategy into audited, production-ready outcomes.",
     "body": "Go from kickoff to production in 6 weeks—with governance that passes compliance on day one.",
     "points": [
       "Voice and chat agents that resolve issues—not frustrate customers",
@@ -32,16 +32,30 @@
       "noteText": "= kickoff to production release of the first automation wave."
     },
     "stats": [
-      { "label": "CX architecture experience", "value": "15+ yrs" },
-      { "label": "Faster than Big 4 delivery", "value": "30%" },
-      { "label": "Programs delivered", "value": "30+" }
+      { "label": "Compliance-first launch gates", "value": "100%" },
+      { "label": "Typical kickoff-to-production", "value": "< 6 wks" },
+      { "label": "Enterprise CX programs delivered", "value": "30+" }
     ],
     "badges": [
-      "6-week delivery",
       "SOC2 & HIPAA ready",
-      "CCaaS & CRM certified",
-      "NA & LATAM delivery"
+      "Audit-ready safety cases",
+      "Data governance by design",
+      "CCaaS & CRM certified"
     ],
+    "media": {
+      "eyebrow": "GOVERNED DELIVERY LOOP",
+      "title": "From intake to trusted launch—then continuous optimization.",
+      "body": "A closed-loop program that clears compliance, accelerates delivery, and feeds performance data into the next wave.",
+      "graphicLabel": "Governed delivery loop with five stages and a return arrow",
+      "stages": ["Intake", "Design", "Build", "Launch", "Optimize"],
+      "steps": [
+        "Governance gates embedded before build starts",
+        "Security, privacy, and legal approvals tracked in-flow",
+        "QA + observability validated before launch",
+        "Post-launch performance feeds the next release cycle"
+      ],
+      "caption": "An enterprise loop: audit-ready at launch, measurable after."
+    },
     "utility": "Enterprise + SMB CX programs delivered across NA & LATAM.",
     "bookNow": "Book now"
   },

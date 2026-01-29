@@ -57,24 +57,26 @@ function renderLangToggle(labels, lang) {
 function renderHeader(nav, labels, hero, lang) {
   return `
     <header>
-      <a href="#top" class="logo"><img src="/logo.png" alt="DBX Solutions" /></a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-        <span class="nav-toggle-bar"></span>
-      </button>
-      <nav id="primary-nav">
-        <a href="#services">${nav.services}</a>
-        <a href="#solutions">${nav.solutions}</a>
-        <a href="#smb">${nav.smb}</a>
-        <a href="#process">${nav.process}</a>
-        <a href="#proof">${nav.proof}</a>
-        <a href="#contact">${nav.contact}</a>
-      </nav>
-      <div class="header-actions">
-        <a class="btn btn-primary header-book" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${hero.bookNow}</a>
-        ${renderLangToggle(labels, lang)}
+      <div class="header-top">
+        <a href="#top" class="logo"><img src="/logo.png" alt="DBX Solutions" /></a>
+        <nav id="primary-nav">
+          <a href="#services">${nav.services}</a>
+          <a href="#solutions">${nav.solutions}</a>
+          <a href="#smb">${nav.smb}</a>
+          <a href="#process">${nav.process}</a>
+          <a href="#proof">${nav.proof}</a>
+          <a href="#contact">${nav.contact}</a>
+        </nav>
+        <div class="header-cta">
+          <a class="btn btn-primary header-book" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${hero.bookNow}</a>
+          ${renderLangToggle(labels, lang)}
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
       </div>
     </header>
   `
@@ -110,20 +112,40 @@ function renderHero(t, labels) {
         </div>
         <p class="value-note"><strong>${t.hero.value.noteLabel}</strong> ${t.hero.value.noteText}</p>
       </div>
-      <div class="hero-card">
-        <div class="stat-grid">
-          ${t.hero.stats
-            .map(
-              (stat) => `
-          <div class="stat">
-            <strong>${stat.value}</strong>
-            ${stat.label}
-          </div>`
-            )
-            .join('')}
-        </div>
-        <div class="badge-grid">
-          ${t.hero.badges.map((badge) => `<span class="badge">${badge}</span>`).join('')}
+      <div class="hero-card hero-media-card">
+        <div class="hero-media">
+          <span class="media-eyebrow">${t.hero.media.eyebrow}</span>
+          <h3>${t.hero.media.title}</h3>
+          <p>${t.hero.media.body}</p>
+          <div class="media-frame" role="img" aria-label="${t.hero.media.graphicLabel}">
+            <svg viewBox="0 0 520 240" aria-hidden="true">
+              <defs>
+                <linearGradient id="media-line" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#4fd1c5" stop-opacity="0.9" />
+                  <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.5" />
+                </linearGradient>
+                <linearGradient id="media-loop" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#4fd1c5" stop-opacity="0.7" />
+                  <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.2" />
+                </linearGradient>
+              </defs>
+              <rect x="16" y="24" width="488" height="170" rx="16" fill="rgba(255,255,255,0.04)" />
+              <path d="M60 110 L460 110" stroke="url(#media-line)" stroke-width="3" stroke-linecap="round" />
+              ${t.hero.media.stages
+                .map(
+                  (stage, index) => `
+              <g>
+                <circle cx="${60 + index * 100}" cy="110" r="16" fill="rgba(79, 209, 197, 0.2)" stroke="#4fd1c5" stroke-width="2" />
+                <text x="${60 + index * 100}" y="155" text-anchor="middle" fill="rgba(238,241,255,0.78)" font-size="12" font-family="Manrope, sans-serif">${stage}</text>
+              </g>`
+                )
+                .join('')}
+            </svg>
+          </div>
+          <ul class="media-list">
+            ${t.hero.media.steps.map((step) => `<li>${step}</li>`).join('')}
+          </ul>
+          <p class="media-caption">${t.hero.media.caption}</p>
         </div>
       </div>
     </section>

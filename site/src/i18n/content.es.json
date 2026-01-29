@@ -15,7 +15,7 @@
   },
   "hero": {
     "eyebrow": "SOLUCIONES GENAI CX",
-    "headline": "Diseña, implementa, opera y mide recorridos de servicio potenciados por IA.",
+    "headline": "Convierte tu estrategia de CX con IA en resultados auditados y listos para producción.",
     "body": "DBX Solutions se integra como una fuerza de tareas CX de servicio completo para organizaciones empresariales y SMB de alto crecimiento, aportando un equipo distribuido de arquitectos, ingenieros y operadores que cubre descubrimiento, implementación y gobernanza post-lanzamiento.",
     "points": [
       "IA conversacional y agentica en canales de voz y digitales",
@@ -33,18 +33,30 @@
       "noteText": "= tiempo entre kickoff y la primera ola de automatización en producción."
     },
     "stats": [
-      { "label": "Arquitectura CX", "value": "15+ años" },
-      { "label": "Implementaciones más rápidas", "value": "30%" },
-      { "label": "Reducción de ramp-up", "value": "20%" }
+      { "label": "Gates de cumplimiento antes del launch", "value": "100%" },
+      { "label": "Kickoff a producción típico", "value": "< 6 sem" },
+      { "label": "Programas CX enterprise entregados", "value": "30+" }
     ],
     "badges": [
-      "Diseño GenAI y agentico",
-      "Integración CRM + CCaaS",
-      "Entrega LATAM & Norteamérica",
-      "Aceleradores SMB",
-      "Soporte multilenguaje",
-      "Resultados medibles"
+      "SOC2 y HIPAA listos",
+      "Casos de seguridad auditables",
+      "Gobernanza de datos por diseño",
+      "CCaaS y CRM certificados"
     ],
+    "media": {
+      "eyebrow": "LOOP DE ENTREGA GOBERNADA",
+      "title": "De intake a lanzamiento confiable—y mejora continua.",
+      "body": "Un programa en loop que despeja compliance, acelera delivery y alimenta la siguiente ola con datos de desempeño.",
+      "graphicLabel": "Loop de entrega con cinco etapas y flecha de retorno",
+      "stages": ["Intake", "Diseño", "Build", "Lanzar", "Optimizar"],
+      "steps": [
+        "Gates de gobernanza antes de iniciar build",
+        "Aprobaciones de seguridad, privacidad y legal en flujo",
+        "QA + observabilidad validadas antes del launch",
+        "Rendimiento post-lanzamiento alimenta el siguiente release"
+      ],
+      "caption": "Loop enterprise: audit-ready al launch, medible después."
+    },
     "utility": "Programas CX para empresas y SMB en NA · LATAM · EMEA.",
     "bookNow": "Reservar"
   },
