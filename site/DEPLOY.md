@@ -54,6 +54,6 @@ The project is fully static—no server-side dependencies are required.
 ## Responsive Testing
 
 - The layout uses breakpoints at `1024px`, `900px`, `768px`, and `520px`. Navigation becomes a drawer below 900px; cards, timelines, and CTA forms stack in a single column under 768px.
-- To test locally, run `npm run dev -- --host localhost --port 4173` and open Chrome/Edge DevTools → Responsive mode. Verify at least these presets: 1280px (desktop), 820px (tablet), 414px (iPhone), 360px (Android).
+- To test locally, run `npm run dev -- --host localhost --port 4174` and open Chrome/Edge DevTools → Responsive mode. Verify at least these presets: 1280px (desktop), 820px (tablet), 414px (iPhone), 360px (Android).
 - Closing the mobile nav is supported via the toggle button, tapping any link, or tapping outside the drawer. Ensure `body.nav-open` drops on navigation to prevent scroll lock persisting.
 

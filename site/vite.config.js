@@ -13,11 +13,11 @@ export default defineConfig(({ mode }) => {
   return {
     base,
     server: {
-      port: 4173,
+      port: 4174,
       host: 'localhost'
     },
     preview: {
-      port: 4173,
+      port: 4174,
       host: 'localhost'
     }
   }

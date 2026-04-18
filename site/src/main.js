@@ -7,18 +7,16 @@ const defaultLocale = 'en'
 const storageKey = 'dbx-locale'
 
 const navDefaults = {
-  services: 'Services',
-  solutions: 'Use Cases',
-  smb: 'SMB Programs',
-  process: 'Process',
+  services: 'Programs',
+  process: 'How we work',
   proof: 'Results',
   contact: 'Contact'
 }
 
 const labelDefaults = {
-  valueEquation: 'VALUE EQUATION',
-  timeToProd: 'TIME TO PROD',
-  stack: 'STACK',
+  valueEquation: 'WHAT YOU GET',
+  timeToProd: 'TIME TO LIVE',
+  stack: 'YOUR TOOLS',
   languageToggle: 'Language toggle'
 }
 
@@ -54,21 +52,18 @@ function renderLangToggle(labels, lang) {
   `
 }
 
-function renderHeader(nav, labels, hero, lang) {
+function renderHeader(nav, labels, lang) {
   return `
     <header>
       <div class="header-top">
         <a href="#top" class="logo"><img src="/logo.png" alt="DBX Solutions" /></a>
         <nav id="primary-nav">
-          <a href="#services">${nav.services}</a>
-          <a href="#solutions">${nav.solutions}</a>
-          <a href="#smb">${nav.smb}</a>
           <a href="#process">${nav.process}</a>
+          <a href="#programs">${nav.services}</a>
           <a href="#proof">${nav.proof}</a>
           <a href="#contact">${nav.contact}</a>
         </nav>
         <div class="header-cta">
-          <a class="btn btn-primary header-book" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${hero.bookNow}</a>
           ${renderLangToggle(labels, lang)}
         </div>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
@@ -94,7 +89,6 @@ function renderHero(t, labels) {
         </ul>
         <div class="actions">
           <a class="btn btn-primary" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.hero.ctaPrimary}</a>
-          <a class="btn btn-secondary" href="#contact">${t.hero.ctaSecondary}</a>
         </div>
         <div class="value-equation">
           <div class="value-pill">
@@ -136,7 +130,7 @@ function renderHero(t, labels) {
                   (stage, index) => `
               <g>
                 <circle cx="${60 + index * 100}" cy="110" r="16" fill="rgba(79, 209, 197, 0.2)" stroke="#4fd1c5" stroke-width="2" />
-                <text x="${60 + index * 100}" y="155" text-anchor="middle" fill="rgba(238,241,255,0.78)" font-size="12" font-family="Manrope, sans-serif">${stage}</text>
+                <text x="${60 + index * 100}" y="155" text-anchor="middle" fill="rgba(238,241,255,0.78)" font-size="11" font-family="Manrope, sans-serif">${stage}</text>
               </g>`
                 )
                 .join('')}
@@ -152,9 +146,23 @@ function renderHero(t, labels) {
   `
 }
 
-function renderServices(t) {
+function renderTrustBar(t) {
+  if (!t.trust) return ''
+  const clients = t.socialProof?.clients || t.trust.industries || []
+  if (!clients.length) return ''
   return `
-    <section id="services">
+    <section class="trust-bar" id="trust">
+      <div class="trust-bar-label">${t.trust.label}</div>
+      <div class="logo-strip">
+        ${clients.map((item) => `<span class="logo-pill">${item}</span>`).join('')}
+      </div>
+    </section>
+  `
+}
+
+function renderPrograms(t) {
+  return `
+    <section id="programs">
       <div class="section-heading">
         <span class="eyebrow">${t.services.eyebrow}</span>
         <h2>${t.services.title}</h2>
@@ -190,110 +198,19 @@ function renderServices(t) {
   `
 }
 
-function renderSolutions(t) {
-  return `
-    <section id="solutions">
-      <div class="section-heading">
-        <span class="eyebrow">${t.solutions.eyebrow}</span>
-        <h2>${t.solutions.title}</h2>
-        <p>${t.solutions.description}</p>
-      </div>
-      <div class="card-grid solution-grid">
-        ${t.solutions.cards
-          .map(
-            (card) => `
-        <article class="card">
-          <div class="card-header">
-            <span class="pill">${card.pill}</span>
-            <span class="timeline-tag">${card.timeline}</span>
-          </div>
-          <h4>${card.title}</h4>
-          <p>${card.body}</p>
-          <span class="kpi-tag">${card.kpi}</span>
-        </article>`
-          )
-          .join('')}
-      </div>
-    </section>
-  `
-}
-
-function renderSMB(t) {
-  return `
-    <section id="smb">
-      <div class="section-heading">
-        <span class="eyebrow">${t.smb.eyebrow}</span>
-        <h2>${t.smb.title}</h2>
-        <p>${t.smb.description}</p>
-      </div>
-      <div class="card-grid">
-        ${t.smb.cards
-          .map(
-            (card) => `
-        <article class="card">
-          <span class="pill">${card.pill}</span>
-          <h4>${card.title}</h4>
-          <p>${card.body}</p>
-          <span class="timeline-tag">${card.timeline}</span>
-        </article>`
-          )
-          .join('')}
-      </div>
-      <div class="actions" style="margin-top:1.75rem;">
-        <a class="btn btn-primary" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.smb.ctaPrimary}</a>
-        <a class="btn btn-secondary" href="mailto:rdebiasec@gmail.com">${t.smb.ctaSecondary}</a>
-      </div>
-    </section>
-  `
-}
-
-function renderIndustries(t) {
-  return `
-    <section id="industries">
-      <div class="section-heading">
-        <span class="eyebrow">${t.industries.eyebrow}</span>
-        <h2>${t.industries.title}</h2>
-      </div>
-      <div class="case-grid">
-        ${t.industries.cards
-          .map(
-            (card, index) => `
-        <article class="case-card" data-slide="${pad(index + 1)}">
-          <div class="card-header">
-            <span class="pill">${card.pill}</span>
-            <span class="timeline-tag">${card.timeline}</span>
-          </div>
-          <h4>${card.title}</h4>
-          <p>${card.body}</p>
-          <div class="case-meta">
-            <span class="kpi-tag">${card.kpi}</span>
-            <span>${card.compliance}</span>
-          </div>
-          <div class="stack-logos">
-            ${card.stack.map((stack) => `<span>${stack}</span>`).join('')}
-          </div>
-        </article>`
-          )
-          .join('')}
-      </div>
-    </section>
-  `
-}
-
 function renderProcess(t) {
   return `
-    <section id="process" class="two-col">
-      <div>
-        <div class="section-heading">
-          <span class="eyebrow">${t.process.eyebrow}</span>
-          <h2>${t.process.title}</h2>
-          <p>${t.process.body}</p>
-        </div>
-        <div class="process-timeline">
-          <div class="process-grid">
-            ${t.process.steps
-              .map(
-                (step, index) => `
+    <section id="process" class="process-section">
+      <div class="section-heading">
+        <span class="eyebrow">${t.process.eyebrow}</span>
+        <h2>${t.process.title}</h2>
+        <p>${t.process.body}</p>
+      </div>
+      <div class="process-timeline">
+        <div class="process-grid">
+          ${t.process.steps
+            .map(
+              (step, index) => `
             <div class="step-card">
               <div class="step-number">${pad(index + 1)}</div>
               <div>
@@ -302,34 +219,8 @@ function renderProcess(t) {
                 <div class="milestone-chip">${step.chip}</div>
               </div>
             </div>`
-              )
-              .join('')}
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="section-heading">
-          <span class="eyebrow">${t.process.optionsEyebrow}</span>
-          <h2>${t.process.optionsTitle}</h2>
-        </div>
-        <div class="card" style="gap:1rem;">
-          <div class="engage-table">
-            ${t.process.options
-              .map(
-                (option) => `
-            <div class="engage-row">
-              <div>
-                <strong>${option.title}</strong>
-                <p>${option.body}</p>
-              </div>
-              <div>
-                <span class="timeline-tag">${option.tag}</span>
-                <span class="kpi-tag">${option.kpi}</span>
-              </div>
-            </div>`
-              )
-              .join('')}
-          </div>
+            )
+            .join('')}
         </div>
       </div>
     </section>
@@ -337,7 +228,6 @@ function renderProcess(t) {
 }
 
 function renderProof(t) {
-  const marquee = t.proof.marquee.concat(t.proof.marquee)
   return `
     <section id="proof">
       <div class="section-heading">
@@ -357,11 +247,6 @@ function renderProof(t) {
               )
               .join('')}
           </div>
-          <div class="logo-marquee" aria-label="Client marquee">
-            <div class="marquee-track">
-              ${marquee.map((item) => `<span>${item}</span>`).join('')}
-            </div>
-          </div>
         </div>
         <div class="testimonial-stack">
           ${t.proof.testimonials
@@ -376,24 +261,21 @@ function renderProof(t) {
             .join('')}
         </div>
       </div>
-      ${t.proof.cta ? `
-      <div class="proof-cta">
-        <p>${t.proof.cta}</p>
-        <a class="btn btn-primary" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.proof.ctaButton}</a>
-      </div>
-      ` : ''}
     </section>
   `
 }
 
 function renderContact(t) {
+  const booking = t.contact.bookingNote
+    ? `<p class="contact-booking-note"><a href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.contact.bookingNote}</a></p>`
+    : ''
   return `
     <section id="contact" class="cta-panel">
       <span class="eyebrow">${t.contact.eyebrow}</span>
       <h2>${t.contact.title}</h2>
       <p>${t.contact.body}</p>
       ${t.contact.urgency ? `<p class="urgency-note">${t.contact.urgency}</p>` : ''}
-      <div class="cta-grid">
+      <div class="cta-grid cta-grid-single">
         <form class="lead-form">
           <div>
             <label for="lead-name">${t.contact.form.name}</label>
@@ -401,20 +283,27 @@ function renderContact(t) {
           </div>
           <div>
             <label for="lead-email">${t.contact.form.email}</label>
-            <input id="lead-email" type="email" name="email" placeholder="${t.contact.form.placeholderEmail}" autocomplete="email" />
+            <input id="lead-email" type="email" name="email" placeholder="${t.contact.form.placeholderEmail}" autocomplete="email" required />
           </div>
+          ${
+            Array.isArray(t.contact.form.challengeOptions)
+              ? `
+          <div>
+            <label for="lead-challenge">${t.contact.form.challengeLabel}</label>
+            <select id="lead-challenge" name="challenge">
+              <option value="">${t.contact.form.challengePlaceholder}</option>
+              ${t.contact.form.challengeOptions.map((opt) => `<option>${opt}</option>`).join('')}
+            </select>
+          </div>`
+              : ''
+          }
           <div>
             <label for="lead-initiative">${t.contact.form.message}</label>
-            <textarea id="lead-initiative" name="message" placeholder="${t.contact.form.placeholderMessage}"></textarea>
+            <textarea id="lead-initiative" name="message" placeholder="${t.contact.form.placeholderMessage}" rows="3"></textarea>
           </div>
           <button class="btn btn-primary" type="submit">${t.contact.form.submit}</button>
+          ${booking}
         </form>
-        <div class="calendly-frame">
-          <span class="eyebrow" style="margin-bottom:0;">${t.contact.calendly.eyebrow}</span>
-          <h3 style="margin:0;">${t.contact.calendly.title}</h3>
-          <p style="color:var(--muted);">${t.contact.calendly.body}</p>
-          <a class="btn btn-secondary" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.contact.calendly.cta}</a>
-        </div>
       </div>
       <div class="secondary-actions">
         ${t.contact.secondary
@@ -429,7 +318,7 @@ function renderContact(t) {
       </div>
       <div class="contact-badges">
         ${t.contact.badges.map((badge) => `<span>${badge}</span>`).join('')}
-    </div>
+      </div>
     </section>
   `
 }
@@ -451,17 +340,15 @@ function render(locale) {
 
   app.innerHTML = `
     <div class="wrapper" data-locale="${locale}">
-      ${renderHeader(nav, labels, t.hero, locale)}
+      ${renderHeader(nav, labels, locale)}
       ${renderHero(t, labels)}
-      ${renderServices(t)}
-      ${renderSolutions(t)}
-      ${renderSMB(t)}
-      ${renderIndustries(t)}
+      ${renderTrustBar(t)}
       ${renderProcess(t)}
       ${renderProof(t)}
+      ${renderPrograms(t)}
       ${renderContact(t)}
       ${renderFooter(t)}
-  </div>
+    </div>
 `
 
   document.querySelectorAll('.lang-toggle button').forEach((button) => {

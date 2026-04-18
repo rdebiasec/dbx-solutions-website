@@ -1,342 +1,213 @@
 {
   "nav": {
-    "services": "Services",
-    "solutions": "Use Cases",
-    "smb": "SMB Programs",
-    "process": "Process",
+    "services": "Programs",
+    "process": "How we work",
     "proof": "Results",
     "contact": "Contact"
   },
   "labels": {
-    "valueEquation": "VALUE EQUATION",
-    "timeToProd": "TIME TO PROD",
-    "stack": "STACK",
+    "valueEquation": "WHAT YOU GET",
+    "timeToProd": "TIME TO LIVE",
+    "stack": "YOUR TOOLS",
     "languageToggle": "Language toggle"
   },
   "hero": {
-    "eyebrow": "AI-POWERED CUSTOMER EXPERIENCE",
-    "headline": "Turn AI CX strategy into audited, production-ready outcomes.",
-    "body": "Go from kickoff to production in 6 weeks—with governance that passes compliance on day one.",
+    "eyebrow": "AI & CUSTOMER EXPERIENCE FOR SMBs",
+    "headline": "Boutique CX & AI help for growing teams.",
+    "body": "DBX Solutions combines 20+ years of hands-on CX and integration experience to help small and mid-sized businesses ship practical AI—not slide decks. Same senior judgment larger firms pay consultancies for, scoped for teams that need clarity, speed, and tools that fit how you already work.",
     "points": [
-      "Voice and chat agents that resolve issues—not frustrate customers",
-      "Integrates with your existing CCaaS and CRM—no rip-and-replace",
-      "Governance that satisfies compliance before launch"
+      "Automate repetitive customer questions so your small team stops living in the inbox.",
+      "Plugs into the helpdesk, CRM, or chat apps you already pay for—no forced platform swap.",
+      "Plain-language roadmap: what to build first, what it costs, and what \"done\" looks like for your size of business."
     ],
-    "ctaPrimary": "Book a Working Session",
-    "ctaSecondary": "Request Capability Brief",
+    "ctaPrimary": "Book a fit call (30 min)",
     "value": {
-      "equation": "Strategy × Delivery × Governance",
-      "time": "< 6 weeks",
-      "stack": "Cloud AI · CCaaS · CRM",
-      "noteLabel": "Time to Prod",
-      "noteText": "= kickoff to production release of the first automation wave."
+      "equation": "Clarity × Build × Coaching",
+      "time": "Weeks, not quarters",
+      "stack": "Helpdesk · CRM · Chat · AI",
+      "noteLabel": "What \"live\" means",
+      "noteText": "= first workflow your customers actually use, running in your environment."
     },
     "stats": [
-      { "label": "Compliance-first launch gates", "value": "100%" },
-      { "label": "Typical kickoff-to-production", "value": "< 6 wks" },
-      { "label": "Enterprise CX programs delivered", "value": "30+" }
+      { "label": "Fit calls same week", "value": "Yes" },
+      { "label": "Typical first workflow live", "value": "< 8 wks" },
+      { "label": "Collective team experience", "value": "20+ yrs" }
     ],
     "badges": [
-      "SOC2 & HIPAA ready",
-      "Audit-ready safety cases",
-      "Data governance by design",
-      "CCaaS & CRM certified"
+      "Built for lean teams",
+      "Boutique delivery—not a call center farm",
+      "Hands-on support when you need it",
+      "Works with mainstream SMB stacks (Zendesk, HubSpot, Salesforce, Freshdesk)"
     ],
     "media": {
-      "eyebrow": "GOVERNED DELIVERY LOOP",
-      "title": "From intake to trusted launch—then continuous optimization.",
-      "body": "A closed-loop program that clears compliance, accelerates delivery, and feeds performance data into the next wave.",
-      "graphicLabel": "Governed delivery loop with five stages and a return arrow",
-      "stages": ["Intake", "Design", "Build", "Launch", "Optimize"],
+      "eyebrow": "FROM IDEA TO LIVE ASSISTANT",
+      "title": "A simple path your team can follow.",
+      "body": "We start with one high-impact workflow, connect it to your real tools, train your people, then improve based on real conversations—not theory.",
+      "graphicLabel": "Five-step SMB delivery path (diagram)",
+      "stages": ["Listen", "Pick one win", "Build", "Train", "Tune"],
       "steps": [
-        "Governance gates embedded before build starts",
-        "Security, privacy, and legal approvals tracked in-flow",
-        "QA + observability validated before launch",
-        "Post-launch performance feeds the next release cycle"
+        "Align on goals & tools",
+        "Choose the first automation",
+        "Ship to production",
+        "Coach frontline staff",
+        "Review metrics monthly"
       ],
-      "caption": "An enterprise loop: audit-ready at launch, measurable after."
+      "caption": "Built for SMB reality: ship, learn, improve—without a 40-person PMO."
     },
-    "utility": "Enterprise + SMB CX programs delivered across NA & LATAM.",
-    "bookNow": "Book now"
+    "utility": "Serving small and mid-market teams worldwide."
+  },
+  "socialProof": {
+    "clients": [
+      "Professional services firm (~25 employees)",
+      "E-commerce brand (service + messaging)",
+      "Regional clinic group (scheduling & reminders)",
+      "B2B distributor (orders & logistics)",
+      "SaaS scale-up (self-service & billing FAQs)"
+    ]
   },
   "trust": {
-    "label": "Trusted by CX teams at 30+ organizations including:",
+    "label": "Teams like yours trust DBX with customer experience and automation:",
     "industries": [
-      "Top 3 US Retailer",
-      "LATAM Digital Bank",
-      "Regional Healthcare Network",
-      "Travel Booking Platform",
-      "Public Sector Agency"
+      "Professional services firm (~25 employees)",
+      "E-commerce brand (service + messaging)",
+      "Regional clinic group (scheduling & reminders)",
+      "B2B distributor (orders & logistics)",
+      "SaaS scale-up (self-service & billing FAQs)"
     ]
   },
   "services": {
-    "eyebrow": "WHAT WE DELIVER",
-    "title": "Three service pillars that keep CX modernization moving.",
-    "description": "Modular pillars—engage for the full lifecycle or plug specific gaps.",
-    "listLabel": "Playbook includes",
+    "eyebrow": "PROGRAMS FOR SMBs & MID-MARKET",
+    "title": "One partner. Clear packages. No shelfware.",
+    "description": "DBX combines strategy, build, and coaching so your customers feel the difference—not just your roadmap slides. For organizations that want senior help without hiring a full in-house AI department.",
+    "listLabel": "What's included",
     "cards": [
       {
-        "title": "Advisory Lab",
-        "description": "Know exactly which AI bets will pay off—before you spend a dollar on implementation.",
-        "timeline": "0–4 weeks",
-        "outputs": "GenAI opportunity map, prioritized backlog",
-        "artifacts": "Governance guardrails, integration blueprint",
-        "kpi": "Roadmap confidence +30%",
+        "title": "Plan & prioritize",
+        "description": "Figure out what to automate first, what to ignore, and what it should cost at your size.",
+        "timeline": "1–3 weeks",
+        "outputs": "Written backlog + effort/impact matrix",
+        "artifacts": "Integration sketch + risk notes",
+        "kpi": "Fewer dead-end pilots",
         "items": [
-          "Executive workshops & customer journey mapping",
-          "Tech stack audits & integration roadmaps",
-          "Proof-of-concept design with safety rails"
+          "Owner/interview workshops",
+          "Tool audit (helpdesk, CRM, chat)",
+          "Mini pilot definition"
         ]
       },
       {
-        "title": "Build Studio",
-        "description": "Go from approved design to production agent in 8 weeks—with observability built in.",
-        "timeline": "4–12 weeks",
-        "outputs": "Production-ready flows, observability stack",
-        "artifacts": "Safety cases, data contracts, QA scorecards",
-        "kpi": "Automation velocity +40%",
+        "title": "Build & integrate",
+        "description": "Ship flows that answer real customer questions and escalate cleanly to humans.",
+        "timeline": "3–10 weeks",
+        "outputs": "Production-ready flows + monitoring basics",
+        "artifacts": "Runbook + test cases",
+        "kpi": "Hours returned to team / week",
         "items": [
-          "Bot dialog + agent copilot development",
-          "CRM, CCaaS, data layer integration",
-          "Instrumentation, analytics, and QA"
+          "Chat/voice assistants tied to FAQs & tickets",
+          "CRM/helpdesk connectors you already use",
+          "Dashboards your ops lead can read"
         ]
       },
       {
-        "title": "Operate Office",
-        "description": "Keep your AI program on track with fractional leadership that ensures adoption sticks.",
-        "timeline": "Quarterly",
-        "outputs": "Runbooks, maturity dashboards, enablement loops",
-        "artifacts": "KPI cockpit, escalation paths, training kits",
-        "kpi": "Adoption lift +25%",
+        "title": "Coach & improve",
+        "description": "Office hours, backlog grooming, and tuning after launch so adoption doesn't die after week three.",
+        "timeline": "Monthly or quarterly",
+        "outputs": "Iteration backlog + monthly review",
+        "artifacts": "Light KPI view + escalation rules",
+        "kpi": "Sustained usage after 90 days",
         "items": [
-          "Runbooks, training, and change management",
-          "Health checks & ROI tracking",
-          "Fractional PS leadership & escalation support"
+          "Train-the-trainer for leads",
+          "Biweekly health check",
+          "Named senior contact"
         ]
-      }
-    ]
-  },
-  "solutions": {
-    "eyebrow": "PACKAGED SOLUTIONS",
-    "title": "Proven outcomes you can deploy in weeks.",
-    "description": "Repeatable plays ready to deploy—use as-is or customize.",
-    "cards": [
-      {
-        "pill": "Deflect & Resolve",
-        "timeline": "Pilot: 8 weeks",
-        "title": "Automated service desk",
-        "body": "Voice and digital flows that authenticate customers, surface answers, and escalate with full context.",
-        "kpi": "FCR +18%"
-      },
-      {
-        "pill": "Revenue Assist",
-        "timeline": "Launch: 6 weeks",
-        "title": "Guided selling & retention",
-        "body": "Agentic copilots that recommend offers, coach agents, and trigger workflows inside CRM.",
-        "kpi": "Upsell +12%"
-      },
-      {
-        "pill": "Operations",
-        "timeline": "Rollout: 10 weeks",
-        "title": "Back-office automation",
-        "body": "Case triage, data collection, and notifications spanning ERP, ticketing, and custom APIs.",
-        "kpi": "Manual effort −35%"
-      },
-      {
-        "pill": "Voice of Customer",
-        "timeline": "Sprint: 5 weeks",
-        "title": "Feedback & analytics",
-        "body": "Survey orchestration, insight pipelines, and KPI dashboards tied to business impact.",
-        "kpi": "Insight latency −50%"
-      }
-    ]
-  },
-  "smb": {
-    "eyebrow": "PROGRAMS FOR GROWING TEAMS",
-    "title": "Enterprise-grade AI sized for lean budgets.",
-    "description": "Same rigor, faster pace, friendlier price—built for teams ready to scale.",
-    "cards": [
-      {
-        "pill": "CX Starter Pack",
-        "title": "90-day automation lift",
-        "body": "Rapid discovery, pre-built intent libraries, and packaged integrations that snap into your existing helpdesk and CRM.",
-        "timeline": "Fixed scope · 12 weeks"
-      },
-      {
-        "pill": "Co-managed Launch",
-        "title": "Shared delivery pod",
-        "body": "Blend your internal ops team with DBX engineers to design, build, and govern cross-channel AI journeys.",
-        "timeline": "Dedicated pod"
-      },
-      {
-        "pill": "Growth Retainer",
-        "title": "Fractional PS + analytics",
-        "body": "Monthly sprints that prioritize roadmap health, KPI instrumentation, and change management for evolving SMB orgs.",
-        "timeline": "Monthly subscription"
-      }
-    ],
-    "ctaPrimary": "See If Accelerators Fit",
-    "ctaSecondary": "Request SMB Brief"
-  },
-  "industries": {
-    "eyebrow": "INDUSTRY PLAYBOOKS",
-    "title": "Use-case blueprints for your vertical.",
-    "cards": [
-      {
-        "pill": "Financial Services",
-        "timeline": "Audit-ready",
-        "title": "Fraud triage + secure messaging",
-        "body": "Loan status, collections coaching, fraud triage, and encrypted client servicing with audit trails.",
-        "kpi": "Chargeback time −42%",
-        "compliance": "Compliance: PCI, SOC2",
-        "stack": ["CRM", "CCaaS", "Cloud AI"]
-      },
-      {
-        "pill": "Healthcare",
-        "timeline": "HIPAA safe",
-        "title": "Care navigation copilots",
-        "body": "Intake, benefits checks, Rx reminders, and omnichannel patient routing with PHI guardrails.",
-        "kpi": "No-show rate −18%",
-        "compliance": "Compliance: HIPAA, HITRUST",
-        "stack": ["Voice API", "EHR", "Cloud AI"]
-      },
-      {
-        "pill": "Retail & DTC",
-        "timeline": "Peak ready",
-        "title": "Conversational commerce",
-        "body": "Order management, loyalty, warranties, and guided selling tied to live inventory.",
-        "kpi": "AOV +9%",
-        "compliance": "Compliance: GDPR, CCPA",
-        "stack": ["Commerce", "Marketing", "Cloud AI"]
-      },
-      {
-        "pill": "Travel & Hospitality",
-        "timeline": "Multilingual",
-        "title": "Irregular ops control tower",
-        "body": "Itinerary servicing, disruption comms, and loyalty concierge with 24/7 agent assist.",
-        "kpi": "Rebooking time −55%",
-        "compliance": "Compliance: DOT, GDPR",
-        "stack": ["ITSM", "CCaaS", "Cloud AI"]
       }
     ]
   },
   "process": {
-    "eyebrow": "ENGAGEMENT MODEL",
-    "title": "Four tightly managed phases.",
-    "body": "No handoffs. No finger-pointing. DBX Solutions stays accountable from kickoff through adoption.",
+    "eyebrow": "HOW WE WORK",
+    "title": "Three practical phases—built for busy SMB teams.",
+    "body": "One accountable partner from first call to first live workflow—and the coaching your team needs so it sticks.",
     "steps": [
       {
-        "title": "Discovery",
-        "body": "Interviews, data diagnostics, and ROI scoring to stack-rank opportunities.",
-        "chip": "Signals locked in 10 days"
+        "title": "Discover & prioritize",
+        "body": "We interview your leads, agents, or owners, map where time is lost, and pick one automation that pays back quickly.",
+        "chip": "Roadmap in ~10 days"
       },
       {
-        "title": "Design",
-        "body": "Journey flows, safety rails, and proof points validated with stakeholders.",
-        "chip": "POC evidence pack"
+        "title": "Design & scope",
+        "body": "Low-fi flows, clear success metrics, and a fixed scope your budget can absorb.",
+        "chip": "Scope you can approve"
       },
       {
-        "title": "Build & Integrate",
-        "body": "Implementation across channels, data, and tooling with observability baked in.",
-        "chip": "Observability + QA stack"
-      },
-      {
-        "title": "Measure & Adopt",
-        "body": "Enablement, runbooks, and governance cadences that institutionalize outcomes and prep the next wave.",
-        "chip": "Quarterly business reviews"
+        "title": "Build, launch & coach",
+        "body": "We integrate with your CRM/helpdesk/chat, launch to a pilot group, train your team, and tune based on real tickets—weekly at first, then monthly.",
+        "chip": "Live in weeks—with office-hour support"
       }
     ],
-    "optionsEyebrow": "ENGAGEMENT OPTIONS",
-    "optionsTitle": "Plug DBX Solutions where you need it.",
-    "options": [
-      {
-        "title": "Acceleration Sprint",
-        "body": "3-week war room to unblock or relaunch a stalled CX GenAI initiative.",
-        "tag": "Fixed fee",
-        "kpi": "Delivery: 15 days"
-      },
-      {
-        "title": "Fractional PS Lead",
-        "body": "Part-time Professional Services leadership to steer roadmap + governance.",
-        "tag": "Monthly retainer",
-        "kpi": "20 hrs / month"
-      },
-      {
-        "title": "Launch Assurance",
-        "body": "Readiness reviews, risk desk, and day-0 response plan for enterprise launches.",
-        "tag": "2-week block",
-        "kpi": "Audit scorecard"
-      },
-      {
-        "title": "Advisory Retainer",
-        "body": "Quarterly strategic partner for roadmap prioritization and exec reporting.",
-        "tag": "Quarterly",
-        "kpi": "CXO-ready decks"
-      }
-    ]
+    "optionsEyebrow": "",
+    "optionsTitle": "",
+    "options": []
   },
   "proof": {
-    "eyebrow": "RESULTS & TRUST",
-    "title": "Proof that the work lands.",
+    "eyebrow": "RESULTS YOU CAN RELATE TO",
+    "title": "What we optimize for on every SMB engagement",
     "stats": [
-      { "value": "4.8 / 5", "label": "Client satisfaction across 30+ programs" },
-      { "value": "90%+", "label": "NPS maintained across programs" },
-      { "value": "6–10 wks", "label": "Typical kickoff-to-production" },
-      { "value": "2 regions", "label": "NA & LATAM delivery" }
-    ],
-    "marquee": [
-      "Top 3 US Retailer",
-      "Global Telco",
-      "LATAM Digital Bank",
-      "Regional Healthcare Network",
-      "Travel Booking Platform",
-      "Public Sector Agency"
+      { "value": "4.8 / 5", "label": "Average satisfaction (post-project survey)" },
+      { "value": "90%+", "label": "Clients who say they would recommend DBX" },
+      { "value": "< 8 wks", "label": "Median time to first live workflow" },
+      { "value": "20+ yrs", "label": "Combined experience across the core team" }
     ],
     "testimonials": [
       {
-        "quote": "DBX unified our sales engineering, delivery, and customer success into one motion. We launched our AI messaging program in 8 weeks—2 months ahead of schedule.",
-        "author": "Sarah M., VP Customer Experience",
-        "company": "Top 3 US Retailer"
+        "quote": "We were drowning in repeat questions on email and chat. DBX connected our CRM and messaging in one flow—the team finally uses one playbook.",
+        "author": "Operations Manager",
+        "company": "Professional services (~25 staff)"
       },
       {
-        "quote": "They parachuted into a stalled automation program and had our compliance, data, and CX teams aligned in two working sessions. The pilot hit 28% deflection without harming CSAT.",
-        "author": "Carlos R., Head of Contact Center",
-        "company": "LATAM Digital Bank"
+        "quote": "No \"big transformation theater.\" We shipped a working assistant in a few sprints and adjusted based on real tickets—not slide decks.",
+        "author": "Founder",
+        "company": "E-commerce / retail"
       }
-    ],
-    "cta": "See how we can help your team",
-    "ctaButton": "Book a Call"
+    ]
   },
   "contact": {
-    "eyebrow": "LET'S TALK",
-    "title": "Ready to explore what's possible?",
-    "body": "Whether you're just exploring AI automation or ready to launch, we'll respond within 24 hours. No sales pressure—just a conversation about your goals.",
-    "urgency": "",
+    "eyebrow": "NEXT STEP",
+    "title": "Tell us about your business",
+    "body": "Share who answers customers today, what tools you use, and what \"better\" looks like—we reply within one business day.",
+    "urgency": "We onboard a limited number of hands-on projects each quarter—ask about current availability.",
+    "bookingNote": "Prefer to talk live? Schedule a time →",
     "form": {
       "name": "Full name",
       "email": "Work email",
-      "message": "What's your biggest CX challenge? (optional)",
-      "placeholderName": "Alex Rivera",
-      "placeholderEmail": "alex@brand.com",
-      "placeholderMessage": "e.g., Reducing support costs, launching AI automation...",
-      "submit": "Get in Touch"
-    },
-    "calendly": {
-      "eyebrow": "PREFER TO TALK?",
-      "title": "Book a 30-min call",
-      "body": "Skip the form—book directly. No prep needed, just bring your questions.",
-      "cta": "Pick a Time"
+      "challengeLabel": "What should we fix first?",
+      "challengePlaceholder": "Choose one (optional)",
+      "challengeOptions": [
+        "Too much time on repetitive questions",
+        "Need chat, email & CRM to work together",
+        "Want AI but don't know where to start",
+        "Small team—need fixed scope & price",
+        "Customers in multiple languages or regions",
+        "Tools: Zendesk / Freshdesk / HubSpot / Salesforce",
+        "Other"
+      ],
+      "message": "Company context (size, tools) (optional)",
+      "placeholderName": "Alex Morgan",
+      "placeholderEmail": "you@yourbusiness.com",
+      "placeholderMessage": "e.g., Zendesk + Salesforce, ~40 employees",
+      "submit": "Send message"
     },
     "secondary": [
-      { "label": "WhatsApp", "href": "https://wa.me/13212874509" },
       { "label": "Email", "href": "mailto:rdebiasec@gmail.com" },
-      { "label": "LinkedIn DM", "href": "https://www.linkedin.com/in/ricardo-de-biase" }
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/ricardo-de-biase" }
     ],
     "contacts": [],
-    "badges": ["Cloud AI Partner", "CCaaS Certified", "CRM Consultant", "Enterprise Ready"]
+    "badges": [
+      "Boutique CX & AI partner",
+      "20+ years combined experience",
+      "Practical delivery, not shelfware"
+    ]
   },
   "footer": {
-    "notice": "© 2026 DBX Solutions. Orlando, FL.",
+    "notice": "© 2026 DBX Solutions · Boutique CX & AI for SMBs · Orlando, FL",
     "warning": ""
   }
 }

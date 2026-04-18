@@ -9,6 +9,7 @@
     "build:static": "node scripts/i18n-build.mjs && vite build",
     "build:gh-pages": "npm run build:static",
     "preview": "vite preview",
+    "audit:ctas": "node scripts/audit-ctas.mjs",
     "i18n:translate": "node scripts/translate.mjs",
     "predeploy": "npm run build:gh-pages",
     "deploy": "gh-pages -d dist"
