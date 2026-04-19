@@ -13,7 +13,7 @@
   },
   "hero": {
     "eyebrow": "EXPERIENCIA DEL CLIENTE E IA PARA PYMES",
-    "headline": "Acompañamiento boutique en CX e inteligencia artificial para equipos que crecen.",
+    "headline": "Acompañamiento cercano en CX e inteligencia artificial para equipos que crecen.",
     "body": "En DBX Solutions sumamos más de veinte años de experiencia real en experiencia del cliente e integraciones. Ayudamos a las pymes a pasar de la idea a la IA en producción, no a otra presentación en PowerPoint. Ofrecemos el mismo nivel de criterio que las grandes empresas encargan a las consultoras, pero pensado para equipos que necesitan claridad, ritmo y herramientas acordes a su día a día.",
     "points": [
       "Automatiza las preguntas que se repiten para que su equipo deje de ahogarse en el correo.",
@@ -192,11 +192,14 @@
       "message": "Contexto de la empresa (tamaño, herramientas) — opcional",
       "placeholderName": "Laura Gómez",
       "placeholderEmail": "tu@empresa.com",
+      "phone": "Teléfono móvil (opcional)",
+      "placeholderPhone": "+1 (321) 287-4509",
+      "smsConsentError": "Si indica un teléfono, marque la casilla de consentimiento SMS para continuar—o deje el teléfono en blanco.",
       "placeholderMessage": "Ej.: Zendesk y Salesforce, unas 40 personas en soporte",
       "submit": "Enviar mensaje"
     },
     "secondary": [
-      { "label": "Correo", "href": "mailto:rdebiasec@gmail.com" },
+      { "label": "Correo", "href": "mailto:contact@dbx-solutions.com" },
       { "label": "LinkedIn", "href": "https://www.linkedin.com/in/ricardo-de-biase" }
     ],
     "contacts": [],
@@ -207,7 +210,10 @@
     ]
   },
   "footer": {
-    "notice": "© 2026 DBX Solutions · Experiencia del cliente e IA para pymes · Orlando, FL",
-    "warning": ""
+    "notice": "© 2026 DBX Solutions · CX e IA para pymes y mercado medio · Orlando, FL",
+    "warning": "",
+    "linkPrivacy": "Política de privacidad",
+    "linkTerms": "Términos del servicio",
+    "linkSms": "Términos SMS"
   }
 }

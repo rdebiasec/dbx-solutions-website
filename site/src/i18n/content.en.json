@@ -13,7 +13,7 @@
   },
   "hero": {
     "eyebrow": "AI & CUSTOMER EXPERIENCE FOR SMBs",
-    "headline": "Boutique CX & AI help for growing teams.",
+    "headline": "Hands-on CX & AI help for growing teams.",
     "body": "DBX Solutions combines 20+ years of hands-on CX and integration experience to help small and mid-sized businesses ship practical AI—not slide decks. Same senior judgment larger firms pay consultancies for, scoped for teams that need clarity, speed, and tools that fit how you already work.",
     "points": [
       "Automate repetitive customer questions so your small team stops living in the inbox.",
@@ -35,7 +35,7 @@
     ],
     "badges": [
       "Built for lean teams",
-      "Boutique delivery—not a call center farm",
+      "Direct delivery—not a call center farm",
       "Hands-on support when you need it",
       "Works with mainstream SMB stacks (Zendesk, HubSpot, Salesforce, Freshdesk)"
     ],
@@ -192,22 +192,28 @@
       "message": "Company context (size, tools) (optional)",
       "placeholderName": "Alex Morgan",
       "placeholderEmail": "you@yourbusiness.com",
+      "phone": "Mobile phone (optional)",
+      "placeholderPhone": "+1 (321) 287-4509",
+      "smsConsentError": "If you enter a phone number, check the SMS consent box to continue—or leave phone blank.",
       "placeholderMessage": "e.g., Zendesk + Salesforce, ~40 employees",
       "submit": "Send message"
     },
     "secondary": [
-      { "label": "Email", "href": "mailto:rdebiasec@gmail.com" },
+      { "label": "Email", "href": "mailto:contact@dbx-solutions.com" },
       { "label": "LinkedIn", "href": "https://www.linkedin.com/in/ricardo-de-biase" }
     ],
     "contacts": [],
     "badges": [
-      "Boutique CX & AI partner",
+      "CX & AI partner for SMBs",
       "20+ years combined experience",
       "Practical delivery, not shelfware"
     ]
   },
   "footer": {
-    "notice": "© 2026 DBX Solutions · Boutique CX & AI for SMBs · Orlando, FL",
-    "warning": ""
+    "notice": "© 2026 DBX Solutions · CX & AI for SMBs & mid-market · Orlando, FL",
+    "warning": "",
+    "linkPrivacy": "Privacy Policy",
+    "linkTerms": "Terms of Service",
+    "linkSms": "SMS Terms"
   }
 }

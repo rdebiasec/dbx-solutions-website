@@ -1,6 +1,8 @@
 import './style.css'
 import en from './i18n/content.en.json'
 import es from './i18n/content.es.json'
+import { href } from './legal/constants.js'
+import { smsConsentCheckboxHtml } from './sms-consent-copy.js'
 
 const locales = { en, es }
 const defaultLocale = 'en'
@@ -56,7 +58,7 @@ function renderHeader(nav, labels, lang) {
   return `
     <header>
       <div class="header-top">
-        <a href="#top" class="logo"><img src="/logo.png" alt="DBX Solutions" /></a>
+        <a href="#top" class="logo"><img src="${href('logo.png')}" alt="DBX Solutions" /></a>
         <nav id="primary-nav">
           <a href="#process">${nav.process}</a>
           <a href="#programs">${nav.services}</a>
@@ -269,6 +271,13 @@ function renderContact(t) {
   const booking = t.contact.bookingNote
     ? `<p class="contact-booking-note"><a href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.contact.bookingNote}</a></p>`
     : ''
+  const privacyHref = href('privacy-policy/')
+  const smsTermsHref = href('sms-terms/')
+  const smsBlock = smsConsentCheckboxHtml(
+    privacyHref,
+    smsTermsHref,
+    t.contact.form.smsConsentError || ''
+  )
   return `
     <section id="contact" class="cta-panel">
       <span class="eyebrow">${t.contact.eyebrow}</span>
@@ -285,6 +294,11 @@ function renderContact(t) {
             <label for="lead-email">${t.contact.form.email}</label>
             <input id="lead-email" type="email" name="email" placeholder="${t.contact.form.placeholderEmail}" autocomplete="email" required />
           </div>
+          <div>
+            <label for="lead-phone">${t.contact.form.phone}</label>
+            <input id="lead-phone" type="tel" name="phone" placeholder="${t.contact.form.placeholderPhone}" autocomplete="tel" inputmode="tel" />
+          </div>
+          ${smsBlock}
           ${
             Array.isArray(t.contact.form.challengeOptions)
               ? `
@@ -324,10 +338,20 @@ function renderContact(t) {
 }
 
 function renderFooter(t) {
+  const p = href('privacy-policy/')
+  const te = href('terms-of-service/')
+  const s = href('sms-terms/')
   return `
     <footer>
-      <span>${t.footer.notice}</span>
-      <span>${t.footer.warning}</span>
+      <nav class="footer-legal" aria-label="Legal">
+        <a href="${p}">${t.footer.linkPrivacy}</a>
+        <a href="${te}">${t.footer.linkTerms}</a>
+        <a href="${s}">${t.footer.linkSms}</a>
+      </nav>
+      <div class="footer-meta">
+        <span>${t.footer.notice}</span>
+        <span>${t.footer.warning}</span>
+      </div>
     </footer>
   `
 }
@@ -384,6 +408,37 @@ function render(locale) {
     if (!document.body.classList.contains('nav-open')) return
     if (event.target.closest('header')) return
     closeNav()
+  })
+
+  bindLeadFormValidation()
+}
+
+function bindLeadFormValidation() {
+  const form = document.querySelector('.lead-form')
+  const phoneInput = document.getElementById('lead-phone')
+  const smsCheckbox = document.getElementById('lead-sms-consent')
+  const errEl = document.getElementById('lead-sms-consent-error')
+  if (!form || !phoneInput || !smsCheckbox || !errEl) return
+
+  const syncState = () => {
+    const phone = phoneInput.value.trim()
+    if (!phone || smsCheckbox.checked) {
+      errEl.hidden = true
+      smsCheckbox.removeAttribute('aria-invalid')
+    }
+  }
+
+  phoneInput.addEventListener('input', syncState)
+  smsCheckbox.addEventListener('change', syncState)
+
+  form.addEventListener('submit', (event) => {
+    const phone = phoneInput.value.trim()
+    if (phone && !smsCheckbox.checked) {
+      event.preventDefault()
+      errEl.hidden = false
+      smsCheckbox.setAttribute('aria-invalid', 'true')
+      smsCheckbox.focus()
+    }
   })
 }
 

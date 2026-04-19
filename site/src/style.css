@@ -998,9 +998,139 @@ footer {
   font-size: 0.85rem;
   color: var(--muted);
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+footer .footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  justify-content: center;
+}
+
+footer .footer-legal a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+footer .footer-legal a:hover {
+  color: #4fd1c5;
+  border-bottom-color: rgba(79, 209, 197, 0.6);
+}
+
+footer .footer-meta {
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+/* Legal document pages (multi-page Vite entries) */
+
+.legal-doc .legal-main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+}
+
+.legal-page h1 {
+  font-size: clamp(1.65rem, 4vw, 2rem);
+  margin-bottom: 0.5rem;
+}
+
+.legal-effective {
+  color: var(--muted);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.legal-page h2 {
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.legal-page h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: rgba(238, 241, 255, 0.92);
+}
+
+.legal-page ul {
+  padding-left: 1.35rem;
+  margin: 0.5rem 0 1rem;
+}
+
+.legal-contact-block {
+  margin-top: 1rem;
+  line-height: 1.65;
+}
+
+.legal-contact-block a {
+  color: #4fd1c5;
+  text-decoration: none;
+}
+
+.legal-contact-block a:hover {
+  text-decoration: underline;
+}
+
+.legal-doc-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.legal-doc-footer .footer-legal {
+  justify-content: flex-start;
+}
+
+.legal-back-home {
+  margin-top: 1.25rem;
+}
+
+.legal-back-home a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.legal-back-home a:hover {
+  color: #4fd1c5;
+}
+
+.sms-consent-wrap {
+  margin: 0.25rem 0 0.5rem;
+}
+
+.sms-consent {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.sms-consent input {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.sms-consent span a {
+  color: #4fd1c5;
+  text-decoration: underline;
+}
+
+.field-error {
+  font-size: 0.8rem;
+  color: #fca5a5;
+  margin: 0.35rem 0 0;
 }
 
 @media (max-width: 1200px) {
