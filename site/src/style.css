@@ -180,6 +180,15 @@ nav a:hover {
   max-width: 620px;
 }
 
+.use-cases-section {
+  margin-top: 3rem;
+}
+
+.use-cases-section .use-cases-list {
+  max-width: 52rem;
+  margin-top: 0.5rem;
+}
+
 .hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));

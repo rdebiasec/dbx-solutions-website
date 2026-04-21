@@ -9,7 +9,8 @@ const defaultLocale = 'en'
 const storageKey = 'dbx-locale'
 
 const navDefaults = {
-  services: 'Programs',
+  services: 'Solutions',
+  growth: 'Growth',
   process: 'How we work',
   proof: 'Results',
   contact: 'Contact'
@@ -60,8 +61,9 @@ function renderHeader(nav, labels, lang) {
       <div class="header-top">
         <a href="#top" class="logo"><img src="${href('logo.png')}" alt="DBX Solutions" /></a>
         <nav id="primary-nav">
-          <a href="#process">${nav.process}</a>
           <a href="#programs">${nav.services}</a>
+          <a href="#growth">${nav.growth}</a>
+          <a href="#process">${nav.process}</a>
           <a href="#proof">${nav.proof}</a>
           <a href="#contact">${nav.contact}</a>
         </nav>
@@ -150,7 +152,7 @@ function renderHero(t, labels) {
 
 function renderTrustBar(t) {
   if (!t.trust) return ''
-  const clients = t.socialProof?.clients || t.trust.industries || []
+  const clients = t.trust.industries ?? []
   if (!clients.length) return ''
   return `
     <section class="trust-bar" id="trust">
@@ -196,6 +198,50 @@ function renderPrograms(t) {
           )
           .join('')}
       </div>
+    </section>
+  `
+}
+
+function renderBusinessModel(t) {
+  if (!t.model) return ''
+  return `
+    <section id="business-model" class="cta-panel">
+      <span class="eyebrow">${t.model.eyebrow}</span>
+      <h2>${t.model.title}</h2>
+      <p>${t.model.intro}</p>
+      <p>${t.model.body1}</p>
+      <p>${t.model.body2}</p>
+      <p class="urgency-note">${t.model.privacy}</p>
+    </section>
+  `
+}
+
+function renderGrowth(t) {
+  if (!t.growth) return ''
+  return `
+    <section id="growth" class="cta-panel growth-section">
+      <span class="eyebrow">${t.growth.eyebrow}</span>
+      <h2>${t.growth.title}</h2>
+      <p>${t.growth.intro}</p>
+      <p>${t.growth.body1}</p>
+      <p>${t.growth.body2}</p>
+      <p>${t.growth.body3}</p>
+    </section>
+  `
+}
+
+function renderUseCases(t) {
+  if (!t.useCases?.items?.length) return ''
+  return `
+    <section id="use-cases" class="use-cases-section">
+      <div class="section-heading">
+        <span class="eyebrow">${t.useCases.eyebrow}</span>
+        <h2>${t.useCases.title}</h2>
+        ${t.useCases.body ? `<p>${t.useCases.body}</p>` : ''}
+      </div>
+      <ul class="use-cases-list list-dots">
+        ${t.useCases.items.map((item) => `<li>${item}</li>`).join('')}
+      </ul>
     </section>
   `
 }
@@ -367,9 +413,12 @@ function render(locale) {
       ${renderHeader(nav, labels, locale)}
       ${renderHero(t, labels)}
       ${renderTrustBar(t)}
-      ${renderProcess(t)}
-      ${renderProof(t)}
       ${renderPrograms(t)}
+      ${renderGrowth(t)}
+      ${renderProcess(t)}
+      ${renderBusinessModel(t)}
+      ${renderUseCases(t)}
+      ${renderProof(t)}
       ${renderContact(t)}
       ${renderFooter(t)}
     </div>

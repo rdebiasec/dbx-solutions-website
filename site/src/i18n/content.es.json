@@ -1,6 +1,7 @@
 {
   "nav": {
-    "services": "Programas",
+    "services": "Soluciones",
+    "growth": "Crecimiento",
     "process": "Cómo trabajamos",
     "proof": "Resultados",
     "contact": "Contacto"
@@ -8,148 +9,155 @@
   "labels": {
     "valueEquation": "QUÉ GANAS",
     "timeToProd": "CUÁNDO QUEDA LISTO",
-    "stack": "CON QUÉ TRABAJAMOS",
+    "stack": "CANALES Y HERRAMIENTAS",
     "languageToggle": "Cambiar idioma"
   },
   "hero": {
-    "eyebrow": "EXPERIENCIA DEL CLIENTE E IA PARA PYMES",
-    "headline": "Acompañamiento cercano en CX e inteligencia artificial para equipos que crecen.",
-    "body": "En DBX Solutions sumamos más de veinte años de experiencia real en experiencia del cliente e integraciones. Ayudamos a las pymes a pasar de la idea a la IA en producción, no a otra presentación en PowerPoint. Ofrecemos el mismo nivel de criterio que las grandes empresas encargan a las consultoras, pero pensado para equipos que necesitan claridad, ritmo y herramientas acordes a su día a día.",
+    "eyebrow": "CX CON IA PARA EMPRESAS QUE ESTÁN CRECIENDO",
+    "headline": "En DBX creemos que la tecnología avanzada no es solo para las multinacionales.",
+    "body": "Diseñamos y operamos experiencia de cliente con IA para que usted compita de verdad, sin montar un equipo interno caro solo para “modernizar”. Llevamos más de 20 años en CX e integraciones: conectamos la automatización a su mesa de ayuda, CRM y canales reales—WhatsApp, SMS, voz, chat web—según cómo le hablen a sus clientes.",
     "points": [
-      "Automatiza las preguntas que se repiten para que su equipo deje de ahogarse en el correo.",
-      "Encaja con la mesa de ayuda, el CRM o el chat que ya pagas: nadie te obliga a cambiar de plataforma.",
-      "Un plan en palabras sencillas: qué hacer primero, cuánto cuesta y qué significa para su equipo \"terminado\"."
+      "Menos horas perdidas en lo repetitivo: lo rutinario lo atiende el flujo; una persona entra cuando la conversación lo pide.",
+      "Respuestas más rápidas por WhatsApp, SMS, voz y mensajería. Trabajamos sobre lo que ya tiene; el proyecto no es reemplazarlo todo de un día para otro.",
+      "Primero algo pequeño en producción, se mide, y si funciona se amplía. Sin piloto eterno que no llega a ningún lado."
     ],
-    "ctaPrimary": "Reservar una primera conversación (30 min)",
+    "ctaPrimary": "Agendar una primera conversación (30 min)",
     "value": {
-      "equation": "Claridad × Implementación × Seguimiento",
+      "equation": "Velocidad × Claridad × Resultados visibles",
       "time": "Semanas, no trimestres",
-      "stack": "Mesa de ayuda · CRM · Chat · IA",
-      "noteLabel": "Qué entendemos por \"en producción\"",
-      "noteText": "= el primer flujo que sus clientes usan de verdad, funcionando en su propio entorno."
+      "stack": "WhatsApp · SMS · Voz · Mensajería · CRM",
+      "noteLabel": "Qué queremos decir con \"en producción\"",
+      "noteText": "El primer flujo que el cliente de verdad usa, en su entorno, amarrado a tickets y datos reales."
     },
-    "stats": [
-      { "label": "Primera llamada en la misma semana", "value": "Sí" },
-      { "label": "Primer flujo productivo (típico)", "value": "< 8 sem" },
-      { "label": "Experiencia acumulada del equipo", "value": "20+ años" }
-    ],
-    "badges": [
-      "Pensado para equipos ágiles",
-      "Trabajo a medida, no fábrica de llamadas",
-      "Soporte cercano cuando hace falta",
-      "Encaja con las herramientas que ya usan las pymes (Zendesk, HubSpot, Salesforce, Freshdesk…)"
-    ],
     "media": {
-      "eyebrow": "DE LA IDEA AL ASISTENTE FUNCIONANDO",
-      "title": "Un camino claro que su equipo puede seguir.",
-      "body": "Arrancamos con un flujo que sí importa, lo conectamos a sus sistemas reales, formamos a las personas que atienden y mejoramos con lo que pasa en la práctica, no con teoría.",
+      "eyebrow": "DE UN FLUJO BUENO A ALGO QUE NO SE ABANDONA A LA SEMANA",
+      "title": "Un camino que el equipo puede seguir sin un manual imposible.",
+      "body": "Se elige un flujo que duela de verdad, se conecta a lo que ya usan (WhatsApp, SMS, lo que sea), se forma a quien atiende y se ajusta con lo que pasa en la calle, no con teoría de presentación.",
       "graphicLabel": "Diagrama de cinco pasos para llevar la solución a producción",
       "stages": ["Escuchar", "Primer logro", "Construir", "Formar", "Mejorar"],
       "steps": [
-        "Ponerse de acuerdo en objetivos y herramientas",
-        "Elegir la primera automatización",
-        "Pasar a producción",
-        "Formar al equipo de primera línea",
-        "Revisar resultados cada mes"
+        "Qué quieren mejorar y con qué sistemas vamos a convivir",
+        "Una primera automatización acotada, que sí se pueda lanzar",
+        "A producción de verdad, no un demo bonito",
+        "Formación a quien habla con el cliente",
+        "Revisión mensual de números y ajustes"
       ],
-      "caption": "Hecho para la realidad de una pyme: lanzar, aprender y afinar sin un ejército de gestión de proyecto."
-    },
-    "utility": "Acompañamos a pymes y empresas medianas en cualquier parte."
-  },
-  "socialProof": {
-    "clients": [
-      "Firma de servicios profesionales (unos 25 empleados)",
-      "Tienda online (atención al cliente y mensajería)",
-      "Red de clínicas (citas y recordatorios)",
-      "Distribuidor B2B (pedidos y logística)",
-      "Empresa SaaS en crecimiento (autoservicio y dudas de facturación)"
-    ]
+      "caption": "Fases chicas, lanzamientos reales: probar, aprender, volver a intentar."
+    }
   },
   "trust": {
-    "label": "Empresas como la suya ya confían en DBX para la experiencia del cliente y la automatización:",
+    "label": "Algunos contextos donde hemos ayudado a equipos parecidos al suyo:",
     "industries": [
-      "Firma de servicios profesionales (unos 25 empleados)",
-      "Tienda online (atención al cliente y mensajería)",
-      "Red de clínicas (citas y recordatorios)",
-      "Distribuidor B2B (pedidos y logística)",
-      "Empresa SaaS en crecimiento (autoservicio y dudas de facturación)"
+      "Firma de servicios, unas 25 personas",
+      "Marca de e-commerce mezclando soporte y mensajería",
+      "Red de clínicas con citas y recordatorios",
+      "Distribuidor B2B con pedidos y temas de logística",
+      "SaaS en crecimiento ordenando autoservicio y dudas de cobro"
     ]
   },
   "services": {
-    "eyebrow": "PROGRAMAS PARA PYMES Y EMPRESAS MEDIANAS",
-    "title": "Un solo socio. Propuestas claras. Nada que acabe guardado en un cajón.",
-    "description": "Unimos estrategia, construcción y seguimiento para que sus clientes noten el cambio, no solo una hoja de ruta en una reunión. Para organizaciones que buscan experiencia senior sin montar un departamento de inteligencia artificial adentro.",
-    "listLabel": "Qué incluye",
+    "eyebrow": "LO QUE CONSTRUIMOS CONTIGO",
+    "title": "Tres formas típicas de empezar",
+    "description": "Nada de categorías vacías: son ofertas con nombre. Cada una puede usar WhatsApp, SMS, voz y mensajería donde haga falta, y engancharse al CRM y la mesa de ayuda que ya paga.",
+    "listLabel": "Qué suele entrar en un proyecto",
     "cards": [
       {
-        "title": "Planificar y priorizar",
-        "description": "Aclarar qué automatizar primero, qué puede esperar y qué presupuesto encaja con la escala de su negocio.",
-        "timeline": "1–3 semanas",
-        "outputs": "Lista priorizada por escrito + matriz esfuerzo frente a impacto",
-        "artifacts": "Esquema de integración + riesgos principales",
-        "kpi": "Menos pilotos que no llevan a ningún sitio",
+        "title": "Automatización de soporte",
+        "description": "Cuando las mismas preguntas le comen la semana, esta es la palanca. Orquestamos conversaciones por WhatsApp, SMS, chat y voz para que respondan rápido y su gente solo entre cuando hace falta un humano.",
+        "timeline": "Primer alcance típico: 3–10 semanas",
+        "outputs": "Flujos listos para producción y derivaciones que tienen sentido",
+        "artifacts": "Amarrados a mesa de ayuda / CRM, FAQs y tickets",
+        "kpi": "Horas que vuelven al equipo cada semana",
         "items": [
-          "Entrevistas con responsables y talleres cortos",
-          "Revisión del stack (mesa de ayuda, CRM, chat)",
-          "Definición de un piloto pequeño y realista"
+          "WhatsApp, SMS, mensajería y voz según dónde esté su cliente",
+          "Respuestas alineadas a políticas y base de conocimiento, no texto genérico",
+          "Reglas de paso a agente que el equipo reconoce al instante"
         ]
       },
       {
-        "title": "Construir e integrar",
-        "description": "Poner en marcha flujos que contestan de verdad al cliente y derivan bien al equipo humano cuando hace falta.",
-        "timeline": "3–10 semanas",
-        "outputs": "Flujos listos para producción y monitorización básica",
-        "artifacts": "Manual de operación + casos de prueba",
-        "kpi": "Horas que el equipo recupera cada semana",
+        "title": "Recepción con IA y citas",
+        "description": "Llamadas perdidas y demoras cuestan plata. Armamos flujos que atienden lo que entra, entienden qué busca la persona y agendan o mueven citas por WhatsApp, SMS y voz, para que menos oportunidades se pierdan en el camino.",
+        "timeline": "Primer alcance típico: 3–8 semanas",
+        "outputs": "Flujos de agenda, confirmaciones, recordatorios",
+        "artifacts": "Calendarios y campos de CRM que ya usa",
+        "kpi": "Menos fricción entre “me interesa” y “quedó en el calendario”",
         "items": [
-          "Asistentes por chat o voz ligados a preguntas frecuentes y tickets",
-          "Conectores con el CRM o la mesa de ayuda que ya usáis",
-          "Cuadros de mando que quien lleva operaciones sí entiende"
+          "Cobertura fuera de horario para lo repetible, con límites que usted aprueba",
+          "Preguntas de calificación que no cambian según quién atienda",
+          "Recordatorios por SMS o WhatsApp como usted trabaja en la vida real"
         ]
       },
       {
-        "title": "Acompañar y mejorar",
-        "description": "Horas de consulta, ordenar la lista de mejoras y ajustes después del arranque para que el uso no se caiga a las pocas semanas.",
-        "timeline": "Mensual o trimestral",
-        "outputs": "Lista de mejoras por iteración + revisión mensual",
-        "artifacts": "Indicadores esenciales y reglas claras de escalado",
-        "kpi": "Uso que se mantiene después de 90 días",
+        "title": "Calificación y conversión de leads",
+        "description": "A ventas no le debería tocar triage todo el día. Capturamos leads en WhatsApp y mensajería, ordenamos quién vale la llamada y metemos datos limpios al CRM para que el tiempo se vaya a cerrar, no a arreglar Excel.",
+        "timeline": "Primer alcance típico: 2–8 semanas",
+        "outputs": "Captura, reglas de ruteo, actualización en CRM",
+        "artifacts": "Definiciones claras: qué es “calificado” y qué va a nutrición",
+        "kpi": "Más consultas que pasan a un siguiente paso concreto",
         "items": [
-          "Formación para quienes forman al resto del equipo",
-          "Revisión quincenal del estado del proyecto",
-          "Un interlocutor senior con nombre propio"
+          "Respuesta rápida donde ya está el comprador: WhatsApp y SMS incluidos",
+          "Campos ordenados para que el seguimiento no sea adivinanza",
+          "Ruteo acorde a territorios o equipos como usted los tiene hoy"
         ]
       }
     ]
   },
+  "growth": {
+    "eyebrow": "DESPUÉS DEL PRIMER LOGRO",
+    "title": "Seguimos mientras los sistemas demuestran que valen la pena",
+    "intro": "Salir a producción es el día uno. Los modelos se mueven, cambia el lenguaje del cliente y salen ideas nuevas. Es normal.",
+    "body1": "Nos ocupamos del mantenimiento y los ajustes para que el rendimiento no se vaya degradando solo. Cuando los números acompañan, le ayudamos a extender a nuevos casos y canales con el mismo cuidado que el primer proyecto: probado, aburrido en el buen sentido.",
+    "body2": "Nos importa qué pasa a los tres meses, no solo el día del lanzamiento.",
+    "body3": "Así equipos medianos siguen el ritmo sin montar una fábrica interna de IA."
+  },
+  "model": {
+    "eyebrow": "CÓMO SE CONTRATA",
+    "title": "Arranque chico. Suma alcance cuando tenga sentido.",
+    "intro": "Acordamos un primer pedazo medible y un valor mensual que se pueda planear, sin medidor abierto para siempre.",
+    "body1": "O lo operamos nosotros o formamos a su gente para el día a día. Usted decide.",
+    "body2": "Sabe qué compra en cada fase y qué significa “listo” antes de que toquemos la primera configuración.",
+    "privacy": "¿No quiere cargar con el mantenimiento diario? Podemos operarlo con prácticas habituales del sector y sin cadena perpetua: si mañana quiere otro proveedor, puede."
+  },
   "process": {
     "eyebrow": "CÓMO TRABAJAMOS",
-    "title": "Tres fases concretas, pensadas para equipos con poco tiempo.",
-    "body": "Un solo interlocutor desde la primera llamada hasta el primer flujo en producción, con el acompañamiento necesario para que el cambio se quede.",
+    "title": "Tres fases: conversar, acotar, lanzar… y no hacerse los sordos después.",
+    "body": "Hay una persona responsable de punta a punta. Encontramos dónde se pierde tiempo, elegimos una automatización que se pague sola temprano y la integramos con CRM, mesa de ayuda, WhatsApp, SMS: lo que sus clientes usen. Luego lanzamos, formamos y ajustamos con tickets y mensajes de verdad.",
     "steps": [
       {
         "title": "Descubrir y priorizar",
-        "body": "Hablamos con quien atiende al cliente o lleva el día a día, vemos dónde se pierde el tiempo y elegimos una automatización que compense pronto.",
-        "chip": "Plan en unos 10 días"
+        "body": "Hablamos con quien manda, con líderes y con quien está en la línea. Ubicamos el dolor y elegimos algo que rinda rápido, incluido qué canales (WhatsApp, SMS, voz, mensajería) van primero.",
+        "chip": "Borrador de plan en unos 10 días"
       },
       {
-        "title": "Diseñar y delimitar",
-        "body": "Flujos sencillos, indicadores claros y un alcance cerrado que el presupuesto pueda asumir.",
-        "chip": "Alcance que pueden aprobar sin sorpresas"
+        "title": "Diseñar y acotar",
+        "body": "Flujos sencillos, pocas métricas de éxito y un alcance que el presupuesto aguante. Metemos privacidad y seguridad acordes a su sector para que no aparezca el susto después.",
+        "chip": "Algo que puedan aprobar sin cruzar los dedos"
       },
       {
         "title": "Construir, lanzar y acompañar",
-        "body": "Integramos con su CRM, mesa de ayuda o chat, lanzamos con un grupo piloto, formamos al equipo y afinamos con casos reales: primero cada semana, luego cada mes.",
-        "chip": "En producción en semanas, con soporte en horario laboral"
+        "body": "Integramos, piloto corto, formación y ajustes con tráfico real: primero seguido, después en un ritmo que les calce.",
+        "chip": "En producción en semanas, con respaldo cuando lo necesiten"
       }
     ],
     "optionsEyebrow": "",
     "optionsTitle": "",
     "options": []
   },
+  "useCases": {
+    "eyebrow": "DÓNDE ESTO SUELA DOLER",
+    "title": "Situaciones que escuchamos seguido",
+    "body": "No hace falta un call center gigante para verse moderno: hace falta automatización donde realmente alivia.",
+    "items": [
+      "Soportar más volumen sin contratar cada trimestre",
+      "Dejar de perder leads porque nadie respondió a tiempo",
+      "Atender por WhatsApp, SMS, voz y mensajería sin enloquecerse con pestañas",
+      "Cubrir lo repetible por la noche sin fingir que contrató turno nocturno",
+      "Dar respuestas claras cuando el cliente pregunta, para que la confianza suba y no baje"
+    ]
+  },
   "proof": {
-    "eyebrow": "RESULTADOS QUE SUENAN REALES",
-    "title": "En qué nos fijamos en cada proyecto con pymes",
+    "eyebrow": "LO QUE CUENTA LA GENTE",
+    "title": "Cifras que miramos, más voces de clientes",
     "stats": [
       { "value": "4.8 / 5", "label": "Valoración media (encuesta tras el proyecto)" },
       { "value": "90%+", "label": "Clientes que recomendarían DBX" },
@@ -163,7 +171,7 @@
         "company": "Servicios profesionales (~25 personas)"
       },
       {
-        "quote": "Nada de megaproyectos de transformación que no empatan con el día a día. En pocas iteraciones teníamos un asistente que funcionaba y lo fuimos ajustando con tickets reales, no con presentaciones.",
+        "quote": "Nada de megaproyectos que no empatan con el día a día. En pocas iteraciones teníamos un asistente que funcionaba y lo fuimos ajustando con tickets reales, no con presentaciones.",
         "author": "Fundador",
         "company": "Comercio electrónico / retail"
       }
@@ -171,20 +179,20 @@
   },
   "contact": {
     "eyebrow": "SIGUIENTE PASO",
-    "title": "Hablemos de su negocio",
-    "body": "Cuéntenos quién atiende hoy al cliente, qué herramientas usan y qué sería un salto adelante para su empresa. Respondemos en un día hábil.",
-    "urgency": "Cada trimestre aceptamos un número acotado de proyectos con acompañamiento directo: consulte disponibilidad.",
-    "bookingNote": "¿Prefiere hablar por videollamada o teléfono? Reserve horario aquí →",
+    "title": "Cuéntenos qué está pasando",
+    "body": "¿Quién atiende hoy? ¿Qué canal pesa más: WhatsApp, SMS, otro? ¿Qué herramientas ya están? Con eso alcanza en el formulario. Le devolvemos con un primer paso razonable en un día hábil.",
+    "urgency": "Cada trimestre abrimos pocos proyectos con acompañamiento serio—pregunte cómo está el calendario.",
+    "bookingNote": "¿Prefiere hablar en vivo? Reserve aquí →",
     "form": {
       "name": "Nombre y apellidos",
       "email": "Correo corporativo",
-      "challengeLabel": "¿Qué querrías mejorar primero?",
-      "challengePlaceholder": "Seleccione una opción (opcional)",
+      "challengeLabel": "¿Qué le gustaría arreglar primero?",
+      "challengePlaceholder": "Elija una opción (opcional)",
       "challengeOptions": [
         "Demasiado tiempo en consultas repetidas",
-        "Que chat, correo y CRM trabajen en conjunto",
+        "Que WhatsApp, SMS, chat y CRM funcionen en conjunto",
         "Queremos IA pero no sabemos por dónde empezar",
-        "Somos un equipo pequeño: necesitamos alcance y precio cerrados",
+        "Equipo chico: necesitamos alcance y precio cerrados",
         "Clientes en varios idiomas o mercados",
         "Stack actual: Zendesk, Freshdesk, HubSpot o Salesforce",
         "Otro"
@@ -204,13 +212,13 @@
     ],
     "contacts": [],
     "badges": [
-      "Socio especializado en CX e IA",
-      "Más de veinte años de experiencia combinada",
-      "Entregas que se usan, no software olvidado"
+      "CX e IA serias, en un tamaño que una pyme sí puede asumir",
+      "Privacidad, seguridad y calidad van en la obra, no como parche al final",
+      "Modelo mensual: lo operamos con usted o dejamos a su equipo dominándolo"
     ]
   },
   "footer": {
-    "notice": "© 2026 DBX Solutions · CX e IA para pymes y mercado medio · Orlando, FL",
+    "notice": "© 2026 DBX Solutions · Tecnología seria para equipos que no son el Fortune 500 · Orlando, FL",
     "warning": "",
     "linkPrivacy": "Política de privacidad",
     "linkTerms": "Términos del servicio",
