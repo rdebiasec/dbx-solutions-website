@@ -13,15 +13,21 @@
     "languageToggle": "Cambiar idioma"
   },
   "hero": {
-    "eyebrow": "CX CON IA PARA EMPRESAS QUE ESTÁN CRECIENDO",
-    "headline": "En DBX creemos que la tecnología avanzada no es solo para las multinacionales.",
-    "body": "Diseñamos y operamos experiencia de cliente con IA para que usted compita de verdad, sin montar un equipo interno caro solo para “modernizar”. Llevamos más de 20 años en CX e integraciones: conectamos la automatización a su mesa de ayuda, CRM y canales reales—WhatsApp, SMS, voz, chat web—según cómo le hablen a sus clientes.",
+    "eyebrow": "CX CON IA PARA PYMES Y EMPRESAS MEDIANAS",
+    "headline": "Automatice la atención al cliente y mantenga el ritmo del mercado—sin montar un equipo interno de IA costoso.",
+    "body": "DBX democratiza la tecnología avanzada para pequeñas y medianas empresas. Diseñamos, construimos y operamos soluciones de experiencia del cliente con IA para que usted siga el ritmo que exige el negocio hoy—sin pagar salarios de especialistas internos como si fuera una corporación gigante. La automatización seria no debería ser solo para las más grandes: la hacemos accesible y manejable, conectada a su mesa de ayuda, CRM y los canales que ya usan sus clientes—incluidos WhatsApp, SMS, voz y mensajería. Más de 20 años de experiencia en CX e integraciones, con alcance pensado para equipos como el suyo.",
     "points": [
-      "Menos horas perdidas en lo repetitivo: lo rutinario lo atiende el flujo; una persona entra cuando la conversación lo pide.",
-      "Respuestas más rápidas por WhatsApp, SMS, voz y mensajería. Trabajamos sobre lo que ya tiene; el proyecto no es reemplazarlo todo de un día para otro.",
-      "Primero algo pequeño en producción, se mide, y si funciona se amplía. Sin piloto eterno que no llega a ningún lado."
+      "Menos horas en lo repetitivo: lo rutinario lo atiende el flujo; una persona entra cuando hace falta criterio humano.",
+      "Respuestas más rápidas por WhatsApp, SMS, voz y mensajería. Construimos sobre lo que ya tiene, sin obligarlo a cambiar todo.",
+      "Algo real en producción en semanas, se mide y luego se amplía. Sin piloto eterno."
     ],
-    "ctaPrimary": "Agendar una primera conversación (30 min)",
+    "ctaPrimary": "Agende una llamada de 30 minutos para ver cómo aplicaría a su negocio",
+    "ctaCallIntro": "En esa llamada:",
+    "ctaBullets": [
+      "Revisamos cómo atiende hoy a sus clientes",
+      "Identificamos qué conviene automatizar primero para el impacto más rápido",
+      "Le proponemos cómo empezar, con alcance claro"
+    ],
     "value": {
       "equation": "Velocidad × Claridad × Resultados visibles",
       "time": "Semanas, no trimestres",
@@ -57,70 +63,70 @@
   },
   "services": {
     "eyebrow": "LO QUE CONSTRUIMOS CONTIGO",
-    "title": "Tres formas típicas de empezar",
-    "description": "Nada de categorías vacías: son ofertas con nombre. Cada una puede usar WhatsApp, SMS, voz y mensajería donde haga falta, y engancharse al CRM y la mesa de ayuda que ya paga.",
+    "title": "Tres ofertas concretas",
+    "description": "Resultados claros, no categorías vacías de consultoría. Cada una puede usar WhatsApp, SMS, voz y mensajería según necesidad, y engancharse al CRM y la mesa de ayuda que ya paga.",
     "listLabel": "Qué suele entrar en un proyecto",
     "cards": [
       {
         "title": "Automatización de soporte",
-        "description": "Cuando las mismas preguntas le comen la semana, esta es la palanca. Orquestamos conversaciones por WhatsApp, SMS, chat y voz para que respondan rápido y su gente solo entre cuando hace falta un humano.",
+        "description": "Automatice conversaciones por WhatsApp, SMS, chat y voz para bajar tiempos de respuesta y quitarse lo repetitivo de encima—su equipo entra solo cuando hace falta un humano.",
         "timeline": "Primer alcance típico: 3–10 semanas",
         "outputs": "Flujos listos para producción y derivaciones que tienen sentido",
         "artifacts": "Amarrados a mesa de ayuda / CRM, FAQs y tickets",
         "kpi": "Horas que vuelven al equipo cada semana",
         "items": [
-          "WhatsApp, SMS, mensajería y voz según dónde esté su cliente",
-          "Respuestas alineadas a políticas y base de conocimiento, no texto genérico",
+          "WhatsApp, SMS, mensajería y voz: donde esté su cliente",
+          "Respuestas alineadas a políticas y base de conocimiento",
           "Reglas de paso a agente que el equipo reconoce al instante"
         ]
       },
       {
         "title": "Recepción con IA y citas",
-        "description": "Llamadas perdidas y demoras cuestan plata. Armamos flujos que atienden lo que entra, entienden qué busca la persona y agendan o mueven citas por WhatsApp, SMS y voz, para que menos oportunidades se pierdan en el camino.",
+        "description": "Atienda consultas entrantes, califique intención y reserve o reprograme citas por WhatsApp, SMS y voz—para que no se pierdan oportunidades después de horas o en día cargado.",
         "timeline": "Primer alcance típico: 3–8 semanas",
         "outputs": "Flujos de agenda, confirmaciones, recordatorios",
         "artifacts": "Calendarios y campos de CRM que ya usa",
-        "kpi": "Menos fricción entre “me interesa” y “quedó en el calendario”",
+        "kpi": "Menos fricción entre interés y cita en el calendario",
         "items": [
-          "Cobertura fuera de horario para lo repetible, con límites que usted aprueba",
-          "Preguntas de calificación que no cambian según quién atienda",
-          "Recordatorios por SMS o WhatsApp como usted trabaja en la vida real"
+          "Cobertura fuera de horario para lo predecible, con límites que usted define",
+          "Preguntas de calificación consistentes",
+          "Recordatorios por SMS o WhatsApp alineados a su proceso real"
         ]
       },
       {
         "title": "Calificación y conversión de leads",
-        "description": "A ventas no le debería tocar triage todo el día. Capturamos leads en WhatsApp y mensajería, ordenamos quién vale la llamada y metemos datos limpios al CRM para que el tiempo se vaya a cerrar, no a arreglar Excel.",
+        "description": "Capture, califique y enrute leads al instante por WhatsApp y mensajería para que la conversión no dependa de qué tan rápido alguien alcance a responder a mano.",
         "timeline": "Primer alcance típico: 2–8 semanas",
         "outputs": "Captura, reglas de ruteo, actualización en CRM",
-        "artifacts": "Definiciones claras: qué es “calificado” y qué va a nutrición",
+        "artifacts": "Definiciones claras: calificado vs. nutrición",
         "kpi": "Más consultas que pasan a un siguiente paso concreto",
         "items": [
-          "Respuesta rápida donde ya está el comprador: WhatsApp y SMS incluidos",
-          "Campos ordenados para que el seguimiento no sea adivinanza",
-          "Ruteo acorde a territorios o equipos como usted los tiene hoy"
+          "Respuesta rápida en WhatsApp y SMS donde ya está el comprador",
+          "Campos ordenados en CRM para seguimiento sin adivinar",
+          "Ruteo acorde a territorios o equipos"
         ]
       }
     ]
   },
   "growth": {
-    "eyebrow": "DESPUÉS DEL PRIMER LOGRO",
-    "title": "Seguimos mientras los sistemas demuestran que valen la pena",
-    "intro": "Salir a producción es el día uno. Los modelos se mueven, cambia el lenguaje del cliente y salen ideas nuevas. Es normal.",
-    "body1": "Nos ocupamos del mantenimiento y los ajustes para que el rendimiento no se vaya degradando solo. Cuando los números acompañan, le ayudamos a extender a nuevos casos y canales con el mismo cuidado que el primer proyecto: probado, aburrido en el buen sentido.",
-    "body2": "Nos importa qué pasa a los tres meses, no solo el día del lanzamiento.",
-    "body3": "Así equipos medianos siguen el ritmo sin montar una fábrica interna de IA."
+    "eyebrow": "CRECIMIENTO ESTRATÉGICO",
+    "title": "Su IA, operada y ampliada por expertos",
+    "intro": "Cuando los primeros flujos demuestran valor, el tema deja de ser solo “lanzar” y pasa a ser “aprovechar”. Ahí nos enfocamos en crecimiento, no en mantenimiento genérico.",
+    "body1": "Nuestro equipo cubre mantenimiento, monitorización y ajustes para que la calidad no se vaya degradando sola. Si los resultados se sostienen, ampliamos el sistema a nuevos casos de uso y a más áreas del negocio—misma entrega disciplinada, misma mirada de calidad, pensando en que el valor se acumule.",
+    "body2": "Nos importa lo que pasa meses después del arranque, no solo la semana del encendido.",
+    "body3": "Así empresas en crecimiento aprovechan la IA sin montar una fábrica interna completa."
   },
   "model": {
     "eyebrow": "CÓMO SE CONTRATA",
     "title": "Arranque chico. Suma alcance cuando tenga sentido.",
-    "intro": "Acordamos un primer pedazo medible y un valor mensual que se pueda planear, sin medidor abierto para siempre.",
+    "intro": "Puede salir rápido a producción con un camino administrado pensado para impacto temprano: un primer alcance medible y un valor mensual que se pueda planear, sin medidor abierto para siempre.",
     "body1": "O lo operamos nosotros o formamos a su gente para el día a día. Usted decide.",
-    "body2": "Sabe qué compra en cada fase y qué significa “listo” antes de que toquemos la primera configuración.",
+    "body2": "Sabe qué compra en cada fase y qué significa “listo” antes de tocar configuración en producción.",
     "privacy": "¿No quiere cargar con el mantenimiento diario? Podemos operarlo con prácticas habituales del sector y sin cadena perpetua: si mañana quiere otro proveedor, puede."
   },
   "process": {
     "eyebrow": "CÓMO TRABAJAMOS",
-    "title": "Tres fases: conversar, acotar, lanzar… y no hacerse los sordos después.",
+    "title": "Tres fases: conversar, acotar, lanzar… y seguir con los pies en la tierra.",
     "body": "Hay una persona responsable de punta a punta. Encontramos dónde se pierde tiempo, elegimos una automatización que se pague sola temprano y la integramos con CRM, mesa de ayuda, WhatsApp, SMS: lo que sus clientes usen. Luego lanzamos, formamos y ajustamos con tickets y mensajes de verdad.",
     "steps": [
       {
@@ -148,11 +154,12 @@
     "title": "Situaciones que escuchamos seguido",
     "body": "No hace falta un call center gigante para verse moderno: hace falta automatización donde realmente alivia.",
     "items": [
-      "Soportar más volumen sin contratar cada trimestre",
-      "Dejar de perder leads porque nadie respondió a tiempo",
-      "Atender por WhatsApp, SMS, voz y mensajería sin enloquecerse con pestañas",
-      "Cubrir lo repetible por la noche sin fingir que contrató turno nocturno",
-      "Dar respuestas claras cuando el cliente pregunta, para que la confianza suba y no baje"
+      "Soporte al cliente sin contratar más agentes",
+      "Que no se pierda un lead ni una consulta",
+      "Tiempos de respuesta más cortos en WhatsApp, SMS, voz y mensajería",
+      "Cobertura 24/7 para lo rutinario—sin sumar plantilla",
+      "Respuestas acertadas en el momento del cliente para generar confianza",
+      "Respuestas consistentes en WhatsApp y mensajería aunque el equipo esté full o fuera de horario"
     ]
   },
   "proof": {
@@ -166,7 +173,7 @@
     ],
     "testimonials": [
       {
-        "quote": "Estábamos saturados de la misma pregunta por correo y por chat. DBX unió el CRM y la mensajería en un solo criterio de trabajo: por fin todos tiramos del mismo hilo.",
+        "quote": "Estábamos saturados de la misma pregunta por correo, chat y WhatsApp. DBX unió el CRM y la mensajería en un solo criterio de trabajo: por fin todos tiramos del mismo hilo.",
         "author": "Responsable de operaciones",
         "company": "Servicios profesionales (~25 personas)"
       },
@@ -180,9 +187,9 @@
   "contact": {
     "eyebrow": "SIGUIENTE PASO",
     "title": "Cuéntenos qué está pasando",
-    "body": "¿Quién atiende hoy? ¿Qué canal pesa más: WhatsApp, SMS, otro? ¿Qué herramientas ya están? Con eso alcanza en el formulario. Le devolvemos con un primer paso razonable en un día hábil.",
+    "body": "¿Quién atiende hoy al cliente? ¿Qué canal pesa más: WhatsApp, SMS, otro? ¿Qué herramientas ya están? Con eso en el formulario le respondemos en un día hábil con un siguiente paso sensato.",
     "urgency": "Cada trimestre abrimos pocos proyectos con acompañamiento serio—pregunte cómo está el calendario.",
-    "bookingNote": "¿Prefiere hablar en vivo? Reserve aquí →",
+    "bookingNote": "¿Prefiere hablar primero en vivo? Reserve 30 minutos aquí →",
     "form": {
       "name": "Nombre y apellidos",
       "email": "Correo corporativo",
@@ -213,12 +220,12 @@
     "contacts": [],
     "badges": [
       "CX e IA serias, en un tamaño que una pyme sí puede asumir",
-      "Privacidad, seguridad y calidad van en la obra, no como parche al final",
-      "Modelo mensual: lo operamos con usted o dejamos a su equipo dominándolo"
+      "Privacidad, seguridad y calidad van en la entrega, no como parche al final",
+      "Modelo mensual: lo operamos con usted o formamos a su equipo para que lo dominen"
     ]
   },
   "footer": {
-    "notice": "© 2026 DBX Solutions · Tecnología seria para equipos que no son el Fortune 500 · Orlando, FL",
+    "notice": "© 2026 DBX Solutions · Democratizar la tecnología avanzada para pymes y mercado medio · Orlando, FL",
     "warning": "",
     "linkPrivacy": "Política de privacidad",
     "linkTerms": "Términos del servicio",

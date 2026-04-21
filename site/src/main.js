@@ -94,6 +94,17 @@ function renderHero(t, labels) {
         <div class="actions">
           <a class="btn btn-primary" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${t.hero.ctaPrimary}</a>
         </div>
+        ${
+          Array.isArray(t.hero.ctaBullets) && t.hero.ctaBullets.length
+            ? `
+        <div class="hero-cta-detail">
+          ${t.hero.ctaCallIntro ? `<p class="hero-cta-intro">${t.hero.ctaCallIntro}</p>` : ''}
+          <ul class="hero-cta-bullets list-dots">
+            ${t.hero.ctaBullets.map((item) => `<li>${item}</li>`).join('')}
+          </ul>
+        </div>`
+            : ''
+        }
         <div class="value-equation">
           <div class="value-pill">
             <span>${labels.valueEquation}</span>

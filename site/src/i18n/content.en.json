@@ -13,15 +13,21 @@
     "languageToggle": "Language toggle"
   },
   "hero": {
-    "eyebrow": "AI-POWERED CX FOR GROWING BUSINESSES",
-    "headline": "DBX Solutions democratizes advanced technology for small and mid-sized businesses.",
-    "body": "We design, build, and run AI-powered customer experience for you—so you can keep up with how business moves today, without building a pricey in-house AI bench. We’ve spent 20+ years in CX and integrations; we plug automation into the helpdesk, CRM, and channels you already use, from WhatsApp and SMS to voice and web chat.",
+    "eyebrow": "AI-POWERED CX FOR SMALL & MID-SIZED BUSINESSES",
+    "headline": "Automate customer interactions and operate at the speed of today’s market—without hiring an expensive in-house AI team.",
+    "body": "DBX Solutions democratizes advanced technology for small and mid-sized businesses. We design, build, and run AI-powered customer experience solutions so you can keep pace with how business moves today—without paying high salaries for internal specialists. Serious automation shouldn’t be limited to the largest companies: we make it accessible and manageable, wired to your helpdesk, CRM, and the channels your customers already use—including WhatsApp, SMS, voice, and messaging. 20+ years of CX and integration experience, scoped for teams like yours.",
     "points": [
-      "Your team spends less time on repeat questions. Automation handles the routine stuff; humans step in when it’s the right call.",
-      "Customers get answers faster on WhatsApp, SMS, voice, and messaging. We work with your stack—we’re not here to rip it out.",
-      "You ship something real in weeks, see if it’s working, then grow from there. No endless pilot theater."
+      "Your team spends less time on repeat questions. Automation handles the routine; humans step in when it’s the right call.",
+      "Customers get answers faster on WhatsApp, SMS, voice, and messaging. We build on your stack instead of forcing a rip-and-replace.",
+      "You ship something real in weeks, measure it, then expand. No endless pilot theater."
     ],
-    "ctaPrimary": "Book a fit call (30 min)",
+    "ctaPrimary": "Book a 30-minute call to see how this would work for your business",
+    "ctaCallIntro": "On this call:",
+    "ctaBullets": [
+      "We review how you handle customer interactions today",
+      "We pinpoint what can be automated first for the fastest win",
+      "We outline how soon you can get started—with clear scope"
+    ],
     "value": {
       "equation": "Speed × Clarity × Results you can see",
       "time": "Weeks, not quarters",
@@ -57,65 +63,65 @@
   },
   "services": {
     "eyebrow": "WHAT WE BUILD WITH YOU",
-    "title": "Three ways we usually start",
-    "description": "Nothing vague here—these are concrete offers. Each one ties into WhatsApp, SMS, voice, and messaging where you need them, and hooks into the CRM and helpdesk you’re already paying for.",
+    "title": "Three practical offers",
+    "description": "Concrete outcomes—not vague consulting buckets. Each ties to WhatsApp, SMS, voice, and messaging as needed, and to the CRM and helpdesk you already pay for.",
     "listLabel": "What a project often includes",
     "cards": [
       {
         "title": "Customer Support Automation",
-        "description": "When the same questions eat your week, this is the lever. We route conversations across WhatsApp, SMS, web chat, and voice so people get answers fast, and your team only handles what actually needs a human.",
+        "description": "Automate conversations across WhatsApp, SMS, chat, and voice to cut response times and strip out repetitive work—your team steps in only when a human is really needed.",
         "timeline": "Typical first scope: 3–10 weeks",
         "outputs": "Flows ready for production, with escalation that makes sense",
         "artifacts": "Hooked to helpdesk / CRM, FAQs, and tickets",
         "kpi": "Hours back to the team every week",
         "items": [
-          "WhatsApp, SMS, messaging, and voice—use what your customers actually pick up",
-          "Answers pulled from your policies and knowledge base, not generic fluff",
-          "Rules your agents recognize so handoffs don’t feel like starting over"
+          "WhatsApp, SMS, messaging, and voice—meet customers where they are",
+          "Answers grounded in your policies and knowledge base",
+          "Handoff rules your agents recognize so nothing feels like starting from zero"
         ]
       },
       {
         "title": "AI Receptionist & Appointment Handling",
-        "description": "Missed calls and slow callbacks cost money. We set up flows that answer inbound traffic, figure out what someone needs, and book or move appointments on WhatsApp, SMS, and voice—so fewer leads quietly disappear.",
+        "description": "Handle inbound inquiries, qualify intent, and book or reschedule appointments across WhatsApp, SMS, and voice—so fewer opportunities slip away after hours or on a busy day.",
         "timeline": "Typical first scope: 3–8 weeks",
         "outputs": "Scheduling flows, confirmations, reminders",
         "artifacts": "Works with calendars and CRM fields you already rely on",
         "kpi": "Shorter path from “interested” to “on the calendar”",
         "items": [
-          "After-hours coverage for the predictable stuff—you set the guardrails",
-          "Qualification questions that stay consistent",
-          "SMS or WhatsApp nudges that match how your team actually works"
+          "After-hours coverage for predictable requests—you set the guardrails",
+          "Consistent qualification questions",
+          "SMS or WhatsApp reminders that match your real process"
         ]
       },
       {
         "title": "Lead Qualification & Conversion",
-        "description": "Sales shouldn’t live in triage. We help you grab leads on WhatsApp and messaging, sort who’s worth a call, and push clean data into the CRM so reps spend time on deals, not spreadsheet cleanup.",
+        "description": "Capture, qualify, and route leads instantly across WhatsApp and messaging so conversion isn’t limited by how fast someone can reply manually.",
         "timeline": "Typical first scope: 2–8 weeks",
         "outputs": "Capture, routing rules, CRM updates",
-        "artifacts": "Plain definitions: what counts as qualified vs. nurture",
+        "artifacts": "Plain definitions: qualified vs. nurture",
         "kpi": "More inquiries turning into a real next step",
         "items": [
-          "Quick replies where buyers already are—WhatsApp and SMS included",
-          "Structured fields so follow-up isn’t a guessing game",
-          "Routing that matches how your territories or pods actually split work"
+          "Fast replies on WhatsApp and SMS where buyers already are",
+          "Structured CRM fields so follow-up isn’t guesswork",
+          "Routing that matches your territories or teams"
         ]
       }
     ]
   },
   "growth": {
-    "eyebrow": "AFTER THE FIRST WIN",
-    "title": "We stick around while your AI systems earn their keep",
-    "intro": "Going live is day one. Models drift, customer language shifts, and new ideas pop up. That’s normal.",
-    "body1": "We handle the maintenance and tuning so things don’t slowly rot. When the numbers look good, we help you stretch into new use cases and channels—the same way we’d build the first one: careful, tested, boring in the right way.",
-    "body2": "We care what happens three months in, not just launch week.",
-    "body3": "That’s how smaller teams keep up without hiring a whole internal AI org."
+    "eyebrow": "STRATEGIC GROWTH",
+    "title": "Your AI, managed and expanded by experts",
+    "intro": "Once your first workflows prove value, the work shifts from “launch” to “leverage.” That’s where we focus on growth—not generic upkeep.",
+    "body1": "Our team runs maintenance, monitoring, and tuning so quality doesn’t quietly slide. As results hold, we expand your system into new use cases and more of your business—same disciplined delivery, same QA mindset, built to compound over time.",
+    "body2": "We stay accountable for outcomes months after go-live, not just the week you flip the switch.",
+    "body3": "That’s how growing companies scale the upside of AI without building a full internal practice."
   },
   "model": {
     "eyebrow": "HOW ENGAGEMENTS ARE PRICED",
     "title": "Start small. Add scope when it’s justified.",
-    "intro": "We’ll agree on a first slice you can measure, with a monthly number you can plan around—no “we’ll figure it out later” meter running forever.",
+    "intro": "Get up and running quickly with a managed path designed for early impact: a first slice you can measure, plus a monthly number you can plan around—no open-ended meter.",
     "body1": "Either we run it for you, or we train your people to run it. Your call.",
-    "body2": "You know what you’re buying each phase and what finished looks like before we write the first line of config.",
+    "body2": "You know what you’re buying each phase and what “done” looks like before we touch production config.",
     "privacy": "Don’t want to own day-to-day upkeep? We can run it under standard industry practice, and you’re not chained to us—switch vendors whenever you need to."
   },
   "process": {
@@ -148,11 +154,12 @@
     "title": "Scenarios we hear a lot",
     "body": "You don’t need a call center the size of a stadium to feel modern—you need the right automation in the right spots.",
     "items": [
-      "Handle support volume without adding headcount every quarter",
-      "Stop losing leads because nobody replied fast enough",
-      "Meet people on WhatsApp, SMS, voice, and messaging without juggling five tabs",
-      "Cover routine requests overnight without pretending you hired a night shift",
-      "Give straight answers when customers ask, so trust builds instead of eroding"
+      "Customer support without hiring more agents",
+      "Never miss a lead or inquiry",
+      "Faster response times across WhatsApp, SMS, voice, and messaging",
+      "24/7 coverage for routine requests—without adding headcount",
+      "Give customers accurate answers on their schedule and build trust over time",
+      "Consistent, accurate answers on WhatsApp and messaging—even when your team is slammed or off the clock"
     ]
   },
   "proof": {
@@ -166,7 +173,7 @@
     ],
     "testimonials": [
       {
-        "quote": "We were drowning in repeat questions on email and chat. DBX connected our CRM and messaging in one flow—the team finally uses one playbook.",
+        "quote": "We were drowning in repeat questions on email, chat, and WhatsApp. DBX connected our CRM and messaging in one flow—the team finally uses one playbook.",
         "author": "Operations Manager",
         "company": "Professional services (~25 staff)"
       },
@@ -180,9 +187,9 @@
   "contact": {
     "eyebrow": "NEXT STEP",
     "title": "Tell us what’s going on",
-    "body": "Who answers the phone today? Which channels matter—WhatsApp, SMS, something else? What tools are already in the mix? Drop that in the form. We’ll suggest a sensible first move, and we’ll get back to you within a business day.",
+    "body": "Who answers customers today? Which channels matter most—WhatsApp, SMS, something else? What tools are already in play? Send that in the form and we’ll reply within one business day with a sensible next step.",
     "urgency": "We only take a handful of deep-dive projects each quarter—ask us what the calendar looks like.",
-    "bookingNote": "Rather talk live? Grab a slot →",
+    "bookingNote": "Prefer to talk live first? Grab a 30-minute slot →",
     "form": {
       "name": "Full name",
       "email": "Work email",
@@ -213,12 +220,12 @@
     "contacts": [],
     "badges": [
       "Serious CX and AI, sized for teams that aren’t Fortune 500",
-      "Privacy, security, and QA treated as part of the build, not an afterthought",
-      "Monthly model: we run it with you, or we get your crew confident running it"
+      "Privacy, security, and QA baked into delivery—not bolted on later",
+      "Monthly model: we run it with you, or we train your team to run it"
     ]
   },
   "footer": {
-    "notice": "© 2026 DBX Solutions · Making advanced tech workable for smaller teams · Orlando, FL",
+    "notice": "© 2026 DBX Solutions · Democratizing advanced technology for SMBs & mid-market · Orlando, FL",
     "warning": "",
     "linkPrivacy": "Privacy Policy",
     "linkTerms": "Terms of Service",
