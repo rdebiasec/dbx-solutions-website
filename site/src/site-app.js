@@ -21,76 +21,124 @@ const nav = [
   { page: 'contactPage', path: 'contact/', label: 'Contact' }
 ]
 
+const legalLinks = [
+  { path: 'privacy-policy/', label: 'Privacy Policy' },
+  { path: 'terms-of-service/', label: 'Terms of Service' },
+  { path: 'sms-terms/', label: 'SMS Terms' },
+  { path: 'data-handling-notice/', label: 'Data Handling Notice' },
+  { path: 'responsible-ai-policy/', label: 'Responsible AI Policy' },
+  { path: 'security-roadmap/', label: 'Security Roadmap' }
+]
+
 const valuePoints = [
-  'Respond faster to customers',
-  'Reduce repetitive manual work',
-  'Capture and qualify more leads',
-  'Connect conversations with business tools'
+  'Support answers with approved context',
+  'Lead intake across WhatsApp, chat, SMS, forms, and email',
+  'CRM, calendar, and team follow-up workflows',
+  'Human review and escalation when it matters'
 ]
 
 const problems = [
-  ['Slow Response Times', 'Customers expect quick answers. When teams are busy, delayed responses can lead to missed opportunities and lower satisfaction.'],
-  ['Repetitive Customer Questions', 'Teams spend valuable time answering the same questions across email, chat, forms, and other customer communication channels.'],
-  ['Missed Leads and Follow-Ups', 'Without automated qualification and routing, interested prospects can fall through the cracks before the team responds.'],
-  ['Disconnected Tools', 'Customer conversations, CRM data, support requests, and internal workflows are often spread across systems that do not work smoothly together.'],
-  ['Limited Team Capacity', 'Growing businesses need better customer experience, but hiring more people is not always the fastest or most efficient solution.']
+  ['Slow responses', 'Customers move on when questions sit unanswered during busy hours or after closing.'],
+  ['Repetitive questions', 'Your team spends time repeating answers that could be handled consistently.'],
+  ['Missed leads', 'High-intent inquiries lose momentum when follow-up is delayed or incomplete.'],
+  ['Disconnected tools', 'Conversation details often stay separate from the CRM, calendar, support desk, or team workflow.'],
+  ['Limited team capacity', 'Growing demand creates more customer conversations than a lean team can manage manually.']
 ]
 
-const solutionPillars = [
-  ['Conversational AI', 'AI assistants that answer questions, guide customers, collect information, and support conversations across digital channels.'],
-  ['Customer Experience Automation', 'Automated flows that improve speed, consistency, and service quality across common customer interactions.'],
-  ['Workflow Integration', 'Connected systems that move customer information between tools, teams, and processes more efficiently.'],
-  ['AI Strategy and Implementation', 'Practical guidance and implementation support to help your business adopt AI with clarity, control, and measurable purpose.']
+const solutionArchitecture = [
+  {
+    title: 'Customer Channels',
+    body: 'Customers reach out through the channels they already use.',
+    items: ['WhatsApp', 'Web chat', 'SMS', 'Forms', 'Email']
+  },
+  {
+    title: 'DBX AI Assistant',
+    body: 'The assistant answers common questions, qualifies intent, collects details, and routes the next step.',
+    items: ['Answer', 'Qualify', 'Collect', 'Route']
+  },
+  {
+    title: 'Business Systems',
+    body: 'Useful customer context moves into the tools your team uses to manage work.',
+    items: ['CRM', 'Calendar', 'Support desk', 'Team notifications']
+  },
+  {
+    title: 'Human Team',
+    body: 'People stay in control for follow-up, exceptions, decisions, and customer relationships.',
+    items: ['Review', 'Follow up', 'Close', 'Support']
+  }
 ]
 
 const services = [
   {
     title: 'AI Customer Assistants',
-    body: 'Create intelligent assistants that answer common questions, guide customers, collect information, and support your team across digital channels.',
-    bestFor: 'Businesses that want faster customer responses and more consistent communication.',
-    outcome: 'Reduce repetitive inquiries while improving the customer experience.'
+    icon: '01',
+    core: true,
+    badge: 'Priority focus',
+    body: 'Customer-facing assistants for WhatsApp, web chat, SMS, forms, and email that answer common questions and guide people to the right next step.',
+    bestFor: 'Businesses that need dependable first-response coverage without adding complexity.',
+    outcome: 'Clearer conversations and faster next steps, with handoff paths when people need to step in.',
+    learnHref: 'services/'
   },
   {
     title: 'Lead Qualification Automation',
-    body: 'Use AI-powered conversation flows to capture prospect details, qualify interest, ask the right questions, and route leads to the right next step.',
-    bestFor: 'Businesses that receive inquiries through forms, chat, email, social channels, or booking requests.',
-    outcome: 'Improve lead response speed and reduce missed sales opportunities.'
+    icon: '02',
+    core: true,
+    badge: 'Priority focus',
+    body: 'Structured intake flows that ask the right questions, capture buyer details, qualify fit, and route sales-ready leads with useful context.',
+    bestFor: 'Teams receiving inquiries through WhatsApp, chat, forms, email, or booking requests.',
+    outcome: 'More organized follow-up and cleaner information for sales conversations.',
+    learnHref: 'solutions/'
   },
   {
     title: 'Customer Support Automation',
-    body: 'Automate common support interactions, frequently asked questions, intake forms, ticket routing, and customer updates.',
-    bestFor: 'Teams that spend too much time on repetitive support requests.',
-    outcome: 'Lower manual workload while improving support consistency.'
+    icon: '03',
+    body: 'Handle common questions, support intake, ticket routing, status updates, and escalation paths for routine customer needs.',
+    bestFor: 'Support teams spending too much time on repeat requests and intake triage.',
+    outcome: 'More consistent support coverage while the team focuses on higher-value issues.',
+    learnHref: 'services/'
   },
   {
     title: 'CRM and Workflow Integration',
-    body: 'Connect customer conversations with CRM records, internal workflows, notifications, and business systems so teams have better context and fewer manual steps.',
+    icon: '04',
+    body: 'Connect customer conversations with CRM records, calendars, support desks, internal notifications, and operational workflows.',
     bestFor: 'Businesses using multiple tools that do not communicate effectively.',
-    outcome: 'Create smoother handoffs and cleaner operational processes.'
+    outcome: 'Smoother handoffs, fewer manual updates, and better visibility into customer activity.',
+    learnHref: 'solutions/'
   },
   {
     title: 'AI Strategy and Roadmapping',
-    body: 'Assess your current customer journey and identify practical AI opportunities that align with your business goals, tools, team, and budget.',
-    bestFor: 'Businesses that want to adopt AI but need a clear plan before implementation.',
-    outcome: 'Move from AI uncertainty to a focused, actionable roadmap.'
+    icon: '05',
+    body: 'Review your customer journey, tools, team capacity, and operational goals to identify the best practical AI starting points.',
+    bestFor: 'Businesses that want AI clarity before investing in implementation.',
+    outcome: 'A focused roadmap tied to customer experience and operational value.',
+    learnHref: 'process/'
   },
   {
     title: 'Optimization and Continuous Improvement',
-    body: 'Review performance, improve conversation flows, refine automations, and adapt systems as customer needs and business processes evolve.',
-    bestFor: 'Businesses that want AI systems to improve over time.',
-    outcome: 'Keep automation useful, accurate, and aligned with business growth.'
+    icon: '06',
+    core: true,
+    badge: 'Managed partner',
+    body: 'Review real conversations, improve responses, tune workflows, and expand useful improvements as your business changes.',
+    bestFor: 'Businesses that want AI systems managed beyond launch.',
+    outcome: 'AI assistants stay accurate, useful, and aligned with customer behavior.',
+    learnHref: '#managed-ai-operations'
   }
 ]
 
 const benefits = [
-  ['Faster Response Times', 'Help customers get answers quickly, even when your team is busy or outside normal business hours.'],
-  ['Fewer Missed Opportunities', 'Capture, qualify, and route inquiries before prospects lose interest or move on.'],
-  ['Reduced Manual Workload', 'Automate repetitive questions, intake steps, and routine follow-ups so your team can focus on higher-value work.'],
-  ['Better Customer Satisfaction', 'Create a more consistent and responsive experience across customer touchpoints.'],
-  ['More Consistent Communication', 'Ensure customers receive clear, accurate, and brand-aligned responses throughout their journey.'],
-  ['Scalable Support', 'Handle more conversations and requests without immediately increasing headcount.'],
-  ['Improved Operational Visibility', 'Connect conversations and workflows so teams have better context and fewer information gaps.'],
-  ['Practical AI Adoption', 'Use AI where it supports real business outcomes instead of chasing trends or adding unnecessary tools.']
+  ['Faster response times', 'Give customers a useful answer or next step while intent is still high.'],
+  ['Fewer missed opportunities', 'Capture and route inquiries before prospects lose interest or choose another provider.'],
+  ['Reduced manual workload', 'Move repetitive questions, intake, and routing out of your team’s daily queue.'],
+  ['More consistent customer communication', 'Keep answers clear, approved, and aligned across channels and team handoffs.'],
+  ['Better operational visibility', 'Turn conversations into structured information your team can review and act on.'],
+  ['Scalable support without immediate headcount growth', 'Handle more routine conversations while your team focuses on higher-value work.']
+]
+
+const managedOps = [
+  ['Conversation quality review', 'Review real customer interactions to spot unclear answers, missed intent, and handoff improvements.'],
+  ['Workflow monitoring', 'Track where workflows help, stall, or need adjustment as volume and customer behavior change.'],
+  ['AI response improvement', 'Tune approved responses so assistants stay accurate, useful, and aligned with your business.'],
+  ['Automation optimization', 'Refine intake steps, routing rules, and follow-up triggers based on what customers actually do.']
 ]
 
 const processSteps = [
@@ -117,34 +165,32 @@ const processSteps = [
 ]
 
 const industries = [
-  ['Professional Services', 'Automate intake questions, qualify inquiries, route prospects, and improve response times for consulting, legal, financial, and advisory firms.'],
-  ['Healthcare and Wellness Clinics', 'Support appointment inquiries, FAQs, intake guidance, service information, and patient communication workflows.'],
-  ['Real Estate Teams', 'Qualify buyer and seller inquiries, answer property-related questions, route leads, and support faster follow-up.'],
-  ['Local Service Businesses', 'Automate quote requests, booking inquiries, service questions, and customer follow-ups for businesses with high call or message volume.'],
-  ['E-Commerce Businesses', 'Support product questions, order-related inquiries, return guidance, and customer service automation.'],
-  ['Education and Training Providers', 'Answer program questions, qualify student or client interest, guide enrollment inquiries, and automate follow-up.'],
-  ['Financial and Advisory Services', 'Improve inquiry handling, appointment requests, client intake, and customer communication while maintaining a professional experience.']
+  { priority: true, title: 'Professional services', body: 'Automate intake, qualify inquiries, route prospects, and improve response times for consulting, legal, financial, and advisory teams.' },
+  { priority: true, title: 'Healthcare and wellness clinics', body: 'Support appointment inquiries, FAQs, intake guidance, service information, and patient communication workflows.' },
+  { priority: true, title: 'Real estate teams', body: 'Qualify buyer and seller inquiries, answer common property questions, route leads, and support faster follow-up.' },
+  { priority: true, title: 'Local service businesses', body: 'Automate quote requests, booking inquiries, service questions, and customer follow-ups for high-message-volume teams.' },
+  { title: 'E-commerce', body: 'Support product questions, order-related inquiries, return guidance, and routine customer service requests.' },
+  { title: 'Education and training', body: 'Answer program questions, qualify student or client interest, guide enrollment inquiries, and automate follow-up.' },
+  { title: 'Financial and advisory services', body: 'Improve inquiry handling, appointment requests, client intake, and customer communication with human oversight.' }
 ]
 
 const trustPoints = [
-  ['SMB-Focused', 'Solutions are designed for growing businesses that need practical impact without enterprise-level complexity.'],
-  ['Business-First Approach', 'We start with your customer journey, operational challenges, and business goals before recommending technology.'],
-  ['Human Oversight', 'AI is designed to support your team, not replace judgment where human review, escalation, or expertise is needed.'],
-  ['Integration-Aware', 'We consider how AI fits with your existing tools, workflows, CRM, and customer communication channels.'],
-  ['Outcome-Oriented', 'Every solution is tied to a business purpose such as faster response, better support, improved lead handling, or reduced manual work.'],
-  ['Built to Improve', 'AI systems should evolve. We help refine flows, responses, and automations as your business learns what works best.']
+  ['SMB-focused implementation', 'Solutions are designed for growing businesses that need practical value without enterprise-level complexity.'],
+  ['Business-first design', 'We start with customer journeys, operational challenges, and business goals before recommending technology.'],
+  ['Human-supervised AI', 'AI supports your team while escalation, review, and judgment remain available when needed.'],
+  ['Integration-aware solutions', 'We consider how AI fits with your existing channels, workflows, CRM, and customer communication tools.'],
+  ['Outcome-oriented delivery', 'Every solution connects to a business outcome such as better lead handling, support consistency, or reduced manual work.'],
+  ['Continuous improvement', 'We help refine flows, responses, and automations as your business learns what works best.']
 ]
 
 const faq = [
-  ['What does DBX Solutions do?', 'DBX Solutions helps small and mid-sized businesses use AI to improve customer experience, automate repetitive interactions, qualify leads, support customers, and streamline workflows.'],
-  ['Is this only for large companies?', 'No. DBX Solutions is focused on practical AI solutions for SMBs. The goal is to help growing businesses use AI in ways that are useful, manageable, and aligned with their operations.'],
-  ['Can AI work with our existing tools?', 'In many cases, yes. DBX Solutions can help connect AI-powered customer interactions with tools such as CRMs, forms, support systems, scheduling platforms, and workflow tools depending on your current setup.'],
-  ['Do we need technical knowledge to use these solutions?', 'No. DBX Solutions handles the strategy, design, implementation, and optimization. The goal is to make AI easier for your business to adopt and manage.'],
-  ['Can humans still review or take over conversations?', 'Yes. Human oversight is an important part of responsible AI implementation. AI can support common interactions while allowing your team to review, respond, or take over when needed.'],
-  ['How long does implementation take?', 'Timing depends on the complexity of the solution, the number of workflows, and the tools involved. A focused implementation can often begin with a clearly defined use case, then expand over time.'],
-  ['What types of customer interactions can be automated?', 'Common examples include FAQs, lead qualification, appointment requests, intake questions, quote requests, support triage, follow-ups, and routing inquiries to the right person or system.'],
-  ['Will AI replace our customer service team?', 'The goal is not to replace your team. The goal is to reduce repetitive work, improve response speed, and help your team focus on higher-value conversations.'],
-  ['How do we get started?', 'Start with a consultation. DBX Solutions will review your business goals, customer journey, current tools, and operational challenges to identify the best AI opportunities.']
+  ['What does DBX Solutions do?', 'DBX helps SMBs design, connect, monitor, and improve AI-assisted customer conversation systems around real business workflows.'],
+  ['Can this work with WhatsApp?', 'Yes. WhatsApp can be part of the channel mix along with web chat, SMS, forms, and email, depending on your setup.'],
+  ['Can humans take over conversations?', 'Yes. DBX designs escalation paths so your team can review, respond, or take over when a conversation needs human judgment.'],
+  ['How long does implementation take?', 'Timing depends on scope, channels, and integrations. Many businesses start with one focused use case, then expand after launch.'],
+  ['How are AI responses controlled?', 'Assistants are built around approved business information, clear rules, escalation paths, and ongoing quality review.'],
+  ['Can DBX connect with our existing tools?', 'In many cases, yes. DBX can connect conversations with CRMs, calendars, support systems, forms, notifications, and workflow tools.'],
+  ['Will AI replace our customer service team?', 'No. The goal is to support your team, reduce repetitive work, and keep people focused on higher-value customer needs.']
 ]
 
 const pages = {
@@ -154,37 +200,56 @@ const pages = {
       'DBX Solutions helps small and mid-sized businesses automate customer conversations, improve response times, qualify leads, and streamline operations with practical AI-powered solutions.',
     hero: {
       eyebrow: 'AI-Powered Customer Experience',
-      headline: 'AI-Powered Customer Experience for Growing SMBs',
+      headline: 'Never miss a customer conversation again.',
       body:
-        'DBX Solutions helps small and mid-sized businesses automate customer conversations, improve response times, and create smarter customer journeys without adding operational complexity.',
+        'DBX Solutions helps growing SMBs respond faster, qualify leads, automate repetitive conversations, and connect customer interactions with the tools your team already uses.',
       primary: 'Book a Consultation',
-      secondary: 'Explore Solutions',
-      secondaryHref: 'solutions/',
-      microcopy: 'Practical AI solutions designed for real business operations, not generic automation.'
+      secondary: 'See How It Works',
+      secondaryHref: '#process',
+      microcopy: 'Practical AI for customer support, lead engagement, workflow automation, and smarter business operations.'
     },
     blocks: [
       { type: 'problem' },
       { type: 'solution' },
       { type: 'services' },
-      { type: 'benefits' },
-      { type: 'process' },
-      { type: 'industries' },
-      { type: 'trust' },
       {
         type: 'cta',
-        title: 'Ready to improve your customer experience with practical AI?',
+        title: 'Explore the first customer workflow worth improving.',
         body:
-          'Let’s identify where automation can help your business respond faster, serve customers better, and operate more efficiently.',
-        note: 'No generic AI pitch. Just a focused conversation about your business, your customer journey, and where AI can create real value.'
+          'We can help identify where customer response, intake, qualification, or follow-up should become clearer first.',
+        note: 'A practical consultation keeps the first implementation focused.',
+        secondary: 'See How It Works',
+        secondaryHref: '#process'
       },
+      { type: 'managedOps' },
+      {
+        type: 'cta',
+        title: 'Keep your AI assistant useful after launch.',
+        body:
+          'Managed AI Operations gives your business ongoing review, tuning, and improvement as conversations and workflows evolve.',
+        note: 'AI works best when it is monitored, measured, and improved.'
+      },
+      { type: 'benefits' },
+      { type: 'process' },
+      {
+        type: 'cta',
+        title: 'Map your first AI workflow with DBX.',
+        body:
+          'Bring your current customer channels, common questions, and follow-up process. We will help turn them into a practical implementation path.',
+        note: 'Guided adoption makes AI feel lower-risk and easier to manage.',
+        secondary: 'Start With a Practical AI Consultation',
+        secondaryHref: 'CALENDAR_URL'
+      },
+      { type: 'industries' },
+      { type: 'trust' },
       { type: 'faq' },
       {
         type: 'cta',
         final: true,
-        title: 'Build a smarter customer experience without overwhelming your team.',
+        title: 'Start with a practical AI consultation.',
         body:
-          'DBX Solutions helps SMBs use AI in practical, useful, and scalable ways. Start with a focused conversation and discover where automation can create real value for your business.',
-        note: 'Designed for growing businesses that want better customer experience, smarter workflows, and practical AI implementation.'
+          'DBX Solutions helps SMBs improve customer conversations, qualify leads, automate repetitive work, and connect AI with real business operations.',
+        note: 'Designed for growing businesses that want clearer customer communication and practical AI implementation.'
       }
     ]
   },
@@ -427,24 +492,44 @@ function renderHeader(pageKey) {
 }
 
 function renderWorkflowVisual() {
-  const steps = ['Customer message', 'AI assistant', 'Workflow automation', 'CRM / team follow-up']
+  const steps = [
+    ['Customer message', 'WhatsApp, chat, SMS, form, or email inquiry arrives.'],
+    ['DBX AI Assistant', 'Qualifies, answers, collects details, and routes.'],
+    ['Workflow automation', 'Creates the next step in your business process.'],
+    ['CRM or team follow-up', 'Your team gets context to close, support, or review.']
+  ]
   return `
     <aside class="workflow-visual" aria-label="Customer communication workflow visualization">
       <div class="orbit-glow"></div>
+      <div class="visual-kicker">Customer conversations connected to business operations</div>
+      <div class="channel-stack" aria-hidden="true">
+        <span>WhatsApp</span>
+        <span>Web chat</span>
+        <span>SMS</span>
+      </div>
       <div class="message-card customer">
         <span>Incoming</span>
-        <strong>“Can I get pricing and availability?”</strong>
+        <strong>“Can I get pricing and availability on WhatsApp?”</strong>
       </div>
       <div class="ai-core">
-        <span>DBX AI</span>
+        <span>DBX AI Assistant</span>
         <strong>Qualify, answer, route</strong>
+      </div>
+      <div class="message-card workflow">
+        <span>Automation</span>
+        <strong>CRM update, booking step, or support route</strong>
       </div>
       <div class="message-card team">
         <span>Team handoff</span>
-        <strong>Lead summary sent with next step</strong>
+        <strong>Lead summary sent with owner and next step</strong>
+      </div>
+      <div class="system-stack" aria-hidden="true">
+        <span>CRM</span>
+        <span>Calendar</span>
+        <span>Team alerts</span>
       </div>
       <div class="workflow-line">
-        ${steps.map((step, index) => `<div><b>${index + 1}</b><span>${step}</span></div>`).join('')}
+        ${steps.map(([title, body], index) => `<div><b>${index + 1}</b><strong>${title}</strong><span>${body}</span></div>`).join('')}
       </div>
     </aside>
   `
@@ -510,8 +595,8 @@ function renderProblem() {
     <section id="challenge">
       ${sectionHeading(
         'The Challenge',
-        'Customer expectations are rising. Manual processes are slowing businesses down.',
-        'Many growing businesses rely on small teams, disconnected tools, and manual follow-ups to manage customer conversations. As demand increases, response times slow down, leads get missed, and teams spend too much time on repetitive tasks.'
+        'Customer demand grows faster than manual follow-up can keep up.',
+        'For many SMBs, the issue is not effort. It is that conversations, customer details, and next steps are spread across busy people and disconnected tools.'
       )}
       ${renderSimpleCards(problems)}
     </section>
@@ -520,16 +605,30 @@ function renderProblem() {
 
 function renderSolution() {
   return `
-    <section id="solutions" class="split-section">
+    <section id="solutions" class="solution-section">
       <div>
         ${sectionHeading(
           'The Solution',
-          'Smarter customer conversations. Simpler business operations.',
-          'DBX Solutions designs and implements AI-powered customer experience systems that help businesses respond faster, support customers more consistently, and streamline the way work moves across teams and tools.'
+          'Customer experience automation connected to real business operations.',
+        'DBX Solutions designs customer conversation systems that collect the right information, trigger the right workflow, and give your team useful context.'
         )}
-        <p class="section-note">Instead of adding more complexity, we help your business use AI where it creates real operational value: customer communication, lead qualification, support automation, workflow integration, and process improvement.</p>
+        <p class="section-note">The result is a practical bridge between customer communication and the work your team already needs to do.</p>
       </div>
-      ${renderSimpleCards(solutionPillars, 'pillar-grid')}
+      <div class="architecture-flow" aria-label="DBX customer experience automation architecture">
+        ${solutionArchitecture
+          .map(
+            (layer, index) => `
+              <article class="architecture-card">
+                <span class="card-index">${String(index + 1).padStart(2, '0')}</span>
+                <div>
+                  <h3>${layer.title}</h3>
+                  <p>${layer.body}</p>
+                  <ul>${layer.items.map((item) => `<li>${item}</li>`).join('')}</ul>
+                </div>
+              </article>`
+          )
+          .join('')}
+      </div>
     </section>
   `
 }
@@ -540,25 +639,40 @@ function renderServices(full = false) {
       ${sectionHeading(
         'Services',
         'AI solutions designed around your customer journey',
-        'Every business has different customer touchpoints, tools, and operational challenges. DBX Solutions helps identify where AI can make the greatest impact, then designs solutions that fit your workflows, team capacity, and business goals.'
+        'Each service starts with a clear operational need, then turns it into a customer-facing workflow your team can manage.'
       )}
       <div class="services-grid">
         ${services
           .map(
             (service, index) => `
-              <article class="service-card">
-                <span class="card-index">${String(index + 1).padStart(2, '0')}</span>
+              <article class="service-card ${service.core ? 'service-card-core' : ''}">
+                <span class="service-icon" aria-hidden="true">${service.icon || String(index + 1).padStart(2, '0')}</span>
+                ${service.badge ? `<span class="service-badge">${service.badge}</span>` : ''}
                 <h3>${service.title}</h3>
                 <p>${service.body}</p>
                 <div class="service-meta">
                   <div><strong>Best for</strong><span>${service.bestFor}</span></div>
                   <div><strong>Business outcome</strong><span>${service.outcome}</span></div>
                 </div>
+                ${service.learnHref ? `<a class="learn-link" href="${route(service.learnHref)}">Explore service</a>` : ''}
               </article>`
           )
           .join('')}
       </div>
-      ${full ? '' : `<div class="section-actions">${renderActions('Book a Consultation', 'View All Services', 'services/')}</div>`}
+      ${full ? '' : `<div class="section-actions">${renderActions('Book a Consultation', 'Explore Solutions', 'solutions/')}</div>`}
+    </section>
+  `
+}
+
+function renderManagedOps() {
+  return `
+    <section id="managed-ai-operations" class="managed-section">
+      ${sectionHeading(
+        'Managed AI Operations',
+        'Keep AI useful as your business changes.',
+        'AI systems require ongoing review, tuning, monitoring, and refinement. DBX helps keep assistants accurate, useful, and aligned with evolving workflows and customer needs.'
+      )}
+      ${renderSimpleCards(managedOps, 'managed-grid')}
     </section>
   `
 }
@@ -568,8 +682,8 @@ function renderBenefits() {
     <section id="benefits">
       ${sectionHeading(
         'Business Impact',
-        'Built to improve customer experience without overwhelming your team',
-        'AI should make business operations easier, not more complicated. DBX Solutions focuses on practical improvements that help teams work faster, respond better, and create a more consistent experience for customers.'
+        'Operational improvements your team and customers can feel.',
+        'DBX focuses on business outcomes that make customer communication clearer, follow-up easier, and support more scalable.'
       )}
       ${renderSimpleCards(benefits, 'benefit-grid')}
     </section>
@@ -582,7 +696,7 @@ function renderProcess() {
       ${sectionHeading(
         'Our Process',
         'A simple path from AI idea to business impact',
-        'DBX Solutions uses a practical implementation process designed to understand your business first, then build AI-powered customer experience solutions that fit your operations.'
+        'DBX guides each project through a clear, low-risk process that starts with your customer journey and ends with ongoing operational improvement.'
       )}
       <div class="process-track">
         ${processSteps
@@ -602,14 +716,35 @@ function renderProcess() {
 }
 
 function renderIndustries(full = false) {
+  const priorityIndustries = industries.filter((industry) => industry.priority)
+  const additionalIndustries = industries.filter((industry) => !industry.priority)
+  const industryCards = (items) =>
+    items
+      .map(
+        (industry, index) => `
+          <article class="content-card ${industry.priority ? 'priority-card' : ''}">
+            <span class="card-index">${String(index + 1).padStart(2, '0')}</span>
+            <h3>${industry.title}</h3>
+            <p>${industry.body}</p>
+          </article>`
+      )
+      .join('')
+
   return `
     <section id="industries">
       ${sectionHeading(
-        'Use Cases',
-        'AI customer experience solutions for service-driven businesses',
-        'DBX Solutions helps SMBs across industries improve how they communicate with customers, manage inquiries, and automate repetitive interactions.'
+        'Industries',
+        'Focused on SMB sectors where conversations drive revenue and service quality.',
+        'DBX is especially useful for businesses that depend on fast inquiry handling, clear intake, reliable follow-up, and repeatable customer support.'
       )}
-      ${renderSimpleCards(industries, 'industry-grid')}
+      <div class="industry-group">
+        <h3>High-priority SMB sectors</h3>
+        <div class="industry-grid priority-grid">${industryCards(priorityIndustries)}</div>
+      </div>
+      <div class="industry-group additional-group">
+        <h3>Additional sectors</h3>
+        <div class="industry-grid additional-grid">${industryCards(additionalIndustries)}</div>
+      </div>
       ${full ? '' : `<div class="section-actions">${renderActions('Book a Consultation', 'Explore Industries', 'industries/')}</div>`}
     </section>
   `
@@ -620,8 +755,8 @@ function renderTrust() {
     <section id="trust" class="trust-section">
       ${sectionHeading(
         'Why DBX Solutions',
-        'Practical AI implementation with a human-centered approach',
-        'Successful AI adoption is not just about technology. It requires clear strategy, thoughtful design, reliable implementation, and ongoing improvement.'
+        'A practical partner for customer experience systems.',
+        'We do not just launch AI assistants. We design, connect, monitor, and improve customer experience systems around your real business operations.'
       )}
       ${renderSimpleCards(trustPoints, 'trust-grid')}
     </section>
@@ -648,12 +783,14 @@ function renderFaq() {
 }
 
 function renderCta(block) {
+  const secondary = block.secondary || 'Explore Solutions'
+  const secondaryHref = block.secondaryHref || 'solutions/'
   return `
     <section class="cta-panel ${block.final ? 'final-cta' : ''}">
       <span class="eyebrow">${block.final ? 'Next Step' : 'Start Practical'}</span>
       <h2>${block.title}</h2>
       <p>${block.body}</p>
-      ${renderActions('Book a Consultation', 'Contact Us', 'contact/')}
+      ${renderActions(block.final ? 'Start With a Practical AI Consultation' : 'Book a Consultation', secondary, secondaryHref)}
       <p class="cta-note">${block.note}</p>
     </section>
   `
@@ -764,6 +901,7 @@ function renderBlock(block) {
   if (block.type === 'problem') return renderProblem()
   if (block.type === 'solution') return renderSolution()
   if (block.type === 'services') return renderServices(block.full)
+  if (block.type === 'managedOps') return renderManagedOps()
   if (block.type === 'benefits') return renderBenefits()
   if (block.type === 'process') return renderProcess()
   if (block.type === 'industries') return renderIndustries(block.full)
@@ -783,17 +921,19 @@ function renderFooter() {
     <footer>
       <div>
         <a href="${href('')}" class="footer-logo"><img src="${href('logo.png')}" alt="DBX Solutions" /></a>
-        <p>DBX Solutions helps small and mid-sized businesses improve customer experience, automate repetitive interactions, and streamline operations with practical AI-powered solutions.</p>
-        <strong>Practical AI for better customer experience and smarter business operations.</strong>
+        <p>DBX Solutions helps small and mid-sized businesses turn customer conversations into clearer support, qualified leads, and connected follow-up workflows.</p>
+        <strong>Practical AI for SMB customer experience and operations.</strong>
       </div>
       <nav aria-label="Footer navigation">
         ${nav.map((item) => `<a href="${href(item.path)}">${item.label}</a>`).join('')}
-        <a href="${href('privacy-policy/')}">Privacy Policy</a>
-        <a href="${href('terms-of-service/')}">Terms of Service</a>
+        <span class="footer-heading">Legal</span>
+        ${legalLinks.map((item) => `<a href="${href(item.path)}">${item.label}</a>`).join('')}
       </nav>
       <div class="footer-cta">
         <a class="btn btn-primary" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">Book a Consultation</a>
         <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>
+        <a href="https://www.linkedin.com/in/ricardo-de-biase" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <span>Serving SMBs remotely across the U.S. and Latin America.</span>
       </div>
     </footer>
   `
@@ -841,6 +981,7 @@ export function mountPage(pageKey) {
         ${page.blocks.map(renderBlock).join('')}
       </main>
       ${renderFooter()}
+      <a class="mobile-sticky-cta" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">Book a Consultation</a>
     </div>
   `
   app.innerHTML = translateHtml(html, locale)
