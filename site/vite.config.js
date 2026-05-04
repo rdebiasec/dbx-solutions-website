@@ -20,6 +20,17 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'index.html'),
+          solutions: resolve(__dirname, 'solutions/index.html'),
+          services: resolve(__dirname, 'services/index.html'),
+          industries: resolve(__dirname, 'industries/index.html'),
+          security: resolve(__dirname, 'security/index.html'),
+          packages: resolve(__dirname, 'packages/index.html'),
+          process: resolve(__dirname, 'process/index.html'),
+          about: resolve(__dirname, 'about/index.html'),
+          contact: resolve(__dirname, 'contact/index.html'),
+          dataHandling: resolve(__dirname, 'data-handling-notice/index.html'),
+          responsibleAi: resolve(__dirname, 'responsible-ai-policy/index.html'),
+          securityRoadmap: resolve(__dirname, 'security-roadmap/index.html'),
           privacy: resolve(__dirname, 'privacy-policy/index.html'),
           terms: resolve(__dirname, 'terms-of-service/index.html'),
           sms: resolve(__dirname, 'sms-terms/index.html')

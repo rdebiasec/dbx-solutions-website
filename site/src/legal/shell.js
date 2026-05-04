@@ -1,10 +1,11 @@
 import { href } from './constants.js'
 
 const NAV = [
-  { hash: '#programs', label: 'Solutions' },
-  { hash: '#growth', label: 'Growth' },
+  { hash: '#solutions', label: 'Solutions' },
+  { hash: '#services', label: 'Services' },
+  { hash: '#benefits', label: 'Benefits' },
   { hash: '#process', label: 'How we work' },
-  { hash: '#proof', label: 'Results' },
+  { hash: '#trust', label: 'Trust' },
   { hash: '#contact', label: 'Contact' }
 ]
 

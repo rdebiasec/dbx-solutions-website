@@ -1,234 +1,556 @@
 {
-  "nav": {
-    "services": "Soluciones",
-    "growth": "Crecimiento",
-    "process": "Cómo trabajamos",
-    "proof": "Resultados",
-    "contact": "Contacto"
+  "meta": {
+    "title": "DBX Solutions | Automatización de atención al cliente con IA para pymes"
   },
   "labels": {
-    "valueEquation": "QUÉ GANAS",
-    "timeToProd": "CUÁNDO QUEDA LISTO",
-    "stack": "CANALES Y HERRAMIENTAS",
     "languageToggle": "Cambiar idioma"
   },
-  "hero": {
-    "eyebrow": "CX CON IA PARA PYMES Y EMPRESAS MEDIANAS",
-    "headline": "Automatice la atención al cliente y mantenga el ritmo del mercado—sin montar un equipo interno de IA costoso.",
-    "body": "DBX democratiza la tecnología avanzada para pequeñas y medianas empresas. Diseñamos, construimos y operamos soluciones de experiencia del cliente con IA para que usted siga el ritmo que exige el negocio hoy—sin pagar salarios de especialistas internos como si fuera una corporación gigante. La automatización seria no debería ser solo para las más grandes: la hacemos accesible y manejable, conectada a su mesa de ayuda, CRM y los canales que ya usan sus clientes—incluidos WhatsApp, SMS, voz y mensajería. Más de 20 años de experiencia en CX e integraciones, con alcance pensado para equipos como el suyo.",
-    "points": [
-      "Menos horas en lo repetitivo: lo rutinario lo atiende el flujo; una persona entra cuando hace falta criterio humano.",
-      "Respuestas más rápidas por WhatsApp, SMS, voz y mensajería. Construimos sobre lo que ya tiene, sin obligarlo a cambiar todo.",
-      "Algo real en producción en semanas, se mide y luego se amplía. Sin piloto eterno."
-    ],
-    "ctaPrimary": "Agende una llamada de 30 minutos para ver cómo aplicaría a su negocio",
-    "ctaCallIntro": "En esa llamada:",
-    "ctaBullets": [
-      "Revisamos cómo atiende hoy a sus clientes",
-      "Identificamos qué conviene automatizar primero para el impacto más rápido",
-      "Le proponemos cómo empezar, con alcance claro"
-    ],
-    "value": {
-      "equation": "Velocidad × Claridad × Resultados visibles",
-      "time": "Semanas, no trimestres",
-      "stack": "WhatsApp · SMS · Voz · Mensajería · CRM",
-      "noteLabel": "Qué queremos decir con \"en producción\"",
-      "noteText": "El primer flujo que el cliente de verdad usa, en su entorno, amarrado a tickets y datos reales."
-    },
-    "media": {
-      "eyebrow": "DE UN FLUJO BUENO A ALGO QUE NO SE ABANDONA A LA SEMANA",
-      "title": "Un camino que el equipo puede seguir sin un manual imposible.",
-      "body": "Se elige un flujo que duela de verdad, se conecta a lo que ya usan (WhatsApp, SMS, lo que sea), se forma a quien atiende y se ajusta con lo que pasa en la calle, no con teoría de presentación.",
-      "graphicLabel": "Diagrama de cinco pasos para llevar la solución a producción",
-      "stages": ["Escuchar", "Primer logro", "Construir", "Formar", "Mejorar"],
-      "steps": [
-        "Qué quieren mejorar y con qué sistemas vamos a convivir",
-        "Una primera automatización acotada, que sí se pueda lanzar",
-        "A producción de verdad, no un demo bonito",
-        "Formación a quien habla con el cliente",
-        "Revisión mensual de números y ajustes"
-      ],
-      "caption": "Fases chicas, lanzamientos reales: probar, aprender, volver a intentar."
-    }
-  },
-  "trust": {
-    "label": "Algunos contextos donde hemos ayudado a equipos parecidos al suyo:",
-    "industries": [
-      "Firma de servicios, unas 25 personas",
-      "Marca de e-commerce mezclando soporte y mensajería",
-      "Red de clínicas con citas y recordatorios",
-      "Distribuidor B2B con pedidos y temas de logística",
-      "SaaS en crecimiento ordenando autoservicio y dudas de cobro"
-    ]
-  },
-  "services": {
-    "eyebrow": "LO QUE CONSTRUIMOS CONTIGO",
-    "title": "Tres ofertas concretas",
-    "description": "Resultados claros, no categorías vacías de consultoría. Cada una puede usar WhatsApp, SMS, voz y mensajería según necesidad, y engancharse al CRM y la mesa de ayuda que ya paga.",
-    "listLabel": "Qué suele entrar en un proyecto",
-    "cards": [
-      {
-        "title": "Automatización de soporte",
-        "description": "Automatice conversaciones por WhatsApp, SMS, chat y voz para bajar tiempos de respuesta y quitarse lo repetitivo de encima—su equipo entra solo cuando hace falta un humano.",
-        "timeline": "Primer alcance típico: 3–10 semanas",
-        "outputs": "Flujos listos para producción y derivaciones que tienen sentido",
-        "artifacts": "Amarrados a mesa de ayuda / CRM, FAQs y tickets",
-        "kpi": "Horas que vuelven al equipo cada semana",
-        "items": [
-          "WhatsApp, SMS, mensajería y voz: donde esté su cliente",
-          "Respuestas alineadas a políticas y base de conocimiento",
-          "Reglas de paso a agente que el equipo reconoce al instante"
-        ]
-      },
-      {
-        "title": "Recepción con IA y citas",
-        "description": "Atienda consultas entrantes, califique intención y reserve o reprograme citas por WhatsApp, SMS y voz—para que no se pierdan oportunidades después de horas o en día cargado.",
-        "timeline": "Primer alcance típico: 3–8 semanas",
-        "outputs": "Flujos de agenda, confirmaciones, recordatorios",
-        "artifacts": "Calendarios y campos de CRM que ya usa",
-        "kpi": "Menos fricción entre interés y cita en el calendario",
-        "items": [
-          "Cobertura fuera de horario para lo predecible, con límites que usted define",
-          "Preguntas de calificación consistentes",
-          "Recordatorios por SMS o WhatsApp alineados a su proceso real"
-        ]
-      },
-      {
-        "title": "Calificación y conversión de leads",
-        "description": "Capture, califique y enrute leads al instante por WhatsApp y mensajería para que la conversión no dependa de qué tan rápido alguien alcance a responder a mano.",
-        "timeline": "Primer alcance típico: 2–8 semanas",
-        "outputs": "Captura, reglas de ruteo, actualización en CRM",
-        "artifacts": "Definiciones claras: calificado vs. nutrición",
-        "kpi": "Más consultas que pasan a un siguiente paso concreto",
-        "items": [
-          "Respuesta rápida en WhatsApp y SMS donde ya está el comprador",
-          "Campos ordenados en CRM para seguimiento sin adivinar",
-          "Ruteo acorde a territorios o equipos"
-        ]
-      }
-    ]
-  },
-  "growth": {
-    "eyebrow": "CRECIMIENTO ESTRATÉGICO",
-    "title": "Su IA, operada y ampliada por expertos",
-    "intro": "Cuando los primeros flujos demuestran valor, el tema deja de ser solo “lanzar” y pasa a ser “aprovechar”. Ahí nos enfocamos en crecimiento, no en mantenimiento genérico.",
-    "body1": "Nuestro equipo cubre mantenimiento, monitorización y ajustes para que la calidad no se vaya degradando sola. Si los resultados se sostienen, ampliamos el sistema a nuevos casos de uso y a más áreas del negocio—misma entrega disciplinada, misma mirada de calidad, pensando en que el valor se acumule.",
-    "body2": "Nos importa lo que pasa meses después del arranque, no solo la semana del encendido.",
-    "body3": "Así empresas en crecimiento aprovechan la IA sin montar una fábrica interna completa."
-  },
-  "model": {
-    "eyebrow": "CÓMO SE CONTRATA",
-    "title": "Arranque chico. Suma alcance cuando tenga sentido.",
-    "intro": "Puede salir rápido a producción con un camino administrado pensado para impacto temprano: un primer alcance medible y un valor mensual que se pueda planear, sin medidor abierto para siempre.",
-    "body1": "O lo operamos nosotros o formamos a su gente para el día a día. Usted decide.",
-    "body2": "Sabe qué compra en cada fase y qué significa “listo” antes de tocar configuración en producción.",
-    "privacy": "¿No quiere cargar con el mantenimiento diario? Podemos operarlo con prácticas habituales del sector y sin cadena perpetua: si mañana quiere otro proveedor, puede."
-  },
-  "process": {
-    "eyebrow": "CÓMO TRABAJAMOS",
-    "title": "Tres fases: conversar, acotar, lanzar… y seguir con los pies en la tierra.",
-    "body": "Hay una persona responsable de punta a punta. Encontramos dónde se pierde tiempo, elegimos una automatización que se pague sola temprano y la integramos con CRM, mesa de ayuda, WhatsApp, SMS: lo que sus clientes usen. Luego lanzamos, formamos y ajustamos con tickets y mensajes de verdad.",
-    "steps": [
-      {
-        "title": "Descubrir y priorizar",
-        "body": "Hablamos con quien manda, con líderes y con quien está en la línea. Ubicamos el dolor y elegimos algo que rinda rápido, incluido qué canales (WhatsApp, SMS, voz, mensajería) van primero.",
-        "chip": "Borrador de plan en unos 10 días"
-      },
-      {
-        "title": "Diseñar y acotar",
-        "body": "Flujos sencillos, pocas métricas de éxito y un alcance que el presupuesto aguante. Metemos privacidad y seguridad acordes a su sector para que no aparezca el susto después.",
-        "chip": "Algo que puedan aprobar sin cruzar los dedos"
-      },
-      {
-        "title": "Construir, lanzar y acompañar",
-        "body": "Integramos, piloto corto, formación y ajustes con tráfico real: primero seguido, después en un ritmo que les calce.",
-        "chip": "En producción en semanas, con respaldo cuando lo necesiten"
-      }
-    ],
-    "optionsEyebrow": "",
-    "optionsTitle": "",
-    "options": []
-  },
-  "useCases": {
-    "eyebrow": "DÓNDE ESTO SUELA DOLER",
-    "title": "Situaciones que escuchamos seguido",
-    "body": "No hace falta un call center gigante para verse moderno: hace falta automatización donde realmente alivia.",
-    "items": [
-      "Soporte al cliente sin contratar más agentes",
-      "Que no se pierda un lead ni una consulta",
-      "Tiempos de respuesta más cortos en WhatsApp, SMS, voz y mensajería",
-      "Cobertura 24/7 para lo rutinario—sin sumar plantilla",
-      "Respuestas acertadas en el momento del cliente para generar confianza",
-      "Respuestas consistentes en WhatsApp y mensajería aunque el equipo esté full o fuera de horario"
-    ]
-  },
-  "proof": {
-    "eyebrow": "LO QUE CUENTA LA GENTE",
-    "title": "Cifras que miramos, más voces de clientes",
-    "stats": [
-      { "value": "4.8 / 5", "label": "Valoración media (encuesta tras el proyecto)" },
-      { "value": "90%+", "label": "Clientes que recomendarían DBX" },
-      { "value": "< 8 sem", "label": "Tiempo típico hasta el primer flujo en producción" },
-      { "value": "20+ años", "label": "Experiencia conjunta del equipo núcleo" }
-    ],
-    "testimonials": [
-      {
-        "quote": "Estábamos saturados de la misma pregunta por correo, chat y WhatsApp. DBX unió el CRM y la mensajería en un solo criterio de trabajo: por fin todos tiramos del mismo hilo.",
-        "author": "Responsable de operaciones",
-        "company": "Servicios profesionales (~25 personas)"
-      },
-      {
-        "quote": "Nada de megaproyectos que no empatan con el día a día. En pocas iteraciones teníamos un asistente que funcionaba y lo fuimos ajustando con tickets reales, no con presentaciones.",
-        "author": "Fundador",
-        "company": "Comercio electrónico / retail"
-      }
-    ]
-  },
-  "contact": {
-    "eyebrow": "SIGUIENTE PASO",
-    "title": "Cuéntenos qué está pasando",
-    "body": "¿Quién atiende hoy al cliente? ¿Qué canal pesa más: WhatsApp, SMS, otro? ¿Qué herramientas ya están? Con eso en el formulario le respondemos en un día hábil con un siguiente paso sensato.",
-    "urgency": "Cada trimestre abrimos pocos proyectos con acompañamiento serio—pregunte cómo está el calendario.",
-    "bookingNote": "¿Prefiere hablar primero en vivo? Reserve 30 minutos aquí →",
-    "form": {
-      "name": "Nombre y apellidos",
-      "email": "Correo corporativo",
-      "challengeLabel": "¿Qué le gustaría arreglar primero?",
-      "challengePlaceholder": "Elija una opción (opcional)",
-      "challengeOptions": [
-        "Demasiado tiempo en consultas repetidas",
-        "Que WhatsApp, SMS, chat y CRM funcionen en conjunto",
-        "Queremos IA pero no sabemos por dónde empezar",
-        "Equipo chico: necesitamos alcance y precio cerrados",
-        "Clientes en varios idiomas o mercados",
-        "Stack actual: Zendesk, Freshdesk, HubSpot o Salesforce",
-        "Otro"
-      ],
-      "message": "Contexto de la empresa (tamaño, herramientas) — opcional",
-      "placeholderName": "Laura Gómez",
-      "placeholderEmail": "tu@empresa.com",
-      "phone": "Teléfono móvil (opcional)",
-      "placeholderPhone": "+1 (321) 287-4509",
-      "smsConsentError": "Si indica un teléfono, marque la casilla de consentimiento SMS para continuar—o deje el teléfono en blanco.",
-      "placeholderMessage": "Ej.: Zendesk y Salesforce, unas 40 personas en soporte",
-      "submit": "Enviar mensaje"
-    },
-    "secondary": [
-      { "label": "Correo", "href": "mailto:contact@dbx-solutions.com" },
-      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/ricardo-de-biase" }
-    ],
-    "contacts": [],
-    "badges": [
-      "CX e IA serias, en un tamaño que una pyme sí puede asumir",
-      "Privacidad, seguridad y calidad van en la entrega, no como parche al final",
-      "Modelo mensual: lo operamos con usted o formamos a su equipo para que lo dominen"
-    ]
-  },
+  "nav": [
+    { "page": "home", "path": "", "label": "Inicio" },
+    { "page": "solutionsPage", "path": "solutions/", "label": "Soluciones" },
+    { "page": "securityPage", "path": "security/", "label": "Seguridad" },
+    { "page": "packagesPage", "path": "packages/", "label": "Paquetes" },
+    { "page": "processPage", "path": "process/", "label": "Proceso" },
+    { "page": "aboutPage", "path": "about/", "label": "Nosotros" },
+    { "page": "contactPage", "path": "contact/", "label": "Contacto" }
+  ],
   "footer": {
-    "notice": "© 2026 DBX Solutions · Democratizar la tecnología avanzada para pymes y mercado medio · Orlando, FL",
-    "warning": "",
-    "linkPrivacy": "Política de privacidad",
-    "linkTerms": "Términos del servicio",
-    "linkSms": "Términos SMS"
+    "notice": "DBX Solutions — Democratizando la IA para pymes y empresas de mercado medio.",
+    "email": "contact@dbx-solutions.com",
+    "contact": "Contacto",
+    "bookDemo": "Agendar demo",
+    "links": [
+      { "path": "privacy-policy/", "label": "Política de privacidad" },
+      { "path": "terms-of-service/", "label": "Términos del servicio" },
+      { "path": "data-handling-notice/", "label": "Aviso de manejo de datos" },
+      { "path": "responsible-ai-policy/", "label": "Política de IA responsable" },
+      { "path": "security-roadmap/", "label": "Roadmap de seguridad" },
+      { "path": "contact/", "label": "Contacto" },
+      { "path": "contact/", "label": "Agendar demo" }
+    ]
+  },
+  "pages": {
+    "home": {
+      "meta": { "title": "DBX Solutions | Automatización de atención al cliente con IA para pymes" },
+      "hero": {
+        "eyebrow": "Democratizing AI for SMBs",
+        "headline": "No vuelva a perder un cliente por falta de respuesta",
+        "body": "DBX Solutions ayuda a pymes y empresas medianas a responder al instante, capturar más leads calificados y preservar relaciones con clientes usando sistemas de atención con IA, seguros y específicos para su negocio.",
+        "actions": [
+          { "label": "Agendar demo", "href": "CALENDAR_URL" },
+          { "label": "Ver cómo funciona", "href": "solutions/" }
+        ],
+        "microcopy": "Sin compromiso. Revisamos su proceso actual de interacción con clientes e identificamos dónde la IA puede mejorar captura de leads, tiempos de respuesta y experiencia del cliente.",
+        "card": {
+          "eyebrow": "Mensaje central",
+          "title": "Las conversaciones se vuelven oportunidades estructuradas.",
+          "items": [
+            "Capturar demanda antes de que se enfríe",
+            "Responder con información aprobada por su negocio",
+            "Enrutar leads, solicitudes y soporte con contexto"
+          ]
+        }
+      },
+      "blocks": [
+        {
+          "type": "section",
+          "id": "problem",
+          "eyebrow": "El problema",
+          "title": "Mensajes perdidos. Respuestas lentas. Ingresos que se escapan.",
+          "body": "Muchas oportunidades se pierden antes de que el proceso comercial empiece. Un cliente pregunta, llena un formulario, envía un mensaje o visita la web, y nadie responde lo suficientemente rápido. Esa demora genera menos ingresos, menos confianza y peor experiencia.",
+          "items": [
+            "Consultas sin respuesta después de horario",
+            "Leads capturados de forma inconsistente",
+            "El equipo repite las mismas respuestas todos los días",
+            "Compradores que se van cuando no reciben respuestas rápidas",
+            "Clientes que pierden confianza por soporte inconsistente",
+            "Gerentes sin visibilidad de oportunidades perdidas"
+          ],
+          "note": "DBX ayuda a corregirlo creando sistemas de IA estructurados que responden, califican, enrutan y apoyan clientes 24/7."
+        },
+        {
+          "type": "section",
+          "id": "value",
+          "eyebrow": "Valor central",
+          "title": "IA que captura ingresos y protege relaciones con clientes",
+          "body": "La interacción con el cliente es donde empieza el ingreso y donde la confianza se gana o se pierde. DBX implementa agentes de IA entrenados con información aprobada de su negocio para responder con claridad, recopilar datos correctos y llevar al cliente al siguiente paso. No es un chatbot genérico: es un sistema de interacción diseñado alrededor de su operación.",
+          "items": [
+            "Respuesta inmediata al cliente",
+            "Captura y calificación de leads",
+            "Respuestas consistentes usando datos aprobados",
+            "Derivación a humanos cuando haga falta",
+            "Recepción de solicitudes de servicio",
+            "Enrutamiento a citas o consultas",
+            "Integración con CRM o flujos donde aplique",
+            "Optimización continua después del lanzamiento"
+          ],
+          "note": "Cada consulta debería terminar en un lead calificado, un cliente atendido o un siguiente paso claro."
+        },
+        {
+          "type": "section",
+          "id": "lead-generation",
+          "eyebrow": "Generación de leads",
+          "title": "Convierta conversaciones en leads calificados",
+          "body": "Un comprador está más interesado justo cuando hace la pregunta. Si su negocio responde de inmediato con información útil, es más probable que avance. DBX diseña agentes de IA que funcionan como representantes de primera línea entrenados en su negocio, servicios, políticas y proceso de admisión.",
+          "items": [
+            "Responden preguntas de producto o servicio con información aprobada",
+            "Guían al comprador por una conversación estructurada",
+            "Capturan nombre, teléfono, email y necesidad del negocio",
+            "Califican la consulta según sus reglas",
+            "Envían el lead a su equipo con contexto útil"
+          ],
+          "note": "Cada pregunta entrante se vuelve una oportunidad estructurada de generar ingresos."
+        },
+        {
+          "type": "section",
+          "id": "retention",
+          "eyebrow": "Retención",
+          "title": "Cuide clientes con soporte rápido y consistente",
+          "body": "Atender al cliente no es solo resolver problemas. Es mantener confianza. Cuando los clientes reciben respuestas rápidas, claras y consistentes, es más probable que sigan comprometidos con su negocio.",
+          "items": [
+            "Reconocimiento rápido de necesidades del cliente",
+            "Menos frustración por demoras",
+            "Respuestas consistentes entre interacciones",
+            "Mejor escalamiento a soporte humano",
+            "Menos carga repetitiva para el equipo",
+            "Mejor continuidad en la experiencia del cliente"
+          ],
+          "note": "Un buen servicio protege el ingreso que usted ya ganó."
+        },
+        {
+          "type": "section",
+          "variant": "cta-panel",
+          "id": "final-cta",
+          "eyebrow": "Siguiente paso",
+          "title": "¿Listo para capturar más leads y mejorar la respuesta al cliente?",
+          "body": "Agende una conversación con DBX para revisar su proceso de interacción con clientes e identificar dónde la automatización con IA puede mejorar tiempos de respuesta, captura de leads y experiencia.",
+          "cards": [
+            {
+              "title": "Qué revisamos",
+              "items": [
+                "Canales actuales, incluidos WhatsApp, SMS, voz, email, chat y mensajería",
+                "Dónde se demoran las respuestas",
+                "Qué consultas conviene estructurar primero"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "solutionsPage": {
+      "meta": { "title": "DBX Solutions | Soluciones de interacción con clientes con IA" },
+      "hero": {
+        "eyebrow": "Soluciones",
+        "headline": "Diseñamos el sistema detrás de cada interacción con el cliente",
+        "body": "La mayoría de los negocios no necesita simplemente otra herramienta. Necesita un mejor proceso de interacción con clientes. DBX revisa cómo lo contactan, qué preguntan, dónde se demoran las respuestas y cómo se mueve la información dentro del equipo. Luego diseña un sistema con IA que mejora ese proceso.",
+        "actions": [
+          { "label": "Solicitar consulta", "href": "contact/" },
+          { "label": "Ver paquetes", "href": "packages/" }
+        ]
+      },
+      "blocks": [
+        {
+          "type": "section",
+          "eyebrow": "Revisamos",
+          "title": "Encontrar brechas antes de automatizar",
+          "items": [
+            "Canales de consulta, incluidos WhatsApp, SMS, voz, chat, email y mensajería",
+            "Preguntas comunes",
+            "Proceso actual de respuesta",
+            "Brechas en captura de leads",
+            "Cuellos de botella de soporte",
+            "Necesidades de escalamiento",
+            "Herramientas y flujos existentes"
+          ]
+        },
+        {
+          "type": "section",
+          "eyebrow": "Construimos",
+          "title": "Sistemas de interacción que encajan con su negocio",
+          "items": [
+            "Flujos de respuesta con IA",
+            "Lógica de calificación de leads",
+            "Procesos de intake de clientes",
+            "Rutas de escalamiento",
+            "Estructura de base de conocimiento",
+            "Planes de integración",
+            "Proceso de monitoreo y optimización"
+          ]
+        },
+        {
+          "type": "section",
+          "eyebrow": "Casos de uso comunes",
+          "title": "Dónde ayudan los sistemas de interacción con IA",
+          "cards": [
+            { "title": "Automatización de captura de leads", "body": "Responda consultas entrantes de inmediato, recopile datos del cliente y envíe leads calificados a su equipo." },
+            { "title": "Solicitudes de citas o consultas", "body": "Guíe al cliente por selección de servicio, disponibilidad y próximos pasos de reserva." },
+            { "title": "Automatización de FAQs", "body": "Responda preguntas repetitivas sobre servicios, rangos de precio, horarios, políticas y siguientes pasos." },
+            { "title": "Recepción de solicitudes de servicio", "body": "Recoja información estructurada para cotizaciones, estimados, onboarding o solicitudes." },
+            { "title": "Triage de soporte", "body": "Identifique el problema del cliente y enrútelo al equipo o proceso correcto." },
+            { "title": "Respuesta fuera de horario", "body": "Mantenga la comunicación activa cuando el equipo no esté disponible." }
+          ]
+        },
+        {
+          "type": "section",
+          "eyebrow": "Casos ilustrativos — Reemplazar con datos verificados de clientes",
+          "title": "Resultado de muestra — Reemplazar con datos verificados de clientes",
+          "cards": [
+            {
+              "label": "Caso ilustrativo",
+              "title": "Empresa local de servicios",
+              "subtitle": "Reto: consultas perdidas fuera de horario",
+              "items": ["Cobertura de respuesta 24/7", "Datos de lead capturados automáticamente", "El equipo recibe información ordenada para seguimiento"]
+            },
+            {
+              "label": "Caso ilustrativo",
+              "title": "Negocio basado en citas",
+              "subtitle": "Reto: respuesta lenta a preguntas de agenda",
+              "items": ["Orientación más rápida al cliente", "Menos ida y vuelta", "Solicitudes de reserva más estructuradas"]
+            },
+            {
+              "label": "Caso ilustrativo",
+              "title": "Pyme con alto volumen de soporte",
+              "subtitle": "Reto: equipo saturado con preguntas repetitivas",
+              "items": ["Preguntas comunes atendidas automáticamente", "Equipo humano enfocado en temas complejos", "Comunicación más consistente"]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "eyebrow": "Ejemplos de testimonios placeholder — Reemplazar con testimonios reales",
+          "title": "Placeholders claramente etiquetados",
+          "cards": [
+            {
+              "label": "Ejemplo de testimonio placeholder",
+              "title": "Dueño de negocio de servicios, Placeholder",
+              "body": "Antes de usar un sistema de interacción con IA, estábamos perdiendo consultas y respondiendo tarde. El nuevo proceso nos ayudó a capturar leads de forma más consistente."
+            },
+            {
+              "label": "Ejemplo de testimonio placeholder",
+              "title": "Gerente de operaciones, Placeholder",
+              "body": "La mejora más grande fue la consistencia. Los clientes recibieron respuestas claras más rápido y el equipo tuvo mejor información para seguimiento."
+            },
+            {
+              "label": "Ejemplo de testimonio placeholder",
+              "title": "Dueño de negocio, Placeholder",
+              "body": "Reducimos preguntas repetitivas y dimos más tiempo al equipo para atender necesidades de mayor valor."
+            }
+          ]
+        }
+      ]
+    },
+    "securityPage": {
+      "meta": { "title": "DBX Solutions | Implementación segura y responsable de IA" },
+      "hero": {
+        "eyebrow": "Seguridad e IA responsable",
+        "headline": "IA que opera bajo las reglas de su negocio",
+        "body": "La IA no debería adivinar. No debería inventar respuestas. No debería crear riesgo para su negocio. DBX construye sistemas controlados que usan datos privados y aprobados del negocio, con flujos definidos.",
+        "actions": [
+          { "label": "Ver roadmap de seguridad", "href": "security-roadmap/" },
+          { "label": "Solicitar revisión de preparación", "href": "contact/" }
+        ]
+      },
+      "blocks": [
+        {
+          "type": "section",
+          "eyebrow": "IA controlada",
+          "title": "Límites antes de automatizar",
+          "body": "Su IA debe comportarse como un empleado entrenado con instrucciones claras, no como un sistema impredecible.",
+          "items": [
+            "Fuentes privadas y específicas del negocio",
+            "Límites definidos de respuesta",
+            "Sin respuestas especulativas o no soportadas",
+            "Reglas de escalamiento para solicitudes inciertas",
+            "Derivación humana cuando haga falta",
+            "Revisión y mejora continua"
+          ]
+        },
+        {
+          "type": "section",
+          "eyebrow": "Implementación responsable",
+          "title": "Implementación de IA segura y responsable",
+          "body": "Los negocios necesitan sistemas de IA útiles, seguros y gestionados con responsabilidad. DBX aborda la implementación con foco en protección de datos, control de acceso, continuidad operativa y confianza del cliente.",
+          "cards": [
+            {
+              "title": "Prácticas de seguridad",
+              "items": [
+                "Acceso controlado a datos del negocio",
+                "Planificación segura de integraciones",
+                "Permisos basados en roles donde aplique",
+                "Revisión de proveedores antes de implementar",
+                "Aislamiento de datasets específicos donde esté disponible",
+                "Uso responsable de información de clientes",
+                "Monitoreo continuo del comportamiento de la IA"
+              ]
+            },
+            {
+              "title": "Principios de IA responsable",
+              "items": [
+                "Precisión por encima de velocidad sola",
+                "Escalamiento humano para temas sensibles o inciertos",
+                "Límites claros sobre lo que la IA puede responder",
+                "Uso transparente de información aprobada",
+                "Mejora continua basada en interacciones reales"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "roadmap",
+          "eyebrow": "Roadmap / En progreso",
+          "title": "Roadmap de seguridad y cumplimiento",
+          "body": "DBX está construyendo sus operaciones con prácticas de seguridad, privacidad e IA responsable en mente.",
+          "items": [
+            "Preparación SOC 2 Type I",
+            "Preparación futura SOC 2 Type II",
+            "Alineación ISO/IEC 27001",
+            "Preparación de Data Processing Agreement",
+            "Política de privacidad y términos del servicio",
+            "Procedimientos internos de manejo de datos",
+            "Política de uso responsable de IA",
+            "Proceso de revisión de seguridad de proveedores"
+          ],
+          "disclaimer": "Certifications listed as roadmap items are not claimed as completed unless formally obtained. DBX Solutions is aligning its operations with recognized security and responsible AI best practices."
+        }
+      ]
+    },
+    "packagesPage": {
+      "meta": { "title": "DBX Solutions | Paquetes de automatización de interacción con clientes" },
+      "hero": {
+        "eyebrow": "Paquetes",
+        "headline": "Paquetes de automatización de interacción con clientes",
+        "body": "Los planes se estructuran como implementación inicial más servicio mensual. El uso se agrupa dentro de límites definidos y se ajusta según volumen, canales, integraciones y costos de proveedores.",
+        "actions": [
+          { "label": "Solicitar consulta", "href": "contact/" },
+          { "label": "Ver proceso", "href": "process/" }
+        ]
+      },
+      "blocks": [
+        {
+          "type": "packages",
+          "eyebrow": "Paquetes",
+          "title": "Elija un punto de partida práctico",
+          "body": "Cada paquete se define según volumen de interacción, canales requeridos y complejidad de integración.",
+          "cards": [
+            {
+              "label": "Starter",
+              "title": "Sistema de respuesta con IA",
+              "subtitle": "Para negocios que necesitan respuesta rápida en sitio web y captura básica de leads.",
+              "items": ["1 agente de atención con IA", "Integración de chat web", "FAQ básico", "Captura de leads", "Derivación humana", "Optimización mensual"]
+            },
+            {
+              "label": "Growth",
+              "title": "Sistema de atención al cliente con IA",
+              "subtitle": "Para negocios que quieren automatización multicanal y flujos más fuertes.",
+              "items": ["2–3 agentes o flujos de IA", "Sitio web más SMS/email opcional", "Integración con CRM o ruteo de leads", "Citas o intake de servicios", "Lógica de flujo personalizada", "Reporte mensual"]
+            },
+            {
+              "label": "Pro",
+              "title": "Capa operativa con IA",
+              "subtitle": "Para empresas medianas que necesitan integraciones avanzadas y visibilidad operativa.",
+              "items": ["Automatización multicanal", "Flujos avanzados", "Integraciones CRM/helpdesk", "Lógica de escalamiento", "Analítica y reportes", "Optimización continua"]
+            }
+          ],
+          "note": "El precio depende de canales, integraciones, volumen de uso, costos de proveedores y soporte requerido."
+        }
+      ]
+    },
+    "processPage": {
+      "meta": { "title": "DBX Solutions | Proceso de implementación de IA" },
+      "hero": {
+        "eyebrow": "Proceso de implementación",
+        "headline": "Cómo construimos su sistema de interacción con clientes con IA",
+        "body": "Un sistema controlado necesita un proceso controlado. Revisamos, estructuramos, diseñamos, construimos, lanzamos y optimizamos con reglas claras de negocio.",
+        "actions": [
+          { "label": "Solicitar consulta", "href": "contact/" },
+          { "label": "Ver enfoque de seguridad", "href": "security/" }
+        ]
+      },
+      "blocks": [
+        {
+          "type": "steps",
+          "eyebrow": "Seis pasos",
+          "title": "De revisión de negocio a optimización continua",
+          "body": "El proceso busca reducir riesgo mientras mejora velocidad, consistencia y visibilidad sobre clientes.",
+          "steps": [
+            { "title": "Revisión del negocio", "body": "Revisamos su proceso de interacción, canales de consulta, preguntas comunes y cuellos de botella actuales." },
+            { "title": "Diseño de conocimiento", "body": "Estructuramos su información aprobada en una base de conocimiento controlada." },
+            { "title": "Diseño conversacional", "body": "Definimos cómo debe responder la IA, qué información debe recoger y cuándo escalar." },
+            { "title": "Construcción del sistema", "body": "Configuramos el agente de IA, flujos, lógica de ruteo e integraciones." },
+            { "title": "Lanzamiento controlado", "body": "Probamos el sistema antes de ampliarlo para reducir riesgo y mejorar precisión." },
+            { "title": "Optimización", "body": "Revisamos desempeño, ajustamos respuestas, mejoramos flujos y ampliamos casos de uso." }
+          ]
+        }
+      ]
+    },
+    "aboutPage": {
+      "meta": { "title": "DBX Solutions | Democratizing AI for SMBs" },
+      "hero": {
+        "eyebrow": "Misión",
+        "headline": "Democratizing AI for SMBs",
+        "body": "La IA avanzada no debería estar limitada a grandes empresas con grandes presupuestos y equipos técnicos internos. DBX existe para hacer que la IA de nivel empresarial sea práctica, segura y usable para pymes y empresas medianas.",
+        "actions": [
+          { "label": "Hablar con DBX", "href": "contact/" },
+          { "label": "Explorar paquetes", "href": "packages/" }
+        ]
+      },
+      "blocks": [
+        {
+          "type": "section",
+          "eyebrow": "Declaración de misión",
+          "title": "IA adoptada con responsabilidad y conectada a resultados",
+          "body": "Ayudamos a pymes a adoptar IA responsablemente convirtiendo automatización avanzada en sistemas operativos reales que apoyan crecimiento, servicio al cliente y captura de ingresos.",
+          "note": "Democratizing AI significa hacerla accesible, confiable, segura y alineada con cómo trabajan los negocios."
+        },
+        {
+          "type": "section",
+          "eyebrow": "Para quién es",
+          "title": "Diseñado para negocios que dependen de conversaciones con clientes",
+          "cards": [
+            {
+              "title": "Buen fit",
+              "items": [
+                "Pymes con consultas entrantes constantes",
+                "Empresas medianas con necesidades crecientes de soporte",
+                "Negocios de servicios que dependen del seguimiento rápido",
+                "Compañías que pierden leads por respuesta lenta",
+                "Equipos saturados con preguntas repetitivas",
+                "Negocios listos para mejorar experiencia del cliente"
+              ]
+            },
+            {
+              "title": "No es ideal para",
+              "items": [
+                "Negocios con muy bajo volumen de consultas",
+                "Empresas que solo buscan un chatbot genérico rápido",
+                "Equipos que no quieren definir proceso o base de conocimiento",
+                "Organizaciones no listas para optimización continua"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "eyebrow": "Por qué DBX Solutions",
+          "title": "Propósito, control y valor operativo medible",
+          "items": [
+            "Implementación primero desde negocio",
+            "Foco en generación de leads y retención",
+            "IA controlada con límites definidos",
+            "Especialización en pymes y mercado medio",
+            "Enfoque seguro y responsable",
+            "Onboarding estructurado",
+            "Optimización continua después del lanzamiento",
+            "Sistemas prácticos, no tecnología por tecnología"
+          ],
+          "note": "Ayudamos a empresas a usar IA con propósito, control y valor operativo medible."
+        }
+      ]
+    },
+    "contactPage": {
+      "meta": { "title": "DBX Solutions | Solicitar consulta" },
+      "hero": {
+        "eyebrow": "Contacto",
+        "headline": "¿Listo para capturar más leads y mejorar la respuesta al cliente?",
+        "body": "Agende una conversación con DBX para revisar su proceso de interacción con clientes e identificar dónde la IA puede mejorar tiempos de respuesta, captura de leads y experiencia.",
+        "actions": [
+          { "label": "Agendar demo", "href": "CALENDAR_URL" },
+          { "label": "Solicitar revisión de preparación de IA", "href": "contact/" }
+        ]
+      },
+      "blocks": [
+        {
+          "type": "contact",
+          "contactForm": {
+            "eyebrow": "Solicitar consulta",
+            "title": "Cuéntenos sobre su proceso de interacción con clientes",
+            "body": "Use este formulario para contarnos dónde ocurren hoy las conversaciones con clientes y qué quiere mejorar.",
+            "submit": "Solicitar consulta",
+            "confirmation": "Gracias. DBX Solutions recibió su solicitud y hará seguimiento para conversar sobre sus necesidades de interacción con clientes y automatización con IA.",
+            "smsConsentError": "Si indica un teléfono, marque la casilla de consentimiento SMS para continuar—o deje el teléfono en blanco.",
+            "fields": [
+              { "name": "first_name", "label": "Nombre", "type": "text", "placeholder": "Laura", "required": true },
+              { "name": "last_name", "label": "Apellido", "type": "text", "placeholder": "Gómez", "required": true },
+              { "name": "business_email", "label": "Correo corporativo", "type": "email", "placeholder": "tu@empresa.com", "required": true },
+              { "name": "phone", "label": "Teléfono", "type": "tel", "placeholder": "+1 (321) 287-4509" },
+              { "name": "company", "label": "Empresa", "type": "text", "placeholder": "Empresa LLC" },
+              { "name": "website", "label": "Sitio web", "type": "url", "placeholder": "https://ejemplo.com" },
+              { "name": "company_size", "label": "Tamaño de empresa", "type": "select", "placeholder": "Seleccione una opción", "options": ["1–10", "11–50", "51–200", "201–500", "500+"] },
+              { "name": "industry", "label": "Industria", "type": "text", "placeholder": "Servicios, salud, B2B, etc." },
+              { "name": "monthly_inquiries", "label": "Consultas mensuales estimadas", "type": "select", "placeholder": "Seleccione una opción", "options": ["Menos de 100", "100–500", "500–2,000", "2,000+"] },
+              { "name": "channels", "label": "Canales actuales de atención", "type": "text", "placeholder": "WhatsApp, SMS, voz, chat, email, formularios web" },
+              { "name": "improvement_goal", "label": "¿Qué quiere mejorar?", "type": "text", "placeholder": "Captura de leads, tiempo de respuesta, carga de soporte..." },
+              { "name": "message", "label": "Mensaje", "type": "textarea", "placeholder": "Cuéntenos qué pasa hoy." }
+            ]
+          }
+        }
+      ]
+    },
+    "dataHandlingPage": {
+      "meta": { "title": "DBX Solutions | Aviso de manejo de datos" },
+      "hero": {
+        "eyebrow": "Placeholder de política",
+        "headline": "Aviso de manejo de datos",
+        "body": "Esta página es un placeholder para el aviso de manejo de datos de DBX Solutions. Reemplace con lenguaje revisado antes de usarlo como política formal.",
+        "actions": [{ "label": "Contactar a DBX", "href": "contact/" }]
+      },
+      "blocks": [
+        {
+          "type": "section",
+          "title": "Intención actual",
+          "body": "DBX está construyendo procedimientos de manejo de datos alrededor del uso responsable de información de clientes, acceso controlado, fuentes específicas del negocio y planificación segura de integraciones."
+        }
+      ]
+    },
+    "responsibleAiPage": {
+      "meta": { "title": "DBX Solutions | Política de IA responsable" },
+      "hero": {
+        "eyebrow": "Placeholder de política",
+        "headline": "Política de IA responsable",
+        "body": "Esta página es un placeholder para la política de IA responsable de DBX Solutions. Reemplace con lenguaje revisado antes de presentarla como política final.",
+        "actions": [{ "label": "Ver enfoque de seguridad", "href": "security/" }]
+      },
+      "blocks": [
+        {
+          "type": "section",
+          "title": "Principios de trabajo",
+          "items": [
+            "Precisión por encima de velocidad sola",
+            "Escalamiento humano para solicitudes sensibles o inciertas",
+            "Límites claros sobre lo que la IA puede responder",
+            "Uso transparente de información aprobada",
+            "Mejora continua basada en interacciones reales"
+          ]
+        }
+      ]
+    },
+    "securityRoadmapPage": {
+      "meta": { "title": "DBX Solutions | Roadmap de seguridad" },
+      "hero": {
+        "eyebrow": "Roadmap / En progreso",
+        "headline": "Roadmap de seguridad",
+        "body": "DBX está alineando sus operaciones con buenas prácticas reconocidas de seguridad e IA responsable. Los ítems del roadmap no se presentan como completados salvo que se obtengan formalmente.",
+        "actions": [{ "label": "Contactar a DBX", "href": "contact/" }]
+      },
+      "blocks": [
+        {
+          "type": "roadmap",
+          "eyebrow": "Roadmap / En progreso",
+          "title": "Roadmap de seguridad y cumplimiento",
+          "body": "Estos ítems se presentan como roadmap o preparación, no como certificaciones completadas.",
+          "items": [
+            "Preparación SOC 2 Type I",
+            "Preparación futura SOC 2 Type II",
+            "Alineación ISO/IEC 27001",
+            "Preparación de Data Processing Agreement",
+            "Política de privacidad y términos del servicio",
+            "Procedimientos internos de manejo de datos",
+            "Política de uso responsable de IA",
+            "Proceso de revisión de seguridad de proveedores"
+          ],
+          "disclaimer": "Certifications listed as roadmap items are not claimed as completed unless formally obtained. DBX Solutions is aligning its operations with recognized security and responsible AI best practices."
+        }
+      ]
+    }
   }
 }

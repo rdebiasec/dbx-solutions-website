@@ -1,3 +1,3 @@
 import { mountPage } from './site-app.js'
 
-mountPage('home')
+mountPage('contactPage')
