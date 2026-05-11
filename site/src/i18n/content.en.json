@@ -18,7 +18,7 @@
     "notice": "DBX Solutions — Democratizing AI for SMB and mid-market businesses.",
     "email": "contact@dbx-solutions.com",
     "contact": "Contact",
-    "bookDemo": "Book a Demo",
+    "bookDemo": "Book a Consultation",
     "links": [
       { "path": "privacy-policy/", "label": "Privacy Policy" },
       { "path": "terms-of-service/", "label": "Terms of Service" },
@@ -26,7 +26,7 @@
       { "path": "responsible-ai-policy/", "label": "Responsible AI Policy" },
       { "path": "security-roadmap/", "label": "Security Roadmap" },
       { "path": "contact/", "label": "Contact" },
-      { "path": "contact/", "label": "Book a Demo" }
+      { "path": "contact/", "label": "Book a Consultation" }
     ]
   },
   "pages": {
@@ -35,21 +35,21 @@
         "title": "DBX Solutions | AI-Powered Customer Service Automation for SMBs"
       },
       "hero": {
-        "eyebrow": "Democratizing AI for SMBs",
-        "headline": "Never Miss Another Customer Again",
-        "body": "DBX Solutions helps SMB and mid-sized businesses respond instantly, capture more qualified leads, and preserve customer relationships with secure, business-specific AI-powered customer service systems.",
+        "eyebrow": "AI-Powered Customer Experience",
+        "headline": "A good experience with your customers will pay for itself and help you monetize.",
+        "body": "Our purpose is to empower SMBs with Enterprise Level AI that handles the heavy lifting of daily tasks. From lead qualifying to providing order status, our platform executes tasks securely with error-handling with human in the loop intervention only if needed. We bridge the gap between your customer conversations and your tech stack, delivering immediate ROI so you can focus on growing your business while we manage the AI.",
         "actions": [
-          { "label": "Book a Demo", "href": "CALENDAR_URL" },
-          { "label": "See How It Works", "href": "solutions/" }
+          { "label": "Book a Free Consultation", "href": "CALENDAR_URL" },
+          { "label": "See How It Works", "href": "#process" }
         ],
-        "microcopy": "No commitment. We review your current customer interaction process and identify where AI can improve lead capture, response time, and customer experience.",
+        "microcopy": "From answering repetitive questions to chasing down leads, we take the \"busy\" out of business. It’s enterprise-grade automation that actually feels like help.",
         "card": {
-          "eyebrow": "Core message",
-          "title": "Conversations become structured opportunities.",
+          "eyebrow": "Connected operations",
+          "title": "Conversations become structured business workflows.",
           "items": [
-            "Capture inbound demand before it goes cold",
-            "Use approved business data for accurate responses",
-            "Route leads, service needs, and support requests cleanly"
+            "Customer message",
+            "DBX AI Assistant qualifies, answers, and routes",
+            "Workflow automation connects CRM or team follow-up"
           ]
         }
       },
@@ -57,82 +57,76 @@
         {
           "type": "section",
           "id": "problem",
-          "eyebrow": "The problem",
-          "title": "Missed Messages. Slow Responses. Lost Revenue.",
-          "body": "Most businesses lose opportunities before the sales process even begins. A customer asks a question, submits a form, sends a message, or visits a website—and no one responds fast enough. That delay creates lost revenue, weaker trust, and poor customer experience.",
+          "eyebrow": "The Challenge",
+          "title": "Customer expectations are rising. Manual processes are slowing businesses down.",
+          "body": "Many growing businesses rely on small teams, disconnected tools, and manual follow-ups to manage customer conversations.",
           "items": [
-            "Inquiries go unanswered after hours",
-            "Leads are not captured consistently",
-            "Staff repeats the same answers every day",
-            "Buyers leave when they do not get fast answers",
-            "Customers lose confidence when support is inconsistent",
-            "Managers lack visibility into missed opportunities"
+            "Slow responses",
+            "Repetitive questions",
+            "Missed leads",
+            "Disconnected tools",
+            "Limited team capacity"
           ],
-          "note": "DBX Solutions helps fix this by creating structured AI systems that respond, qualify, route, and support customers around the clock."
+          "note": "DBX Solutions helps turn customer conversations into structured next steps."
         },
         {
           "type": "section",
           "id": "value",
-          "eyebrow": "Core value",
-          "title": "AI That Captures Revenue and Protects Customer Relationships",
-          "body": "Customer interaction is where revenue begins and trust is either built or lost. DBX Solutions implements AI agents trained on your approved business information so they can respond clearly, collect the right details, and guide customers to the next step. This is not a generic chatbot. It is a structured customer interaction system designed around your business.",
+          "eyebrow": "The Solution",
+          "title": "Customer experience automation connected to real business operations.",
+          "body": "DBX Solutions designs customer conversation systems that collect the right information, trigger the right workflow, and give your team useful context.",
           "items": [
-            "Instant customer response",
-            "Lead capture and qualification",
-            "Consistent answers using approved business data",
-            "Human handoff when needed",
-            "Service request intake",
-            "Appointment or consultation routing",
-            "CRM or workflow integration where applicable",
-            "Ongoing optimization after launch"
+            "Customer Channels: WhatsApp, web chat, SMS, forms, email",
+            "DBX AI Assistant: answers, qualifies, collects, routes",
+            "Business Systems: CRM, calendar, support desk, team notifications",
+            "Human Team: reviews, follows up, closes, supports"
           ],
-          "note": "Every inquiry should either become a qualified lead, a supported customer, or a clear next step."
+          "note": "This is not just AI chat. It is customer experience automation connected to business operations."
         },
         {
           "type": "section",
-          "id": "lead-generation",
-          "eyebrow": "Lead generation",
-          "title": "Turn Conversations Into Qualified Leads",
-          "body": "A curious buyer is most engaged at the moment they ask a question. If your business responds immediately with useful information, that buyer is more likely to continue. DBX Solutions designs AI agents to act like knowledgeable front-line representatives trained on your business, services, policies, and intake process.",
+          "id": "services",
+          "eyebrow": "Services",
+          "title": "AI solutions designed around your customer journey",
+          "body": "DBX Solutions helps identify where AI can make the greatest impact, then designs solutions that fit your workflows, team capacity, and business goals.",
           "items": [
-            "Answers product or service questions using approved information",
-            "Guides the buyer through a structured conversation",
-            "Captures name, phone, email, and business need",
-            "Qualifies the inquiry based on your rules",
-            "Sends the lead to your team with useful context"
+            "AI Customer Assistants",
+            "Lead Qualification Automation",
+            "Customer Support Automation",
+            "CRM and Workflow Integration",
+            "AI Strategy and Roadmapping",
+            "Optimization and Continuous Improvement"
           ],
-          "note": "Every inbound question becomes a structured opportunity to generate revenue."
+          "note": "Core services include AI Customer Assistants, Lead Qualification Automation, and Optimization and Continuous Improvement."
         },
         {
           "type": "section",
-          "id": "retention",
-          "eyebrow": "Customer retention",
-          "title": "Preserve Customers With Fast, Consistent Support",
-          "body": "Customer service is not only about solving problems. It is about maintaining confidence. When customers receive fast, clear, and consistent responses, they are more likely to stay engaged with your business.",
+          "id": "managed-ai-operations",
+          "eyebrow": "Managed AI Operations",
+          "title": "Launch is only the beginning.",
+          "body": "AI systems need ongoing review, tuning, and improvement. DBX helps keep your AI assistants accurate, useful, and aligned with your business as customer behavior and workflows change.",
           "items": [
-            "Faster acknowledgment of customer needs",
-            "Reduced frustration from delayed replies",
-            "Consistent answers across interactions",
-            "Better escalation to human support",
-            "Less repetitive workload for staff",
-            "Improved customer experience continuity"
+            "Conversation quality review",
+            "Workflow performance monitoring",
+            "AI response improvement",
+            "New automation opportunities"
           ],
-          "note": "Good customer service protects the revenue you already earned."
+          "note": "DBX is positioned as a long-term AI operations partner, not just a one-time implementation vendor."
         },
         {
           "type": "section",
           "variant": "cta-panel",
           "id": "final-cta",
           "eyebrow": "Next step",
-          "title": "Ready to Capture More Leads and Improve Customer Response?",
-          "body": "Book a conversation with DBX Solutions to review your customer interaction process and identify where AI-powered automation can help improve response time, lead capture, and customer experience.",
+          "title": "Start with a practical AI consultation.",
+          "body": "Book a conversation with DBX Solutions to review your customer channels, common questions, and workflow challenges.",
           "cards": [
             {
               "title": "What we review",
               "items": [
                 "Current customer channels including WhatsApp, SMS, voice, email, chat, and messaging",
-                "Where responses slow down",
-                "Which inquiries can be structured first"
+                "Where responses, qualification, or handoffs slow down",
+                "Which practical AI workflow should come first"
               ]
             }
           ]
@@ -159,7 +153,7 @@
             "Customer inquiry channels including WhatsApp, SMS, voice, chat, email, and messaging",
             "Common questions",
             "Current response process",
-            "Lead capture gaps",
+            "Lead qualifying gaps",
             "Support bottlenecks",
             "Escalation needs",
             "Existing tools and workflows"
@@ -337,8 +331,8 @@
             {
               "label": "Starter",
               "title": "AI Response System",
-              "subtitle": "Best for businesses that need fast website response and basic lead capture.",
-              "items": ["1 AI customer service agent", "Website chat integration", "Basic FAQ setup", "Lead capture", "Human handoff", "Monthly optimization"]
+              "subtitle": "Best for businesses that need fast website response and basic lead qualifying.",
+              "items": ["1 AI customer service agent", "Website chat integration", "Basic FAQ setup", "Lead qualifying", "Human handoff", "Monthly optimization"]
             },
             {
               "label": "Growth",
@@ -454,9 +448,9 @@
       "hero": {
         "eyebrow": "Contact",
         "headline": "Ready to Capture More Leads and Improve Customer Response?",
-        "body": "Book a conversation with DBX Solutions to review your customer interaction process and identify where AI can help improve response time, lead capture, and customer experience.",
+        "body": "Book a conversation with DBX Solutions to review your customer interaction process and identify where AI can help improve response time, lead qualifying, and customer experience.",
         "actions": [
-          { "label": "Book a Demo", "href": "CALENDAR_URL" },
+          { "label": "Book a Consultation", "href": "CALENDAR_URL" },
           { "label": "Request an AI Readiness Review", "href": "contact/" }
         ]
       },
@@ -481,7 +475,7 @@
               { "name": "industry", "label": "Industry", "type": "text", "placeholder": "Home services, healthcare, B2B, etc." },
               { "name": "monthly_inquiries", "label": "Estimated monthly customer inquiries", "type": "select", "placeholder": "Select one", "options": ["Under 100", "100–500", "500–2,000", "2,000+"] },
               { "name": "channels", "label": "Current customer service channels", "type": "text", "placeholder": "WhatsApp, SMS, voice, chat, email, website forms" },
-              { "name": "improvement_goal", "label": "What do you want to improve?", "type": "text", "placeholder": "Lead capture, response time, support workload..." },
+              { "name": "improvement_goal", "label": "What do you want to improve?", "type": "text", "placeholder": "Lead qualifying, response time, support workload..." },
               { "name": "message", "label": "Message", "type": "textarea", "placeholder": "Tell us what is happening today." }
             ]
           }

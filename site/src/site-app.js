@@ -31,10 +31,22 @@ const legalLinks = [
 ]
 
 const valuePoints = [
-  'Support answers with approved context',
-  'Lead intake across WhatsApp, chat, SMS, forms, and email',
-  'CRM, calendar, and team follow-up workflows',
-  'Human review and escalation when it matters'
+  {
+    title: 'Verified Accuracy',
+    body: 'Answers grounded in your specific business data for total precision.'
+  },
+  {
+    title: 'Unified Channels',
+    body: 'Connect everywhere: WhatsApp, SMS, Web, and Email in one place.'
+  },
+  {
+    title: 'Integrated Workflows',
+    body: 'Instant sync with your CRM, calendar, and team for zero-lag follow-up.'
+  },
+  {
+    title: 'Smart Escalation',
+    body: 'Seamless hand-offs to your team exactly when a human touch is needed.'
+  }
 ]
 
 const problems = [
@@ -200,13 +212,11 @@ const pages = {
       'DBX Solutions helps small and mid-sized businesses automate customer conversations, improve response times, qualify leads, and streamline operations with practical AI-powered solutions.',
     hero: {
       eyebrow: 'AI-Powered Customer Experience',
-      headline: 'Never miss a customer conversation again.',
+      headline: 'A good experience with your customers will pay for itself and help you monetize.',
       body:
-        'DBX Solutions helps growing SMBs respond faster, qualify leads, automate repetitive conversations, and connect customer interactions with the tools your team already uses.',
-      primary: 'Book a Consultation',
-      secondary: 'See How It Works',
-      secondaryHref: '#process',
-      microcopy: 'Practical AI for customer support, lead engagement, workflow automation, and smarter business operations.'
+        'Our purpose is to empower SMBs with Enterprise Level AI that handles the heavy lifting of daily tasks. From lead qualifying to providing order status, our platform executes tasks securely with error-handling with human in the loop intervention only if needed. We bridge the gap between your customer conversations and your tech stack, delivering immediate ROI so you can focus on growing your business while we manage the AI.',
+      primary: 'Book a Free Consultation',
+      microcopy: 'From answering repetitive questions to chasing down leads, we take the "busy" out of business. It’s enterprise-grade automation that actually feels like help.'
     },
     blocks: [
       { type: 'problem' },
@@ -491,51 +501,159 @@ function renderHeader(pageKey) {
   `
 }
 
-function renderWorkflowVisual() {
-  const steps = [
-    ['Customer message', 'WhatsApp, chat, SMS, form, or email inquiry arrives.'],
-    ['DBX AI Assistant', 'Qualifies, answers, collects details, and routes.'],
-    ['Workflow automation', 'Creates the next step in your business process.'],
-    ['CRM or team follow-up', 'Your team gets context to close, support, or review.']
-  ]
-  return `
-    <aside class="workflow-visual" aria-label="Customer communication workflow visualization">
-      <div class="orbit-glow"></div>
-      <div class="visual-kicker">Customer conversations connected to business operations</div>
-      <div class="channel-stack" aria-hidden="true">
+function renderPhoneDevice(variant = 'booking') {
+  const conversations = {
+    status: [
+      ['incoming', 'Can you check my order status and send the latest delivery update?', '9:12 AM'],
+      ['outgoing wide', 'I found your order. It is packed, assigned to delivery, and expected today between 2pm and 4pm.', '9:12 AM', '✓✓'],
+      ['incoming compact', 'Can you notify my team too?', '9:13 AM'],
+      ['outgoing', 'Done. I synced the update to your CRM and sent the team alert with the customer note.', '9:13 AM', '✓✓'],
+      ['incoming compact', 'Perfect, thank you.', '9:14 AM'],
+      ['outgoing', 'You are welcome. I will watch for delivery changes and update the record if anything shifts.', '9:14 AM', '✓✓']
+    ]
+  }
+
+  const chatScreen = `
+    <div class="whatsapp-preview">
+      <div class="whatsapp-header">
+        <div class="whatsapp-avatar" aria-hidden="true">
+          <img src="${href('dbx-logo-avatar.png')}" alt="" />
+        </div>
+        <div>
+          <strong>DBX Assistant</strong>
+          <span>online now</span>
+        </div>
+      </div>
+
+      <div class="whatsapp-chat" aria-label="Example WhatsApp customer conversation">
+        <span class="whatsapp-day">Today</span>
+        ${conversations.status
+          .map(
+            ([type, message, time, receipt]) => `
+              <div class="whatsapp-bubble ${type}">
+                <p>${message}</p>
+                <time>${time}${receipt ? ` <span aria-hidden="true">${receipt}</span>` : ''}</time>
+              </div>`
+          )
+          .join('')}
+      </div>
+    </div>
+  `
+
+  const whatsappCallScreen = `
+    <div class="phone-call-screen whatsapp-call-screen" aria-label="Example WhatsApp customer call screen">
+      <div class="call-status-bar" aria-hidden="true">
+        <span>9:41</span>
+        <span class="call-status-icons">5G 82%</span>
+      </div>
+      <div class="whatsapp-call-surface" aria-hidden="true"></div>
+      <div class="whatsapp-call-notice" aria-hidden="true">
+        <span class="whatsapp-call-lock"></span>
+        <span>End-to-end encrypted</span>
+      </div>
+      <div class="whatsapp-call-identity">
+        <div class="call-avatar whatsapp-call-avatar" aria-hidden="true">
+          <img src="${href('dbx-logo-avatar.png')}" alt="" />
+        </div>
+        <strong>DBX Assistant</strong>
+        <span>00:38</span>
+        <p>WhatsApp voice call</p>
+      </div>
+      <div class="whatsapp-call-privacy" aria-hidden="true">
         <span>WhatsApp</span>
-        <span>Web chat</span>
-        <span>SMS</span>
       </div>
-      <div class="message-card customer">
-        <span>Incoming</span>
-        <strong>“Can I get pricing and availability on WhatsApp?”</strong>
+      <div class="call-controls whatsapp-call-controls" aria-hidden="true">
+        <span class="call-control"><span class="control-icon icon-speaker"></span><small>Audio</small></span>
+        <span class="call-control"><span class="control-icon icon-video"></span><small>Video</small></span>
+        <span class="call-control"><span class="control-icon icon-mic"></span><small>Mute</small></span>
+        <span class="call-control end"><span class="control-icon icon-phone-end"></span><small>End</small></span>
       </div>
-      <div class="ai-core">
-        <span>DBX AI Assistant</span>
-        <strong>Qualify, answer, route</strong>
+    </div>
+  `
+
+  const iphoneCallScreen = `
+    <div class="phone-call-screen ios-call-screen" aria-label="Example iPhone customer call screen">
+      <div class="call-status-bar" aria-hidden="true">
+        <span>9:41</span>
+        <span class="call-status-icons">5G 82%</span>
       </div>
-      <div class="message-card workflow">
-        <span>Automation</span>
-        <strong>CRM update, booking step, or support route</strong>
+      <div class="ios-call-glow" aria-hidden="true"></div>
+      <div class="ios-call-identity">
+        <strong>Maria Gomez</strong>
+        <p>mobile 00:51</p>
       </div>
-      <div class="message-card team">
-        <span>Team handoff</span>
-        <strong>Lead summary sent with owner and next step</strong>
+      <div class="call-controls ios-call-controls" aria-hidden="true">
+        <span class="call-control"><span class="control-icon icon-mic"></span><small>mute</small></span>
+        <span class="call-control"><span class="control-icon icon-keypad"></span><small>keypad</small></span>
+        <span class="call-control"><span class="control-icon icon-speaker"></span><small>speaker</small></span>
+        <span class="call-control"><span class="control-icon icon-plus"></span><small>add call</small></span>
+        <span class="call-control"><span class="control-icon icon-video"></span><small>FaceTime</small></span>
+        <span class="call-control"><span class="control-icon icon-contacts"></span><small>contacts</small></span>
+        <span class="call-control end"><span class="control-icon icon-phone-end"></span></span>
       </div>
-      <div class="system-stack" aria-hidden="true">
-        <span>CRM</span>
-        <span>Calendar</span>
-        <span>Team alerts</span>
+    </div>
+  `
+
+  const screens = {
+    status: chatScreen,
+    booking: whatsappCallScreen,
+    handoff: iphoneCallScreen
+  }
+
+  return `
+    <div class="iphone-device iphone-device-${variant}">
+      <span class="iphone-side-button iphone-side-button-left" aria-hidden="true"></span>
+      <span class="iphone-side-button iphone-side-button-right" aria-hidden="true"></span>
+      <div class="iphone-screen">
+        <span class="iphone-island" aria-hidden="true"></span>
+        ${screens[variant] || chatScreen}
       </div>
-      <div class="workflow-line">
-        ${steps.map(([title, body], index) => `<div><b>${index + 1}</b><strong>${title}</strong><span>${body}</span></div>`).join('')}
+    </div>
+  `
+}
+
+function renderWorkflowVisual() {
+  return `
+    <aside class="workflow-visual" aria-label="Customer conversation and call previews">
+      <div class="phone-stage">
+        <div class="phone-stack">
+          ${renderPhoneDevice('status')}
+          ${renderPhoneDevice('booking')}
+          ${renderPhoneDevice('handoff')}
+        </div>
       </div>
     </aside>
   `
 }
 
+function renderValuePoints() {
+  return `<ul class="value-points">${valuePoints
+    .map(
+      (item) => `<li>
+        <strong>${item.title}</strong>
+        <p>${item.body}</p>
+      </li>`
+    )
+    .join('')}</ul>`
+}
+
 function renderHero(page) {
+  if (page === pages.home) {
+    return `
+      <section class="hero home-hero" id="top">
+        <div class="hero-copy">
+          <h1>${page.hero.headline}</h1>
+          <p>${page.hero.body}</p>
+        </div>
+        ${renderWorkflowVisual()}
+        ${renderValuePoints()}
+        <div class="home-hero-actions">
+          ${renderActions(page.hero.primary)}
+        </div>
+      </section>
+    `
+  }
+
   return `
     <section class="hero" id="top">
       <div class="hero-copy">
@@ -544,13 +662,8 @@ function renderHero(page) {
         <p>${page.hero.body}</p>
         ${page.hero.microcopy ? `<p class="hero-trust">${page.hero.microcopy}</p>` : ''}
         ${renderActions(page.hero.primary, page.hero.secondary, page.hero.secondaryHref)}
-        ${
-          page === pages.home
-            ? `<ul class="value-points">${valuePoints.map((item) => `<li>${item}</li>`).join('')}</ul>`
-            : ''
-        }
       </div>
-      ${page === pages.home ? renderWorkflowVisual() : renderPageSignal(page.hero.eyebrow)}
+      ${renderPageSignal(page.hero.eyebrow)}
     </section>
   `
 }
@@ -974,7 +1087,7 @@ export function mountPage(pageKey) {
   const description = document.querySelector('meta[name="description"]')
   if (description) description.setAttribute('content', translateText(description.getAttribute('content'), locale))
   const html = `
-    <div class="wrapper">
+    <div class="wrapper ${pageKey === 'home' ? 'home-wrapper' : ''}">
       ${renderHeader(pageKey)}
       <main>
         ${renderHero(page)}

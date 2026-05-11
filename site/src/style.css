@@ -21,10 +21,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 12% 0%, rgba(79, 209, 197, 0.18), transparent 30rem),
     radial-gradient(circle at 88% 8%, rgba(214, 106, 42, 0.16), transparent 28rem),
@@ -301,17 +303,25 @@ footer p,
 }
 
 .value-points li {
-  padding: 0.8rem 0.9rem;
+  padding: 0.8rem 0.9rem 0.85rem;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: var(--panel);
   color: var(--muted);
 }
 
-.value-points li::before {
-  content: '•';
-  margin-right: 0.55rem;
+.value-points strong {
+  display: block;
   color: var(--accent);
+  font-size: 0.92rem;
+  line-height: 1.2;
+}
+
+.value-points p {
+  margin-top: 0.3rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.35;
 }
 
 .workflow-visual,
@@ -1080,8 +1090,8 @@ nav a:hover {
 .eyebrow {
   color: var(--accent);
   letter-spacing: 0.35em;
-  font-weight: 600;
-  font-size: 0.936rem;
+  font-weight: 900;
+  font-size: clamp(1.05rem, 1.35vw, 1.18rem);
   margin-bottom: 1rem;
   display: inline-block;
 }
@@ -2478,7 +2488,7 @@ footer .footer-meta {
   top: 1rem;
   z-index: 80;
   display: grid;
-  grid-template-columns: auto 1fr auto auto;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
   gap: 1.25rem;
   padding: 0.65rem 0.8rem;
@@ -2490,8 +2500,15 @@ footer .footer-meta {
   backdrop-filter: blur(18px);
 }
 
+.home-wrapper .site-header {
+  margin-bottom: clamp(1rem, 2vw, 1.75rem);
+}
+
 .site-header .logo img {
+  display: block;
   height: 58px;
+  width: auto;
+  object-fit: contain;
 }
 
 #primary-nav {
@@ -2499,6 +2516,7 @@ footer .footer-meta {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: nowrap;
   gap: clamp(0.7rem, 2vw, 1.35rem);
   padding: 0;
   background: transparent;
@@ -2510,12 +2528,14 @@ footer nav a {
   color: var(--muted);
   text-decoration: none;
   font-size: 0.94rem;
+  white-space: nowrap;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  transform: none;
 }
 
 .hero {
@@ -2527,19 +2547,53 @@ footer nav a {
   padding: 0;
 }
 
+.hero-copy {
+  align-self: center;
+}
+
+.home-hero {
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: clamp(1.5rem, 3vw, 2.45rem);
+  min-height: auto;
+  padding-block: 0 clamp(1.5rem, 3.5vw, 2.75rem);
+  text-align: center;
+}
+
+.home-hero .hero-copy {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 1060px);
+}
+
 .hero h1 {
-  max-width: 760px;
-  margin-bottom: 1.2rem;
-  font-size: clamp(2.8rem, 7vw, 5.9rem);
-  line-height: 0.98;
-  letter-spacing: -0.07em;
+  max-width: 700px;
+  margin-bottom: 1rem;
+  font-size: clamp(2rem, 3.9vw, 3.45rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.home-hero h1 {
+  max-width: 980px;
+  font-size: clamp(2.25rem, 5.1vw, 4.55rem);
+  line-height: 1.04;
+  letter-spacing: -0.055em;
 }
 
 .hero-copy > p {
   max-width: 700px;
-  margin-bottom: 1.15rem;
+  margin-bottom: 1rem;
   color: var(--muted);
-  font-size: clamp(1.05rem, 2vw, 1.26rem);
+  font-size: clamp(1rem, 1.75vw, 1.16rem);
+}
+
+.home-hero .hero-copy > p {
+  max-width: 1120px;
+  margin-bottom: 0;
+  font-size: clamp(0.98rem, 1.25vw, 1.1rem);
+  line-height: 1.5;
 }
 
 .hero-trust {
@@ -2554,30 +2608,68 @@ footer nav a {
 .value-points {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-  max-width: 700px;
-  margin-top: 1.5rem;
+  gap: 0.55rem;
+  max-width: 690px;
+  margin-top: 1.15rem;
   list-style: none;
 }
 
 .value-points li {
-  padding: 0.8rem 0.9rem;
+  padding: 0.65rem 0.75rem 0.7rem;
   border: 1px solid var(--line);
   border-radius: 16px;
   background: var(--panel);
   color: var(--muted);
+  list-style: none;
 }
 
 .value-points li::before {
-  content: '•';
-  margin-right: 0.55rem;
+  content: none;
+}
+
+.value-points strong {
+  display: block;
   color: var(--accent);
+  font-size: 0.9rem;
+  line-height: 1.15;
+}
+
+.value-points p {
+  margin-top: 0.22rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.25;
+}
+
+.home-hero .value-points {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+  width: min(100%, 1060px);
+  max-width: none;
+  margin-top: 0;
+  text-align: left;
+}
+
+.home-hero .value-points li {
+  min-height: 100%;
+  padding: 1rem;
+  background:
+    linear-gradient(145deg, rgba(79, 209, 197, 0.12), rgba(255, 255, 255, 0.045)),
+    rgba(5, 6, 10, 0.62);
+}
+
+.home-hero .value-points strong {
+  font-size: 0.96rem;
+}
+
+.home-hero .value-points p {
+  font-size: 0.86rem;
+  line-height: 1.42;
 }
 
 .workflow-visual,
 .page-signal {
   position: relative;
-  min-height: 600px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 34px;
@@ -2587,164 +2679,872 @@ footer nav a {
   box-shadow: var(--shadow);
 }
 
+.workflow-visual {
+  display: grid;
+  align-self: start;
+  align-content: center;
+  gap: 1rem;
+  min-height: auto;
+  margin-top: clamp(4.25rem, 7vw, 5.6rem);
+  padding: clamp(0.45rem, 1.2vw, 0.75rem);
+  overflow: visible;
+  background:
+    radial-gradient(circle at 50% 8%, rgba(79, 209, 197, 0.14), transparent 21rem),
+    linear-gradient(145deg, rgba(18, 24, 29, 0.9), rgba(9, 13, 18, 0.82));
+}
+
+.home-hero .workflow-visual {
+  width: min(100%, 1080px);
+  margin-top: 0;
+  padding: clamp(1rem, 2vw, 1.4rem);
+  border-radius: 38px;
+  overflow: hidden;
+}
+
 .workflow-visual::before {
-  content: '';
-  position: absolute;
-  inset: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 26px;
-  pointer-events: none;
+  content: none;
 }
 
-.visual-kicker {
-  position: absolute;
-  top: 1.2rem;
-  left: 1.4rem;
-  right: 1.4rem;
-  display: flex;
-  justify-content: center;
-  color: rgba(238, 241, 255, 0.72);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.orbit-glow {
-  position: absolute;
-  inset: 6rem 4.5rem;
-  border: 1px solid rgba(79, 209, 197, 0.2);
-  border-radius: 999px;
-  box-shadow: 0 0 80px rgba(79, 209, 197, 0.12);
-}
-
-.channel-stack,
-.system-stack {
-  position: absolute;
+.phone-stage {
+  position: relative;
+  z-index: 1;
   display: grid;
-  gap: 0.45rem;
-  width: 9rem;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
 }
 
-.channel-stack {
-  left: 1.4rem;
-  top: 13.3rem;
-}
-
-.system-stack {
-  right: 1.4rem;
-  top: 13.3rem;
-}
-
-.channel-stack span,
-.system-stack span {
-  padding: 0.45rem 0.65rem;
-  border: 1px solid rgba(79, 209, 197, 0.22);
-  border-radius: 999px;
-  background: rgba(5, 6, 10, 0.62);
-  color: var(--muted);
-  font-size: 0.82rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-.ai-core {
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  width: 220px;
-  height: 220px;
+.phone-stack {
   display: grid;
-  place-content: center;
-  gap: 0.45rem;
-  padding: 1.5rem;
-  border: 1px solid rgba(79, 209, 197, 0.5);
-  border-radius: 50%;
-  background: rgba(5, 6, 10, 0.9);
-  text-align: center;
-  transform: translate(-50%, -50%);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: clamp(0.65rem, 1.8vw, 1.2rem);
+  width: 100%;
+}
+
+.iphone-device {
+  position: relative;
+  width: min(100%, 430px);
+  padding: 0.36rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 46px;
+  background:
+    linear-gradient(145deg, #4f565c, #101318 18%, #050607 55%, #2f363d);
   box-shadow:
-    0 0 0 12px rgba(79, 209, 197, 0.045),
-    0 0 70px rgba(79, 209, 197, 0.24);
+    0 34px 70px rgba(0, 0, 0, 0.48),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.045);
 }
 
-.message-card {
+.home-hero .iphone-device {
+  width: min(100%, 318px);
+  height: 736px;
+  min-height: 0;
+}
+
+.home-hero .iphone-device-booking {
+  z-index: 2;
+}
+
+.home-hero .iphone-device-status,
+.home-hero .iphone-device-handoff {
+  z-index: 1;
+}
+
+.iphone-device::before {
+  content: none;
+}
+
+.iphone-side-button {
   position: absolute;
-  width: min(276px, 72%);
-  padding: 1rem;
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.075);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  width: 3px;
+  border-radius: 999px;
+  background: linear-gradient(#68717a, #12161b);
 }
 
-.message-card span,
-.ai-core span,
+.iphone-side-button-left {
+  left: -3px;
+  top: 9.5rem;
+  height: 5.2rem;
+}
+
+.iphone-side-button-right {
+  right: -3px;
+  top: 12rem;
+  height: 6rem;
+}
+
+.iphone-screen {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 39px;
+  background: #111820;
+  isolation: isolate;
+  clip-path: inset(0 round 39px);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 0 30px rgba(0, 0, 0, 0.48);
+}
+
+.iphone-screen > .whatsapp-preview,
+.iphone-screen > .phone-call-screen {
+  border-radius: inherit;
+}
+
+.iphone-island {
+  position: absolute;
+  z-index: 3;
+  top: 0.72rem;
+  left: 50%;
+  width: 6.2rem;
+  height: 1.55rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: #030405;
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.05),
+    0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.whatsapp-preview {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-self: stretch;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-height: 735px;
+  border: 0;
+  border-radius: inherit;
+  background: #111820;
+  box-shadow: none;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.home-hero .whatsapp-preview {
+  height: 100%;
+  min-height: 0;
+}
+
+.whatsapp-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.58rem;
+  min-height: 4.75rem;
+  padding: 2.55rem 0.82rem 0.62rem;
+  background: #182128;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.whatsapp-avatar {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 999px;
+  border: 1px solid rgba(140, 236, 226, 0.65);
+  background: #ffffff;
+  box-shadow: 0 0 22px rgba(79, 209, 197, 0.25);
+}
+
+.whatsapp-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 42%;
+  transform: scale(1.62);
+}
+
+.whatsapp-header strong {
+  display: block;
+  color: #e9edef;
+  font-size: 0.96rem;
+  line-height: 1.1;
+}
+
+.whatsapp-header span {
+  display: block;
+  margin-top: 0.1rem;
+  color: #8696a0;
+  font-size: 0.74rem;
+}
+
+.visual-kicker,
 .page-signal span {
   color: var(--accent);
   font-size: 0.76rem;
-  font-weight: 800;
-  letter-spacing: 0.16em;
+  font-weight: 900;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
-.message-card.customer {
-  top: 3.2rem;
-  left: 1.6rem;
-}
-
-.message-card.workflow {
-  top: 3.2rem;
-  right: 1.6rem;
-}
-
-.message-card.team {
-  right: 2rem;
-  bottom: 8.5rem;
-}
-
-.message-card strong,
-.ai-core strong {
-  display: block;
-  line-height: 1.2;
-}
-
-.workflow-line {
-  position: absolute;
-  inset-inline: 1.25rem;
-  bottom: 1.25rem;
+.whatsapp-chat {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.65rem;
+  align-content: start;
+  align-items: start;
+  grid-auto-rows: max-content;
+  gap: 0.22rem;
+  min-height: 660px;
+  padding: 0.5rem 0.56rem 0.5rem;
+  background:
+    radial-gradient(circle at 18% 4%, rgba(79, 209, 197, 0.055), transparent 9rem),
+    #10181f;
 }
 
-.workflow-line div {
-  min-height: 126px;
-  padding: 0.8rem;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: rgba(5, 6, 10, 0.7);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+.home-hero .whatsapp-chat {
+  min-height: 0;
+  overflow: hidden;
+  padding-bottom: 1.15rem;
 }
 
-.workflow-line b {
+.whatsapp-day {
+  justify-self: center;
+  margin-bottom: 0.12rem;
+  padding: 0.22rem 0.56rem;
+  border-radius: 12px;
+  background: #25313a;
+  color: #e9edef;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.whatsapp-bubble {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: fit-content;
+  max-width: 64%;
+  padding: 0.28rem 0.46rem 0.18rem;
+  color: #e9edef;
+  box-shadow: 0 1px 0.5px rgba(0, 0, 0, 0.22);
+}
+
+.whatsapp-bubble p {
   display: block;
-  color: var(--accent);
-  margin-bottom: 0.35rem;
+  color: inherit;
+  font-size: clamp(0.84rem, 1.04vw, 0.92rem);
+  font-weight: 500;
+  line-height: 1.18;
 }
 
-.workflow-line strong {
+.whatsapp-bubble p::after {
+  content: none;
+}
+
+.whatsapp-link {
+  color: #53bdeb;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.whatsapp-bubble time {
+  position: static;
+  align-self: flex-end;
   display: block;
-  margin-bottom: 0.35rem;
-  line-height: 1.2;
+  float: none;
+  margin: 0.06rem 0 0;
+  color: rgba(233, 237, 239, 0.66);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
 }
 
-.workflow-line span {
-  color: var(--muted);
-  font-size: 0.86rem;
+.whatsapp-bubble time span {
+  color: #53bdeb;
+  letter-spacing: -0.12em;
+}
+
+.whatsapp-bubble.incoming {
+  justify-self: start;
+  margin-left: 0.42rem;
+  border-radius: 0 10px 10px 10px;
+  background: #202c33;
+}
+
+.whatsapp-bubble.incoming::before,
+.whatsapp-bubble.outgoing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 0.6rem;
+  height: 0.76rem;
+  background: inherit;
+}
+
+.whatsapp-bubble.outgoing {
+  justify-self: end;
+  margin-right: 0.42rem;
+  border-radius: 10px 0 10px 10px;
+  background: #005c4b;
+}
+
+.whatsapp-bubble.incoming::before {
+  left: -0.46rem;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+}
+
+.whatsapp-bubble.outgoing::before {
+  right: -0.46rem;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.whatsapp-bubble.outgoing p::after {
+  content: none;
+}
+
+.whatsapp-bubble.outgoing time {
+  color: rgba(214, 232, 226, 0.7);
+}
+
+.whatsapp-bubble.compact {
+  max-width: 58%;
+}
+
+.whatsapp-bubble.compact time {
+  position: static;
+  display: block;
+  margin: 0.06rem 0 0;
+}
+
+.whatsapp-bubble.incoming + .whatsapp-bubble.outgoing,
+.whatsapp-bubble.outgoing + .whatsapp-bubble.incoming {
+  margin-top: 0.14rem;
+}
+
+.whatsapp-bubble.wide {
+  max-width: 70%;
+}
+
+.phone-call-screen {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  align-self: stretch;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  min-height: 735px;
+  border-radius: inherit;
+  color: #f6f7f8;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.home-hero .phone-call-screen {
+  height: 100%;
+  min-height: 0;
+}
+
+.call-status-bar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 2.75rem;
+  padding: 0.9rem 1.25rem 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.call-status-icons {
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+}
+
+.call-avatar {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.call-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 42%;
+  transform: scale(1.48);
+}
+
+.call-controls {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: 1rem 0.95rem;
+  padding: 0 1.45rem 2.15rem;
+}
+
+.call-control {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 0.48rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+}
+
+.control-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 3.65rem;
+  height: 3.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  font-size: 0;
+  overflow: hidden;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    0 16px 34px rgba(0, 0, 0, 0.22);
+}
+
+.control-icon::before,
+.control-icon::after {
+  content: '';
+  position: absolute;
+}
+
+.icon-mic::before {
+  top: 0.88rem;
+  width: 0.62rem;
+  height: 1.18rem;
+  border: 0.14rem solid #fff;
+  border-radius: 999px;
+}
+
+.icon-mic::after {
+  top: 2.08rem;
+  width: 1.08rem;
+  height: 0.72rem;
+  border: 0.13rem solid #fff;
+  border-top: 0;
+  border-radius: 0 0 999px 999px;
+  box-shadow: 0 0.55rem 0 -0.21rem #fff;
+}
+
+.icon-keypad::before {
+  width: 0.24rem;
+  height: 0.24rem;
+  border-radius: 999px;
+  background: #fff;
+  box-shadow:
+    0.56rem 0 0 #fff,
+    -0.56rem 0 0 #fff,
+    0 0.56rem 0 #fff,
+    0.56rem 0.56rem 0 #fff,
+    -0.56rem 0.56rem 0 #fff,
+    0 -0.56rem 0 #fff,
+    0.56rem -0.56rem 0 #fff,
+    -0.56rem -0.56rem 0 #fff;
+}
+
+.icon-speaker::before {
+  left: 1.02rem;
+  width: 0.92rem;
+  height: 1.02rem;
+  background: #fff;
+  clip-path: polygon(0 34%, 34% 34%, 100% 5%, 100% 95%, 34% 66%, 0 66%);
+}
+
+.icon-speaker::after {
+  right: 0.98rem;
+  width: 0.78rem;
+  height: 1.22rem;
+  border: 0.14rem solid #fff;
+  border-left: 0;
+  border-radius: 0 999px 999px 0;
+}
+
+.icon-video::before {
+  left: 0.98rem;
+  width: 1.2rem;
+  height: 0.86rem;
+  border: 0.14rem solid #fff;
+  border-radius: 0.24rem;
+}
+
+.icon-video::after {
+  right: 0.94rem;
+  width: 0.78rem;
+  height: 0.76rem;
+  background: #fff;
+  clip-path: polygon(0 30%, 100% 4%, 100% 96%, 0 70%);
+}
+
+.icon-plus::before,
+.icon-plus::after {
+  width: 1.4rem;
+  height: 0.16rem;
+  border-radius: 999px;
+  background: #fff;
+}
+
+.icon-plus::after {
+  transform: rotate(90deg);
+}
+
+.icon-contacts::before {
+  top: 0.9rem;
+  width: 0.82rem;
+  height: 0.82rem;
+  border: 0.14rem solid #fff;
+  border-radius: 999px;
+}
+
+.icon-contacts::after {
+  bottom: 0.98rem;
+  width: 1.56rem;
+  height: 0.78rem;
+  border: 0.14rem solid #fff;
+  border-radius: 999px 999px 0.42rem 0.42rem;
+}
+
+.icon-phone-end::before {
+  width: 1.5rem;
+  height: 0.72rem;
+  border: 0.19rem solid #fff;
+  border-top: 0;
+  border-radius: 0 0 999px 999px;
+  transform: rotate(180deg);
+}
+
+.call-control small {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.call-control.end .control-icon {
+  background: #f04438;
+}
+
+.whatsapp-call-screen {
+  grid-template-rows: auto auto 1fr auto auto;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(37, 211, 102, 0.18), transparent 14rem),
+    radial-gradient(circle at 82% 76%, rgba(18, 140, 126, 0.18), transparent 13rem),
+    linear-gradient(180deg, #17352a 0%, #0f241d 34%, #08130f 100%);
+}
+
+.whatsapp-call-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 26%),
+    rgba(3, 7, 6, 0.2);
+  backdrop-filter: blur(2px);
+}
+
+.whatsapp-call-surface {
+  position: absolute;
+  inset: 4.4rem 0.82rem 1.05rem;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(255, 255, 255, 0.11), transparent 11rem),
+    rgba(255, 255, 255, 0.045);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 24px 70px rgba(0, 0, 0, 0.24);
+  backdrop-filter: blur(20px);
+}
+
+.whatsapp-call-notice {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-self: center;
+  gap: 0.35rem;
+  max-width: calc(100% - 2rem);
+  min-height: 1.55rem;
+  padding: 0.18rem 0.68rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.14);
+  color: rgba(236, 253, 245, 0.72);
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.whatsapp-call-lock {
+  position: relative;
+  width: 0.54rem;
+  height: 0.46rem;
+  border: 0.08rem solid currentColor;
+  border-radius: 0.1rem;
+}
+
+.whatsapp-call-lock::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0.31rem;
+  width: 0.36rem;
+  height: 0.32rem;
+  border: 0.08rem solid currentColor;
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
+  transform: translateX(-50%);
+}
+
+.whatsapp-call-identity {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  padding: 4.7rem 1.25rem 0;
+  text-align: center;
+}
+
+.whatsapp-call-avatar {
+  width: 7.9rem;
+  height: 7.9rem;
+  margin-bottom: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: #ffffff;
+  box-shadow:
+    0 0 0 0.48rem rgba(255, 255, 255, 0.055),
+    0 24px 64px rgba(0, 0, 0, 0.38);
+}
+
+.whatsapp-call-identity strong {
+  color: #ffffff;
+  font-size: 1.9rem;
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.045em;
+}
+
+.whatsapp-call-identity span {
+  margin-top: 0.48rem;
+  color: rgba(236, 253, 245, 0.8);
+  font-size: 0.96rem;
+  font-weight: 700;
+}
+
+.whatsapp-call-identity p:last-child {
+  max-width: 13rem;
+  margin-top: 0.28rem;
+  color: rgba(236, 253, 245, 0.56);
+  font-size: 0.82rem;
   line-height: 1.35;
+}
+
+.whatsapp-call-privacy {
+  position: relative;
+  z-index: 2;
+  align-self: end;
+  display: grid;
+  justify-content: center;
+  padding: 0 1.25rem 0.75rem;
+  color: rgba(236, 253, 245, 0.45);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.whatsapp-call-controls {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: center;
+  gap: 0.42rem;
+  margin: 0 0.92rem 1.12rem;
+  padding: 0.58rem 0.62rem 0.5rem;
+  border-radius: 2rem;
+  background: rgba(5, 14, 11, 0.7);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 20px 46px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(20px);
+}
+
+.whatsapp-call-controls .control-icon {
+  width: 2.78rem;
+  height: 2.78rem;
+  background: rgba(236, 253, 245, 0.15);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.13),
+    0 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+.whatsapp-call-controls .call-control {
+  gap: 0.22rem;
+}
+
+.whatsapp-call-controls .call-control small {
+  color: rgba(236, 253, 245, 0.66);
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.whatsapp-call-controls .call-control.end .control-icon {
+  background: #e5484d;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 12px 24px rgba(229, 72, 77, 0.26);
+}
+
+.ios-call-screen {
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  isolation: isolate;
+  clip-path: inset(0 round 39px);
+  background:
+    radial-gradient(circle at 68% 18%, rgba(185, 197, 218, 0.22), transparent 12rem),
+    radial-gradient(circle at 12% 38%, rgba(255, 255, 255, 0.14), transparent 11rem),
+    linear-gradient(160deg, #3f4654 0%, #1b202d 46%, #070910 100%);
+}
+
+.ios-call-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 44%),
+    rgba(6, 9, 16, 0.24);
+  backdrop-filter: blur(16px);
+}
+
+.ios-call-glow {
+  position: absolute;
+  z-index: 0;
+  inset: 5.2rem 1.2rem auto;
+  height: 13rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  filter: blur(30px);
+}
+
+.ios-call-identity {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  padding: 4.35rem 1.35rem 0;
+  text-align: center;
+}
+
+.ios-call-identity strong {
+  color: #ffffff;
+  font-size: 2.28rem;
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.06em;
+}
+
+.ios-call-identity p {
+  margin-top: 0.55rem;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.ios-call-controls {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-self: end;
+  gap: 1.05rem 1.08rem;
+  padding: 0 1.55rem 2.2rem;
+}
+
+.ios-call-controls .control-icon {
+  width: 3.68rem;
+  height: 3.68rem;
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 16px 34px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(18px);
+}
+
+.ios-call-controls .call-control small {
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.ios-call-controls .call-control.end {
+  grid-column: 2;
+  margin-top: 0.32rem;
+}
+
+.ios-call-controls .call-control.end .control-icon {
+  width: 4rem;
+  height: 4rem;
+  background: #ff3b30;
+}
+
+.conversation-outcomes {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  width: min(100%, 455px);
+  margin-inline: auto;
+}
+
+.conversation-outcomes div {
+  min-width: 0;
+  padding: 0.75rem 0.78rem;
+  border: 1px solid rgba(79, 209, 197, 0.22);
+  border-radius: 18px;
+  background:
+    linear-gradient(145deg, rgba(79, 209, 197, 0.12), rgba(255, 255, 255, 0.045)),
+    rgba(5, 6, 10, 0.62);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.2);
+}
+
+.conversation-outcomes strong {
+  display: block;
+  color: var(--text);
+  font-size: 0.84rem;
+  line-height: 1.18;
+}
+
+.conversation-outcomes p {
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1.28;
+}
+
+.home-hero-actions {
+  width: min(100%, 520px);
+}
+
+.home-hero-actions .actions {
+  display: grid;
+  margin-top: 0;
+}
+
+.home-hero-actions .btn {
+  width: 100%;
+  min-height: 58px;
+  font-size: 1rem;
 }
 
 main {
@@ -3140,9 +3940,10 @@ footer nav,
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1100px) {
   .site-header {
     grid-template-columns: auto 1fr auto;
+    align-items: center;
     border-radius: 26px;
   }
 
@@ -3156,6 +3957,11 @@ footer nav,
     justify-self: end;
   }
 
+  .header-actions {
+    align-self: center;
+    transform: none;
+  }
+
   body.nav-open #primary-nav {
     position: absolute;
     inset: calc(100% + 0.65rem) 0 auto;
@@ -3166,6 +3972,7 @@ footer nav,
     border-radius: 24px;
     background: rgba(5, 6, 10, 0.96);
     box-shadow: var(--shadow);
+    transform: none;
   }
 
   body.nav-open #primary-nav a {
@@ -3182,6 +3989,24 @@ footer nav,
 
   .hero {
     min-height: auto;
+  }
+
+  .workflow-visual {
+    margin-top: 0;
+  }
+
+  .home-hero .phone-stack,
+  .home-hero .value-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-hero .iphone-device-booking {
+    transform: none;
+  }
+
+  .home-hero .iphone-device-handoff {
+    grid-column: 1 / -1;
+    width: min(100%, 318px);
   }
 
   .services-grid,
@@ -3207,6 +4032,26 @@ footer nav,
   }
 }
 
+@media (max-width: 920px) {
+  .home-hero .workflow-visual {
+    width: min(100%, 380px);
+  }
+
+  .home-hero .phone-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .home-hero .iphone-device-status,
+  .home-hero .iphone-device-handoff {
+    display: none;
+  }
+
+  .home-hero .value-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(100%, 680px);
+  }
+}
+
 @media (max-width: 680px) {
   .wrapper {
     width: min(100% - 1.2rem, 1200px);
@@ -3214,20 +4059,53 @@ footer nav,
   }
 
   .site-header {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 0.5rem;
     top: 0.65rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.65rem;
+    padding: 0.52rem;
   }
 
   .site-header .logo img {
-    height: 50px;
+    height: 42px;
+  }
+
+  #primary-nav,
+  .header-book {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: grid;
   }
 
   main {
-    gap: 4rem;
+    gap: 3.4rem;
   }
 
   .hero h1 {
-    font-size: clamp(2.45rem, 15vw, 4rem);
+    font-size: clamp(1.95rem, 10.5vw, 2.85rem);
+  }
+
+  .home-hero {
+    gap: 1.15rem;
+    text-align: center;
+  }
+
+  .home-hero .hero-copy {
+    justify-items: center;
+    width: 100%;
+  }
+
+  .home-hero h1 {
+    font-size: clamp(1.95rem, 9.2vw, 2.65rem);
+    line-height: 1.08;
+  }
+
+  .home-hero .hero-copy > p {
+    max-width: 35rem;
+    font-size: 0.9rem;
+    line-height: 1.46;
   }
 
   .actions,
@@ -3250,55 +4128,61 @@ footer nav,
   }
 
   .workflow-visual {
-    min-height: 660px;
+    margin-top: 0;
+    min-height: auto;
+    border-radius: 28px;
   }
 
-  .ai-core {
-    top: 36%;
-    width: 185px;
-    height: 185px;
+  .home-hero .workflow-visual {
+    width: min(100%, 360px);
+    padding: 0.7rem;
   }
 
-  .visual-kicker {
-    position: relative;
-    inset: auto;
-    padding: 1rem 1rem 0;
+  .home-hero .phone-stack {
+    grid-template-columns: 1fr;
   }
 
-  .channel-stack,
-  .system-stack,
-  .orbit-glow {
+  .home-hero .iphone-device {
+    width: min(100%, 318px);
+    height: 678px;
+    min-height: 0;
+  }
+
+  .home-hero .iphone-device-status,
+  .home-hero .iphone-device-handoff {
     display: none;
   }
 
-  .message-card.customer,
-  .message-card.workflow,
-  .message-card.team {
-    left: 1rem;
-    right: 1rem;
-    width: auto;
+  .whatsapp-preview,
+  .phone-call-screen {
+    border-radius: inherit;
   }
 
-  .message-card.customer {
-    top: 1rem;
+  .home-hero .whatsapp-preview,
+  .home-hero .phone-call-screen {
+    height: 100%;
   }
 
-  .message-card.workflow {
-    top: 12rem;
+  .home-hero .value-points {
+    grid-template-columns: 1fr;
+    width: 100%;
   }
 
-  .message-card.team {
-    bottom: 16.2rem;
+  .whatsapp-chat {
+    min-height: 0;
   }
 
-  .workflow-line {
-    grid-template-columns: 1fr 1fr;
-    bottom: 1rem;
-    inset-inline: 1rem;
+  .whatsapp-bubble,
+  .whatsapp-bubble.wide {
+    max-width: 76%;
   }
 
-  .workflow-line div {
-    min-height: 118px;
+  .conversation-outcomes {
+    grid-template-columns: 1fr;
+  }
+
+  .conversation-outcomes div {
+    display: block;
   }
 
   .architecture-card {

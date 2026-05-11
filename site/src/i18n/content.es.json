@@ -18,7 +18,7 @@
     "notice": "DBX Solutions — Democratizando la IA para pymes y empresas de mercado medio.",
     "email": "contact@dbx-solutions.com",
     "contact": "Contacto",
-    "bookDemo": "Agendar demo",
+    "bookDemo": "Agendar consulta",
     "links": [
       { "path": "privacy-policy/", "label": "Política de privacidad" },
       { "path": "terms-of-service/", "label": "Términos del servicio" },
@@ -26,28 +26,28 @@
       { "path": "responsible-ai-policy/", "label": "Política de IA responsable" },
       { "path": "security-roadmap/", "label": "Roadmap de seguridad" },
       { "path": "contact/", "label": "Contacto" },
-      { "path": "contact/", "label": "Agendar demo" }
+      { "path": "contact/", "label": "Agendar consulta" }
     ]
   },
   "pages": {
     "home": {
       "meta": { "title": "DBX Solutions | Automatización de atención al cliente con IA para pymes" },
       "hero": {
-        "eyebrow": "Democratizing AI for SMBs",
-        "headline": "No vuelva a perder un cliente por falta de respuesta",
-        "body": "DBX Solutions ayuda a pymes y empresas medianas a responder al instante, capturar más leads calificados y preservar relaciones con clientes usando sistemas de atención con IA, seguros y específicos para su negocio.",
+        "eyebrow": "Experiencia del Cliente con IA",
+        "headline": "Una buena experiencia con tus clientes se pagará sola y te ayudará a monetizar.",
+        "body": "Nuestro propósito es empoderar a SMBs con IA de nivel empresarial que maneja el trabajo pesado de las tareas diarias. Desde calificar prospectos hasta proporcionar estados de pedidos, nuestra plataforma ejecuta tareas de forma segura con manejo de errores e intervención humana solo cuando se necesita. Conectamos tus conversaciones con clientes y tu stack tecnológico, entregando ROI inmediato para que puedas enfocarte en hacer crecer tu negocio mientras nosotros gestionamos la IA.",
         "actions": [
-          { "label": "Agendar demo", "href": "CALENDAR_URL" },
-          { "label": "Ver cómo funciona", "href": "solutions/" }
+          { "label": "Agendar consulta gratis", "href": "CALENDAR_URL" },
+          { "label": "Ver cómo funciona", "href": "#process" }
         ],
-        "microcopy": "Sin compromiso. Revisamos su proceso actual de interacción con clientes e identificamos dónde la IA puede mejorar captura de leads, tiempos de respuesta y experiencia del cliente.",
+        "microcopy": "IA práctica para soporte al cliente, engagement de prospectos, automatización de workflows y operaciones más inteligentes.",
         "card": {
-          "eyebrow": "Mensaje central",
-          "title": "Las conversaciones se vuelven oportunidades estructuradas.",
+          "eyebrow": "Operaciones conectadas",
+          "title": "Las conversaciones se convierten en workflows estructurados.",
           "items": [
-            "Capturar demanda antes de que se enfríe",
-            "Responder con información aprobada por su negocio",
-            "Enrutar leads, solicitudes y soporte con contexto"
+            "Mensaje del cliente",
+            "DBX AI Assistant califica, responde y enruta",
+            "La automatización conecta CRM o seguimiento del equipo"
           ]
         }
       },
@@ -454,7 +454,7 @@
         "headline": "¿Listo para capturar más leads y mejorar la respuesta al cliente?",
         "body": "Agende una conversación con DBX para revisar su proceso de interacción con clientes e identificar dónde la IA puede mejorar tiempos de respuesta, captura de leads y experiencia.",
         "actions": [
-          { "label": "Agendar demo", "href": "CALENDAR_URL" },
+          { "label": "Agendar consulta", "href": "CALENDAR_URL" },
           { "label": "Solicitar revisión de preparación de IA", "href": "contact/" }
         ]
       },

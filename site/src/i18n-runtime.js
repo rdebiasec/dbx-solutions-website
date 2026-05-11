@@ -9,6 +9,7 @@ const esEntries = [
   ['About', 'Acerca de'],
   ['Contact', 'Contacto'],
   ['Book a Consultation', 'Agenda una Consulta'],
+  ['Book a Free Consultation', 'Agenda una Consulta Gratis'],
   ['Explore Solutions', 'Explorar Soluciones'],
   ['Explore service', 'Explorar servicio'],
   ['View Services', 'Ver Servicios'],
@@ -194,13 +195,13 @@ const esEntries = [
   ['Team handoff', 'Traspaso al equipo'],
   ['Qualify, answer, route', 'Califica, responde, enruta'],
   ['Lead summary sent with next step', 'Resumen del prospecto enviado con siguiente paso'],
-  ['Never miss a customer conversation again.', 'Nunca vuelvas a perder una conversación con un cliente.'],
+  ['A good experience with your customers will pay for itself and help you monetize.', 'Una buena experiencia con tus clientes se pagará sola y te ayudará a monetizar.'],
   [
-    'DBX Solutions helps growing SMBs respond faster, qualify leads, automate repetitive conversations, and connect customer interactions with the tools your team already uses.',
-    'DBX Solutions ayuda a SMBs en crecimiento a responder más rápido, calificar prospectos, automatizar conversaciones repetitivas y conectar interacciones con las herramientas que tu equipo ya usa.'
+    'Our purpose is to empower SMBs with Enterprise Level AI that handles the heavy lifting of daily tasks. From lead qualifying to providing order status, our platform executes tasks securely with error-handling with human in the loop intervention only if needed. We bridge the gap between your customer conversations and your tech stack, delivering immediate ROI so you can focus on growing your business while we manage the AI.',
+    'Nuestro propósito es empoderar a SMBs con IA de nivel empresarial que maneja el trabajo pesado de las tareas diarias. Desde calificar prospectos hasta proporcionar estados de pedidos, nuestra plataforma ejecuta tareas de forma segura con manejo de errores e intervención humana solo cuando se necesita. Conectamos tus conversaciones con clientes y tu stack tecnológico, entregando ROI inmediato para que puedas enfocarte en hacer crecer tu negocio mientras nosotros gestionamos la IA.'
   ],
   [
-    'Practical AI for customer support, lead engagement, workflow automation, and smarter business operations.',
+    'From answering repetitive questions to chasing down leads, we take the "busy" out of business. It’s enterprise-grade automation that actually feels like help.',
     'IA práctica para soporte al cliente, engagement de prospectos, automatización de workflows y operaciones más inteligentes.'
   ],
   ['See How It Works', 'Ver cómo funciona'],
@@ -294,6 +295,26 @@ const esEntries = [
   ['Start with a practical AI consultation.', 'Empieza con una consulta práctica de IA.'],
   ['LinkedIn', 'LinkedIn'],
   ['Serving SMBs remotely across the U.S. and Latin America.', 'Atendemos SMBs de forma remota en EE. UU. y Latinoamérica.'],
+  ['Verified Accuracy', 'Precisión Verificada'],
+  [
+    'Answers grounded in your specific business data for total precision.',
+    'Respuestas basadas en los datos específicos de tu negocio para máxima precisión.'
+  ],
+  ['Unified Channels', 'Canales Unificados'],
+  [
+    'Connect everywhere: WhatsApp, SMS, Web, and Email in one place.',
+    'Conecta en todas partes: WhatsApp, SMS, web y email en un solo lugar.'
+  ],
+  ['Integrated Workflows', 'Workflows Integrados'],
+  [
+    'Instant sync with your CRM, calendar, and team for zero-lag follow-up.',
+    'Sincronización instantánea con tu CRM, calendario y equipo para seguimiento sin demoras.'
+  ],
+  ['Smart Escalation', 'Escalamiento Inteligente'],
+  [
+    'Seamless hand-offs to your team exactly when a human touch is needed.',
+    'Traspasos fluidos a tu equipo justo cuando se necesita intervención humana.'
+  ],
   ['SMS Terms', 'Términos SMS'],
   ['Data Handling Notice', 'Aviso de Manejo de Datos'],
   ['Responsible AI Policy', 'Política de IA Responsable'],
