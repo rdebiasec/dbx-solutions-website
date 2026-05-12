@@ -1,4 +1,4 @@
-import{L as e,a as i,l as o}from"./constants-B0K5DnGB.js";import{m as n}from"./shell-CsvRHjIP.js";function a(){return`
+import{L as e,a as i,l as o}from"./constants-DiCqhfnd.js";import{m as n}from"./shell-DpKKkG5a.js";function a(){return`
     <h1>Privacy Policy</h1>
     <p class="legal-effective"><strong>Effective Date: ${e}</strong></p>
     <p>${i} ("DBX Solutions," "we," "our," or "us") provides CX, automation, and AI-related advisory and implementation services for businesses. We respect your privacy and are committed to handling personal information responsibly.</p>

@@ -1,4 +1,4 @@
-import{h as r}from"./constants-B0K5DnGB.js";const s=[{hash:"#solutions",label:"Solutions"},{hash:"#services",label:"Services"},{hash:"#benefits",label:"Benefits"},{hash:"#process",label:"How we work"},{hash:"#trust",label:"Trust"},{hash:"#contact",label:"Contact"}];function o(){const a=r("");return`
+import{h as r}from"./constants-DiCqhfnd.js";const s=[{hash:"#solutions",label:"Solutions"},{hash:"#services",label:"Services"},{hash:"#benefits",label:"Benefits"},{hash:"#process",label:"How we work"},{hash:"#trust",label:"Trust"},{hash:"#contact",label:"Contact"}];function o(){const a=r("");return`
     <header>
       <div class="header-top">
         <a href="${a}" class="logo"><img src="${r("logo.png")}" alt="DBX Solutions" width="120" height="40" /></a>

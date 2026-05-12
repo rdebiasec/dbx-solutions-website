@@ -1,4 +1,4 @@
-import{h as o,L as r,a as s,l as i}from"./constants-B0K5DnGB.js";import{m as t}from"./shell-CsvRHjIP.js";function a(){const e=o("privacy-policy/");return`
+import{h as o,L as r,a as s,l as i}from"./constants-DiCqhfnd.js";import{m as t}from"./shell-DpKKkG5a.js";function a(){const e=o("privacy-policy/");return`
     <h1>SMS Terms</h1>
     <p class="legal-effective"><strong>Effective Date: ${r}</strong></p>
     <p>These SMS Terms describe how ${s} ("DBX Solutions," "we," "our," or "us") communicates with individuals by text message in connection with business inquiries, consultations, and services.</p>
