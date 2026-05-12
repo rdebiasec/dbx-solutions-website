@@ -19,6 +19,7 @@ const esEntries = [
   ['Email Us', 'Enviar Email'],
   ['Next Step', 'Siguiente Paso'],
   ['Start Practical', 'Empieza de forma práctica'],
+  ['DBX Solutions | AI-Powered Customer Experience for SMBs', 'DBX Solutions | Experiencia del Cliente con IA para SMBs'],
   ['AI-Powered Customer Experience', 'Experiencia del Cliente con IA'],
   ['AI-Powered Customer Experience for Growing SMBs', 'Experiencia del Cliente con IA para SMBs en crecimiento'],
   [
@@ -200,6 +201,29 @@ const esEntries = [
     'Our purpose is to empower SMBs with Enterprise Level AI that handles the heavy lifting of daily tasks. From lead qualifying to providing order status, our platform executes tasks securely with error-handling with human in the loop intervention only if needed. We bridge the gap between your customer conversations and your tech stack, delivering immediate ROI so you can focus on growing your business while we manage the AI.',
     'Nuestro propósito es empoderar a SMBs con IA de nivel empresarial que maneja el trabajo pesado de las tareas diarias. Desde calificar prospectos hasta proporcionar estados de pedidos, nuestra plataforma ejecuta tareas de forma segura con manejo de errores e intervención humana solo cuando se necesita. Conectamos tus conversaciones con clientes y tu stack tecnológico, entregando ROI inmediato para que puedas enfocarte en hacer crecer tu negocio mientras nosotros gestionamos la IA.'
   ],
+  ['Can you check my order status and send the latest delivery update?', '¿Puedes revisar el estado de mi pedido y enviarme la actualización de entrega?'],
+  [
+    'I found your order. It is packed, assigned to delivery, and expected today between 2pm and 4pm.',
+    'Encontré tu pedido. Está empacado, asignado para entrega y se espera hoy entre 2pm y 4pm.'
+  ],
+  ['Can you notify my team too?', '¿También puedes avisar a mi equipo?'],
+  ['Done. I synced the update to your CRM and sent the team alert with the customer note.', 'Listo. Sincronicé la actualización con tu CRM y envié la alerta al equipo con la nota del cliente.'],
+  ['Perfect, thank you.', 'Perfecto, gracias.'],
+  ['You are welcome. I will watch for delivery changes and update the record if anything shifts.', 'Con gusto. Vigilaré cambios de entrega y actualizaré el registro si algo cambia.'],
+  ['online now', 'en línea ahora'],
+  ['Today', 'Hoy'],
+  ['End-to-end encrypted', 'Cifrado de extremo a extremo'],
+  ['WhatsApp voice call', 'Llamada de voz de WhatsApp'],
+  ['Audio', 'Audio'],
+  ['Video', 'Video'],
+  ['Mute', 'Silenciar'],
+  ['End', 'Finalizar'],
+  ['mobile 00:51', 'móvil 00:51'],
+  ['mute', 'silenciar'],
+  ['keypad', 'teclado'],
+  ['speaker', 'altavoz'],
+  ['add call', 'agregar llamada'],
+  ['contacts', 'contactos'],
   [
     'From answering repetitive questions to chasing down leads, we take the "busy" out of business. It’s enterprise-grade automation that actually feels like help.',
     'IA práctica para soporte al cliente, engagement de prospectos, automatización de workflows y operaciones más inteligentes.'
@@ -291,6 +315,9 @@ const esEntries = [
   ['Can this work with WhatsApp?', '¿Puede funcionar con WhatsApp?'],
   ['Can humans take over conversations?', '¿Los humanos pueden tomar control de conversaciones?'],
   ['How are AI responses controlled?', '¿Cómo se controlan las respuestas de IA?'],
+  ['What does DBX Solutions do?', '¿Qué hace DBX Solutions?'],
+  ['How long does implementation take?', '¿Cuánto tarda la implementación?'],
+  ['Will AI replace our customer service team?', '¿La IA reemplazará a nuestro equipo de atención al cliente?'],
   ['Start With a Practical AI Consultation', 'Empieza con una consulta práctica de IA'],
   ['Start with a practical AI consultation.', 'Empieza con una consulta práctica de IA.'],
   ['LinkedIn', 'LinkedIn'],
@@ -417,8 +444,36 @@ const esEntries = [
     'Traspasos más fluidos, menos actualizaciones manuales y mejor visibilidad sobre la actividad del cliente.'
   ],
   [
+    'Connect customer conversations with CRM records, calendars, support desks, internal notifications, and operational workflows.',
+    'Conecta conversaciones con clientes con registros de CRM, calendarios, mesas de soporte, notificaciones internas y workflows operativos.'
+  ],
+  [
+    'Businesses using multiple tools that do not communicate effectively.',
+    'Empresas que usan varias herramientas que no se comunican de forma efectiva.'
+  ],
+  [
+    'Review your customer journey, tools, team capacity, and operational goals to identify the best practical AI starting points.',
+    'Revisa tu recorrido del cliente, herramientas, capacidad del equipo y metas operativas para identificar los mejores puntos de partida prácticos para IA.'
+  ],
+  [
+    'Businesses that want AI clarity before investing in implementation.',
+    'Empresas que quieren claridad sobre IA antes de invertir en implementación.'
+  ],
+  [
+    'A focused roadmap tied to customer experience and operational value.',
+    'Un roadmap enfocado ligado a experiencia del cliente y valor operativo.'
+  ],
+  [
     'Review real conversations, improve responses, tune workflows, and expand useful improvements as your business changes.',
     'Revisa conversaciones reales, mejora respuestas, ajusta workflows y expande mejoras útiles a medida que cambia tu negocio.'
+  ],
+  [
+    'Review real customer interactions to spot unclear answers, missed intent, and handoff improvements.',
+    'Revisa interacciones reales con clientes para detectar respuestas poco claras, intención perdida y mejoras de traspaso.'
+  ],
+  [
+    'Tune approved responses so assistants stay accurate, useful, and aligned with your business.',
+    'Ajusta respuestas aprobadas para que los asistentes se mantengan precisos, útiles y alineados con tu negocio.'
   ],
   ['Workflow monitoring', 'Monitoreo de workflows'],
   [
@@ -440,6 +495,94 @@ const esEntries = [
     'DBX guía cada proyecto con un proceso claro y de bajo riesgo que empieza con tu recorrido del cliente y termina con mejora operativa continua.'
   ],
   [
+    'A practical consultation keeps the first implementation focused.',
+    'Una consulta práctica mantiene enfocada la primera implementación.'
+  ],
+  [
+    'Managed AI Operations gives your business ongoing review, tuning, and improvement as conversations and workflows evolve.',
+    'Operaciones Gestionadas de IA le da a tu negocio revisión, ajuste y mejora continua a medida que evolucionan las conversaciones y workflows.'
+  ],
+  [
+    'Keep your AI assistant useful after launch.',
+    'Mantén tu asistente de IA útil después del lanzamiento.'
+  ],
+  [
+    'AI works best when it is monitored, measured, and improved.',
+    'La IA funciona mejor cuando se monitorea, se mide y se mejora.'
+  ],
+  [
+    'DBX focuses on business outcomes that make customer communication clearer, follow-up easier, and support more scalable.',
+    'DBX se enfoca en resultados de negocio que hacen la comunicación con clientes más clara, el seguimiento más fácil y el soporte más escalable.'
+  ],
+  [
+    'Give customers a useful answer or next step while intent is still high.',
+    'Da a los clientes una respuesta útil o un siguiente paso mientras la intención sigue alta.'
+  ],
+  [
+    'Capture and route inquiries before prospects lose interest or choose another provider.',
+    'Captura y enruta consultas antes de que los prospectos pierdan interés o elijan otro proveedor.'
+  ],
+  [
+    'Move repetitive questions, intake, and routing out of your team’s daily queue.',
+    'Saca preguntas repetitivas, intake y ruteo de la cola diaria de tu equipo.'
+  ],
+  [
+    'Keep answers clear, approved, and aligned across channels and team handoffs.',
+    'Mantén respuestas claras, aprobadas y alineadas entre canales y traspasos del equipo.'
+  ],
+  [
+    'Turn conversations into structured information your team can review and act on.',
+    'Convierte conversaciones en información estructurada que tu equipo puede revisar y accionar.'
+  ],
+  [
+    'Handle more routine conversations while your team focuses on higher-value work.',
+    'Maneja más conversaciones rutinarias mientras tu equipo se enfoca en trabajo de mayor valor.'
+  ],
+  [
+    'We review your customer journey, current tools, common customer interactions, team workflows, and business goals.',
+    'Revisamos tu recorrido del cliente, herramientas actuales, interacciones comunes, workflows del equipo y metas del negocio.'
+  ],
+  ['Identify customer experience gaps', 'Identificar brechas de experiencia del cliente'],
+  ['Review repetitive tasks', 'Revisar tareas repetitivas'],
+  ['Understand current systems', 'Entender sistemas actuales'],
+  ['Define business priorities', 'Definir prioridades del negocio'],
+  [
+    'We map the right AI experience, conversation flows, automations, integrations, and success metrics.',
+    'Mapeamos la experiencia de IA correcta, flujos conversacionales, automatizaciones, integraciones y métricas de éxito.'
+  ],
+  ['Design customer interaction flows', 'Diseñar flujos de interacción con clientes'],
+  ['Define automation logic', 'Definir lógica de automatización'],
+  ['Plan handoffs to your team', 'Planificar traspasos a tu equipo'],
+  ['Align with your brand voice', 'Alinear con la voz de tu marca'],
+  [
+    'We build, configure, test, and launch the solution using your existing tools, workflows, and brand guidelines.',
+    'Construimos, configuramos, probamos y lanzamos la solución usando tus herramientas, workflows y guías de marca existentes.'
+  ],
+  ['Configure AI assistants', 'Configurar asistentes de IA'],
+  ['Connect systems where needed', 'Conectar sistemas donde sea necesario'],
+  ['Test conversation quality', 'Probar la calidad conversacional'],
+  ['Prepare your team for launch', 'Preparar a tu equipo para el lanzamiento'],
+  [
+    'We monitor performance, review user behavior, improve flows, and refine the solution as your business evolves.',
+    'Monitoreamos el desempeño, revisamos comportamiento de usuarios, mejoramos flujos y refinamos la solución a medida que evoluciona tu negocio.'
+  ],
+  ['Review performance data', 'Revisar datos de desempeño'],
+  ['Improve responses and flows', 'Mejorar respuestas y flujos'],
+  ['Adjust automation rules', 'Ajustar reglas de automatización'],
+  ['Identify new opportunities', 'Identificar nuevas oportunidades'],
+  [
+    'Map your first AI workflow with DBX.',
+    'Mapea tu primer workflow de IA con DBX.'
+  ],
+  [
+    'Bring your current customer channels, common questions, and follow-up process. We will help turn them into a practical implementation path.',
+    'Trae tus canales actuales, preguntas comunes y proceso de seguimiento. Te ayudaremos a convertirlos en una ruta de implementación práctica.'
+  ],
+  [
+    'Guided adoption makes AI feel lower-risk and easier to manage.',
+    'La adopción guiada hace que la IA se sienta menos riesgosa y más fácil de gestionar.'
+  ],
+  [
     'Explore the first customer workflow worth improving.',
     'Explora el primer workflow de cliente que vale la pena mejorar.'
   ],
@@ -450,6 +593,74 @@ const esEntries = [
   [
     'DBX helps SMBs design, connect, monitor, and improve AI-assisted customer conversation systems around real business workflows.',
     'DBX ayuda a SMBs a diseñar, conectar, monitorear y mejorar sistemas de conversación asistidos por IA alrededor de workflows reales.'
+  ],
+  [
+    'DBX Solutions helps SMBs improve customer conversations, qualify leads, automate repetitive work, and connect AI with real business operations.',
+    'DBX Solutions ayuda a SMBs a mejorar conversaciones con clientes, calificar prospectos, automatizar trabajo repetitivo y conectar IA con operaciones reales del negocio.'
+  ],
+  [
+    'Designed for growing businesses that want clearer customer communication and practical AI implementation.',
+    'Diseñado para negocios en crecimiento que quieren comunicación con clientes más clara e implementación práctica de IA.'
+  ],
+  [
+    'Focused on SMB sectors where conversations drive revenue and service quality.',
+    'Enfocado en sectores SMB donde las conversaciones impulsan ingresos y calidad de servicio.'
+  ],
+  [
+    'DBX is especially useful for businesses that depend on fast inquiry handling, clear intake, reliable follow-up, and repeatable customer support.',
+    'DBX es especialmente útil para negocios que dependen de manejo rápido de consultas, intake claro, seguimiento confiable y soporte repetible.'
+  ],
+  [
+    'Automate intake, qualify inquiries, route prospects, and improve response times for consulting, legal, financial, and advisory teams.',
+    'Automatiza intake, califica consultas, enruta prospectos y mejora tiempos de respuesta para equipos de consultoría, legales, financieros y de asesoría.'
+  ],
+  [
+    'Support appointment inquiries, FAQs, intake guidance, service information, and patient communication workflows.',
+    'Atiende consultas de citas, FAQs, guía de intake, información de servicios y workflows de comunicación con pacientes.'
+  ],
+  [
+    'Qualify buyer and seller inquiries, answer common property questions, route leads, and support faster follow-up.',
+    'Califica consultas de compradores y vendedores, responde preguntas comunes sobre propiedades, enruta leads y apoya seguimiento más rápido.'
+  ],
+  [
+    'Automate quote requests, booking inquiries, service questions, and customer follow-ups for high-message-volume teams.',
+    'Automatiza solicitudes de cotización, consultas de reserva, preguntas de servicio y seguimientos para equipos con alto volumen de mensajes.'
+  ],
+  [
+    'Support product questions, order-related inquiries, return guidance, and routine customer service requests.',
+    'Atiende preguntas de producto, consultas de pedidos, guía de devoluciones y solicitudes rutinarias de servicio al cliente.'
+  ],
+  [
+    'Answer program questions, qualify student or client interest, guide enrollment inquiries, and automate follow-up.',
+    'Responde preguntas de programas, califica interés de estudiantes o clientes, guía consultas de inscripción y automatiza seguimiento.'
+  ],
+  [
+    'Improve inquiry handling, appointment requests, client intake, and customer communication with human oversight.',
+    'Mejora el manejo de consultas, solicitudes de citas, intake de clientes y comunicación con supervisión humana.'
+  ],
+  [
+    'Solutions are designed for growing businesses that need practical value without enterprise-level complexity.',
+    'Las soluciones están diseñadas para negocios en crecimiento que necesitan valor práctico sin complejidad empresarial.'
+  ],
+  [
+    'We start with customer journeys, operational challenges, and business goals before recommending technology.',
+    'Empezamos con recorridos de cliente, retos operativos y metas del negocio antes de recomendar tecnología.'
+  ],
+  [
+    'AI supports your team while escalation, review, and judgment remain available when needed.',
+    'La IA apoya a tu equipo mientras el escalamiento, la revisión y el criterio humano siguen disponibles cuando se necesitan.'
+  ],
+  [
+    'We consider how AI fits with your existing channels, workflows, CRM, and customer communication tools.',
+    'Consideramos cómo la IA encaja con tus canales, workflows, CRM y herramientas de comunicación existentes.'
+  ],
+  [
+    'Every solution connects to a business outcome such as better lead handling, support consistency, or reduced manual work.',
+    'Cada solución se conecta con un resultado de negocio como mejor manejo de leads, consistencia de soporte o menor trabajo manual.'
+  ],
+  [
+    'We help refine flows, responses, and automations as your business learns what works best.',
+    'Ayudamos a refinar flujos, respuestas y automatizaciones a medida que tu negocio aprende qué funciona mejor.'
   ],
   [
     'Assistants are built around approved business information, clear rules, escalation paths, and ongoing quality review.',
@@ -486,6 +697,11 @@ const esEntries = [
 ]
 
 const translations = new Map(esEntries)
+const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+const translationPattern = new RegExp(
+  [...translations.keys()].sort((a, b) => b.length - a.length).map(escapeRegExp).join('|'),
+  'g'
+)
 
 export function getLocale() {
   const stored = localStorage.getItem(storageKey)
@@ -494,12 +710,7 @@ export function getLocale() {
 
 export function translateText(value, locale = getLocale()) {
   if (locale !== 'es' || !value) return value
-  let translated = value
-  const sorted = [...translations.entries()].sort((a, b) => b[0].length - a[0].length)
-  sorted.forEach(([source, target]) => {
-    translated = translated.split(source).join(target)
-  })
-  return translated
+  return value.replace(translationPattern, (match) => translations.get(match) || match)
 }
 
 export function translateHtml(html, locale = getLocale()) {
