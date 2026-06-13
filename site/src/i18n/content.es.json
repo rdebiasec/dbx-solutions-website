@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "DBX Solutions | Automatización de atención al cliente con IA para pymes"
+    "title": "DBX Solutions | WhatsApp y experiencia del cliente con IA para PyMes"
   },
   "labels": {
     "languageToggle": "Cambiar idioma"
@@ -8,14 +8,13 @@
   "nav": [
     { "page": "home", "path": "", "label": "Inicio" },
     { "page": "solutionsPage", "path": "solutions/", "label": "Soluciones" },
-    { "page": "securityPage", "path": "security/", "label": "Seguridad" },
-    { "page": "packagesPage", "path": "packages/", "label": "Paquetes" },
-    { "page": "processPage", "path": "process/", "label": "Proceso" },
-    { "page": "aboutPage", "path": "about/", "label": "Nosotros" },
+    { "page": "servicesPage", "path": "services/", "label": "Servicios" },
+    { "page": "industriesPage", "path": "industries/", "label": "Industrias" },
+    { "page": "aboutPage", "path": "about/", "label": "Acerca de" },
     { "page": "contactPage", "path": "contact/", "label": "Contacto" }
   ],
   "footer": {
-    "notice": "DBX Solutions — Democratizando la IA para pymes y empresas de mercado medio.",
+    "notice": "DBX Solutions — IA práctica para PyMes que responden más rápido en WhatsApp y otros canales.",
     "email": "contact@dbx-solutions.com",
     "contact": "Contacto",
     "bookDemo": "Agendar consulta",
@@ -31,22 +30,22 @@
   },
   "pages": {
     "home": {
-      "meta": { "title": "DBX Solutions | Automatización de atención al cliente con IA para pymes" },
+      "meta": { "title": "DBX Solutions | WhatsApp y experiencia del cliente con IA para PyMes" },
       "hero": {
-        "eyebrow": "Experiencia del Cliente con IA",
-        "headline": "Una buena experiencia con tus clientes se pagará sola y te ayudará a monetizar.",
-        "body": "Nuestro propósito es empoderar a SMBs con IA de nivel empresarial que maneja el trabajo pesado de las tareas diarias. Desde calificar prospectos hasta proporcionar estados de pedidos, nuestra plataforma ejecuta tareas de forma segura con manejo de errores e intervención humana solo cuando se necesita. Conectamos tus conversaciones con clientes y tu stack tecnológico, entregando ROI inmediato para que puedas enfocarte en hacer crecer tu negocio mientras nosotros gestionamos la IA.",
+        "eyebrow": "WhatsApp y canales del cliente",
+        "headline": "Responde más rápido en WhatsApp y conecta cada conversación con tu equipo, sin contratar más personal.",
+        "body": "DBX implementa y opera IA agéntica para negocios en crecimiento: sistemas que responden, capturan datos del prospecto, activan seguimiento en tu CRM o equipo y escalan cuando hace falta criterio humano. No es un chatbot tradicional que solo responde preguntas frecuentes.",
         "actions": [
           { "label": "Agendar consulta gratis", "href": "CALENDAR_URL" },
           { "label": "Ver cómo funciona", "href": "#process" }
         ],
-        "microcopy": "IA práctica para soporte al cliente, engagement de prospectos, automatización de workflows y operaciones más inteligentes.",
+        "microcopy": "WhatsApp, SMS, chat web y email · Respuesta más rápida, también fuera de horario.",
         "card": {
           "eyebrow": "Operaciones conectadas",
           "title": "Las conversaciones se convierten en workflows estructurados.",
           "items": [
             "Mensaje del cliente",
-            "DBX AI Assistant califica, responde y enruta",
+            "El agente IA de DBX califica, responde y enruta",
             "La automatización conecta CRM o seguimiento del equipo"
           ]
         }
@@ -209,7 +208,7 @@
             },
             {
               "label": "Caso ilustrativo",
-              "title": "Pyme con alto volumen de soporte",
+              "title": "PyMe con alto volumen de soporte",
               "subtitle": "Reto: equipo saturado con preguntas repetitivas",
               "items": ["Preguntas comunes atendidas automáticamente", "Equipo humano enfocado en temas complejos", "Comunicación más consistente"]
             }
@@ -384,11 +383,11 @@
       ]
     },
     "aboutPage": {
-      "meta": { "title": "DBX Solutions | Democratizing AI for SMBs" },
+      "meta": { "title": "DBX Solutions | Democratizando la IA para PyMes" },
       "hero": {
         "eyebrow": "Misión",
-        "headline": "Democratizing AI for SMBs",
-        "body": "La IA avanzada no debería estar limitada a grandes empresas con grandes presupuestos y equipos técnicos internos. DBX existe para hacer que la IA de nivel empresarial sea práctica, segura y usable para pymes y empresas medianas.",
+        "headline": "Democratizando la IA para PyMes",
+        "body": "La IA avanzada no debería estar limitada a grandes empresas con grandes presupuestos y equipos técnicos internos. DBX existe para hacer que la IA de nivel empresarial sea práctica, segura y usable para PyMes y empresas medianas.",
         "actions": [
           { "label": "Hablar con DBX", "href": "contact/" },
           { "label": "Explorar paquetes", "href": "packages/" }
@@ -399,7 +398,7 @@
           "type": "section",
           "eyebrow": "Declaración de misión",
           "title": "IA adoptada con responsabilidad y conectada a resultados",
-          "body": "Ayudamos a pymes a adoptar IA responsablemente convirtiendo automatización avanzada en sistemas operativos reales que apoyan crecimiento, servicio al cliente y captura de ingresos.",
+          "body": "Ayudamos a PyMes a adoptar IA responsablemente convirtiendo automatización avanzada en sistemas operativos reales que apoyan crecimiento, servicio al cliente y captura de ingresos.",
           "note": "Democratizing AI significa hacerla accesible, confiable, segura y alineada con cómo trabajan los negocios."
         },
         {
@@ -410,7 +409,7 @@
             {
               "title": "Buen fit",
               "items": [
-                "Pymes con consultas entrantes constantes",
+                "PyMes con consultas entrantes constantes",
                 "Empresas medianas con necesidades crecientes de soporte",
                 "Negocios de servicios que dependen del seguimiento rápido",
                 "Compañías que pierden leads por respuesta lenta",
@@ -437,7 +436,7 @@
             "Implementación primero desde negocio",
             "Foco en generación de leads y retención",
             "IA controlada con límites definidos",
-            "Especialización en pymes y mercado medio",
+            "Especialización en PyMes y mercado medio",
             "Enfoque seguro y responsable",
             "Onboarding estructurado",
             "Optimización continua después del lanzamiento",

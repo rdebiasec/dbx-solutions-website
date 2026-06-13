@@ -11,6 +11,7 @@
   --panel: rgba(255, 255, 255, 0.045);
   --panel-strong: rgba(255, 255, 255, 0.075);
   --shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+  --section-gap: clamp(2.5rem, 4.5vw, 3.75rem);
 }
 
 * {
@@ -203,15 +204,15 @@ footer nav a:hover {
 
 main {
   display: grid;
-  gap: clamp(4.5rem, 8vw, 7rem);
+  gap: var(--section-gap);
 }
 
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
   align-items: center;
-  gap: clamp(2rem, 5vw, 4rem);
-  min-height: calc(100vh - 9rem);
+  gap: var(--section-gap);
+  min-height: auto;
 }
 
 .eyebrow {
@@ -873,7 +874,7 @@ footer nav,
   }
 
   main {
-    gap: 4rem;
+    gap: var(--section-gap);
   }
 
   h1 {
@@ -2554,9 +2555,9 @@ footer nav a {
 .home-hero {
   grid-template-columns: 1fr;
   justify-items: center;
-  gap: clamp(1.5rem, 3vw, 2.45rem);
+  gap: var(--section-gap);
   min-height: auto;
-  padding-block: 0 clamp(1.5rem, 3.5vw, 2.75rem);
+  padding-block: 0;
   text-align: center;
 }
 
@@ -2564,6 +2565,447 @@ footer nav a {
   display: grid;
   justify-items: center;
   width: min(100%, 1060px);
+}
+
+.home-hero .hero-eyebrow {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  padding: 0.38rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(79, 209, 197, 0.3);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.proof-panel {
+  padding: clamp(1.35rem, 2.4vw, 1.85rem) clamp(1.25rem, 2.2vw, 1.75rem);
+  border-radius: 20px;
+  border: 1px solid rgba(79, 209, 197, 0.22);
+  background:
+    linear-gradient(145deg, rgba(79, 209, 197, 0.11), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+}
+
+.proof-outcomes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem 1.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.proof-outcomes li {
+  display: grid;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.proof-outcomes strong {
+  color: var(--accent);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.proof-outcomes span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.challenge-panel {
+  padding: clamp(1.35rem, 2.4vw, 1.85rem) clamp(1.25rem, 2.2vw, 1.75rem);
+  border-radius: 20px;
+  border: 1px solid rgba(79, 209, 197, 0.22);
+  background:
+    linear-gradient(145deg, rgba(79, 209, 197, 0.11), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+}
+
+.challenge-visual {
+  padding-bottom: 1.35rem;
+  border-bottom: 1px solid rgba(79, 209, 197, 0.14);
+}
+
+.challenge-flow {
+  display: grid;
+  justify-items: center;
+  gap: 0.9rem;
+  max-width: 58rem;
+  margin-inline: auto;
+}
+
+.challenge-flow-top {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+}
+
+.challenge-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.challenge-node-start {
+  padding: 0.72rem 1.2rem;
+  border-color: rgba(79, 209, 197, 0.42);
+  background: rgba(79, 209, 197, 0.14);
+  font-size: 1rem;
+}
+
+.challenge-node-tool {
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 6.75rem;
+  min-height: 4.6rem;
+  padding: 0.85rem 0.75rem 0.78rem;
+  border-radius: 16px;
+  font-size: 0.86rem;
+  text-align: center;
+  white-space: normal;
+}
+
+.challenge-node-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(79, 209, 197, 0.5);
+}
+
+.challenge-channels {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px dashed rgba(79, 209, 197, 0.45);
+  color: rgba(79, 209, 197, 0.96);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.challenge-connector {
+  width: 2px;
+  background: linear-gradient(180deg, rgba(79, 209, 197, 0.55), rgba(79, 209, 197, 0.15));
+}
+
+.challenge-connector-down {
+  height: 1.55rem;
+  width: 3px;
+}
+
+.challenge-connector-split {
+  position: relative;
+  width: min(100%, 30rem);
+  height: 1.75rem;
+  background: transparent;
+}
+
+.challenge-connector-split::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 0.65rem;
+  transform: translateX(-50%);
+  background: rgba(79, 209, 197, 0.4);
+}
+
+.challenge-connector-split::after {
+  content: '';
+  position: absolute;
+  top: 0.72rem;
+  left: 6%;
+  right: 6%;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--orange) 0,
+    var(--orange) 8px,
+    transparent 8px,
+    transparent 14px
+  );
+}
+
+.challenge-connector-muted {
+  background: linear-gradient(180deg, var(--orange), rgba(42, 18, 0, 0.75));
+}
+
+.challenge-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem 0.4rem;
+  width: 100%;
+}
+
+.challenge-break {
+  color: var(--orange);
+  font-size: 1.05rem;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 0 18px rgba(214, 106, 42, 0.35);
+}
+
+.challenge-outcomes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.15rem;
+}
+
+.challenge-outcome {
+  padding: 0.48rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(214, 106, 42, 0.65);
+  background: linear-gradient(145deg, rgba(214, 106, 42, 0.48), var(--orange-dark));
+  color: #ffe4cf;
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 24px rgba(214, 106, 42, 0.22);
+}
+
+.challenge-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.35rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.challenge-points li {
+  display: grid;
+  gap: 0.32rem;
+  min-width: 0;
+}
+
+.challenge-points strong {
+  color: var(--accent);
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.challenge-points span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.42;
+}
+
+.solution-panel {
+  padding: clamp(1.35rem, 2.4vw, 1.85rem) clamp(1.25rem, 2.2vw, 1.75rem);
+  border-radius: 20px;
+  border: 1px solid rgba(79, 209, 197, 0.22);
+  background:
+    linear-gradient(145deg, rgba(79, 209, 197, 0.11), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+}
+
+.solution-visual {
+  padding-bottom: 1.35rem;
+  border-bottom: 1px solid rgba(79, 209, 197, 0.14);
+}
+
+.solution-flow {
+  display: grid;
+  justify-items: center;
+  gap: 0.9rem;
+  max-width: 58rem;
+  margin-inline: auto;
+}
+
+.solution-flow-top {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+}
+
+.solution-node {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.solution-node-start {
+  padding: 0.72rem 1.2rem;
+  border-color: rgba(79, 209, 197, 0.42);
+  background: rgba(79, 209, 197, 0.14);
+  font-size: 1rem;
+}
+
+.solution-node-hub {
+  padding: 0.78rem 1.35rem;
+  border-color: rgba(79, 209, 197, 0.55);
+  background: rgba(79, 209, 197, 0.18);
+  font-size: 1.02rem;
+  box-shadow: 0 0 24px rgba(79, 209, 197, 0.12);
+}
+
+.solution-node-human {
+  padding: 0.72rem 1.25rem;
+  border-color: rgba(79, 209, 197, 0.38);
+  background: rgba(79, 209, 197, 0.1);
+}
+
+.solution-node-tool {
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 6.75rem;
+  min-height: 4.6rem;
+  padding: 0.85rem 0.75rem 0.78rem;
+  border-radius: 16px;
+  font-size: 0.86rem;
+  text-align: center;
+  white-space: normal;
+}
+
+.solution-node-dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 12px rgba(79, 209, 197, 0.5);
+}
+
+.solution-channels {
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(79, 209, 197, 0.45);
+  color: rgba(79, 209, 197, 0.96);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.solution-connector {
+  width: 2px;
+  background: linear-gradient(180deg, rgba(79, 209, 197, 0.75), rgba(79, 209, 197, 0.25));
+}
+
+.solution-connector-down {
+  height: 1.55rem;
+  width: 3px;
+}
+
+.solution-connector-accent {
+  background: linear-gradient(180deg, rgba(79, 209, 197, 0.9), rgba(79, 209, 197, 0.35));
+}
+
+.solution-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem 0.4rem;
+  width: 100%;
+}
+
+.solution-link {
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 0 14px rgba(79, 209, 197, 0.35);
+}
+
+.solution-outcomes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.55rem;
+  margin-top: 0.15rem;
+}
+
+.solution-outcome {
+  padding: 0.48rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(79, 209, 197, 0.45);
+  background: linear-gradient(145deg, rgba(79, 209, 197, 0.22), rgba(79, 209, 197, 0.08));
+  color: rgba(214, 255, 250, 0.96);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 24px rgba(79, 209, 197, 0.12);
+}
+
+.solution-stages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.35rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.solution-stages li {
+  display: grid;
+  gap: 0.32rem;
+  min-width: 0;
+}
+
+.solution-stages strong {
+  color: var(--accent);
+  font-size: 0.94rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.solution-stages span {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.42;
+}
+
+.solution-footnote {
+  margin: 1.15rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(79, 209, 197, 0.12);
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.field-optional {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.82rem;
+}
+
+.contact-options .btn {
+  margin-bottom: 0.75rem;
 }
 
 .hero h1 {
@@ -2577,9 +3019,9 @@ footer nav a {
 
 .home-hero h1 {
   max-width: 980px;
-  font-size: clamp(2.25rem, 5.1vw, 4.55rem);
-  line-height: 1.04;
-  letter-spacing: -0.055em;
+  font-size: clamp(1.85rem, 3.6vw, 3.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.045em;
 }
 
 .hero-copy > p {
@@ -2727,21 +3169,27 @@ footer nav a {
 }
 
 .iphone-device {
+  container-type: inline-size;
   position: relative;
-  width: min(100%, 430px);
-  padding: 0.36rem;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 46px;
+  width: min(100%, 268px);
+  aspect-ratio: 390 / 844;
+  height: auto;
+  padding: 0.52rem;
+  border: 0;
+  border-radius: 2.65rem;
   background:
-    linear-gradient(145deg, #4f565c, #101318 18%, #050607 55%, #2f363d);
+    linear-gradient(165deg, #8e9399 0%, #4a5056 4%, #1e2228 18%, #090b0e 52%, #252a30 88%, #6d747b 100%);
   box-shadow:
-    0 34px 70px rgba(0, 0, 0, 0.48),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.045);
+    0 0 0 1px rgba(255, 255, 255, 0.16),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 28px 56px -14px rgba(0, 0, 0, 0.72),
+    0 10px 28px rgba(0, 0, 0, 0.42);
 }
 
 .home-hero .iphone-device {
-  width: min(100%, 318px);
-  height: 736px;
+  width: min(100%, 268px);
+  height: auto;
+  aspect-ratio: 390 / 844;
   min-height: 0;
 }
 
@@ -2758,36 +3206,77 @@ footer nav a {
   content: none;
 }
 
+.iphone-action-button {
+  position: absolute;
+  z-index: 2;
+  right: -2px;
+  top: 38%;
+  width: 3px;
+  height: 2.4rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #5c636a, #1a1e23);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
 .iphone-side-button {
   position: absolute;
+  z-index: 2;
   width: 3px;
   border-radius: 999px;
-  background: linear-gradient(#68717a, #12161b);
+  background: linear-gradient(180deg, #5c636a, #1a1e23);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .iphone-side-button-left {
-  left: -3px;
-  top: 9.5rem;
-  height: 5.2rem;
+  left: -2px;
+  top: 22%;
+  height: 1.42rem;
+}
+
+.iphone-side-button-left::after {
+  content: '';
+  position: absolute;
+  top: 2.05rem;
+  left: 0;
+  width: 100%;
+  height: 1.42rem;
+  border-radius: inherit;
+  background: linear-gradient(180deg, #5c636a, #1a1e23);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .iphone-side-button-right {
-  right: -3px;
-  top: 12rem;
-  height: 6rem;
+  right: -2px;
+  top: 30%;
+  height: 3.35rem;
 }
 
 .iphone-screen {
   position: relative;
   overflow: hidden;
   height: 100%;
-  border-radius: 39px;
-  background: #111820;
+  border-radius: 2.15rem;
+  background: #000;
   isolation: isolate;
-  clip-path: inset(0 round 39px);
+  font-size: calc(0.034 * 100cqw + 1.5px);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  clip-path: inset(0 round 2.15rem);
   box-shadow:
-    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
-    inset 0 0 30px rgba(0, 0, 0, 0.48);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 0 24px rgba(0, 0, 0, 0.35);
+}
+
+.iphone-screen-glass {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background:
+    linear-gradient(125deg, rgba(255, 255, 255, 0.14) 0%, transparent 28%),
+    linear-gradient(320deg, rgba(255, 255, 255, 0.04) 0%, transparent 22%);
+  opacity: 0.55;
 }
 
 .iphone-screen > .whatsapp-preview,
@@ -2797,34 +3286,168 @@ footer nav a {
 
 .iphone-island {
   position: absolute;
-  z-index: 3;
-  top: 0.72rem;
+  z-index: 6;
+  top: 0.42rem;
   left: 50%;
-  width: 6.2rem;
-  height: 1.55rem;
+  width: 5.6rem;
+  height: 1.35rem;
   transform: translateX(-50%);
   border-radius: 999px;
-  background: #030405;
+  background: #000;
   box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.05),
-    0 1px 0 rgba(255, 255, 255, 0.04);
+    inset 0 1px 1px rgba(255, 255, 255, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.iphone-island-camera {
+  position: absolute;
+  right: 0.72rem;
+  top: 50%;
+  width: 0.42rem;
+  height: 0.42rem;
+  transform: translateY(-50%);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 35% 35%, #3a4a5c, #0a0e14 68%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.ios-status-bar {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 1.65rem;
+  padding: 0.42rem 1.05rem 0.12rem;
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.ios-status-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.28rem;
+}
+
+.ios-signal {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 0.14rem);
+  align-items: end;
+  gap: 0.1rem;
+  height: 0.62rem;
+}
+
+.ios-signal::before,
+.ios-signal::after {
+  content: '';
+  display: block;
+  border-radius: 0.04rem;
+  background: currentColor;
+}
+
+.ios-signal::before {
+  height: 0.22rem;
+  box-shadow:
+    0.24rem 0.08rem 0 0 currentColor,
+    0.48rem 0.18rem 0 0 currentColor,
+    0.72rem 0.3rem 0 0 currentColor;
+}
+
+.ios-signal::after {
+  height: 0.42rem;
+}
+
+.ios-wifi {
+  position: relative;
+  width: 0.82rem;
+  height: 0.62rem;
+}
+
+.ios-wifi::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0.16rem;
+  height: 0.16rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: currentColor;
+  box-shadow:
+    0 -0.14rem 0 -0.04rem transparent,
+    0 -0.14rem 0 -0.04rem currentColor,
+    0 -0.3rem 0 -0.12rem transparent,
+    0 -0.3rem 0 -0.12rem currentColor,
+    0 -0.46rem 0 -0.2rem transparent,
+    0 -0.46rem 0 -0.2rem currentColor;
+}
+
+.ios-battery {
+  position: relative;
+  width: 1.28rem;
+  height: 0.58rem;
+  border: 0.08rem solid currentColor;
+  border-radius: 0.16rem;
+  opacity: 0.95;
+}
+
+.ios-battery::after {
+  content: '';
+  position: absolute;
+  right: -0.18rem;
+  top: 50%;
+  width: 0.1rem;
+  height: 0.22rem;
+  transform: translateY(-50%);
+  border-radius: 0 0.08rem 0.08rem 0;
+  background: currentColor;
+  opacity: 0.72;
+}
+
+.ios-battery-level {
+  position: absolute;
+  inset: 0.1rem 0.12rem 0.1rem 0.1rem;
+  border-radius: 0.08rem;
+  background: currentColor;
+  width: 72%;
+}
+
+.ios-home-indicator {
+  position: absolute;
+  z-index: 4;
+  bottom: 0.38rem;
+  left: 50%;
+  width: 36%;
+  min-width: 4.8rem;
+  max-width: 7.8rem;
+  height: 0.26rem;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
 }
 
 .whatsapp-preview {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto auto 1fr;
   align-self: stretch;
   overflow: hidden;
   width: 100%;
   height: 100%;
-  min-height: 735px;
+  min-height: 0;
   border: 0;
   border-radius: inherit;
-  background: #111820;
+  background: #0b141a;
   box-shadow: none;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.whatsapp-preview .ios-status-bar {
+  background: #1f2c34;
 }
 
 .home-hero .whatsapp-preview {
@@ -2834,25 +3457,82 @@ footer nav a {
 
 .whatsapp-header {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 0.58rem;
-  min-height: 4.75rem;
-  padding: 2.55rem 0.82rem 0.62rem;
-  background: #182128;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 0.42rem;
+  min-height: 0;
+  padding: 0.28rem 0.55rem 0.48rem;
+  background: #1f2c34;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.wa-back {
+  width: 0.48rem;
+  height: 0.48rem;
+  margin-left: 0.12rem;
+  border-left: 2px solid #00a884;
+  border-bottom: 2px solid #00a884;
+  transform: rotate(45deg);
+}
+
+.whatsapp-header-copy {
+  min-width: 0;
+}
+
+.wa-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-right: 0.12rem;
+}
+
+.wa-icon {
+  position: relative;
+  width: 1.05rem;
+  height: 1.05rem;
+  opacity: 0.92;
+}
+
+.wa-icon-video::before {
+  content: '';
+  position: absolute;
+  inset: 0.12rem 0.28rem 0.12rem 0.08rem;
+  border: 0.12rem solid #aebac1;
+  border-radius: 0.18rem;
+}
+
+.wa-icon-video::after {
+  content: '';
+  position: absolute;
+  right: 0.04rem;
+  top: 50%;
+  width: 0.42rem;
+  height: 0.42rem;
+  transform: translateY(-50%);
+  background: #aebac1;
+  clip-path: polygon(0 28%, 100% 4%, 100% 96%, 0 72%);
+}
+
+.wa-icon-call::before {
+  content: '';
+  position: absolute;
+  left: 0.08rem;
+  top: 0.08rem;
+  width: 0.88rem;
+  height: 0.88rem;
+  border: 0.12rem solid #aebac1;
+  border-radius: 999px;
+  transform: rotate(-28deg);
 }
 
 .whatsapp-avatar {
-  width: 34px;
-  height: 34px;
+  width: 2.15rem;
+  height: 2.15rem;
   display: grid;
   place-items: center;
   overflow: hidden;
   border-radius: 999px;
-  border: 1px solid rgba(140, 236, 226, 0.65);
   background: #ffffff;
-  box-shadow: 0 0 22px rgba(79, 209, 197, 0.25);
 }
 
 .whatsapp-avatar img {
@@ -2865,16 +3545,20 @@ footer nav a {
 
 .whatsapp-header strong {
   display: block;
+  overflow: hidden;
   color: #e9edef;
-  font-size: 0.96rem;
+  font-size: 0.92rem;
+  font-weight: 600;
   line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .whatsapp-header span {
   display: block;
-  margin-top: 0.1rem;
+  margin-top: 0.06rem;
   color: #8696a0;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
 }
 
 .visual-kicker,
@@ -2892,18 +3576,19 @@ footer nav a {
   align-content: start;
   align-items: start;
   grid-auto-rows: max-content;
-  gap: 0.22rem;
-  min-height: 660px;
-  padding: 0.5rem 0.56rem 0.5rem;
-  background:
-    radial-gradient(circle at 18% 4%, rgba(79, 209, 197, 0.055), transparent 9rem),
-    #10181f;
+  gap: 0.18rem;
+  min-height: 0;
+  padding: 0.42rem 0.48rem 1.65rem;
+  overflow: hidden;
+  background-color: #0b141a;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='88' viewBox='0 0 88 88'%3E%3Cg fill='%23ffffff' fill-opacity='0.045'%3E%3Cpath d='M14 18h3v3h-3zM42 8l1 2h2l-2 1 1 2-2-1-2 1 1-2-2-1h2zM68 24a2 2 0 110 4 2 2 0 010-4zM24 52c2 0 2 3 0 3s-2-3 0-3zM58 58l2 1v2l-1-2-2-1 1-2 2 1zM8 70h4v1H8z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .home-hero .whatsapp-chat {
   min-height: 0;
   overflow: hidden;
-  padding-bottom: 1.15rem;
+  padding-bottom: 1.55rem;
 }
 
 .whatsapp-day {
@@ -2932,9 +3617,9 @@ footer nav a {
 .whatsapp-bubble p {
   display: block;
   color: inherit;
-  font-size: clamp(0.84rem, 1.04vw, 0.92rem);
-  font-weight: 500;
-  line-height: 1.18;
+  font-size: 0.92em;
+  font-weight: 400;
+  line-height: 1.22;
 }
 
 .whatsapp-bubble p::after {
@@ -3035,10 +3720,9 @@ footer nav a {
   overflow: hidden;
   width: 100%;
   height: 100%;
-  min-height: 735px;
+  min-height: 0;
   border-radius: inherit;
   color: #f6f7f8;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .home-hero .phone-call-screen {
@@ -3104,16 +3788,37 @@ footer nav a {
   position: relative;
   display: grid;
   place-items: center;
-  width: 3.65rem;
-  height: 3.65rem;
+  width: 3.15em;
+  height: 3.15em;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.16);
   color: #ffffff;
-  font-size: 0;
+  font-size: 0.95em;
   overflow: hidden;
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.18),
-    0 16px 34px rgba(0, 0, 0, 0.22);
+    0 10px 22px rgba(0, 0, 0, 0.22);
+}
+
+.iphone-screen .icon-mic::before {
+  top: 0.34em;
+  width: 0.24em;
+  height: 0.46em;
+  border-width: 0.055em;
+}
+
+.iphone-screen .icon-mic::after {
+  top: 0.82em;
+  width: 0.42em;
+  height: 0.28em;
+  border-width: 0.05em;
+  box-shadow: 0 0.22em 0 -0.08em #fff;
+}
+
+.iphone-screen .icon-phone-end::before {
+  width: 0.58em;
+  height: 0.28em;
+  border-width: 0.075em;
 }
 
 .control-icon::before,
@@ -3237,11 +3942,11 @@ footer nav a {
 }
 
 .whatsapp-call-screen {
-  grid-template-rows: auto auto 1fr auto auto;
+  grid-template-rows: auto auto 1fr auto;
   background:
-    radial-gradient(circle at 50% 18%, rgba(37, 211, 102, 0.18), transparent 14rem),
-    radial-gradient(circle at 82% 76%, rgba(18, 140, 126, 0.18), transparent 13rem),
-    linear-gradient(180deg, #17352a 0%, #0f241d 34%, #08130f 100%);
+    radial-gradient(circle at 50% 14%, rgba(37, 211, 102, 0.22), transparent 9rem),
+    radial-gradient(circle at 78% 72%, rgba(18, 140, 126, 0.16), transparent 8rem),
+    linear-gradient(180deg, #1a3d2f 0%, #0f241d 38%, #07110d 100%);
 }
 
 .whatsapp-call-screen::before {
@@ -3276,6 +3981,7 @@ footer nav a {
   gap: 0.35rem;
   max-width: calc(100% - 2rem);
   min-height: 1.55rem;
+  margin-top: 0.35rem;
   padding: 0.18rem 0.68rem;
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.14);
@@ -3311,43 +4017,43 @@ footer nav a {
   z-index: 2;
   display: grid;
   justify-items: center;
-  align-content: start;
-  padding: 4.7rem 1.25rem 0;
+  align-content: center;
+  padding: 0.5rem 1rem;
   text-align: center;
 }
 
 .whatsapp-call-avatar {
-  width: 7.9rem;
-  height: 7.9rem;
-  margin-bottom: 1.25rem;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  width: 5.6rem;
+  height: 5.6rem;
+  margin-bottom: 0.85rem;
+  border: 2px solid rgba(255, 255, 255, 0.42);
   background: #ffffff;
   box-shadow:
-    0 0 0 0.48rem rgba(255, 255, 255, 0.055),
-    0 24px 64px rgba(0, 0, 0, 0.38);
+    0 0 0 0.32rem rgba(255, 255, 255, 0.05),
+    0 16px 40px rgba(0, 0, 0, 0.32);
 }
 
 .whatsapp-call-identity strong {
   color: #ffffff;
-  font-size: 1.9rem;
+  font-size: 1.55rem;
   font-weight: 500;
   line-height: 1.08;
-  letter-spacing: -0.045em;
+  letter-spacing: -0.04em;
 }
 
 .whatsapp-call-identity span {
-  margin-top: 0.48rem;
-  color: rgba(236, 253, 245, 0.8);
-  font-size: 0.96rem;
-  font-weight: 700;
+  margin-top: 0.32rem;
+  color: rgba(236, 253, 245, 0.82);
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
 .whatsapp-call-identity p:last-child {
-  max-width: 13rem;
-  margin-top: 0.28rem;
-  color: rgba(236, 253, 245, 0.56);
-  font-size: 0.82rem;
-  line-height: 1.35;
+  max-width: 11rem;
+  margin-top: 0.18rem;
+  color: rgba(236, 253, 245, 0.52);
+  font-size: 0.76rem;
+  line-height: 1.3;
 }
 
 .whatsapp-call-privacy {
@@ -3366,24 +4072,25 @@ footer nav a {
 .whatsapp-call-controls {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: center;
-  gap: 0.42rem;
-  margin: 0 0.92rem 1.12rem;
-  padding: 0.58rem 0.62rem 0.5rem;
-  border-radius: 2rem;
-  background: rgba(5, 14, 11, 0.7);
+  align-self: end;
+  gap: 0.28rem;
+  margin: 0 0.72rem 1.55rem;
+  padding: 0.48rem 0.52rem 0.42rem;
+  border-radius: 1.65rem;
+  background: rgba(5, 14, 11, 0.76);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.14),
-    0 20px 46px rgba(0, 0, 0, 0.32);
-  backdrop-filter: blur(20px);
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 14px 32px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(18px);
 }
 
 .whatsapp-call-controls .control-icon {
-  width: 2.78rem;
-  height: 2.78rem;
-  background: rgba(236, 253, 245, 0.15);
+  width: 2.55em;
+  height: 2.55em;
+  background: rgba(236, 253, 245, 0.14);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.13),
-    0 10px 22px rgba(0, 0, 0, 0.18);
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 8px 18px rgba(0, 0, 0, 0.16);
 }
 
 .whatsapp-call-controls .call-control {
@@ -3408,11 +4115,11 @@ footer nav a {
   grid-template-rows: auto 1fr auto;
   overflow: hidden;
   isolation: isolate;
-  clip-path: inset(0 round 39px);
+  clip-path: inset(0 round 2.15rem);
   background:
-    radial-gradient(circle at 68% 18%, rgba(185, 197, 218, 0.22), transparent 12rem),
-    radial-gradient(circle at 12% 38%, rgba(255, 255, 255, 0.14), transparent 11rem),
-    linear-gradient(160deg, #3f4654 0%, #1b202d 46%, #070910 100%);
+    radial-gradient(circle at 68% 16%, rgba(185, 197, 218, 0.24), transparent 8rem),
+    radial-gradient(circle at 12% 36%, rgba(255, 255, 255, 0.14), transparent 7rem),
+    linear-gradient(165deg, #4a5262 0%, #232936 42%, #0a0d14 100%);
 }
 
 .ios-call-screen::before {
@@ -3442,41 +4149,56 @@ footer nav a {
   z-index: 2;
   display: grid;
   justify-items: center;
-  align-content: start;
-  padding: 4.35rem 1.35rem 0;
+  align-content: center;
+  padding: 0.5rem 1rem;
   text-align: center;
+}
+
+.ios-call-avatar {
+  display: grid;
+  place-items: center;
+  width: 4.8rem;
+  height: 4.8rem;
+  margin-bottom: 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(145deg, #6d7f9b, #3f4d63);
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
 }
 
 .ios-call-identity strong {
   color: #ffffff;
-  font-size: 2.28rem;
+  font-size: 1.85rem;
   font-weight: 500;
   line-height: 1.06;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.05em;
 }
 
 .ios-call-identity p {
-  margin-top: 0.55rem;
-  color: rgba(255, 255, 255, 0.66);
-  font-size: 1rem;
-  font-weight: 600;
+  margin-top: 0.38rem;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.88rem;
+  font-weight: 500;
 }
 
 .ios-call-controls {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-self: end;
-  gap: 1.05rem 1.08rem;
-  padding: 0 1.55rem 2.2rem;
+  gap: 0.72rem 0.85rem;
+  padding: 0 1.15rem 1.65rem;
 }
 
 .ios-call-controls .control-icon {
-  width: 3.68rem;
-  height: 3.68rem;
+  width: 3.05em;
+  height: 3.05em;
   background: rgba(255, 255, 255, 0.18);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.16),
-    0 16px 34px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(18px);
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 12px 26px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(14px);
 }
 
 .ios-call-controls .call-control small {
@@ -3492,8 +4214,8 @@ footer nav a {
 }
 
 .ios-call-controls .call-control.end .control-icon {
-  width: 4rem;
-  height: 4rem;
+  width: 3.35em;
+  height: 3.35em;
   background: #ff3b30;
 }
 
@@ -3505,6 +4227,54 @@ footer nav a {
   gap: 0.7rem;
   width: min(100%, 455px);
   margin-inline: auto;
+}
+
+.industry-example {
+  margin-top: 0.55rem;
+  color: rgba(79, 209, 197, 0.82);
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.policy-list-section {
+  padding: 0 0 1rem;
+}
+
+.policy-list-section h2,
+.roadmap-section h2 {
+  margin-bottom: 0.85rem;
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.policy-list,
+.roadmap-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+.policy-list li,
+.roadmap-list li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.policy-list li::before,
+.roadmap-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.38rem;
+  height: 0.38rem;
+  border-radius: 999px;
+  background: var(--accent);
 }
 
 .conversation-outcomes div {
@@ -3532,24 +4302,9 @@ footer nav a {
   line-height: 1.28;
 }
 
-.home-hero-actions {
-  width: min(100%, 520px);
-}
-
-.home-hero-actions .actions {
-  display: grid;
-  margin-top: 0;
-}
-
-.home-hero-actions .btn {
-  width: 100%;
-  min-height: 58px;
-  font-size: 1rem;
-}
-
 main {
   display: grid;
-  gap: clamp(4.5rem, 8vw, 7rem);
+  gap: var(--section-gap);
 }
 
 section {
@@ -3557,7 +4312,7 @@ section {
 }
 
 .section-heading {
-  margin-bottom: 2rem;
+  margin-bottom: calc(var(--section-gap) * 0.55);
 }
 
 .section-heading p {
@@ -3581,66 +4336,6 @@ section {
 
 .card-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
-}
-
-.solution-section {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 2rem;
-  align-items: start;
-}
-
-.architecture-flow {
-  display: grid;
-  gap: 0.8rem;
-}
-
-.architecture-card {
-  position: relative;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 1rem;
-  padding: 1.1rem;
-  border: 1px solid var(--line);
-  border-radius: 24px;
-  background: var(--panel);
-}
-
-.architecture-card:not(:last-child)::after {
-  content: '↓';
-  position: absolute;
-  left: 1.95rem;
-  bottom: -1.05rem;
-  z-index: 2;
-  width: 1.4rem;
-  height: 1.4rem;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-  background: var(--accent);
-  color: #04100f;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.architecture-card p {
-  color: var(--muted);
-}
-
-.architecture-card ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-top: 0.8rem;
-  list-style: none;
-}
-
-.architecture-card li {
-  padding: 0.35rem 0.6rem;
-  border: 1px solid rgba(79, 209, 197, 0.22);
-  border-radius: 999px;
-  color: var(--muted);
-  font-size: 0.86rem;
 }
 
 .content-card,
@@ -3671,7 +4366,6 @@ section {
 .content-card p,
 .service-card p,
 .step-card p,
-.architecture-card p,
 footer p,
 .service-meta span,
 .footer-cta span {
@@ -3981,7 +4675,6 @@ footer nav,
   }
 
   .hero,
-  .solution-section,
   .contact-layout,
   footer {
     grid-template-columns: 1fr;
@@ -4006,7 +4699,7 @@ footer nav,
 
   .home-hero .iphone-device-handoff {
     grid-column: 1 / -1;
-    width: min(100%, 318px);
+    width: min(100%, 268px);
   }
 
   .services-grid,
@@ -4050,6 +4743,61 @@ footer nav,
     grid-template-columns: repeat(2, minmax(0, 1fr));
     width: min(100%, 680px);
   }
+
+  .proof-outcomes {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .challenge-tools {
+    gap: 0.5rem;
+  }
+
+  .challenge-break {
+    display: none;
+  }
+
+  .challenge-node-tool {
+    min-width: calc(50% - 0.45rem);
+    min-height: 4.25rem;
+    flex: 1 1 calc(50% - 0.45rem);
+    font-size: 0.8rem;
+  }
+
+  .challenge-outcome {
+    font-size: 0.78rem;
+    padding: 0.42rem 0.82rem;
+  }
+
+  .challenge-points {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .solution-tools {
+    gap: 0.5rem;
+  }
+
+  .solution-link {
+    display: none;
+  }
+
+  .solution-node-tool {
+    min-width: calc(50% - 0.45rem);
+    min-height: 4.25rem;
+    flex: 1 1 calc(50% - 0.45rem);
+    font-size: 0.8rem;
+  }
+
+  .solution-outcome {
+    font-size: 0.78rem;
+    padding: 0.42rem 0.82rem;
+  }
+
+  .solution-stages {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
 }
 
 @media (max-width: 680px) {
@@ -4079,8 +4827,8 @@ footer nav,
     display: grid;
   }
 
-  main {
-    gap: 3.4rem;
+  :root {
+    --section-gap: clamp(2rem, 5vw, 2.75rem);
   }
 
   .hero h1 {
@@ -4088,7 +4836,6 @@ footer nav,
   }
 
   .home-hero {
-    gap: 1.15rem;
     text-align: center;
   }
 
@@ -4098,8 +4845,8 @@ footer nav,
   }
 
   .home-hero h1 {
-    font-size: clamp(1.95rem, 9.2vw, 2.65rem);
-    line-height: 1.08;
+    font-size: clamp(1.55rem, 7.2vw, 2.15rem);
+    line-height: 1.1;
   }
 
   .home-hero .hero-copy > p {
@@ -4143,8 +4890,9 @@ footer nav,
   }
 
   .home-hero .iphone-device {
-    width: min(100%, 318px);
-    height: 678px;
+    width: min(100%, 268px);
+    height: auto;
+    aspect-ratio: 390 / 844;
     min-height: 0;
   }
 
@@ -4183,15 +4931,6 @@ footer nav,
 
   .conversation-outcomes div {
     display: block;
-  }
-
-  .architecture-card {
-    grid-template-columns: 1fr;
-  }
-
-  .architecture-card:not(:last-child)::after {
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   .managed-section,

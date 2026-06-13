@@ -8,14 +8,13 @@
   "nav": [
     { "page": "home", "path": "", "label": "Home" },
     { "page": "solutionsPage", "path": "solutions/", "label": "Solutions" },
-    { "page": "securityPage", "path": "security/", "label": "Security" },
-    { "page": "packagesPage", "path": "packages/", "label": "Packages" },
-    { "page": "processPage", "path": "process/", "label": "Process" },
+    { "page": "servicesPage", "path": "services/", "label": "Services" },
+    { "page": "industriesPage", "path": "industries/", "label": "Industries" },
     { "page": "aboutPage", "path": "about/", "label": "About" },
     { "page": "contactPage", "path": "contact/", "label": "Contact" }
   ],
   "footer": {
-    "notice": "DBX Solutions — Democratizing AI for SMB and mid-market businesses.",
+    "notice": "DBX Solutions — Practical AI for customer experience and operations.",
     "email": "contact@dbx-solutions.com",
     "contact": "Contact",
     "bookDemo": "Book a Consultation",
@@ -32,17 +31,17 @@
   "pages": {
     "home": {
       "meta": {
-        "title": "DBX Solutions | AI-Powered Customer Service Automation for SMBs"
+        "title": "DBX Solutions | WhatsApp & AI Customer Experience for SMBs"
       },
       "hero": {
-        "eyebrow": "AI-Powered Customer Experience",
-        "headline": "A good experience with your customers will pay for itself and help you monetize.",
-        "body": "Our purpose is to empower SMBs with Enterprise Level AI that handles the heavy lifting of daily tasks. From lead qualifying to providing order status, our platform executes tasks securely with error-handling with human in the loop intervention only if needed. We bridge the gap between your customer conversations and your tech stack, delivering immediate ROI so you can focus on growing your business while we manage the AI.",
+        "eyebrow": "WhatsApp & Customer Channels",
+        "headline": "Respond faster on WhatsApp and connect every conversation to your team—without hiring more staff.",
+        "body": "DBX implements and manages agentic AI for growing businesses—systems that respond, capture lead details, trigger follow-up in your CRM or team, and escalate when judgment matters. Not a traditional chatbot that only answers FAQs.",
         "actions": [
           { "label": "Book a Free Consultation", "href": "CALENDAR_URL" },
           { "label": "See How It Works", "href": "#process" }
         ],
-        "microcopy": "From answering repetitive questions to chasing down leads, we take the \"busy\" out of business. It’s enterprise-grade automation that actually feels like help.",
+        "microcopy": "WhatsApp, SMS, web chat, and email · Faster first response, including after hours.",
         "card": {
           "eyebrow": "Connected operations",
           "title": "Conversations become structured business workflows.",

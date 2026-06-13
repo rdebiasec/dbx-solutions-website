@@ -1,5 +1,8 @@
 const storageKey = 'dbx-locale'
 const defaultLocale = 'en'
+/** Add 'pt' and ptEntries to localeCatalogs when Brazilian Portuguese launches */
+const supportedLocales = ['en', 'es']
+const localeLabels = { en: 'EN', es: 'ES', pt: 'PT' }
 
 const esEntries = [
   ['Home', 'Inicio'],
@@ -19,9 +22,10 @@ const esEntries = [
   ['Email Us', 'Enviar Email'],
   ['Next Step', 'Siguiente Paso'],
   ['Start Practical', 'Empieza de forma práctica'],
-  ['DBX Solutions | AI-Powered Customer Experience for SMBs', 'DBX Solutions | Experiencia del Cliente con IA para SMBs'],
+  ['DBX Solutions | WhatsApp & AI Customer Experience for SMBs', 'DBX Solutions | WhatsApp y experiencia del cliente con IA para PyMes'],
+  ['DBX Solutions | AI-Powered Customer Experience for SMBs', 'DBX Solutions | WhatsApp y experiencia del cliente con IA para PyMes'],
   ['AI-Powered Customer Experience', 'Experiencia del Cliente con IA'],
-  ['AI-Powered Customer Experience for Growing SMBs', 'Experiencia del Cliente con IA para SMBs en crecimiento'],
+  ['AI-Powered Customer Experience for Growing SMBs', 'Experiencia del Cliente con IA para PyMes en crecimiento'],
   [
     'DBX Solutions helps small and mid-sized businesses automate customer conversations, improve response times, and create smarter customer journeys without adding operational complexity.',
     'DBX Solutions ayuda a pequeñas y medianas empresas a automatizar conversaciones con clientes, mejorar tiempos de respuesta y crear recorridos más inteligentes sin agregar complejidad operativa.'
@@ -80,8 +84,8 @@ const esEntries = [
   ],
   ['Conversational AI', 'IA conversacional'],
   [
-    'AI assistants that answer questions, guide customers, collect information, and support conversations across digital channels.',
-    'Asistentes de IA que responden preguntas, guían clientes, recopilan información y apoyan conversaciones en canales digitales.'
+    'Agentic AI that answers questions, takes action, collects information, and supports conversations across digital channels.',
+    'IA agéntica que responde preguntas, actúa, recopila información y apoya conversaciones en canales digitales.'
   ],
   ['Customer Experience Automation', 'Automatización de experiencia del cliente'],
   [
@@ -103,10 +107,15 @@ const esEntries = [
     'Every business has different customer touchpoints, tools, and operational challenges. DBX Solutions helps identify where AI can make the greatest impact, then designs solutions that fit your workflows, team capacity, and business goals.',
     'Cada empresa tiene puntos de contacto, herramientas y retos operativos diferentes. DBX Solutions ayuda a identificar dónde la IA puede generar mayor impacto y diseña soluciones que encajan con tus flujos, capacidad del equipo y metas.'
   ],
-  ['AI Customer Assistants', 'Asistentes de IA para clientes'],
+  ['Agentic AI for Customers', 'IA agéntica para clientes'],
+  ['AI Customer Assistants', 'IA agéntica para clientes'],
+  [
+    'Agentic AI for WhatsApp, web chat, SMS, forms, and email that takes action—answers, qualifies, collects data, and routes follow-up. Not a scripted FAQ chatbot.',
+    'IA agéntica para WhatsApp, chat web, SMS, formularios y email que actúa: responde, califica, recopila datos y enruta el seguimiento. No es un chatbot de preguntas frecuentes.'
+  ],
   [
     'Create intelligent assistants that answer common questions, guide customers, collect information, and support your team across digital channels.',
-    'Crea asistentes inteligentes que responden preguntas comunes, guían clientes, recopilan información y apoyan a tu equipo en canales digitales.'
+    'IA agéntica que responde preguntas comunes, guía clientes, recopila información y activa el siguiente paso en tus canales digitales.'
   ],
   ['Lead Qualification Automation', 'Automatización de calificación de prospectos'],
   [
@@ -150,7 +159,7 @@ const esEntries = [
   ['Financial and Advisory Services', 'Servicios financieros y de asesoría'],
   ['Why DBX Solutions', 'Por qué DBX Solutions'],
   ['Practical AI implementation with a human-centered approach', 'Implementación práctica de IA con un enfoque humano'],
-  ['SMB-Focused', 'Enfocado en SMBs'],
+  ['SMB-Focused', 'Enfocado en PyMes'],
   ['Business-First Approach', 'Enfoque primero en el negocio'],
   ['Human Oversight', 'Supervisión humana'],
   ['Integration-Aware', 'Consciente de integraciones'],
@@ -168,7 +177,7 @@ const esEntries = [
   ],
   ['Build a smarter customer experience without overwhelming your team.', 'Construye una experiencia de cliente más inteligente sin abrumar a tu equipo.'],
   ['Solutions that make AI practical for your business', 'Servicios que hacen la IA práctica para tu negocio'],
-  ['Helping SMBs turn AI into better customer experiences', 'Ayudamos a SMBs a convertir IA en mejores experiencias de cliente'],
+  ['Helping SMBs turn AI into better customer experiences', 'Ayudamos a PyMes a convertir IA en mejores experiencias de cliente'],
   ['Let’s explore how AI can improve your customer experience', 'Exploremos cómo la IA puede mejorar tu experiencia del cliente'],
   ['Request Consultation', 'Solicitar Consulta'],
   ['First name', 'Nombre'],
@@ -189,28 +198,151 @@ const esEntries = [
   ['Privacy Policy', 'Política de Privacidad'],
   ['Terms of Service', 'Términos de Servicio'],
   ['Customer message', 'Mensaje del cliente'],
-  ['AI assistant', 'Asistente de IA'],
+  ['DBX AI Agent', 'Agente IA de DBX'],
+  ['DBX Agent', 'Agente DBX'],
+  ['AI assistant', 'Agente de IA'],
+  ['DBX AI Assistant', 'Agente IA de DBX'],
+  ['DBX Assistant', 'Agente DBX'],
   ['Workflow automation', 'Automatización de workflow'],
   ['CRM / team follow-up', 'CRM / seguimiento del equipo'],
   ['Incoming', 'Entrada'],
   ['Team handoff', 'Traspaso al equipo'],
   ['Qualify, answer, route', 'Califica, responde, enruta'],
   ['Lead summary sent with next step', 'Resumen del prospecto enviado con siguiente paso'],
-  ['A good experience with your customers will pay for itself and help you monetize.', 'Una buena experiencia con tus clientes se pagará sola y te ayudará a monetizar.'],
+  ['WhatsApp & Customer Channels', 'WhatsApp y canales del cliente'],
   [
-    'Our purpose is to empower SMBs with Enterprise Level AI that handles the heavy lifting of daily tasks. From lead qualifying to providing order status, our platform executes tasks securely with error-handling with human in the loop intervention only if needed. We bridge the gap between your customer conversations and your tech stack, delivering immediate ROI so you can focus on growing your business while we manage the AI.',
-    'Nuestro propósito es empoderar a SMBs con IA de nivel empresarial que maneja el trabajo pesado de las tareas diarias. Desde calificar prospectos hasta proporcionar estados de pedidos, nuestra plataforma ejecuta tareas de forma segura con manejo de errores e intervención humana solo cuando se necesita. Conectamos tus conversaciones con clientes y tu stack tecnológico, entregando ROI inmediato para que puedas enfocarte en hacer crecer tu negocio mientras nosotros gestionamos la IA.'
+    'Respond faster on WhatsApp and connect every conversation to your team—without hiring more staff.',
+    'Responde más rápido en WhatsApp y conecta cada conversación con tu equipo, sin contratar más personal.'
+  ],
+  [
+    'DBX implements and manages agentic AI for growing businesses—systems that respond, capture lead details, trigger follow-up in your CRM or team, and escalate when judgment matters. Not a traditional chatbot that only answers FAQs.',
+    'DBX implementa y opera IA agéntica para negocios en crecimiento: sistemas que responden, capturan datos del prospecto, activan seguimiento en tu CRM o equipo y escalan cuando hace falta criterio humano. No es un chatbot tradicional que solo responde preguntas frecuentes.'
+  ],
+  ['WhatsApp, SMS, web chat, and email', 'WhatsApp, SMS, chat web y email'],
+  ['Faster first response, including after hours', 'Primera respuesta más rápida, también fuera de horario'],
+  ['Your team steps in when judgment matters', 'Tu equipo interviene cuando importa el criterio humano'],
+  ['Results', 'Resultados'],
+  ['Practical improvements businesses can measure', 'Mejoras prácticas que los negocios pueden medir'],
+  [
+    'DBX focuses on agentic AI that takes action—response speed, cleaner intake, and follow-up your team can use. Not traditional chatbot demos.',
+    'DBX se enfoca en IA agéntica que actúa: velocidad de respuesta, intake más claro y seguimiento que tu equipo puede usar. No son demos de chatbot tradicional.'
+  ],
+  [
+    'Free consultations include a channel review and three practical agentic AI opportunities.',
+    'Las consultas gratis incluyen revisión de canales y tres oportunidades prácticas de IA agéntica.'
+  ],
+  ['Under 15 minutes', 'Menos de 15 minutos'],
+  [
+    'Typical first-response improvement on WhatsApp and chat after launch.',
+    'Mejora típica en la primera respuesta por WhatsApp y chat después del lanzamiento.'
+  ],
+  ['Structured intake', 'Intake estructurado'],
+  [
+    'Lead details captured before your team picks up the conversation.',
+    'Datos del prospecto capturados antes de que tu equipo retome la conversación.'
+  ],
+  ['Human oversight', 'Supervisión humana'],
+  [
+    'Escalation paths keep your team in control of important decisions.',
+    'Rutas de escalamiento mantienen a tu equipo al control de decisiones importantes.'
+  ],
+  [
+    'DBX helped us organize WhatsApp inquiries and give the team useful context before follow-up. Responses got faster without adding headcount.',
+    'DBX nos ayudó a organizar consultas de WhatsApp y dar contexto útil al equipo antes del seguimiento. Las respuestas fueron más rápidas sin aumentar personal.'
+  ],
+  ['Operations Lead', 'Líder de operaciones'],
+  ['U.S. services business', 'Negocio de servicios en EE. UU.'],
+  [
+    'Free consultation includes a review of your customer channels and three practical automation opportunities.',
+    'La consulta gratis incluye revisión de tus canales de clientes y tres oportunidades prácticas de automatización.'
+  ],
+  [
+    'Identify the first WhatsApp workflow worth improving.',
+    'Identifica el primer flujo de WhatsApp que vale la pena mejorar.'
+  ],
+  [
+    'Bring your current channels, common questions, and follow-up process. We will show you where response, intake, or qualification should become clearer first.',
+    'Trae tus canales actuales, preguntas comunes y proceso de seguimiento. Te mostraremos dónde conviene aclarar primero la respuesta, el intake o la calificación.'
+  ],
+  [
+    'Every consultation includes three practical automation opportunities for your business.',
+    'Cada consulta incluye tres oportunidades prácticas de automatización para tu negocio.'
+  ],
+  ['Review My WhatsApp Workflow', 'Revisar mi flujo de WhatsApp'],
+  [
+    'A focused 30-minute consultation reviews your customer journey, tools, and the operational gap costing you leads or response time.',
+    'Una consulta enfocada de 30 minutos revisa tu recorrido del cliente, herramientas y la brecha operativa que te cuesta prospectos o tiempo de respuesta.'
+  ],
+  [
+    'Start with one workflow, then expand based on what works.',
+    'Empieza con un flujo y luego expande según lo que funcione.'
+  ],
+  ['Book a 30-Minute Consultation', 'Agendar consulta de 30 minutos'],
+  ['Ready to improve WhatsApp response and lead follow-up?', '¿Listo para mejorar la respuesta en WhatsApp y el seguimiento de prospectos?'],
+  [
+    'Book a free consultation. We will review your channels, identify the first workflow to improve, and outline three practical agentic AI opportunities for your business.',
+    'Agenda una consulta gratis. Revisaremos tus canales, identificaremos el primer flujo a mejorar y delinearemos tres oportunidades prácticas de IA agéntica para tu negocio.'
+  ],
+  [
+    'DBX Solutions helps growing businesses improve customer conversations on WhatsApp and other channels, qualify leads, reduce repetitive work, and connect AI with real operations.',
+    'DBX Solutions ayuda a negocios en crecimiento a mejorar conversaciones en WhatsApp y otros canales, calificar prospectos, reducir trabajo repetitivo y conectar IA con operaciones reales.'
+  ],
+  [
+    'DBX Solutions helps growing businesses respond faster on WhatsApp, qualify leads, automate repetitive conversations, and connect customer interactions with the tools their teams already use.',
+    'DBX Solutions ayuda a negocios en crecimiento a responder más rápido en WhatsApp, calificar prospectos, automatizar conversaciones repetitivas y conectar interacciones con clientes a las herramientas que su equipo ya usa.'
+  ],
+  [
+    'Book a consultation or send a quick request.',
+    'Agenda una consulta o envía una solicitud breve.'
+  ],
+  [
+    'Prefer the fastest path? Use the calendar. Only need a short note? The form takes under a minute.',
+    '¿Prefieres el camino más rápido? Usa el calendario. ¿Solo una nota breve? El formulario toma menos de un minuto.'
+  ],
+  ['Name', 'Nombre'],
+  ['Your name', 'Tu nombre'],
+  ['Phone or WhatsApp', 'Teléfono o WhatsApp'],
+  ['(optional)', '(opcional)'],
+  [
+    'Share your main channel, common questions, or follow-up challenge.',
+    'Comparte tu canal principal, preguntas comunes o reto de seguimiento.'
+  ],
+  [
+    'Let’s review where WhatsApp and customer conversations are costing you time or leads',
+    'Revisemos dónde WhatsApp y las conversaciones con clientes te cuestan tiempo o prospectos'
+  ],
+  [
+    'Book on the calendar for the fastest response, or send a short request below. We will help identify the most practical first workflow to improve.',
+    'Agenda en el calendario para la respuesta más rápida, o envía una solicitud breve abajo. Te ayudaremos a identificar el primer flujo práctico a mejorar.'
+  ],
+  [
+    'DBX Solutions helps growing businesses turn WhatsApp and customer conversations into faster responses, qualified leads, and connected follow-up workflows.',
+    'DBX Solutions ayuda a negocios en crecimiento a convertir WhatsApp y conversaciones con clientes en respuestas más rápidas, prospectos calificados y seguimiento conectado.'
+  ],
+  ['Practical AI for customer experience and operations.', 'IA práctica para experiencia del cliente y operaciones.'],
+  [
+    'Book a consultation with DBX Solutions to review WhatsApp, lead intake, support automation, and practical AI opportunities for your business.',
+    'Agenda una consulta con DBX Solutions para revisar WhatsApp, intake de prospectos, automatización de soporte y oportunidades prácticas de IA para tu negocio.'
   ],
   ['Can you check my order status and send the latest delivery update?', '¿Puedes revisar el estado de mi pedido y enviarme la actualización de entrega?'],
+  ['Can you check my order status?', '¿Puedes revisar el estado de mi pedido?'],
   [
     'I found your order. It is packed, assigned to delivery, and expected today between 2pm and 4pm.',
     'Encontré tu pedido. Está empacado, asignado para entrega y se espera hoy entre 2pm y 4pm.'
   ],
+  [
+    'Your order is packed and expected today between 2pm and 4pm.',
+    'Tu pedido está empacado y se espera hoy entre 2pm y 4pm.'
+  ],
   ['Can you notify my team too?', '¿También puedes avisar a mi equipo?'],
   ['Done. I synced the update to your CRM and sent the team alert with the customer note.', 'Listo. Sincronicé la actualización con tu CRM y envié la alerta al equipo con la nota del cliente.'],
+  ['Done. I synced the update to your CRM and alerted your team.', 'Listo. Sincronicé la actualización con tu CRM y avisé a tu equipo.'],
   ['Perfect, thank you.', 'Perfecto, gracias.'],
   ['You are welcome. I will watch for delivery changes and update the record if anything shifts.', 'Con gusto. Vigilaré cambios de entrega y actualizaré el registro si algo cambia.'],
+  ['You are welcome. I will watch for delivery changes.', 'Con gusto. Vigilaré cambios de entrega.'],
   ['online now', 'en línea ahora'],
+  ['online', 'en línea'],
+  ['add', 'agregar'],
   ['Today', 'Hoy'],
   ['End-to-end encrypted', 'Cifrado de extremo a extremo'],
   ['WhatsApp voice call', 'Llamada de voz de WhatsApp'],
@@ -277,8 +409,8 @@ const esEntries = [
   ['Managed AI Operations', 'Operaciones Gestionadas de IA'],
   ['Launch is only the beginning.', 'El lanzamiento es solo el comienzo.'],
   [
-    'AI systems need ongoing review, tuning, and improvement. DBX helps keep your AI assistants accurate, useful, and aligned with your business as customer behavior and workflows change.',
-    'Los sistemas de IA necesitan revisión, ajuste y mejora continua. DBX ayuda a mantener tus asistentes precisos, útiles y alineados con el negocio a medida que cambian los clientes y workflows.'
+    'AI systems need ongoing review, tuning, and improvement. DBX helps keep your agentic AI accurate, useful, and aligned with your business as customer behavior and workflows change.',
+    'Los sistemas de IA necesitan revisión, ajuste y mejora continua. DBX ayuda a mantener tu IA agéntica precisa, útil y alineada con el negocio a medida que cambian los clientes y workflows.'
   ],
   ['Conversation quality review', 'Revisión de calidad conversacional'],
   ['Workflow performance monitoring', 'Monitoreo de desempeño de workflows'],
@@ -292,7 +424,7 @@ const esEntries = [
   ['Better operational visibility', 'Mejor visibilidad operativa'],
   ['Scalable support without immediate headcount growth', 'Soporte escalable sin aumentar personal de inmediato'],
   ['Industries', 'Industrias'],
-  ['High-priority SMB sectors', 'Sectores SMB prioritarios'],
+  ['High-priority SMB sectors', 'Sectores PyMes prioritarios'],
   ['Additional sectors', 'Sectores adicionales'],
   ['Professional services', 'Servicios profesionales'],
   ['Healthcare and wellness clinics', 'Clínicas de salud y bienestar'],
@@ -303,10 +435,14 @@ const esEntries = [
   ['Financial and advisory services', 'Servicios financieros y de asesoría'],
   ['A practical partner for customer experience systems.', 'Un socio práctico para sistemas de experiencia del cliente.'],
   [
-    'We do not just launch AI assistants. We design, connect, monitor, and improve customer experience systems around your real business operations.',
-    'No solo lanzamos asistentes de IA. Diseñamos, conectamos, monitoreamos y mejoramos sistemas de experiencia del cliente alrededor de tus operaciones reales.'
+    'We do not just launch agentic AI. We design, connect, monitor, and improve customer experience systems around your real business operations.',
+    'No solo lanzamos IA agéntica. Diseñamos, conectamos, monitoreamos y mejoramos sistemas de experiencia del cliente alrededor de tus operaciones reales.'
   ],
-  ['SMB-focused implementation', 'Implementación enfocada en SMBs'],
+  [
+    'We do not just launch AI assistants. We design, connect, monitor, and improve customer experience systems around your real business operations.',
+    'No solo lanzamos IA agéntica. Diseñamos, conectamos, monitoreamos y mejoramos sistemas de experiencia del cliente alrededor de tus operaciones reales.'
+  ],
+  ['SMB-focused implementation', 'Implementación enfocada en PyMes'],
   ['Business-first design', 'Diseño primero en el negocio'],
   ['Human-supervised AI', 'IA supervisada por humanos'],
   ['Integration-aware solutions', 'Soluciones conscientes de integraciones'],
@@ -321,7 +457,8 @@ const esEntries = [
   ['Start With a Practical AI Consultation', 'Empieza con una consulta práctica de IA'],
   ['Start with a practical AI consultation.', 'Empieza con una consulta práctica de IA.'],
   ['LinkedIn', 'LinkedIn'],
-  ['Serving SMBs remotely across the U.S. and Latin America.', 'Atendemos SMBs de forma remota en EE. UU. y Latinoamérica.'],
+  ['Serving SMBs remotely across the U.S. and Latin America.', 'Atendemos PyMes de forma remota en EE. UU. y Latinoamérica.'],
+  ['Serving businesses remotely across the U.S. and Latin America.', 'Atendemos negocios de forma remota en EE. UU. y Latinoamérica.'],
   ['Verified Accuracy', 'Precisión Verificada'],
   [
     'Answers grounded in your specific business data for total precision.',
@@ -373,7 +510,7 @@ const esEntries = [
   ],
   [
     'For many SMBs, the issue is not effort. It is that conversations, customer details, and next steps are spread across busy people and disconnected tools.',
-    'Para muchas SMBs, el problema no es falta de esfuerzo. Es que las conversaciones, datos del cliente y siguientes pasos están repartidos entre personas ocupadas y herramientas desconectadas.'
+    'Para muchas PyMes, el problema no es falta de esfuerzo. Es que las conversaciones, datos del cliente y siguientes pasos están repartidos entre personas ocupadas y herramientas desconectadas.'
   ],
   [
     'DBX Solutions designs customer conversation systems that collect the right information, trigger the right workflow, and give your team useful context.',
@@ -388,8 +525,12 @@ const esEntries = [
     'Los clientes escriben por los canales que ya usan.'
   ],
   [
+    'The agent answers common questions, qualifies intent, collects details, triggers follow-up, and updates your tools when needed.',
+    'El agente responde preguntas comunes, califica intención, recopila detalles, activa el seguimiento y actualiza tus herramientas cuando hace falta.'
+  ],
+  [
     'The assistant answers common questions, qualifies intent, collects details, and routes the next step.',
-    'El asistente responde preguntas comunes, califica intención, recopila detalles y enruta el siguiente paso.'
+    'El agente responde preguntas comunes, califica intención, recopila detalles y enruta el siguiente paso.'
   ],
   [
     'Useful customer context moves into the tools your team uses to manage work.',
@@ -405,7 +546,7 @@ const esEntries = [
   ],
   [
     'Customer-facing assistants for WhatsApp, web chat, SMS, forms, and email that answer common questions and guide people to the right next step.',
-    'Asistentes de cara al cliente para WhatsApp, chat web, SMS, formularios y email que responden preguntas comunes y guían al siguiente paso correcto.'
+    'IA agéntica de cara al cliente para WhatsApp, chat web, SMS, formularios y email que actúa y guía al siguiente paso correcto.'
   ],
   [
     'Businesses that need dependable first-response coverage without adding complexity.',
@@ -472,8 +613,8 @@ const esEntries = [
     'Revisa interacciones reales con clientes para detectar respuestas poco claras, intención perdida y mejoras de traspaso.'
   ],
   [
-    'Tune approved responses so assistants stay accurate, useful, and aligned with your business.',
-    'Ajusta respuestas aprobadas para que los asistentes se mantengan precisos, útiles y alineados con tu negocio.'
+    'Tune approved responses so agentic AI stays accurate, useful, and aligned with your business.',
+    'Ajusta respuestas aprobadas para que la IA agéntica se mantenga precisa, útil y alineada con tu negocio.'
   ],
   ['Workflow monitoring', 'Monitoreo de workflows'],
   [
@@ -487,8 +628,12 @@ const esEntries = [
   ],
   ['Keep AI useful as your business changes.', 'Mantén la IA útil a medida que cambia tu negocio.'],
   [
+    'AI systems require ongoing review, tuning, monitoring, and refinement. DBX helps keep agentic AI accurate, useful, and aligned with evolving workflows and customer needs.',
+    'Los sistemas de IA requieren revisión, ajuste, monitoreo y refinamiento continuo. DBX ayuda a mantener la IA agéntica precisa, útil y alineada con workflows y necesidades de clientes en evolución.'
+  ],
+  [
     'AI systems require ongoing review, tuning, monitoring, and refinement. DBX helps keep assistants accurate, useful, and aligned with evolving workflows and customer needs.',
-    'Los sistemas de IA requieren revisión, ajuste, monitoreo y refinamiento continuo. DBX ayuda a mantener los asistentes precisos, útiles y alineados con workflows y necesidades de clientes en evolución.'
+    'Los sistemas de IA requieren revisión, ajuste, monitoreo y refinamiento continuo. DBX ayuda a mantener la IA agéntica precisa, útil y alineada con workflows y necesidades de clientes en evolución.'
   ],
   [
     'DBX guides each project through a clear, low-risk process that starts with your customer journey and ends with ongoing operational improvement.',
@@ -504,7 +649,11 @@ const esEntries = [
   ],
   [
     'Keep your AI assistant useful after launch.',
-    'Mantén tu asistente de IA útil después del lanzamiento.'
+    'Mantén tu IA agéntica útil después del lanzamiento.'
+  ],
+  [
+    'Agentic AI stays accurate, useful, and aligned with customer behavior.',
+    'La IA agéntica se mantiene precisa, útil y alineada con el comportamiento del cliente.'
   ],
   [
     'AI works best when it is monitored, measured, and improved.',
@@ -558,7 +707,8 @@ const esEntries = [
     'We build, configure, test, and launch the solution using your existing tools, workflows, and brand guidelines.',
     'Construimos, configuramos, probamos y lanzamos la solución usando tus herramientas, workflows y guías de marca existentes.'
   ],
-  ['Configure AI assistants', 'Configurar asistentes de IA'],
+  ['Configure agentic AI', 'Configurar IA agéntica'],
+  ['Configure AI assistants', 'Configurar IA agéntica'],
   ['Connect systems where needed', 'Conectar sistemas donde sea necesario'],
   ['Test conversation quality', 'Probar la calidad conversacional'],
   ['Prepare your team for launch', 'Preparar a tu equipo para el lanzamiento'],
@@ -592,11 +742,11 @@ const esEntries = [
   ],
   [
     'DBX helps SMBs design, connect, monitor, and improve AI-assisted customer conversation systems around real business workflows.',
-    'DBX ayuda a SMBs a diseñar, conectar, monitorear y mejorar sistemas de conversación asistidos por IA alrededor de workflows reales.'
+    'DBX ayuda a PyMes a diseñar, conectar, monitorear y mejorar sistemas de conversación asistidos por IA alrededor de workflows reales.'
   ],
   [
     'DBX Solutions helps SMBs improve customer conversations, qualify leads, automate repetitive work, and connect AI with real business operations.',
-    'DBX Solutions ayuda a SMBs a mejorar conversaciones con clientes, calificar prospectos, automatizar trabajo repetitivo y conectar IA con operaciones reales del negocio.'
+    'DBX Solutions ayuda a PyMes a mejorar conversaciones con clientes, calificar prospectos, automatizar trabajo repetitivo y conectar IA con operaciones reales del negocio.'
   ],
   [
     'Designed for growing businesses that want clearer customer communication and practical AI implementation.',
@@ -604,7 +754,7 @@ const esEntries = [
   ],
   [
     'Focused on SMB sectors where conversations drive revenue and service quality.',
-    'Enfocado en sectores SMB donde las conversaciones impulsan ingresos y calidad de servicio.'
+    'Enfocado en sectores PyMes donde las conversaciones impulsan ingresos y calidad de servicio.'
   ],
   [
     'DBX is especially useful for businesses that depend on fast inquiry handling, clear intake, reliable follow-up, and repeatable customer support.',
@@ -663,8 +813,12 @@ const esEntries = [
     'Ayudamos a refinar flujos, respuestas y automatizaciones a medida que tu negocio aprende qué funciona mejor.'
   ],
   [
+    'Agentic AI is built around approved business information, clear rules, escalation paths, and ongoing quality review.',
+    'La IA agéntica se construye con información aprobada del negocio, reglas claras, rutas de escalamiento y revisión continua de calidad.'
+  ],
+  [
     'Assistants are built around approved business information, clear rules, escalation paths, and ongoing quality review.',
-    'Los asistentes se construyen con información aprobada del negocio, reglas claras, rutas de escalamiento y revisión continua de calidad.'
+    'La IA agéntica se construye con información aprobada del negocio, reglas claras, rutas de escalamiento y revisión continua de calidad.'
   ],
   [
     'Yes. WhatsApp can be part of the channel mix along with web chat, SMS, forms, and email, depending on your setup.',
@@ -693,24 +847,228 @@ const esEntries = [
   [
     'DBX Solutions helps small and mid-sized businesses turn customer conversations into clearer support, qualified leads, and connected follow-up workflows.',
     'DBX Solutions ayuda a pequeñas y medianas empresas a convertir conversaciones con clientes en soporte más claro, prospectos calificados y workflows de seguimiento conectados.'
-  ]
+  ],
+  ['Practical solutions for WhatsApp, intake, and connected follow-up', 'Soluciones prácticas para WhatsApp, intake y seguimiento conectado'],
+  [
+    'DBX helps growing businesses turn WhatsApp and other customer channels into faster responses, clearer lead intake, and workflows your team can act on—without adding headcount.',
+    'DBX ayuda a negocios en crecimiento a convertir WhatsApp y otros canales en respuestas más rápidas, intake de prospectos más claro y workflows accionables—sin contratar más personal.'
+  ],
+  ['Services that make WhatsApp and customer AI practical', 'Servicios que hacen práctica la IA de clientes en WhatsApp'],
+  [
+    'From agentic AI on WhatsApp and chat to CRM integration and ongoing optimization—DBX implements services around how your team already works.',
+    'Desde IA agéntica en WhatsApp y chat hasta integración con CRM y optimización continua—DBX implementa servicios alrededor de cómo tu equipo ya trabaja.'
+  ],
+  ['Where WhatsApp and customer conversations drive revenue', 'Donde WhatsApp y las conversaciones con clientes impulsan ingresos'],
+  [
+    'DBX helps growing businesses in service-heavy sectors respond faster on WhatsApp, qualify inquiries, and keep follow-up connected to the tools teams already use.',
+    'DBX ayuda a negocios en sectores de servicios a responder más rápido en WhatsApp, calificar consultas y mantener el seguimiento conectado a las herramientas que el equipo ya usa.'
+  ],
+  ['Helping growing businesses turn AI into better customer experiences', 'Ayudando a negocios en crecimiento a convertir IA en mejores experiencias de cliente'],
+  [
+    'DBX Solutions was built to help small and mid-sized businesses adopt AI in a practical, human-centered, and business-focused way—with WhatsApp and customer channels at the center.',
+    'DBX Solutions nació para ayudar a PyMes a adoptar IA de forma práctica, centrada en personas y en el negocio, con WhatsApp y canales del cliente en el centro.'
+  ],
+  ['Want to see how this applies to your business?', '¿Quieres ver cómo aplica a tu negocio?'],
+  [
+    'Book a free consultation to review your channels, workflows, and the first practical opportunity to improve.',
+    'Agenda una consulta gratis para revisar tus canales, workflows y la primera oportunidad práctica de mejora.'
+  ],
+  ['No pressure—just a focused conversation about what would help your team most.', 'Sin presión—solo una conversación enfocada en lo que más ayudaría a tu equipo.'],
+  ['DBX focuses on measurable outcomes—response speed, cleaner intake, and follow-up your team can use.', 'DBX se enfoca en resultados medibles—velocidad de respuesta, intake más claro y seguimiento que tu equipo puede usar.'],
+  ['Outcomes vary by channel volume, workflow scope, and how systems connect to your team.', 'Los resultados varían según volumen de canales, alcance del workflow y cómo los sistemas se conectan con tu equipo.'],
+  ['Illustrative scenario', 'Escenario ilustrativo'],
+  ['Service business with WhatsApp intake', 'Negocio de servicios con intake por WhatsApp'],
+  [
+    'Organizing WhatsApp inquiries gave the team useful context before follow-up. Responses got faster without adding headcount.',
+    'Organizar consultas de WhatsApp dio contexto útil al equipo antes del seguimiento. Las respuestas fueron más rápidas sin aumentar personal.'
+  ],
+  ['WhatsApp, intake, and follow-up workflows.', 'WhatsApp, intake y workflows de seguimiento.'],
+  ['Implementation tied to your channels and CRM.', 'Implementación ligada a tus canales y CRM.'],
+  ['Sector examples—not generic automation.', 'Ejemplos por sector—no automatización genérica.'],
+  ['Calendar for speed, form for a short note.', 'Calendario para rapidez, formulario para una nota breve.'],
+  ['Approved data sources and controlled access.', 'Fuentes de datos aprobadas y acceso controlado.'],
+  ['Escalation paths and clear AI limits.', 'Rutas de escalamiento y límites claros de IA.'],
+  ['Roadmap items—not claimed certifications.', 'Ítems de roadmap—no certificaciones declaradas.'],
+  ['Data handling', 'Manejo de datos'],
+  ['Data Handling Notice', 'Aviso de manejo de datos'],
+  [
+    'DBX designs AI workflows around approved business information, controlled access, and clear limits on what systems process and store.',
+    'DBX diseña workflows de IA con información aprobada del negocio, acceso controlado y límites claros sobre qué procesan y almacenan los sistemas.'
+  ],
+  ['Responsible AI Policy', 'Política de IA responsable'],
+  [
+    'DBX implements agentic AI with clear escalation paths, approved business information, and human review—not unconstrained automation.',
+    'DBX implementa IA agéntica con rutas de escalamiento claras, información aprobada del negocio y revisión humana—no automatización sin límites.'
+  ],
+  ['Security Roadmap', 'Roadmap de seguridad'],
+  [
+    'DBX aligns operations with recognized security and responsible AI practices. Items below are roadmap or readiness work unless explicitly marked complete.',
+    'DBX alinea operaciones con prácticas reconocidas de seguridad e IA responsable. Los ítems son trabajo de roadmap o preparación salvo que se indique lo contrario.'
+  ],
+  ['Our approach', 'Nuestro enfoque'],
+  ['What we prioritize', 'Qué priorizamos'],
+  ['Working principles', 'Principios de trabajo'],
+  ['Security roadmap', 'Roadmap de seguridad'],
+  ['Roadmap / In progress', 'Roadmap / En progreso'],
+  ['Security and compliance roadmap', 'Roadmap de seguridad y cumplimiento'],
+  [
+    'By checking this box, you provide express written consent to receive SMS communications from DBX Solutions LLC related to appointments, services, and support. Message frequency varies. Message and data rates may apply. Consent is not a condition of purchase. Reply STOP to opt out and HELP for help. See Privacy Policy and SMS Terms.',
+    'Al marcar esta casilla, das consentimiento expreso por escrito para recibir comunicaciones SMS de DBX Solutions LLC relacionadas con citas, servicios y soporte. La frecuencia de mensajes varía. Pueden aplicar tarifas de mensajes y datos. El consentimiento no es condición de compra. Responde STOP para cancelar y HELP para ayuda. Consulta la Política de Privacidad y los Términos SMS.'
+  ],
+  [
+    'Example: A firm captures project scope and timeline on WhatsApp, then routes qualified inquiries to the right advisor with full context.',
+    'Ejemplo: Una firma captura alcance y plazos del proyecto en WhatsApp, luego enruta consultas calificadas al asesor correcto con contexto completo.'
+  ],
+  [
+    'Example: After-hours WhatsApp questions about hours, services, and booking get answered while urgent cases escalate to staff.',
+    'Ejemplo: Preguntas por WhatsApp fuera de horario sobre horarios, servicios y reservas se responden mientras casos urgentes escalan al equipo.'
+  ],
+  [
+    'Example: A buyer asks about availability on WhatsApp; the agent collects budget and timeline before alerting the listing agent.',
+    'Ejemplo: Un comprador pregunta disponibilidad por WhatsApp; el agente recopila presupuesto y plazos antes de alertar al agente de la propiedad.'
+  ],
+  [
+    'Example: Quote requests include service type, location, and photos so your team replies with accurate next steps, not repeat questions.',
+    'Ejemplo: Solicitudes de cotización incluyen tipo de servicio, ubicación y fotos para que tu equipo responda con pasos precisos, no preguntas repetidas.'
+  ],
+  [
+    'Example: Order-status questions on WhatsApp pull structured details before a human steps in for exceptions.',
+    'Ejemplo: Preguntas de estado de pedido en WhatsApp recopilan detalles estructurados antes de que una persona intervenga en excepciones.'
+  ],
+  [
+    'Example: Program FAQs and intake questions run on chat while enrollment-ready leads land in your CRM with notes.',
+    'Ejemplo: FAQs del programa e intake en chat mientras prospectos listos para inscripción llegan al CRM con notas.'
+  ],
+  [
+    'Example: General service questions are handled consistently; sensitive or compliance-related topics route to a human reviewer.',
+    'Ejemplo: Preguntas generales se manejan de forma consistente; temas sensibles o de cumplimiento se enrutan a un revisor humano.'
+  ],
+  [
+    'Agentic AI for WhatsApp, web chat, SMS, forms, and email—responds, qualifies, collects data, and routes follow-up to your team or CRM.',
+    'IA agéntica para WhatsApp, chat web, SMS, formularios y email—responde, califica, recopila datos y enruta el seguimiento a tu equipo o CRM.'
+  ],
+  ['Customer message', 'Mensaje del cliente'],
+  ['WhatsApp · Chat · Email', 'WhatsApp · Chat · Email'],
+  ['Team inbox', 'Bandeja del equipo'],
+  ['CRM', 'CRM'],
+  ['Calendar', 'Calendario'],
+  ['Support desk', 'Mesa de soporte'],
+  ['Slow response', 'Respuesta lenta'],
+  ['Lost context', 'Contexto perdido'],
+  ['Missed lead', 'Prospecto perdido'],
+  ['Customer frustration', 'Frustración del cliente'],
+  ['Slow responses', 'Respuestas lentas'],
+  [
+    'Customers move on when questions sit unanswered during busy hours or after closing.',
+    'Los clientes avanzan con otra opción cuando sus preguntas quedan sin respuesta en horas ocupadas o fuera de horario.'
+  ],
+  ['Repetitive questions', 'Preguntas repetitivas'],
+  [
+    'Your team spends time repeating answers that could be handled consistently.',
+    'Tu equipo dedica tiempo a repetir respuestas que podrían manejarse de forma consistente.'
+  ],
+  ['Missed leads', 'Prospectos perdidos'],
+  [
+    'High-intent inquiries lose momentum when follow-up is delayed or incomplete.',
+    'Las consultas con alta intención pierden impulso cuando el seguimiento es lento o incompleto.'
+  ],
+  ['Disconnected tools', 'Herramientas desconectadas'],
+  [
+    'Conversation details often stay separate from the CRM, calendar, support desk, or team workflow.',
+    'Los detalles de las conversaciones suelen quedar separados del CRM, calendario, mesa de soporte o workflow del equipo.'
+  ],
+  ['Limited team capacity', 'Capacidad limitada del equipo'],
+  [
+    'Growing demand creates more customer conversations than a lean team can manage manually.',
+    'La demanda creciente genera más conversaciones de las que un equipo pequeño puede manejar manualmente.'
+  ],
+  [
+    'Slow or inconsistent replies erode trust—customers feel ignored even when your team is doing their best behind the scenes.',
+    'Las respuestas lentas o inconsistentes erosionan la confianza: el cliente siente que lo ignoran, aunque tu equipo esté haciendo su mejor esfuerzo.'
+  ],
+  [
+    'Customer demand grows faster than manual follow-up can keep up.',
+    'La demanda de clientes crece más rápido de lo que el seguimiento manual puede sostener.'
+  ],
+  [
+    'For many SMBs, the issue is not effort. It is that conversations, customer details, and next steps are spread across busy people and disconnected tools.',
+    'Para muchas PyMes, el problema no es falta de esfuerzo. Es que las conversaciones, datos del cliente y siguientes pasos están repartidos entre personas ocupadas y herramientas desconectadas.'
+  ],
+  [
+    'Customer messages turn into team action—without the manual chaos.',
+    'Los mensajes del cliente se convierten en acción del equipo—sin el caos manual.'
+  ],
+  [
+    'DBX connects how customers reach you with what your team needs to do next.',
+    'DBX conecta cómo te contactan con lo que tu equipo necesita hacer después.'
+  ],
+  ['They message you', 'Te escriben'],
+  [
+    'On WhatsApp, chat, and email—where they already are.',
+    'Por WhatsApp, chat y email, donde ya están.'
+  ],
+  ['DBX answers first', 'DBX responde primero'],
+  [
+    'Common questions handled with your business context, day or night.',
+    'Preguntas frecuentes con el contexto de tu negocio, de día o de noche.'
+  ],
+  ['Your tools stay current', 'Tus herramientas al día'],
+  [
+    'CRM, calendar, and team alerts updated—no retyping.',
+    'CRM, calendario y avisos al equipo, sin volver a escribir todo.'
+  ],
+  ['Your team stays in control', 'Tu equipo sigue al mando'],
+  [
+    'People step in for judgment calls, follow-up, and closing.',
+    'Las personas entran en decisiones, seguimiento y cierre.'
+  ],
+  [
+    'Connected customer-to-team workflow',
+    'Flujo conectado del cliente al equipo'
+  ],
+  ['DBX handles intake', 'DBX gestiona la entrada'],
+  ['Team alerts', 'Avisos al equipo'],
+  ['Your team in the loop', 'Tu equipo en el circuito'],
+  ['Faster reply', 'Respuesta más rápida'],
+  ['Clear handoff', 'Traspaso claro'],
+  ['No duplicate work', 'Sin trabajo duplicado'],
+  [
+    'Human-supervised. Your tools. Your rules.',
+    'Supervisión humana. Tus herramientas. Tus reglas.'
+  ],
+  ['Chat', 'Chat']
 ]
 
-const translations = new Map(esEntries)
+const localeCatalogs = {
+  es: esEntries
+  // pt: ptEntries
+}
+
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-const translationPattern = new RegExp(
-  [...translations.keys()].sort((a, b) => b.length - a.length).map(escapeRegExp).join('|'),
-  'g'
+
+function buildLocaleEngine(entries) {
+  const map = new Map(entries)
+  const pattern = new RegExp(
+    [...map.keys()].sort((a, b) => b.length - a.length).map(escapeRegExp).join('|'),
+    'g'
+  )
+  return { map, pattern }
+}
+
+const localeEngines = Object.fromEntries(
+  Object.entries(localeCatalogs).map(([code, entries]) => [code, buildLocaleEngine(entries)])
 )
 
 export function getLocale() {
   const stored = localStorage.getItem(storageKey)
-  return stored === 'es' ? 'es' : defaultLocale
+  return supportedLocales.includes(stored) ? stored : defaultLocale
 }
 
 export function translateText(value, locale = getLocale()) {
-  if (locale !== 'es' || !value) return value
-  return value.replace(translationPattern, (match) => translations.get(match) || match)
+  if (locale === defaultLocale || !value) return value
+  const engine = localeEngines[locale]
+  if (!engine) return value
+  return value.replace(engine.pattern, (match) => engine.map.get(match) || match)
 }
 
 export function translateHtml(html, locale = getLocale()) {
@@ -720,8 +1078,12 @@ export function translateHtml(html, locale = getLocale()) {
 export function renderLangToggle(locale = getLocale()) {
   return `
     <div class="lang-toggle" aria-label="Language">
-      <button class="${locale === 'en' ? 'active' : ''}" data-locale="en" type="button">EN</button>
-      <button class="${locale === 'es' ? 'active' : ''}" data-locale="es" type="button">ES</button>
+      ${supportedLocales
+        .map(
+          (code) =>
+            `<button class="${locale === code ? 'active' : ''}" data-locale="${code}" type="button">${localeLabels[code] || code.toUpperCase()}</button>`
+        )
+        .join('')}
     </div>
   `
 }

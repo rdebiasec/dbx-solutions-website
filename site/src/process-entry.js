@@ -1,3 +1,3 @@
-import { mountPage } from './site-app.js'
+import { href } from './legal/constants.js'
 
-mountPage('processPage')
+window.location.replace(`${href('')}#process`)

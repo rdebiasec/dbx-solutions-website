@@ -1,3 +1,3 @@
-import { mountPage } from './site-app.js'
+import { href } from './legal/constants.js'
 
-mountPage('securityPage')
+window.location.replace(`${href('')}#trust`)

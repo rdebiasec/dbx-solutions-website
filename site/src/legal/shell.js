@@ -1,12 +1,12 @@
 import { href } from './constants.js'
 
 const NAV = [
-  { hash: '#solutions', label: 'Solutions' },
-  { hash: '#services', label: 'Services' },
-  { hash: '#benefits', label: 'Benefits' },
+  { hash: 'solutions/', label: 'Solutions' },
+  { hash: 'services/', label: 'Services' },
+  { hash: 'industries/', label: 'Industries' },
   { hash: '#process', label: 'How we work' },
   { hash: '#trust', label: 'Trust' },
-  { hash: '#contact', label: 'Contact' }
+  { hash: 'contact/', label: 'Contact' }
 ]
 
 function renderLegalHeader() {
@@ -16,7 +16,7 @@ function renderLegalHeader() {
       <div class="header-top">
         <a href="${home}" class="logo"><img src="${href('logo.png')}" alt="DBX Solutions" width="120" height="40" /></a>
         <nav id="primary-nav" aria-label="Primary">
-          ${NAV.map((item) => `<a href="${home}${item.hash}">${item.label}</a>`).join('')}
+          ${NAV.map((item) => `<a href="${item.hash.startsWith('#') ? `${home}${item.hash}` : href(item.hash)}">${item.label}</a>`).join('')}
         </nav>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
           <span class="sr-only">Toggle navigation</span>
