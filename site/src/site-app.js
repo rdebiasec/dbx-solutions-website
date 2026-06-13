@@ -3,6 +3,7 @@ import { href, CONTACT_EMAIL } from './legal/constants.js'
 import { smsConsentCheckboxHtml } from './sms-consent-copy.js'
 import {
   bindLocaleToggle,
+  getHtmlLang,
   getLocale,
   renderLangToggle,
   translateHtml,
@@ -46,7 +47,7 @@ const valuePoints = [
   },
   {
     title: 'Smart Escalation',
-    body: 'Seamless hand-offs to your team exactly when a human touch is needed.'
+    body: 'Seamless handoffs to your team exactly when a human touch is needed.'
   }
 ]
 
@@ -1055,7 +1056,7 @@ function renderBenefits() {
       ${sectionHeading(
         'Business Impact',
         'Operational improvements your team and customers can feel.',
-        'DBX focuses on business outcomes that make customer communication clearer, follow-up easier, and support more scalable.'
+        'DBX focuses on business outcomes that make customer communication clearer, follow-up easier, and make support more scalable.'
       )}
       ${renderSimpleCards(benefits, 'benefit-grid')}
     </section>
@@ -1417,7 +1418,7 @@ export function mountPage(pageKey) {
   if (!app || !page) return
   const locale = getLocale()
 
-  document.documentElement.lang = locale
+  document.documentElement.lang = getHtmlLang(locale)
   setMeta(page)
   document.title = translateText(document.title, locale)
   const description = document.querySelector('meta[name="description"]')

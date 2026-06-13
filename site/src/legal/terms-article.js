@@ -12,7 +12,7 @@ export function getTermsArticleHtml() {
   return `
     <h1>Terms of Service</h1>
     <p class="legal-effective"><strong>Effective Date: ${LEGAL_EFFECTIVE_DATE}</strong></p>
-    <p>These Terms of Service ("Terms") govern your access to and use of the ${COMPANY_LEGAL_NAME} ("DBX Solutions," "we," "our," or "us") website and related materials.</p>
+    <p>These Terms of Service ("Terms") govern your access to and use of the website of ${COMPANY_LEGAL_NAME} ("DBX Solutions," "we," "our," or "us") and related materials.</p>
     <p>By accessing or using this website, you agree to these Terms. If you do not agree, you should not use this website.</p>
 
     <h2>1. Website Purpose</h2>

@@ -1,8 +1,10 @@
+import { ptEntries } from './i18n/pt-entries.js'
+
 const storageKey = 'dbx-locale'
 const defaultLocale = 'en'
-/** Add 'pt' and ptEntries to localeCatalogs when Brazilian Portuguese launches */
-const supportedLocales = ['en', 'es']
+const supportedLocales = ['en', 'es', 'pt']
 const localeLabels = { en: 'EN', es: 'ES', pt: 'PT' }
+const htmlLang = { en: 'en', es: 'es', pt: 'pt-BR' }
 
 const esEntries = [
   ['Home', 'Inicio'],
@@ -12,7 +14,7 @@ const esEntries = [
   ['About', 'Acerca de'],
   ['Contact', 'Contacto'],
   ['Book a Consultation', 'Agenda una Consulta'],
-  ['Book a Free Consultation', 'Agenda una Consulta Gratis'],
+  ['Book a Free Consultation', 'Agenda una consulta gratuita'],
   ['Explore Solutions', 'Explorar Soluciones'],
   ['Explore service', 'Explorar servicio'],
   ['View Services', 'Ver Servicios'],
@@ -154,7 +156,7 @@ const esEntries = [
   ['Healthcare and Wellness Clinics', 'Clínicas de salud y bienestar'],
   ['Real Estate Teams', 'Equipos inmobiliarios'],
   ['Local Service Businesses', 'Negocios locales de servicios'],
-  ['E-Commerce Businesses', 'E-commerce'],
+  ['E-Commerce Businesses', 'Negocios de comercio electrónico'],
   ['Education and Training Providers', 'Educación y capacitación'],
   ['Financial and Advisory Services', 'Servicios financieros y de asesoría'],
   ['Why DBX Solutions', 'Por qué DBX Solutions'],
@@ -175,8 +177,11 @@ const esEntries = [
     'No generic AI pitch. Just a focused conversation about your business, your customer journey, and where AI can create real value.',
     'Sin discurso genérico de IA. Solo una conversación enfocada sobre tu negocio, el recorrido del cliente y dónde la IA puede crear valor real.'
   ],
-  ['Build a smarter customer experience without overwhelming your team.', 'Construye una experiencia de cliente más inteligente sin abrumar a tu equipo.'],
-  ['Solutions that make AI practical for your business', 'Servicios que hacen la IA práctica para tu negocio'],
+  [
+    'Build a smarter customer experience without overwhelming your team.',
+    'Construye una experiencia de cliente más inteligente sin abrumar a tu equipo.'
+  ],
+  ['Solutions that make AI practical for your business', 'Soluciones que hacen la IA práctica para tu negocio'],
   ['Helping SMBs turn AI into better customer experiences', 'Ayudamos a PyMes a convertir IA en mejores experiencias de cliente'],
   ['Let’s explore how AI can improve your customer experience', 'Exploremos cómo la IA puede mejorar tu experiencia del cliente'],
   ['Request Consultation', 'Solicitar Consulta'],
@@ -194,7 +199,7 @@ const esEntries = [
   ['Not sure yet', 'Aún no estoy seguro'],
   ['Message', 'Mensaje'],
   ['Book directly on the calendar', 'Agenda directamente en el calendario'],
-  ['Thank you. Your request has been captured for follow-up.', 'Gracias. Tu solicitud fue capturada para seguimiento.'],
+  ['Thank you. Your request has been captured for follow-up.', 'Gracias. Tu solicitud fue registrada para seguimiento.'],
   ['Privacy Policy', 'Política de Privacidad'],
   ['Terms of Service', 'Términos de Servicio'],
   ['Customer message', 'Mensaje del cliente'],
@@ -229,7 +234,7 @@ const esEntries = [
   ],
   [
     'Free consultations include a channel review and three practical agentic AI opportunities.',
-    'Las consultas gratis incluyen revisión de canales y tres oportunidades prácticas de IA agéntica.'
+    'Las consultas gratuitas incluyen revisión de canales y tres oportunidades prácticas de IA agéntica.'
   ],
   ['Under 15 minutes', 'Menos de 15 minutos'],
   [
@@ -254,12 +259,9 @@ const esEntries = [
   ['U.S. services business', 'Negocio de servicios en EE. UU.'],
   [
     'Free consultation includes a review of your customer channels and three practical automation opportunities.',
-    'La consulta gratis incluye revisión de tus canales de clientes y tres oportunidades prácticas de automatización.'
+    'La consulta gratuita incluye revisión de tus canales de clientes y tres oportunidades prácticas de automatización.'
   ],
-  [
-    'Identify the first WhatsApp workflow worth improving.',
-    'Identifica el primer flujo de WhatsApp que vale la pena mejorar.'
-  ],
+  ['Identify the first WhatsApp workflow worth improving.', 'Identifica el primer flujo de WhatsApp que vale la pena mejorar.'],
   [
     'Bring your current channels, common questions, and follow-up process. We will show you where response, intake, or qualification should become clearer first.',
     'Trae tus canales actuales, preguntas comunes y proceso de seguimiento. Te mostraremos dónde conviene aclarar primero la respuesta, el intake o la calificación.'
@@ -273,15 +275,15 @@ const esEntries = [
     'A focused 30-minute consultation reviews your customer journey, tools, and the operational gap costing you leads or response time.',
     'Una consulta enfocada de 30 minutos revisa tu recorrido del cliente, herramientas y la brecha operativa que te cuesta prospectos o tiempo de respuesta.'
   ],
+  ['Start with one workflow, then expand based on what works.', 'Empieza con un flujo y luego expande según lo que funcione.'],
+  ['Book a 30-Minute Consultation', 'Agenda una consulta de 30 minutos'],
   [
-    'Start with one workflow, then expand based on what works.',
-    'Empieza con un flujo y luego expande según lo que funcione.'
+    'Ready to improve WhatsApp response and lead follow-up?',
+    '¿Listo para mejorar la respuesta en WhatsApp y el seguimiento de prospectos?'
   ],
-  ['Book a 30-Minute Consultation', 'Agendar consulta de 30 minutos'],
-  ['Ready to improve WhatsApp response and lead follow-up?', '¿Listo para mejorar la respuesta en WhatsApp y el seguimiento de prospectos?'],
   [
     'Book a free consultation. We will review your channels, identify the first workflow to improve, and outline three practical agentic AI opportunities for your business.',
-    'Agenda una consulta gratis. Revisaremos tus canales, identificaremos el primer flujo a mejorar y delinearemos tres oportunidades prácticas de IA agéntica para tu negocio.'
+    'Agenda una consulta gratuita. Revisaremos tus canales, identificaremos el primer flujo a mejorar y delinearemos tres oportunidades prácticas de IA agéntica para tu negocio.'
   ],
   [
     'DBX Solutions helps growing businesses improve customer conversations on WhatsApp and other channels, qualify leads, reduce repetitive work, and connect AI with real operations.',
@@ -291,10 +293,7 @@ const esEntries = [
     'DBX Solutions helps growing businesses respond faster on WhatsApp, qualify leads, automate repetitive conversations, and connect customer interactions with the tools their teams already use.',
     'DBX Solutions ayuda a negocios en crecimiento a responder más rápido en WhatsApp, calificar prospectos, automatizar conversaciones repetitivas y conectar interacciones con clientes a las herramientas que su equipo ya usa.'
   ],
-  [
-    'Book a consultation or send a quick request.',
-    'Agenda una consulta o envía una solicitud breve.'
-  ],
+  ['Book a consultation or send a quick request.', 'Agenda una consulta o envía una solicitud breve.'],
   [
     'Prefer the fastest path? Use the calendar. Only need a short note? The form takes under a minute.',
     '¿Prefieres el camino más rápido? Usa el calendario. ¿Solo una nota breve? El formulario toma menos de un minuto.'
@@ -303,10 +302,7 @@ const esEntries = [
   ['Your name', 'Tu nombre'],
   ['Phone or WhatsApp', 'Teléfono o WhatsApp'],
   ['(optional)', '(opcional)'],
-  [
-    'Share your main channel, common questions, or follow-up challenge.',
-    'Comparte tu canal principal, preguntas comunes o reto de seguimiento.'
-  ],
+  ['Share your main channel, common questions, or follow-up challenge.', 'Comparte tu canal principal, preguntas comunes o reto de seguimiento.'],
   [
     'Let’s review where WhatsApp and customer conversations are costing you time or leads',
     'Revisemos dónde WhatsApp y las conversaciones con clientes te cuestan tiempo o prospectos'
@@ -324,21 +320,27 @@ const esEntries = [
     'Book a consultation with DBX Solutions to review WhatsApp, lead intake, support automation, and practical AI opportunities for your business.',
     'Agenda una consulta con DBX Solutions para revisar WhatsApp, intake de prospectos, automatización de soporte y oportunidades prácticas de IA para tu negocio.'
   ],
-  ['Can you check my order status and send the latest delivery update?', '¿Puedes revisar el estado de mi pedido y enviarme la actualización de entrega?'],
+  [
+    'Can you check my order status and send the latest delivery update?',
+    '¿Puedes revisar el estado de mi pedido y enviarme la actualización de entrega?'
+  ],
   ['Can you check my order status?', '¿Puedes revisar el estado de mi pedido?'],
   [
     'I found your order. It is packed, assigned to delivery, and expected today between 2pm and 4pm.',
-    'Encontré tu pedido. Está empacado, asignado para entrega y se espera hoy entre 2pm y 4pm.'
+    'Encontré tu pedido. Está empacado, asignado para entrega y se espera hoy entre 2 p. m. y 4 p. m.'
   ],
-  [
-    'Your order is packed and expected today between 2pm and 4pm.',
-    'Tu pedido está empacado y se espera hoy entre 2pm y 4pm.'
-  ],
+  ['Your order is packed and expected today between 2pm and 4pm.', 'Tu pedido está empacado y se espera hoy entre 2 p. m. y 4 p. m.'],
   ['Can you notify my team too?', '¿También puedes avisar a mi equipo?'],
-  ['Done. I synced the update to your CRM and sent the team alert with the customer note.', 'Listo. Sincronicé la actualización con tu CRM y envié la alerta al equipo con la nota del cliente.'],
+  [
+    'Done. I synced the update to your CRM and sent the team alert with the customer note.',
+    'Listo. Sincronicé la actualización con tu CRM y envié la alerta al equipo con la nota del cliente.'
+  ],
   ['Done. I synced the update to your CRM and alerted your team.', 'Listo. Sincronicé la actualización con tu CRM y avisé a tu equipo.'],
   ['Perfect, thank you.', 'Perfecto, gracias.'],
-  ['You are welcome. I will watch for delivery changes and update the record if anything shifts.', 'Con gusto. Vigilaré cambios de entrega y actualizaré el registro si algo cambia.'],
+  [
+    'You are welcome. I will watch for delivery changes and update the record if anything shifts.',
+    'Con gusto. Vigilaré cambios de entrega y actualizaré el registro si algo cambia.'
+  ],
   ['You are welcome. I will watch for delivery changes.', 'Con gusto. Vigilaré cambios de entrega.'],
   ['online now', 'en línea ahora'],
   ['online', 'en línea'],
@@ -358,7 +360,7 @@ const esEntries = [
   ['contacts', 'contactos'],
   [
     'From answering repetitive questions to chasing down leads, we take the "busy" out of business. It’s enterprise-grade automation that actually feels like help.',
-    'IA práctica para soporte al cliente, engagement de prospectos, automatización de workflows y operaciones más inteligentes.'
+    'Desde responder preguntas repetitivas hasta dar seguimiento a prospectos, quitamos lo "ocupado" del negocio. Es automatización de nivel empresarial que realmente se siente como ayuda.'
   ],
   ['See How It Works', 'Ver cómo funciona'],
   ['Customer support automation', 'Automatización de soporte al cliente'],
@@ -366,16 +368,34 @@ const esEntries = [
   ['Workflow and CRM integration', 'Integración de CRM y workflows'],
   ['Human-supervised AI operations', 'Operaciones de IA con supervisión humana'],
   ['Slow responses', 'Respuestas lentas'],
-  ['Customers move on when questions sit unanswered during busy hours or after closing.', 'Los clientes avanzan con otra opción cuando sus preguntas quedan sin respuesta en horas ocupadas o fuera de horario.'],
+  [
+    'Customers move on when questions sit unanswered during busy hours or after closing.',
+    'Los clientes avanzan con otra opción cuando sus preguntas quedan sin respuesta en horas ocupadas o fuera de horario.'
+  ],
   ['Repetitive questions', 'Preguntas repetitivas'],
-  ['Your team spends time repeating answers that could be handled consistently.', 'Tu equipo dedica tiempo a repetir respuestas que podrían manejarse de forma consistente.'],
+  [
+    'Your team spends time repeating answers that could be handled consistently.',
+    'Tu equipo dedica tiempo a repetir respuestas que podrían manejarse de forma consistente.'
+  ],
   ['Missed leads', 'Prospectos perdidos'],
-  ['High-intent inquiries lose momentum when follow-up is delayed or incomplete.', 'Las consultas con alta intención pierden impulso cuando el seguimiento es lento o incompleto.'],
+  [
+    'High-intent inquiries lose momentum when follow-up is delayed or incomplete.',
+    'Las consultas con alta intención pierden impulso cuando el seguimiento es lento o incompleto.'
+  ],
   ['Disconnected tools', 'Herramientas desconectadas'],
-  ['Conversation details often stay separate from the CRM, calendar, support desk, or team workflow.', 'Los detalles de las conversaciones suelen quedar separados del CRM, calendario, mesa de soporte o workflow del equipo.'],
+  [
+    'Conversation details often stay separate from the CRM, calendar, support desk, or team workflow.',
+    'Los detalles de las conversaciones suelen quedar separados del CRM, calendario, mesa de soporte o workflow del equipo.'
+  ],
   ['Limited team capacity', 'Capacidad limitada del equipo'],
-  ['Growing demand creates more customer conversations than a lean team can manage manually.', 'La demanda creciente genera más conversaciones de las que un equipo pequeño puede manejar manualmente.'],
-  ['Customer experience automation connected to real business operations.', 'Automatización de experiencia del cliente conectada a operaciones reales.'],
+  [
+    'Growing demand creates more customer conversations than a lean team can manage manually.',
+    'La demanda creciente genera más conversaciones de las que un equipo pequeño puede manejar manualmente.'
+  ],
+  [
+    'Customer experience automation connected to real business operations.',
+    'Automatización de experiencia del cliente conectada a operaciones reales.'
+  ],
   [
     'DBX Solutions is not just another AI chat layer. We design customer conversation systems that collect the right information, trigger the right workflow, and give your team useful context.',
     'DBX Solutions no es solo otra capa de chat con IA. Diseñamos sistemas de conversación que recopilan la información correcta, activan el workflow adecuado y dan contexto útil al equipo.'
@@ -396,12 +416,18 @@ const esEntries = [
   ['Collect', 'Recopilar'],
   ['Route', 'Enrutar'],
   ['Business Systems', 'Sistemas del negocio'],
-  ['Connects customer context to your CRM, calendar, support desk, and team notifications.', 'Conecta el contexto del cliente con CRM, calendario, soporte y notificaciones del equipo.'],
+  [
+    'Connects customer context to your CRM, calendar, support desk, and team notifications.',
+    'Conecta el contexto del cliente con CRM, calendario, soporte y notificaciones del equipo.'
+  ],
   ['Calendar', 'Calendario'],
   ['Support desk', 'Mesa de soporte'],
   ['Team notifications', 'Notificaciones del equipo'],
   ['Human Team', 'Equipo humano'],
-  ['Your team reviews, follows up, closes opportunities, and supports customers when human judgment matters.', 'Tu equipo revisa, da seguimiento, cierra oportunidades y atiende clientes cuando se necesita criterio humano.'],
+  [
+    'Your team reviews, follows up, closes opportunities, and supports customers when human judgment matters.',
+    'Tu equipo revisa, da seguimiento, cierra oportunidades y atiende clientes cuando se necesita criterio humano.'
+  ],
   ['Review', 'Revisar'],
   ['Follow up', 'Dar seguimiento'],
   ['Close', 'Cerrar'],
@@ -423,7 +449,6 @@ const esEntries = [
   ['More consistent customer communication', 'Comunicación con clientes más consistente'],
   ['Better operational visibility', 'Mejor visibilidad operativa'],
   ['Scalable support without immediate headcount growth', 'Soporte escalable sin aumentar personal de inmediato'],
-  ['Industries', 'Industrias'],
   ['High-priority SMB sectors', 'Sectores PyMes prioritarios'],
   ['Additional sectors', 'Sectores adicionales'],
   ['Professional services', 'Servicios profesionales'],
@@ -465,10 +490,7 @@ const esEntries = [
     'Respuestas basadas en los datos específicos de tu negocio para máxima precisión.'
   ],
   ['Unified Channels', 'Canales Unificados'],
-  [
-    'Connect everywhere: WhatsApp, SMS, Web, and Email in one place.',
-    'Conecta en todas partes: WhatsApp, SMS, web y email en un solo lugar.'
-  ],
+  ['Connect everywhere: WhatsApp, SMS, Web, and Email in one place.', 'Conecta en todas partes: WhatsApp, SMS, web y email en un solo lugar.'],
   ['Integrated Workflows', 'Workflows Integrados'],
   [
     'Instant sync with your CRM, calendar, and team for zero-lag follow-up.',
@@ -476,34 +498,18 @@ const esEntries = [
   ],
   ['Smart Escalation', 'Escalamiento Inteligente'],
   [
-    'Seamless hand-offs to your team exactly when a human touch is needed.',
+    'Seamless handoffs to your team exactly when a human touch is needed.',
     'Traspasos fluidos a tu equipo justo cuando se necesita intervención humana.'
   ],
   ['SMS Terms', 'Términos SMS'],
-  ['Data Handling Notice', 'Aviso de Manejo de Datos'],
-  ['Responsible AI Policy', 'Política de IA Responsable'],
-  ['Security Roadmap', 'Roadmap de Seguridad'],
   ['Legal', 'Legal'],
   ['Priority focus', 'Enfoque prioritario'],
   ['Managed partner', 'Socio gestionado'],
   ['Support answers with approved context', 'Respuestas de soporte con contexto aprobado'],
-  [
-    'Lead intake across WhatsApp, chat, SMS, forms, and email',
-    'Intake de prospectos en WhatsApp, chat, SMS, formularios y email'
-  ],
-  [
-    'CRM, calendar, and team follow-up workflows',
-    'Workflows de CRM, calendario y seguimiento del equipo'
-  ],
-  [
-    'Human review and escalation when it matters',
-    'Revisión humana y escalamiento cuando importa'
-  ],
-  [
-    'Customer conversations connected to business operations',
-    'Conversaciones con clientes conectadas a operaciones del negocio'
-  ],
-  ['Team alerts', 'Alertas del equipo'],
+  ['Lead intake across WhatsApp, chat, SMS, forms, and email', 'Intake de prospectos en WhatsApp, chat, SMS, formularios y email'],
+  ['CRM, calendar, and team follow-up workflows', 'Workflows de CRM, calendario y seguimiento del equipo'],
+  ['Human review and escalation when it matters', 'Revisión humana y escalamiento cuando importa'],
+  ['Customer conversations connected to business operations', 'Conversaciones con clientes conectadas a operaciones del negocio'],
   [
     'Customer demand grows faster than manual follow-up can keep up.',
     'La demanda de clientes crece más rápido de lo que el seguimiento manual puede sostener.'
@@ -520,10 +526,7 @@ const esEntries = [
     'The result is a practical bridge between customer communication and the work your team already needs to do.',
     'El resultado es un puente práctico entre la comunicación con clientes y el trabajo que tu equipo ya necesita hacer.'
   ],
-  [
-    'Customers reach out through the channels they already use.',
-    'Los clientes escriben por los canales que ya usan.'
-  ],
+  ['Customers reach out through the channels they already use.', 'Los clientes escriben por los canales que ya usan.'],
   [
     'The agent answers common questions, qualifies intent, collects details, triggers follow-up, and updates your tools when needed.',
     'El agente responde preguntas comunes, califica intención, recopila detalles, activa el seguimiento y actualiza tus herramientas cuando hace falta.'
@@ -558,7 +561,7 @@ const esEntries = [
   ],
   [
     'Structured intake flows that ask the right questions, capture buyer details, qualify fit, and route sales-ready leads with useful context.',
-    'Flujos de intake estructurados que hacen las preguntas correctas, capturan datos del comprador, califican fit y enrutan prospectos listos con contexto útil.'
+    'Flujos de captación estructurados que hacen las preguntas correctas, capturan datos del comprador, califican el perfil del prospecto y enrutan oportunidades listas con contexto útil.'
   ],
   [
     'Teams receiving inquiries through WhatsApp, chat, forms, email, or booking requests.',
@@ -600,10 +603,7 @@ const esEntries = [
     'Businesses that want AI clarity before investing in implementation.',
     'Empresas que quieren claridad sobre IA antes de invertir en implementación.'
   ],
-  [
-    'A focused roadmap tied to customer experience and operational value.',
-    'Un roadmap enfocado ligado a experiencia del cliente y valor operativo.'
-  ],
+  ['A focused roadmap tied to customer experience and operational value.', 'Un roadmap enfocado ligado a experiencia del cliente y valor operativo.'],
   [
     'Review real conversations, improve responses, tune workflows, and expand useful improvements as your business changes.',
     'Revisa conversaciones reales, mejora respuestas, ajusta workflows y expande mejoras útiles a medida que cambia tu negocio.'
@@ -639,28 +639,19 @@ const esEntries = [
     'DBX guides each project through a clear, low-risk process that starts with your customer journey and ends with ongoing operational improvement.',
     'DBX guía cada proyecto con un proceso claro y de bajo riesgo que empieza con tu recorrido del cliente y termina con mejora operativa continua.'
   ],
-  [
-    'A practical consultation keeps the first implementation focused.',
-    'Una consulta práctica mantiene enfocada la primera implementación.'
-  ],
+  ['A practical consultation keeps the first implementation focused.', 'Una consulta práctica mantiene enfocada la primera implementación.'],
   [
     'Managed AI Operations gives your business ongoing review, tuning, and improvement as conversations and workflows evolve.',
     'Operaciones Gestionadas de IA le da a tu negocio revisión, ajuste y mejora continua a medida que evolucionan las conversaciones y workflows.'
   ],
-  [
-    'Keep your AI assistant useful after launch.',
-    'Mantén tu IA agéntica útil después del lanzamiento.'
-  ],
+  ['Keep your AI assistant useful after launch.', 'Mantén tu IA agéntica útil después del lanzamiento.'],
   [
     'Agentic AI stays accurate, useful, and aligned with customer behavior.',
     'La IA agéntica se mantiene precisa, útil y alineada con el comportamiento del cliente.'
   ],
+  ['AI works best when it is monitored, measured, and improved.', 'La IA funciona mejor cuando se monitorea, se mide y se mejora.'],
   [
-    'AI works best when it is monitored, measured, and improved.',
-    'La IA funciona mejor cuando se monitorea, se mide y se mejora.'
-  ],
-  [
-    'DBX focuses on business outcomes that make customer communication clearer, follow-up easier, and support more scalable.',
+    'DBX focuses on business outcomes that make customer communication clearer, follow-up easier, and make support more scalable.',
     'DBX se enfoca en resultados de negocio que hacen la comunicación con clientes más clara, el seguimiento más fácil y el soporte más escalable.'
   ],
   [
@@ -720,10 +711,7 @@ const esEntries = [
   ['Improve responses and flows', 'Mejorar respuestas y flujos'],
   ['Adjust automation rules', 'Ajustar reglas de automatización'],
   ['Identify new opportunities', 'Identificar nuevas oportunidades'],
-  [
-    'Map your first AI workflow with DBX.',
-    'Mapea tu primer workflow de IA con DBX.'
-  ],
+  ['Map your first AI workflow with DBX.', 'Mapea tu primer workflow de IA con DBX.'],
   [
     'Bring your current customer channels, common questions, and follow-up process. We will help turn them into a practical implementation path.',
     'Trae tus canales actuales, preguntas comunes y proceso de seguimiento. Te ayudaremos a convertirlos en una ruta de implementación práctica.'
@@ -732,10 +720,7 @@ const esEntries = [
     'Guided adoption makes AI feel lower-risk and easier to manage.',
     'La adopción guiada hace que la IA se sienta menos riesgosa y más fácil de gestionar.'
   ],
-  [
-    'Explore the first customer workflow worth improving.',
-    'Explora el primer workflow de cliente que vale la pena mejorar.'
-  ],
+  ['Explore the first customer workflow worth improving.', 'Explora el primer workflow de cliente que vale la pena mejorar.'],
   [
     'We can help identify where customer response, intake, qualification, or follow-up should become clearer first.',
     'Podemos ayudar a identificar dónde conviene aclarar primero la respuesta, intake, calificación o seguimiento al cliente.'
@@ -770,7 +755,7 @@ const esEntries = [
   ],
   [
     'Qualify buyer and seller inquiries, answer common property questions, route leads, and support faster follow-up.',
-    'Califica consultas de compradores y vendedores, responde preguntas comunes sobre propiedades, enruta leads y apoya seguimiento más rápido.'
+    'Califica consultas de compradores y vendedores, responde preguntas comunes sobre propiedades, enruta prospectos y apoya seguimiento más rápido.'
   ],
   [
     'Automate quote requests, booking inquiries, service questions, and customer follow-ups for high-message-volume teams.',
@@ -806,7 +791,7 @@ const esEntries = [
   ],
   [
     'Every solution connects to a business outcome such as better lead handling, support consistency, or reduced manual work.',
-    'Cada solución se conecta con un resultado de negocio como mejor manejo de leads, consistencia de soporte o menor trabajo manual.'
+    'Cada solución se conecta con un resultado de negocio como mejor manejo de prospectos, consistencia de soporte o menor trabajo manual.'
   ],
   [
     'We help refine flows, responses, and automations as your business learns what works best.',
@@ -832,10 +817,7 @@ const esEntries = [
     'Timing depends on scope, channels, and integrations. Many businesses start with one focused use case, then expand after launch.',
     'El tiempo depende del alcance, canales e integraciones. Muchas empresas empiezan con un caso de uso enfocado y luego expanden después del lanzamiento.'
   ],
-  [
-    'Can DBX connect with our existing tools?',
-    '¿DBX puede conectarse con nuestras herramientas actuales?'
-  ],
+  ['Can DBX connect with our existing tools?', '¿DBX puede conectarse con nuestras herramientas actuales?'],
   [
     'In many cases, yes. DBX can connect conversations with CRMs, calendars, support systems, forms, notifications, and workflow tools.',
     'En muchos casos, sí. DBX puede conectar conversaciones con CRMs, calendarios, sistemas de soporte, formularios, notificaciones y herramientas de workflow.'
@@ -863,7 +845,10 @@ const esEntries = [
     'DBX helps growing businesses in service-heavy sectors respond faster on WhatsApp, qualify inquiries, and keep follow-up connected to the tools teams already use.',
     'DBX ayuda a negocios en sectores de servicios a responder más rápido en WhatsApp, calificar consultas y mantener el seguimiento conectado a las herramientas que el equipo ya usa.'
   ],
-  ['Helping growing businesses turn AI into better customer experiences', 'Ayudando a negocios en crecimiento a convertir IA en mejores experiencias de cliente'],
+  [
+    'Helping growing businesses turn AI into better customer experiences',
+    'Ayudando a negocios en crecimiento a convertir IA en mejores experiencias de cliente'
+  ],
   [
     'DBX Solutions was built to help small and mid-sized businesses adopt AI in a practical, human-centered, and business-focused way—with WhatsApp and customer channels at the center.',
     'DBX Solutions nació para ayudar a PyMes a adoptar IA de forma práctica, centrada en personas y en el negocio, con WhatsApp y canales del cliente en el centro.'
@@ -871,11 +856,20 @@ const esEntries = [
   ['Want to see how this applies to your business?', '¿Quieres ver cómo aplica a tu negocio?'],
   [
     'Book a free consultation to review your channels, workflows, and the first practical opportunity to improve.',
-    'Agenda una consulta gratis para revisar tus canales, workflows y la primera oportunidad práctica de mejora.'
+    'Agenda una consulta gratuita para revisar tus canales, flujos de trabajo y la primera oportunidad práctica de mejora.'
   ],
-  ['No pressure—just a focused conversation about what would help your team most.', 'Sin presión—solo una conversación enfocada en lo que más ayudaría a tu equipo.'],
-  ['DBX focuses on measurable outcomes—response speed, cleaner intake, and follow-up your team can use.', 'DBX se enfoca en resultados medibles—velocidad de respuesta, intake más claro y seguimiento que tu equipo puede usar.'],
-  ['Outcomes vary by channel volume, workflow scope, and how systems connect to your team.', 'Los resultados varían según volumen de canales, alcance del workflow y cómo los sistemas se conectan con tu equipo.'],
+  [
+    'No pressure—just a focused conversation about what would help your team most.',
+    'Sin presión—solo una conversación enfocada en lo que más ayudaría a tu equipo.'
+  ],
+  [
+    'DBX focuses on measurable outcomes—response speed, cleaner intake, and follow-up your team can use.',
+    'DBX se enfoca en resultados medibles—velocidad de respuesta, intake más claro y seguimiento que tu equipo puede usar.'
+  ],
+  [
+    'Outcomes vary by channel volume, workflow scope, and how systems connect to your team.',
+    'Los resultados varían según volumen de canales, alcance del workflow y cómo los sistemas se conectan con tu equipo.'
+  ],
   ['Illustrative scenario', 'Escenario ilustrativo'],
   ['Service business with WhatsApp intake', 'Negocio de servicios con intake por WhatsApp'],
   [
@@ -947,52 +941,16 @@ const esEntries = [
     'Agentic AI for WhatsApp, web chat, SMS, forms, and email—responds, qualifies, collects data, and routes follow-up to your team or CRM.',
     'IA agéntica para WhatsApp, chat web, SMS, formularios y email—responde, califica, recopila datos y enruta el seguimiento a tu equipo o CRM.'
   ],
-  ['Customer message', 'Mensaje del cliente'],
   ['WhatsApp · Chat · Email', 'WhatsApp · Chat · Email'],
   ['Team inbox', 'Bandeja del equipo'],
   ['CRM', 'CRM'],
-  ['Calendar', 'Calendario'],
-  ['Support desk', 'Mesa de soporte'],
   ['Slow response', 'Respuesta lenta'],
   ['Lost context', 'Contexto perdido'],
   ['Missed lead', 'Prospecto perdido'],
   ['Customer frustration', 'Frustración del cliente'],
-  ['Slow responses', 'Respuestas lentas'],
-  [
-    'Customers move on when questions sit unanswered during busy hours or after closing.',
-    'Los clientes avanzan con otra opción cuando sus preguntas quedan sin respuesta en horas ocupadas o fuera de horario.'
-  ],
-  ['Repetitive questions', 'Preguntas repetitivas'],
-  [
-    'Your team spends time repeating answers that could be handled consistently.',
-    'Tu equipo dedica tiempo a repetir respuestas que podrían manejarse de forma consistente.'
-  ],
-  ['Missed leads', 'Prospectos perdidos'],
-  [
-    'High-intent inquiries lose momentum when follow-up is delayed or incomplete.',
-    'Las consultas con alta intención pierden impulso cuando el seguimiento es lento o incompleto.'
-  ],
-  ['Disconnected tools', 'Herramientas desconectadas'],
-  [
-    'Conversation details often stay separate from the CRM, calendar, support desk, or team workflow.',
-    'Los detalles de las conversaciones suelen quedar separados del CRM, calendario, mesa de soporte o workflow del equipo.'
-  ],
-  ['Limited team capacity', 'Capacidad limitada del equipo'],
-  [
-    'Growing demand creates more customer conversations than a lean team can manage manually.',
-    'La demanda creciente genera más conversaciones de las que un equipo pequeño puede manejar manualmente.'
-  ],
   [
     'Slow or inconsistent replies erode trust—customers feel ignored even when your team is doing their best behind the scenes.',
     'Las respuestas lentas o inconsistentes erosionan la confianza: el cliente siente que lo ignoran, aunque tu equipo esté haciendo su mejor esfuerzo.'
-  ],
-  [
-    'Customer demand grows faster than manual follow-up can keep up.',
-    'La demanda de clientes crece más rápido de lo que el seguimiento manual puede sostener.'
-  ],
-  [
-    'For many SMBs, the issue is not effort. It is that conversations, customer details, and next steps are spread across busy people and disconnected tools.',
-    'Para muchas PyMes, el problema no es falta de esfuerzo. Es que las conversaciones, datos del cliente y siguientes pasos están repartidos entre personas ocupadas y herramientas desconectadas.'
   ],
   [
     'Customer messages turn into team action—without the manual chaos.',
@@ -1003,52 +961,28 @@ const esEntries = [
     'DBX conecta cómo te contactan con lo que tu equipo necesita hacer después.'
   ],
   ['They message you', 'Te escriben'],
-  [
-    'On WhatsApp, chat, and email—where they already are.',
-    'Por WhatsApp, chat y email, donde ya están.'
-  ],
+  ['On WhatsApp, chat, and email—where they already are.', 'Por WhatsApp, chat y email, donde ya están.'],
   ['DBX answers first', 'DBX responde primero'],
-  [
-    'Common questions handled with your business context, day or night.',
-    'Preguntas frecuentes con el contexto de tu negocio, de día o de noche.'
-  ],
+  ['Common questions handled with your business context, day or night.', 'Preguntas frecuentes con el contexto de tu negocio, de día o de noche.'],
   ['Your tools stay current', 'Tus herramientas al día'],
-  [
-    'CRM, calendar, and team alerts updated—no retyping.',
-    'CRM, calendario y avisos al equipo, sin volver a escribir todo.'
-  ],
+  ['CRM, calendar, and team alerts updated—no retyping.', 'CRM, calendario y avisos al equipo, sin volver a escribir todo.'],
   ['Your team stays in control', 'Tu equipo sigue al mando'],
-  [
-    'People step in for judgment calls, follow-up, and closing.',
-    'Las personas entran en decisiones, seguimiento y cierre.'
-  ],
-  [
-    'Connected customer-to-team workflow',
-    'Flujo conectado del cliente al equipo'
-  ],
+  ['People step in for judgment calls, follow-up, and closing.', 'Las personas entran en decisiones, seguimiento y cierre.'],
+  ['Connected customer-to-team workflow', 'Flujo conectado del cliente al equipo'],
   ['DBX handles intake', 'DBX gestiona la entrada'],
-  ['Team alerts', 'Avisos al equipo'],
+  ['Team alerts', 'Alertas del equipo'],
   ['Your team in the loop', 'Tu equipo en el circuito'],
   ['Faster reply', 'Respuesta más rápida'],
   ['Clear handoff', 'Traspaso claro'],
   ['No duplicate work', 'Sin trabajo duplicado'],
-  [
-    'Human-supervised. Your tools. Your rules.',
-    'Supervisión humana. Tus herramientas. Tus reglas.'
-  ],
+  ['Human-supervised. Your tools. Your rules.', 'Supervisión humana. Tus herramientas. Tus reglas.'],
   ['Chat', 'Chat'],
-  [
-    'How DBX helps your business every day',
-    'Cómo DBX te ayuda en el día a día'
-  ],
+  ['How DBX helps your business every day', 'Cómo DBX te ayuda en el día a día'],
   [
     'Tell us where you\'re stuck—we connect WhatsApp, your team, and the tools you already use.',
     'Dinos dónde estás atascado—conectamos WhatsApp, tu equipo y las herramientas que ya usas.'
   ],
-  [
-    'How DBX helps from first message to team action',
-    'Cómo DBX ayuda desde el primer mensaje hasta la acción del equipo'
-  ],
+  ['How DBX helps from first message to team action', 'Cómo DBX ayuda desde el primer mensaje hasta la acción del equipo'],
   ['They write you', 'Te escriben'],
   ['DBX replies', 'DBX responde'],
   ['You get the details', 'Recibes los datos'],
@@ -1063,81 +997,48 @@ const esEntries = [
     'Answer common questions fast, even after hours. Your team takes over when a person needs to decide.',
     'Responde preguntas frecuentes rápido, también fuera de horario. Tu equipo entra cuando hace falta una persona.'
   ],
-  [
-    'Customers write you and answers take too long.',
-    'Los clientes te escriben y las respuestas tardan.'
-  ],
-  [
-    'Fewer missed messages. Clearer next steps.',
-    'Menos mensajes perdidos. Siguientes pasos más claros.'
-  ],
+  ['Customers write you and answers take too long.', 'Los clientes te escriben y las respuestas tardan.'],
+  ['Fewer missed messages. Clearer next steps.', 'Menos mensajes perdidos. Siguientes pasos más claros.'],
   ['Sort leads before your team follows up', 'Ordena prospectos antes del seguimiento'],
   [
     'Ask the right questions first so your team calls back with context—not from scratch.',
     'Haz las preguntas correctas primero para que tu equipo llame con contexto, no desde cero.'
   ],
-  [
-    'You get inquiries but follow-up feels messy.',
-    'Recibes consultas pero el seguimiento es un desorden.'
-  ],
+  ['You get inquiries but follow-up feels messy.', 'Recibes consultas pero el seguimiento es un desorden.'],
   ['Better leads, less back-and-forth.', 'Mejores prospectos, menos ida y vuelta.'],
-  [
-    'Handle repeat questions without burning out your team',
-    'Responde lo repetitivo sin agotar a tu equipo'
-  ],
+  ['Handle repeat questions without burning out your team', 'Responde lo repetitivo sin agotar a tu equipo'],
   [
     'Common support questions get a consistent answer. Tricky cases go to a person.',
     'Las preguntas frecuentes tienen respuesta consistente. Los casos difíciles van a una persona.'
   ],
-  [
-    'Your team answers the same things all day.',
-    'Tu equipo responde lo mismo todo el día.'
-  ],
+  ['Your team answers the same things all day.', 'Tu equipo responde lo mismo todo el día.'],
   ['More time for real problems.', 'Más tiempo para problemas de verdad.'],
-  [
-    'Update your CRM without retyping everything',
-    'Actualiza tu CRM sin reescribir todo'
-  ],
+  ['Update your CRM without retyping everything', 'Actualiza tu CRM sin reescribir todo'],
   [
     'What the customer said shows up in your CRM, calendar, or team alerts—automatically.',
     'Lo que dijo el cliente aparece en tu CRM, calendario o avisos al equipo—sin copiar y pegar.'
   ],
-  [
-    'Info lives in chats and never makes it to your tools.',
-    'La info queda en el chat y no llega a tus herramientas.'
-  ],
-  [
-    'Less duplicate work. Everyone sees the same picture.',
-    'Menos trabajo duplicado. Todos ven lo mismo.'
-  ],
+  ['Info lives in chats and never makes it to your tools.', 'La info queda en el chat y no llega a tus herramientas.'],
+  ['Less duplicate work. Everyone sees the same picture.', 'Menos trabajo duplicado. Todos ven lo mismo.'],
   ['Know where to start with AI', 'Sabe por dónde empezar con IA'],
   [
     'We look at how customers reach you today and pick practical first steps—no big vague project.',
     'Revisamos cómo te contactan hoy y elegimos primeros pasos prácticos—sin un proyecto grande y confuso.'
   ],
-  [
-    'You want AI help but do not know what to do first.',
-    'Quieres ayuda con IA pero no sabes por dónde.'
-  ],
+  ['You want AI help but do not know what to do first.', 'Quieres ayuda con IA pero no sabes por dónde.'],
   ['A clear plan you can act on.', 'Un plan claro que puedes ejecutar.'],
   ['We keep improving it with you', 'Lo seguimos mejorando contigo'],
   [
     'After launch, we review real conversations and adjust so it stays useful as your business changes.',
     'Después del lanzamiento, revisamos conversaciones reales y ajustamos para que siga siendo útil.'
   ],
-  [
-    'You do not want a one-time setup that goes stale.',
-    'No quieres algo que se configure una vez y se quede viejo.'
-  ],
-  [
-    'Answers stay useful. Processes stay up to date.',
-    'Las respuestas se mantienen útiles. Los procesos siguen al día.'
-  ]
+  ['You do not want a one-time setup that goes stale.', 'No quieres algo que se configure una vez y se quede viejo.'],
+  ['Answers stay useful. Processes stay up to date.', 'Las respuestas se mantienen útiles. Los procesos siguen al día.'],
 ]
 
 const localeCatalogs = {
-  es: esEntries
-  // pt: ptEntries
+  es: esEntries,
+  pt: ptEntries
 }
 
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
@@ -1154,6 +1055,10 @@ function buildLocaleEngine(entries) {
 const localeEngines = Object.fromEntries(
   Object.entries(localeCatalogs).map(([code, entries]) => [code, buildLocaleEngine(entries)])
 )
+
+export function getHtmlLang(locale = getLocale()) {
+  return htmlLang[locale] || locale
+}
 
 export function getLocale() {
   const stored = localStorage.getItem(storageKey)
