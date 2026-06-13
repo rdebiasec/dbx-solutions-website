@@ -1,4 +1,5 @@
 import { href } from './constants.js'
+import { initIntercom } from '../intercom.js'
 
 const NAV = [
   { hash: 'solutions/', label: 'Solutions' },
@@ -83,4 +84,5 @@ export function mountLegalPage(opts) {
   `
 
   bindMobileNav()
+  initIntercom()
 }

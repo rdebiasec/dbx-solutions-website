@@ -1036,7 +1036,103 @@ const esEntries = [
     'Human-supervised. Your tools. Your rules.',
     'Supervisión humana. Tus herramientas. Tus reglas.'
   ],
-  ['Chat', 'Chat']
+  ['Chat', 'Chat'],
+  [
+    'How DBX helps your business every day',
+    'Cómo DBX te ayuda en el día a día'
+  ],
+  [
+    'Tell us where you\'re stuck—we connect WhatsApp, your team, and the tools you already use.',
+    'Dinos dónde estás atascado—conectamos WhatsApp, tu equipo y las herramientas que ya usas.'
+  ],
+  [
+    'How DBX helps from first message to team action',
+    'Cómo DBX ayuda desde el primer mensaje hasta la acción del equipo'
+  ],
+  ['They write you', 'Te escriben'],
+  ['DBX replies', 'DBX responde'],
+  ['You get the details', 'Recibes los datos'],
+  ['Your tools update', 'Tus herramientas se actualizan'],
+  ['Your team closes', 'Tu equipo cierra'],
+  ['Good if you', 'Te sirve si'],
+  ['What changes', 'Qué mejora'],
+  ['Start here', 'Empieza aquí'],
+  ['We run it with you', 'Lo operamos contigo'],
+  ['Reply on WhatsApp and chat', 'Responde en WhatsApp y chat'],
+  [
+    'Answer common questions fast, even after hours. Your team takes over when a person needs to decide.',
+    'Responde preguntas frecuentes rápido, también fuera de horario. Tu equipo entra cuando hace falta una persona.'
+  ],
+  [
+    'Customers write you and answers take too long.',
+    'Los clientes te escriben y las respuestas tardan.'
+  ],
+  [
+    'Fewer missed messages. Clearer next steps.',
+    'Menos mensajes perdidos. Siguientes pasos más claros.'
+  ],
+  ['Sort leads before your team follows up', 'Ordena prospectos antes del seguimiento'],
+  [
+    'Ask the right questions first so your team calls back with context—not from scratch.',
+    'Haz las preguntas correctas primero para que tu equipo llame con contexto, no desde cero.'
+  ],
+  [
+    'You get inquiries but follow-up feels messy.',
+    'Recibes consultas pero el seguimiento es un desorden.'
+  ],
+  ['Better leads, less back-and-forth.', 'Mejores prospectos, menos ida y vuelta.'],
+  [
+    'Handle repeat questions without burning out your team',
+    'Responde lo repetitivo sin agotar a tu equipo'
+  ],
+  [
+    'Common support questions get a consistent answer. Tricky cases go to a person.',
+    'Las preguntas frecuentes tienen respuesta consistente. Los casos difíciles van a una persona.'
+  ],
+  [
+    'Your team answers the same things all day.',
+    'Tu equipo responde lo mismo todo el día.'
+  ],
+  ['More time for real problems.', 'Más tiempo para problemas de verdad.'],
+  [
+    'Update your CRM without retyping everything',
+    'Actualiza tu CRM sin reescribir todo'
+  ],
+  [
+    'What the customer said shows up in your CRM, calendar, or team alerts—automatically.',
+    'Lo que dijo el cliente aparece en tu CRM, calendario o avisos al equipo—sin copiar y pegar.'
+  ],
+  [
+    'Info lives in chats and never makes it to your tools.',
+    'La info queda en el chat y no llega a tus herramientas.'
+  ],
+  [
+    'Less duplicate work. Everyone sees the same picture.',
+    'Menos trabajo duplicado. Todos ven lo mismo.'
+  ],
+  ['Know where to start with AI', 'Sabe por dónde empezar con IA'],
+  [
+    'We look at how customers reach you today and pick practical first steps—no big vague project.',
+    'Revisamos cómo te contactan hoy y elegimos primeros pasos prácticos—sin un proyecto grande y confuso.'
+  ],
+  [
+    'You want AI help but do not know what to do first.',
+    'Quieres ayuda con IA pero no sabes por dónde.'
+  ],
+  ['A clear plan you can act on.', 'Un plan claro que puedes ejecutar.'],
+  ['We keep improving it with you', 'Lo seguimos mejorando contigo'],
+  [
+    'After launch, we review real conversations and adjust so it stays useful as your business changes.',
+    'Después del lanzamiento, revisamos conversaciones reales y ajustamos para que siga siendo útil.'
+  ],
+  [
+    'You do not want a one-time setup that goes stale.',
+    'No quieres algo que se configure una vez y se quede viejo.'
+  ],
+  [
+    'Answers stay useful. Processes stay up to date.',
+    'Las respuestas se mantienen útiles. Los procesos siguen al día.'
+  ]
 ]
 
 const localeCatalogs = {

@@ -2998,6 +2998,176 @@ footer nav a {
   text-align: center;
 }
 
+.services-panel {
+  padding: clamp(1.35rem, 2.4vw, 1.85rem) clamp(1.25rem, 2.2vw, 1.75rem);
+  border-radius: 20px;
+  border: 1px solid rgba(79, 209, 197, 0.22);
+  background:
+    linear-gradient(145deg, rgba(79, 209, 197, 0.11), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+}
+
+.services-visual {
+  padding-bottom: 1.35rem;
+  border-bottom: 1px solid rgba(79, 209, 197, 0.14);
+  overflow-x: auto;
+}
+
+.services-journey {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem 0.35rem;
+  max-width: 58rem;
+  margin-inline: auto;
+}
+
+.services-journey-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.62rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.services-journey-step-hub {
+  border-color: rgba(79, 209, 197, 0.48);
+  background: rgba(79, 209, 197, 0.14);
+}
+
+.services-journey-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(79, 209, 197, 0.45);
+}
+
+.services-journey-arrow {
+  color: var(--accent);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.services-stages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.35rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-stage {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  min-width: 0;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(5, 6, 10, 0.28);
+}
+
+.services-stage-core {
+  border-color: rgba(79, 209, 197, 0.32);
+  background:
+    linear-gradient(145deg, rgba(79, 209, 197, 0.08), rgba(255, 255, 255, 0.02)),
+    rgba(5, 6, 10, 0.28);
+}
+
+.services-stage-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid rgba(79, 209, 197, 0.35);
+  border-radius: 999px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.services-stage-content {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.services-stage-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.65rem;
+}
+
+.services-stage-head strong {
+  color: var(--text);
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.services-stage-badge {
+  padding: 0.28rem 0.55rem;
+  border: 1px solid rgba(79, 209, 197, 0.28);
+  border-radius: 999px;
+  background: rgba(79, 209, 197, 0.1);
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.services-stage-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.42;
+}
+
+.services-stage-chips {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.services-chip {
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.38;
+}
+
+.services-chip em {
+  color: var(--accent);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-right: 0.35rem;
+}
+
+.services-chip-outcome em {
+  color: rgba(79, 209, 197, 0.88);
+}
+
+.services-stage .learn-link {
+  margin-top: 0.15rem;
+  font-size: 0.88rem;
+}
+
 .field-optional {
   color: var(--muted);
   font-weight: 400;
@@ -4795,6 +4965,27 @@ footer nav,
   }
 
   .solution-stages {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .services-journey {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .services-journey-arrow {
+    align-self: center;
+    transform: rotate(90deg);
+  }
+
+  .services-journey-step {
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .services-stages {
     grid-template-columns: 1fr;
     gap: 0.9rem;
   }

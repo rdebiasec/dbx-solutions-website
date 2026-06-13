@@ -8,6 +8,7 @@ import {
   translateHtml,
   translateText
 } from './i18n-runtime.js'
+import { initIntercom } from './intercom.js'
 
 const CALENDAR_URL =
   'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1ZsDyacDZ8oSqHZCMshx3wV8SzGw3MA9KL4hjcU3OIMLJ-3QFRfiV2OjLTn0nKqz526eI3zQk1?gv=true'
@@ -82,57 +83,54 @@ const solutionStages = [
 
 const services = [
   {
-    title: 'Agentic AI for Customers',
+    title: 'Reply on WhatsApp and chat',
     icon: '01',
     core: true,
-    badge: 'Priority focus',
-    body: 'Agentic AI for WhatsApp, web chat, SMS, forms, and email—responds, qualifies, collects data, and routes follow-up to your team or CRM.',
-    bestFor: 'Businesses that need dependable first-response coverage without adding complexity.',
-    outcome: 'Clearer conversations and faster next steps, with handoff paths when people need to step in.',
+    badge: 'Start here',
+    body: 'Answer common questions fast, even after hours. Your team takes over when a person needs to decide.',
+    goodIf: 'Customers write you and answers take too long.',
+    outcome: 'Fewer missed messages. Clearer next steps.',
     learnHref: 'services/'
   },
   {
-    title: 'Lead Qualification Automation',
+    title: 'Sort leads before your team follows up',
     icon: '02',
     core: true,
-    badge: 'Priority focus',
-    body: 'Structured intake flows that ask the right questions, capture buyer details, qualify fit, and route sales-ready leads with useful context.',
-    bestFor: 'Teams receiving inquiries through WhatsApp, chat, forms, email, or booking requests.',
-    outcome: 'More organized follow-up and cleaner information for sales conversations.',
+    badge: 'Start here',
+    body: 'Ask the right questions first so your team calls back with context—not from scratch.',
+    goodIf: 'You get inquiries but follow-up feels messy.',
+    outcome: 'Better leads, less back-and-forth.',
     learnHref: 'solutions/'
   },
   {
-    title: 'Customer Support Automation',
+    title: 'Handle repeat questions without burning out your team',
     icon: '03',
-    body: 'Handle common questions, support intake, ticket routing, status updates, and escalation paths for routine customer needs.',
-    bestFor: 'Support teams spending too much time on repeat requests and intake triage.',
-    outcome: 'More consistent support coverage while the team focuses on higher-value issues.',
-    learnHref: 'services/'
+    body: 'Common support questions get a consistent answer. Tricky cases go to a person.',
+    goodIf: 'Your team answers the same things all day.',
+    outcome: 'More time for real problems.'
   },
   {
-    title: 'CRM and Workflow Integration',
+    title: 'Update your CRM without retyping everything',
     icon: '04',
-    body: 'Connect customer conversations with CRM records, calendars, support desks, internal notifications, and operational workflows.',
-    bestFor: 'Businesses using multiple tools that do not communicate effectively.',
-    outcome: 'Smoother handoffs, fewer manual updates, and better visibility into customer activity.',
-    learnHref: 'solutions/'
+    body: 'What the customer said shows up in your CRM, calendar, or team alerts—automatically.',
+    goodIf: 'Info lives in chats and never makes it to your tools.',
+    outcome: 'Less duplicate work. Everyone sees the same picture.'
   },
   {
-    title: 'AI Strategy and Roadmapping',
+    title: 'Know where to start with AI',
     icon: '05',
-    body: 'Review your customer journey, tools, team capacity, and operational goals to identify the best practical AI starting points.',
-    bestFor: 'Businesses that want AI clarity before investing in implementation.',
-    outcome: 'A focused roadmap tied to customer experience and operational value.',
-    learnHref: 'contact/'
+    body: 'We look at how customers reach you today and pick practical first steps—no big vague project.',
+    goodIf: 'You want AI help but do not know what to do first.',
+    outcome: 'A clear plan you can act on.'
   },
   {
-    title: 'Optimization and Continuous Improvement',
+    title: 'We keep improving it with you',
     icon: '06',
     core: true,
-    badge: 'Managed partner',
-    body: 'Review real conversations, improve responses, tune workflows, and expand useful improvements as your business changes.',
-    bestFor: 'Businesses that want AI systems managed beyond launch.',
-    outcome: 'Agentic AI stays accurate, useful, and aligned with customer behavior.',
+    badge: 'We run it with you',
+    body: 'After launch, we review real conversations and adjust so it stays useful as your business changes.',
+    goodIf: 'You do not want a one-time setup that goes stale.',
+    outcome: 'Answers stay useful. Processes stay up to date.',
     learnHref: '#managed-ai-operations'
   }
 ]
@@ -968,33 +966,72 @@ function renderSolution() {
   `
 }
 
-function renderServices(full = false) {
+function renderServicesVisual() {
   return `
-    <section id="services">
+    <div class="services-visual" aria-label="How DBX helps from first message to team action">
+      <div class="services-journey">
+        <div class="services-journey-step">
+          <span class="services-journey-dot" aria-hidden="true"></span>
+          <span>They write you</span>
+        </div>
+        <span class="services-journey-arrow" aria-hidden="true">→</span>
+        <div class="services-journey-step services-journey-step-hub">
+          <span class="services-journey-dot" aria-hidden="true"></span>
+          <span>DBX replies</span>
+        </div>
+        <span class="services-journey-arrow" aria-hidden="true">→</span>
+        <div class="services-journey-step">
+          <span class="services-journey-dot" aria-hidden="true"></span>
+          <span>You get the details</span>
+        </div>
+        <span class="services-journey-arrow" aria-hidden="true">→</span>
+        <div class="services-journey-step">
+          <span class="services-journey-dot" aria-hidden="true"></span>
+          <span>Your tools update</span>
+        </div>
+        <span class="services-journey-arrow" aria-hidden="true">→</span>
+        <div class="services-journey-step">
+          <span class="services-journey-dot" aria-hidden="true"></span>
+          <span>Your team closes</span>
+        </div>
+      </div>
+    </div>
+  `
+}
+
+function renderServices() {
+  return `
+    <section id="services" class="section">
       ${sectionHeading(
         'Services',
-        'AI solutions designed around your customer journey',
-        'Each service starts with a clear operational need, then turns it into a customer-facing workflow your team can manage.'
+        'How DBX helps your business every day',
+        'Tell us where you\'re stuck—we connect WhatsApp, your team, and the tools you already use.'
       )}
-      <div class="services-grid">
-        ${services
-          .map(
-            (service, index) => `
-              <article class="service-card ${service.core ? 'service-card-core' : ''}">
-                <span class="service-icon" aria-hidden="true">${service.icon || String(index + 1).padStart(2, '0')}</span>
-                ${service.badge ? `<span class="service-badge">${service.badge}</span>` : ''}
-                <h3>${service.title}</h3>
-                <p>${service.body}</p>
-                <div class="service-meta">
-                  <div><strong>Best for</strong><span>${service.bestFor}</span></div>
-                  <div><strong>Business outcome</strong><span>${service.outcome}</span></div>
-                </div>
-                ${service.learnHref ? `<a class="learn-link" href="${route(service.learnHref)}">Explore service</a>` : ''}
-              </article>`
-          )
-          .join('')}
+      <div class="services-panel">
+        ${renderServicesVisual()}
+        <ul class="services-stages">
+          ${services
+            .map(
+              (service) => `
+                <li class="services-stage ${service.core ? 'services-stage-core' : ''}">
+                  <span class="services-stage-num" aria-hidden="true">${service.icon}</span>
+                  <div class="services-stage-content">
+                    <div class="services-stage-head">
+                      <strong>${service.title}</strong>
+                      ${service.badge ? `<span class="services-stage-badge">${service.badge}</span>` : ''}
+                    </div>
+                    <p>${service.body}</p>
+                    <div class="services-stage-chips">
+                      <span class="services-chip"><em>Good if you</em> ${service.goodIf}</span>
+                      <span class="services-chip services-chip-outcome"><em>What changes</em> ${service.outcome}</span>
+                    </div>
+                    ${service.learnHref ? `<a class="learn-link" href="${route(service.learnHref)}">Explore service</a>` : ''}
+                  </div>
+                </li>`
+            )
+            .join('')}
+        </ul>
       </div>
-      ${full ? '' : ''}
     </section>
   `
 }
@@ -1398,4 +1435,5 @@ export function mountPage(pageKey) {
   `
   app.innerHTML = translateHtml(html, locale)
   bindInteractions(app, pageKey)
+  initIntercom()
 }
