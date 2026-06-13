@@ -21,21 +21,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://dbx-solutions.com/security/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dbx-solutions.com/packages/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://dbx-solutions.com/process/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://dbx-solutions.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -76,4 +61,3 @@
     <priority>0.4</priority>
   </url>
 </urlset>
-
