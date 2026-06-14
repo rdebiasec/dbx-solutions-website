@@ -106,25 +106,60 @@ img {
 
 .lang-toggle {
   display: inline-flex;
-  overflow: hidden;
-  border: 1px solid var(--line);
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.28rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
 }
 
-.lang-toggle button {
-  border: 0;
-  background: transparent;
-  color: var(--muted);
+.lang-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
   cursor: pointer;
-  font-size: 0.78rem;
-  font-weight: 800;
-  padding: 0.48rem 0.68rem;
+  padding: 0;
+  transition: border-color 160ms ease, background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 
-.lang-toggle button.active {
-  background: rgba(79, 209, 197, 0.16);
-  color: var(--text);
+.lang-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.lang-toggle-btn:focus-visible {
+  outline: 2px solid rgba(79, 209, 197, 0.65);
+  outline-offset: 2px;
+}
+
+.lang-toggle-btn.active {
+  border-color: rgba(79, 209, 197, 0.75);
+  background: rgba(79, 209, 197, 0.12);
+  box-shadow: 0 0 0 3px rgba(79, 209, 197, 0.14);
+}
+
+.lang-flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.45rem;
+  height: 1.05rem;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
+}
+
+.lang-flag svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 #primary-nav {
@@ -1007,28 +1042,6 @@ header {
 .header-book {
   font-size: 0.9rem;
   padding-inline: 1.4rem;
-}
-
-.lang-toggle {
-  display: flex;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 999px;
-  overflow: hidden;
-}
-
-.lang-toggle button {
-  background: transparent;
-  border: none;
-  color: var(--muted);
-  font-size: 0.78rem;
-  padding: 0.25rem 0.75rem;
-  cursor: pointer;
-  transition: background 150ms ease, color 150ms ease;
-}
-
-.lang-toggle button.active {
-  background: rgba(255, 255, 255, 0.1);
-  color: var(--text);
 }
 
 .sr-only {
@@ -3168,6 +3181,141 @@ footer nav a {
   font-size: 0.88rem;
 }
 
+.managed-section .section-heading {
+  max-width: 860px;
+}
+
+.managed-panel {
+  padding: clamp(1.35rem, 2.4vw, 1.85rem) clamp(1.25rem, 2.2vw, 1.75rem);
+  border-radius: 20px;
+  border: 1px solid rgba(214, 106, 42, 0.28);
+  background:
+    linear-gradient(145deg, rgba(214, 106, 42, 0.12), rgba(255, 255, 255, 0.025)),
+    rgba(255, 255, 255, 0.02);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+}
+
+.managed-visual {
+  padding-bottom: 1.35rem;
+  border-bottom: 1px solid rgba(214, 106, 42, 0.16);
+  overflow-x: auto;
+}
+
+.managed-loop {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem 0.35rem;
+  max-width: 58rem;
+  margin-inline: auto;
+}
+
+.managed-loop-step {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.62rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.managed-loop-step-start {
+  border-color: rgba(214, 106, 42, 0.45);
+  background: rgba(214, 106, 42, 0.14);
+}
+
+.managed-loop-step-end {
+  border-color: rgba(214, 106, 42, 0.38);
+  background: rgba(214, 106, 42, 0.1);
+}
+
+.managed-loop-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--orange);
+  box-shadow: 0 0 10px rgba(214, 106, 42, 0.45);
+}
+
+.managed-loop-arrow {
+  color: var(--orange);
+  font-size: 0.95rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.managed-stages {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem 1.35rem;
+  margin: 1.35rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.managed-stage {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  min-width: 0;
+  padding: 1rem 1.05rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(5, 6, 10, 0.28);
+}
+
+.managed-stage-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid rgba(214, 106, 42, 0.4);
+  border-radius: 999px;
+  color: var(--orange);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.managed-stage-content {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.managed-stage-content strong {
+  color: var(--text);
+  font-size: 0.96rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.managed-stage-content p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.42;
+}
+
+.managed-footnote {
+  margin: 1.15rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(214, 106, 42, 0.14);
+  color: rgba(214, 106, 42, 0.92);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .field-optional {
   color: var(--muted);
   font-weight: 400;
@@ -4622,19 +4770,6 @@ footer p,
   text-decoration: none;
 }
 
-.managed-section {
-  padding: clamp(2rem, 5vw, 3rem);
-  border: 1px solid rgba(79, 209, 197, 0.2);
-  border-radius: 34px;
-  background:
-    radial-gradient(circle at 10% 0%, rgba(79, 209, 197, 0.16), transparent 22rem),
-    rgba(255, 255, 255, 0.035);
-}
-
-.managed-section .section-heading {
-  max-width: 860px;
-}
-
 .managed-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -4989,6 +5124,17 @@ footer nav,
     grid-template-columns: 1fr;
     gap: 0.9rem;
   }
+
+  .managed-stages {
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+  }
+
+  .managed-loop-step {
+    justify-content: center;
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 @media (max-width: 680px) {
@@ -5124,7 +5270,6 @@ footer nav,
     display: block;
   }
 
-  .managed-section,
   .cta-panel {
     padding: 1.5rem;
     border-radius: 26px;

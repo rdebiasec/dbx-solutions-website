@@ -145,11 +145,29 @@ const benefits = [
   ['Scalable support without immediate headcount growth', 'Handle more routine conversations while your team focuses on higher-value work.']
 ]
 
-const managedOps = [
-  ['Conversation quality review', 'Review real customer interactions to spot unclear answers, missed intent, and handoff improvements.'],
-  ['Workflow monitoring', 'Track where workflows help, stall, or need adjustment as volume and customer behavior change.'],
-  ['AI response improvement', 'Tune approved responses so agentic AI stays accurate, useful, and aligned with your business.'],
-  ['Automation optimization', 'Refine intake steps, routing rules, and follow-up triggers based on what customers actually do.']
+const managedOpsLoop = ['Launch', 'Review chats', 'Adjust', 'Improve']
+
+const managedOpsStages = [
+  {
+    num: '01',
+    title: 'Review real chats',
+    body: 'Catch confusing replies or bad handoffs before they cost you sales.'
+  },
+  {
+    num: '02',
+    title: 'See what is working',
+    body: 'Spot repeat questions and where your team still loses time.'
+  },
+  {
+    num: '03',
+    title: 'Update your answers',
+    body: 'Refresh prices, hours, services, and tone when your business changes.'
+  },
+  {
+    num: '04',
+    title: 'Improve follow-up',
+    body: 'Fix routes so no lead sits waiting without a next step.'
+  }
 ]
 
 const processSteps = [
@@ -248,7 +266,6 @@ const pages = {
     description:
       'DBX Solutions helps growing businesses respond faster on WhatsApp, qualify leads, automate repetitive conversations, and connect customer interactions with the tools their teams already use.',
     hero: {
-      eyebrow: 'WhatsApp & Customer Channels',
       headline:
         'Respond faster on WhatsApp and connect every conversation to your team—without hiring more staff.',
       body:
@@ -759,7 +776,7 @@ function renderHero(page, pageKey) {
     return `
       <section class="hero home-hero" id="top">
         <div class="hero-copy">
-          <span class="hero-eyebrow">${page.hero.eyebrow}</span>
+          ${page.hero.eyebrow ? `<span class="hero-eyebrow">${page.hero.eyebrow}</span>` : ''}
           <h1>${page.hero.headline}</h1>
           <p>${page.hero.body}</p>
         </div>
@@ -1037,15 +1054,51 @@ function renderServices() {
   `
 }
 
+function renderManagedOpsVisual() {
+  return `
+    <div class="managed-visual" aria-label="Ongoing support cycle from launch to improvement">
+      <div class="managed-loop">
+        ${managedOpsLoop
+          .map(
+            (label, index) => `
+          ${index > 0 ? '<span class="managed-loop-arrow" aria-hidden="true">→</span>' : ''}
+          <div class="managed-loop-step${index === 0 ? ' managed-loop-step-start' : index === managedOpsLoop.length - 1 ? ' managed-loop-step-end' : ''}">
+            <span class="managed-loop-dot" aria-hidden="true"></span>
+            <span>${label}</span>
+          </div>`
+          )
+          .join('')}
+      </div>
+    </div>
+  `
+}
+
 function renderManagedOps() {
   return `
-    <section id="managed-ai-operations" class="managed-section">
+    <section id="managed-ai-operations" class="section managed-section">
       ${sectionHeading(
-        'Managed AI Operations',
-        'Keep AI useful as your business changes.',
-        'AI systems require ongoing review, tuning, monitoring, and refinement. DBX helps keep agentic AI accurate, useful, and aligned with evolving workflows and customer needs.'
+        'Ongoing support',
+        'AI does not stop working after launch day.',
+        'After WhatsApp and your flows go live, most SMB owners worry about outdated replies, stuck leads, or losing control. DBX stays with you to review, adjust, and improve—without you watching everything alone.'
       )}
-      ${renderSimpleCards(managedOps, 'managed-grid')}
+      <div class="managed-panel">
+        ${renderManagedOpsVisual()}
+        <ul class="managed-stages">
+          ${managedOpsStages
+            .map(
+              (stage) => `
+            <li class="managed-stage">
+              <span class="managed-stage-num" aria-hidden="true">${stage.num}</span>
+              <div class="managed-stage-content">
+                <strong>${stage.title}</strong>
+                <p>${stage.body}</p>
+              </div>
+            </li>`
+            )
+            .join('')}
+        </ul>
+        <p class="managed-footnote">Human-supervised. Your tools. Your rules.</p>
+      </div>
     </section>
   `
 }

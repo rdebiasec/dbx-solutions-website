@@ -108,7 +108,29 @@ const ptCorrections = {
   'We can help identify where response, intake, qualification, or customer follow-up should become clearer first.':
     'Podemos ajudar a identificar onde a resposta, a captação, a qualificação ou o acompanhamento do cliente devem ficar mais claros primeiro.',
   'Automate common support interactions, frequently asked questions, intake forms, ticket routing, and customer updates.':
-    'Automatize interações comuns de suporte, perguntas frequentes, formulários de captação, encaminhamento de tickets e atualizações de clientes.'
+    'Automatize interações comuns de suporte, perguntas frequentes, formulários de captação, encaminhamento de tickets e atualizações de clientes.',
+  'Ongoing support': 'Acompanhamento contínuo',
+  'AI does not stop working after launch day.': 'A IA não para no dia do lançamento.',
+  'After WhatsApp and your flows go live, most SMB owners worry about outdated replies, stuck leads, or losing control. DBX stays with you to review, adjust, and improve—without you watching everything alone.':
+    'Depois de ativar o WhatsApp e seus fluxos, o que mais preocupa uma PME é resposta desatualizada, lead travado ou perda de controle. A DBX fica com você para revisar, ajustar e melhorar—sem você vigiar tudo sozinho.',
+  'Launch': 'Lançamos',
+  'Review chats': 'Revisamos conversas',
+  'Adjust': 'Ajustamos',
+  'Improve': 'Melhoramos',
+  'Review real chats': 'Revisamos conversas reais',
+  'Catch confusing replies or bad handoffs before they cost you sales.':
+    'Detectamos respostas confusas ou repasses mal feitos antes de custarem vendas.',
+  'See what is working': 'Vemos o que funciona',
+  'Spot repeat questions and where your team still loses time.':
+    'Identificamos perguntas que se repetem e onde sua equipe ainda perde tempo.',
+  'Update your answers': 'Atualizamos respostas',
+  'Refresh prices, hours, services, and tone when your business changes.':
+    'Ajustamos preços, horários, serviços e tom quando seu negócio muda.',
+  'Improve follow-up': 'Melhoramos o acompanhamento',
+  'Fix routes so no lead sits waiting without a next step.':
+    'Corrigimos rotas para que nenhum lead fique esperando sem um próximo passo.',
+  'Ongoing support cycle from launch to improvement':
+    'Ciclo de acompanhamento contínuo do lançamento à melhoria'
 }
 
 function applyRegexFixes(text) {
@@ -157,6 +179,9 @@ function applyCorrections(entries, corrections) {
     let next = corrections[key] ?? tr
     next = applyRegexFixes(next)
     seen.set(key, next)
+  }
+  for (const [en, tr] of Object.entries(corrections)) {
+    if (!seen.has(en)) seen.set(en, tr)
   }
   return [...seen.entries()]
 }

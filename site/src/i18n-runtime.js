@@ -3,7 +3,17 @@ import { ptEntries } from './i18n/pt-entries.js'
 const storageKey = 'dbx-locale'
 const defaultLocale = 'en'
 const supportedLocales = ['en', 'es', 'pt']
-const localeLabels = { en: 'EN', es: 'ES', pt: 'PT' }
+const localeMeta = {
+  en: { label: 'English (United States)', short: 'EN' },
+  es: { label: 'Español (Colombia)', short: 'ES' },
+  pt: { label: 'Português (Brazil)', short: 'PT' }
+}
+
+const flagSvgs = {
+  en: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 15" aria-hidden="true"><rect width="21" height="15" fill="#b22234"/><g fill="#fff"><rect y="1.15" width="21" height="1.15"/><rect y="3.46" width="21" height="1.15"/><rect y="5.77" width="21" height="1.15"/><rect y="8.08" width="21" height="1.15"/><rect y="10.38" width="21" height="1.15"/><rect y="12.69" width="21" height="1.15"/></g><rect width="8.4" height="8.05" fill="#3c3b6e"/><g fill="#fff"><circle cx="1.35" cy="1.1" r=".42"/><circle cx="2.7" cy="1.1" r=".42"/><circle cx="4.05" cy="1.1" r=".42"/><circle cx="5.4" cy="1.1" r=".42"/><circle cx="6.75" cy="1.1" r=".42"/><circle cx="2.03" cy="2.35" r=".42"/><circle cx="3.38" cy="2.35" r=".42"/><circle cx="4.73" cy="2.35" r=".42"/><circle cx="6.08" cy="2.35" r=".42"/><circle cx="7.43" cy="2.35" r=".42"/><circle cx="1.35" cy="3.6" r=".42"/><circle cx="2.7" cy="3.6" r=".42"/><circle cx="4.05" cy="3.6" r=".42"/><circle cx="5.4" cy="3.6" r=".42"/><circle cx="6.75" cy="3.6" r=".42"/><circle cx="2.03" cy="4.85" r=".42"/><circle cx="3.38" cy="4.85" r=".42"/><circle cx="4.73" cy="4.85" r=".42"/><circle cx="6.08" cy="4.85" r=".42"/><circle cx="7.43" cy="4.85" r=".42"/><circle cx="1.35" cy="6.1" r=".42"/><circle cx="2.7" cy="6.1" r=".42"/><circle cx="4.05" cy="6.1" r=".42"/><circle cx="5.4" cy="6.1" r=".42"/><circle cx="6.75" cy="6.1" r=".42"/></g></svg>`,
+  es: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 15" aria-hidden="true"><rect width="21" height="7.5" fill="#fcd116"/><rect y="7.5" width="21" height="3.75" fill="#003893"/><rect y="11.25" width="21" height="3.75" fill="#ce1126"/></svg>`,
+  pt: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 15" aria-hidden="true"><rect width="21" height="15" fill="#009b3a"/><polygon fill="#fedf00" points="10.5,1.4 19.2,7.5 10.5,13.6 1.8,7.5"/><circle fill="#002776" cx="10.5" cy="7.5" r="3.1"/><path fill="#fff" stroke="#002776" stroke-width=".2" d="M7.1 8.1c2.2-2.8 5.8-1.2 6.8 1.5-2.5.8-5.1-.2-6.8-1.5z"/></svg>`
+}
 const htmlLang = { en: 'en', es: 'es', pt: 'pt-BR' }
 
 const esEntries = [
@@ -433,6 +443,37 @@ const esEntries = [
   ['Close', 'Cerrar'],
   ['Support', 'Atender'],
   ['Managed AI Operations', 'Operaciones Gestionadas de IA'],
+  ['Ongoing support', 'Seguimiento continuo'],
+  ['AI does not stop working after launch day.', 'La IA no termina el día del lanzamiento.'],
+  [
+    'After WhatsApp and your flows go live, most SMB owners worry about outdated replies, stuck leads, or losing control. DBX stays with you to review, adjust, and improve—without you watching everything alone.',
+    'Después de activar WhatsApp y tus flujos, lo que más preocupa a una PyME es que las respuestas se desactualicen, los leads se traben o el equipo pierda control. DBX se queda contigo para revisar, ajustar y mejorar sin que tengas que vigilarlo todo tú solo.'
+  ],
+  ['Launch', 'Lanzamos'],
+  ['Review chats', 'Revisamos chats'],
+  ['Adjust', 'Ajustamos'],
+  ['Improve', 'Mejoramos'],
+  ['Review real chats', 'Revisamos chats reales'],
+  [
+    'Catch confusing replies or bad handoffs before they cost you sales.',
+    'Detectamos respuestas confusas o traspasos mal hechos antes de que te cuesten ventas.'
+  ],
+  ['See what is working', 'Vemos qué funciona'],
+  [
+    'Spot repeat questions and where your team still loses time.',
+    'Identificamos preguntas que se repiten y dónde tu equipo sigue perdiendo tiempo.'
+  ],
+  ['Update your answers', 'Actualizamos respuestas'],
+  [
+    'Refresh prices, hours, services, and tone when your business changes.',
+    'Ajustamos precios, horarios, servicios y tono cuando tu negocio cambia.'
+  ],
+  ['Improve follow-up', 'Mejoramos el seguimiento'],
+  [
+    'Fix routes so no lead sits waiting without a next step.',
+    'Corregimos rutas para que ningún lead se quede esperando sin un siguiente paso.'
+  ],
+  ['Ongoing support cycle from launch to improvement', 'Ciclo de seguimiento continuo del lanzamiento a la mejora'],
   ['Launch is only the beginning.', 'El lanzamiento es solo el comienzo.'],
   [
     'AI systems need ongoing review, tuning, and improvement. DBX helps keep your agentic AI accurate, useful, and aligned with your business as customer behavior and workflows change.',
@@ -1078,19 +1119,22 @@ export function translateHtml(html, locale = getLocale()) {
 
 export function renderLangToggle(locale = getLocale()) {
   return `
-    <div class="lang-toggle" aria-label="Language">
+    <div class="lang-toggle" role="group" aria-label="Language">
       ${supportedLocales
-        .map(
-          (code) =>
-            `<button class="${locale === code ? 'active' : ''}" data-locale="${code}" type="button">${localeLabels[code] || code.toUpperCase()}</button>`
-        )
+        .map((code) => {
+          const meta = localeMeta[code] || { label: code.toUpperCase(), short: code.toUpperCase() }
+          return `<button class="lang-toggle-btn${locale === code ? ' active' : ''}" data-locale="${code}" type="button" aria-label="${meta.label}" title="${meta.label}">
+            <span class="lang-flag">${flagSvgs[code] || ''}</span>
+            <span class="sr-only">${meta.label}</span>
+          </button>`
+        })
         .join('')}
     </div>
   `
 }
 
 export function bindLocaleToggle(pageKey, mountPage) {
-  document.querySelectorAll('.lang-toggle button').forEach((button) => {
+  document.querySelectorAll('.lang-toggle-btn').forEach((button) => {
     button.addEventListener('click', (event) => {
       const locale = event.currentTarget.dataset.locale
       if (!locale) return

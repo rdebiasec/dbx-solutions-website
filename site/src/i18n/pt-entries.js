@@ -2066,5 +2066,89 @@ export const ptEntries = [
   [
     "Answers stay useful. Processes stay up to date.",
     "As respostas continuam úteis. Os processos permanecem atualizados."
+  ],
+  [
+    "Support teams spend too much time on repeat requests and intake triage.",
+    "As equipes de suporte gastam muito tempo em solicitações repetidas e triagem de captação."
+  ],
+  [
+    "AI systems require review, tuning, monitoring, and continuous refinement. DBX helps keep agentic AI accurate, useful, and aligned with evolving workflows and customer needs.",
+    "Os sistemas de IA exigem revisão, ajuste, monitoramento e refinamento contínuos. A DBX ajuda a manter a IA agéntica precisa, útil e alinhada com os fluxos de trabalho em evolução e as necessidades dos clientes."
+  ],
+  [
+    "AI systems need review, tuning, and continuous improvement. DBX helps keep your agentic AI accurate, useful, and aligned with your business as customer behavior and workflows change.",
+    "Os sistemas de IA precisam de revisão, ajuste e melhoria contínuas. A DBX ajuda a manter sua IA agéntica precisa, útil e alinhada com seus negócios à medida que o comportamento do cliente e os fluxos de trabalho mudam."
+  ],
+  [
+    "From agentic AI on WhatsApp and chat to CRM integration and ongoing optimization, DBX implements services the way your team already works.",
+    "Desde IA agéntica no WhatsApp e chat até integração de CRM e otimização contínua, a DBX implementa serviços de acordo com o modo como sua equipe já trabalha."
+  ],
+  [
+    "We can help identify where response, intake, qualification, or customer follow-up should become clearer first.",
+    "Podemos ajudar a identificar onde a resposta, a captação, a qualificação ou o acompanhamento do cliente devem ficar mais claros primeiro."
+  ],
+  [
+    "Ongoing support",
+    "Acompanhamento contínuo"
+  ],
+  [
+    "AI does not stop working after launch day.",
+    "A IA não para no dia do lançamento."
+  ],
+  [
+    "After WhatsApp and your flows go live, most SMB owners worry about outdated replies, stuck leads, or losing control. DBX stays with you to review, adjust, and improve—without you watching everything alone.",
+    "Depois de ativar o WhatsApp e seus fluxos, o que mais preocupa uma PME é resposta desatualizada, lead travado ou perda de controle. A DBX fica com você para revisar, ajustar e melhorar—sem você vigiar tudo sozinho."
+  ],
+  [
+    "Launch",
+    "Lançamos"
+  ],
+  [
+    "Review chats",
+    "Revisamos conversas"
+  ],
+  [
+    "Adjust",
+    "Ajustamos"
+  ],
+  [
+    "Improve",
+    "Melhoramos"
+  ],
+  [
+    "Review real chats",
+    "Revisamos conversas reais"
+  ],
+  [
+    "Catch confusing replies or bad handoffs before they cost you sales.",
+    "Detectamos respostas confusas ou repasses mal feitos antes de custarem vendas."
+  ],
+  [
+    "See what is working",
+    "Vemos o que funciona"
+  ],
+  [
+    "Spot repeat questions and where your team still loses time.",
+    "Identificamos perguntas que se repetem e onde sua equipe ainda perde tempo."
+  ],
+  [
+    "Update your answers",
+    "Atualizamos respostas"
+  ],
+  [
+    "Refresh prices, hours, services, and tone when your business changes.",
+    "Ajustamos preços, horários, serviços e tom quando seu negócio muda."
+  ],
+  [
+    "Improve follow-up",
+    "Melhoramos o acompanhamento"
+  ],
+  [
+    "Fix routes so no lead sits waiting without a next step.",
+    "Corrigimos rotas para que nenhum lead fique esperando sem um próximo passo."
+  ],
+  [
+    "Ongoing support cycle from launch to improvement",
+    "Ciclo de acompanhamento contínuo do lançamento à melhoria"
   ]
 ]
