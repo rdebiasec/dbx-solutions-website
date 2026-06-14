@@ -1,4 +1,4 @@
-import{h as r}from"./constants-JzEbBYJV.js";import{i as n}from"./intercom-BbqvsTpU.js";const o=[{hash:"solutions/",label:"Solutions"},{hash:"services/",label:"Services"},{hash:"industries/",label:"Industries"},{hash:"#process",label:"How we work"},{hash:"#trust",label:"Trust"},{hash:"contact/",label:"Contact"}];function l(){const a=r("");return`
+import{h as r}from"./constants-JzEbBYJV.js";import{i as n}from"./intercom-DIzKIbEm.js";const o=[{hash:"solutions/",label:"Solutions"},{hash:"services/",label:"Services"},{hash:"industries/",label:"Industries"},{hash:"#process",label:"How we work"},{hash:"#trust",label:"Trust"},{hash:"contact/",label:"Contact"}];function l(){const a=r("");return`
     <header>
       <div class="header-top">
         <a href="${a}" class="logo"><img src="${r("logo.png")}" alt="DBX Solutions" width="120" height="40" /></a>

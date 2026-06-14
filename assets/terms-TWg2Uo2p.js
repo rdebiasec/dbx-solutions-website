@@ -1,4 +1,4 @@
-import{h as e,L as o,a as s,l as a}from"./constants-JzEbBYJV.js";import"./intercom-BbqvsTpU.js";import{m as r}from"./shell-Dodry95I.js";function n(){const i=e("privacy-policy/"),t=e("sms-terms/");return`
+import{h as e,L as o,a as s,l as a}from"./constants-JzEbBYJV.js";import"./intercom-DIzKIbEm.js";import{m as r}from"./shell-CAyzHMTW.js";function n(){const i=e("privacy-policy/"),t=e("sms-terms/");return`
     <h1>Terms of Service</h1>
     <p class="legal-effective"><strong>Effective Date: ${o}</strong></p>
     <p>These Terms of Service ("Terms") govern your access to and use of the website of ${s} ("DBX Solutions," "we," "our," or "us") and related materials.</p>
