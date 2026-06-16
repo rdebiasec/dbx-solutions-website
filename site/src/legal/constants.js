@@ -1,5 +1,14 @@
 /** Canonical legal / business facts — single source of truth */
 export const LEGAL_EFFECTIVE_DATE = 'February 23, 2026'
+export const LEGAL_EFFECTIVE_DATES = {
+  en: 'February 23, 2026',
+  es: '23 de febrero de 2026',
+  pt: '23 de fevereiro de 2026'
+}
+
+export function getLegalEffectiveDate(locale = 'en') {
+  return LEGAL_EFFECTIVE_DATES[locale] ?? LEGAL_EFFECTIVE_DATES.en
+}
 export const COMPANY_LEGAL_NAME = 'DBX Solutions LLC'
 export const CONTACT_EMAIL = 'contact@dbx-solutions.com'
 /** Display format; same E.164 as +13212874509 */

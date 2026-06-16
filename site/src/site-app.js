@@ -7,7 +7,8 @@ import {
   getLocale,
   renderLangToggle,
   translateHtml,
-  translateText
+  translateText,
+  updateHreflang
 } from './i18n-runtime.js'
 import { initIntercom } from './intercom.js'
 
@@ -34,20 +35,20 @@ const legalLinks = [
 
 const valuePoints = [
   {
-    title: 'Verified Accuracy',
-    body: 'Answers grounded in your specific business data for total precision.'
+    title: 'Answers from your real info',
+    body: 'Replies use your prices, hours, and services—not generic guesses.'
   },
   {
-    title: 'Unified Channels',
-    body: 'Connect everywhere: WhatsApp, SMS, Web, and Email in one place.'
+    title: 'WhatsApp, chat, and email together',
+    body: 'Meet customers on the channels they already use.'
   },
   {
-    title: 'Integrated Workflows',
-    body: 'Instant sync with your CRM, calendar, and team for zero-lag follow-up.'
+    title: 'Your CRM stays updated',
+    body: 'What they said shows up in your tools without retyping.'
   },
   {
-    title: 'Smart Escalation',
-    body: 'Seamless handoffs to your team exactly when a human touch is needed.'
+    title: 'Your team steps in when it matters',
+    body: 'People take over for judgment calls and closing.'
   }
 ]
 
@@ -55,7 +56,7 @@ const problems = [
   ['Slow responses', 'Customers move on when questions sit unanswered during busy hours or after closing.'],
   ['Repetitive questions', 'Your team spends time repeating answers that could be handled consistently.'],
   ['Missed leads', 'High-intent inquiries lose momentum when follow-up is delayed or incomplete.'],
-  ['Disconnected tools', 'Conversation details often stay separate from the CRM, calendar, support desk, or team workflow.'],
+  ['Disconnected tools', 'Conversation details often stay separate from the CRM, calendar, support queue, or your team\'s daily work.'],
   ['Limited team capacity', 'Growing demand creates more customer conversations than a lean team can manage manually.'],
   [
     'Customer frustration',
@@ -139,10 +140,10 @@ const services = [
 const benefits = [
   ['Faster response times', 'Give customers a useful answer or next step while intent is still high.'],
   ['Fewer missed opportunities', 'Capture and route inquiries before prospects lose interest or choose another provider.'],
-  ['Reduced manual workload', 'Move repetitive questions, intake, and routing out of your team’s daily queue.'],
+  ['Reduced manual workload', 'Move repetitive questions and routing out of your team\'s daily queue.'],
   ['More consistent customer communication', 'Keep answers clear, approved, and aligned across channels and team handoffs.'],
   ['Better operational visibility', 'Turn conversations into structured information your team can review and act on.'],
-  ['Scalable support without immediate headcount growth', 'Handle more routine conversations while your team focuses on higher-value work.']
+  ['More conversations without hiring first', 'Handle more routine messages while your team focuses on higher-value work.']
 ]
 
 const managedOpsLoop = ['Launch', 'Review chats', 'Adjust', 'Improve']
@@ -173,23 +174,23 @@ const managedOpsStages = [
 const processSteps = [
   {
     title: 'Discover',
-    body: 'We review your customer journey, current tools, common customer interactions, team workflows, and business goals.',
-    items: ['Identify customer experience gaps', 'Review repetitive tasks', 'Understand current systems', 'Define business priorities']
+    body: 'We review how customers reach you, the tools you use, repeat questions, and what outcomes matter most.',
+    items: ['Map where replies slow down', 'Review repetitive tasks', 'Understand current systems', 'Pick business priorities']
   },
   {
     title: 'Design',
-    body: 'We map the right AI experience, conversation flows, automations, integrations, and success metrics.',
-    items: ['Design customer interaction flows', 'Define automation logic', 'Plan handoffs to your team', 'Align with your brand voice']
+    body: 'We map replies, handoffs, and connections to your CRM or team—aligned with how you already work.',
+    items: ['Design conversation flows', 'Set up handoff rules', 'Plan team alerts', 'Align with your brand voice']
   },
   {
     title: 'Implement',
-    body: 'We build, configure, test, and launch the solution using your existing tools, workflows, and brand guidelines.',
-    items: ['Configure agentic AI', 'Connect systems where needed', 'Test conversation quality', 'Prepare your team for launch']
+    body: 'We build, test, and launch on your channels using your existing tools and guidelines.',
+    items: ['Set up WhatsApp and chat replies', 'Connect systems where needed', 'Test conversation quality', 'Prepare your team for launch']
   },
   {
     title: 'Optimize',
-    body: 'We monitor performance, review user behavior, improve flows, and refine the solution as your business evolves.',
-    items: ['Review performance data', 'Improve responses and flows', 'Adjust automation rules', 'Identify new opportunities']
+    body: 'We review real conversations, improve answers, and refine follow-up as your business changes.',
+    items: ['Review real chats', 'Improve responses and routes', 'Adjust handoff rules', 'Spot new opportunities']
   }
 ]
 
@@ -197,66 +198,66 @@ const industries = [
   {
     priority: true,
     title: 'Professional services',
-    body: 'Automate intake, qualify inquiries, route prospects, and improve response times for consulting, legal, financial, and advisory teams.',
-    example: 'Example: A firm captures project scope and timeline on WhatsApp, then routes qualified inquiries to the right advisor with full context.'
+    body: 'Capture project scope on WhatsApp, qualify inquiries faster, and hand off to the right advisor with context.',
+    example: 'Example: A firm collects scope and timeline on WhatsApp, then routes qualified inquiries to the right advisor with full context.'
   },
   {
     priority: true,
     title: 'Healthcare and wellness clinics',
-    body: 'Support appointment inquiries, FAQs, intake guidance, service information, and patient communication workflows.',
+    body: 'Answer after-hours questions about hours and services, guide booking inquiries, and escalate urgent cases to staff.',
     example: 'Example: After-hours WhatsApp questions about hours, services, and booking get answered while urgent cases escalate to staff.'
   },
   {
     priority: true,
     title: 'Real estate teams',
-    body: 'Qualify buyer and seller inquiries, answer common property questions, route leads, and support faster follow-up.',
-    example: 'Example: A buyer asks about availability on WhatsApp; the agent collects budget and timeline before alerting the listing agent.'
+    body: 'Qualify buyers and sellers on WhatsApp, answer property FAQs, and alert the listing advisor with budget and timing.',
+    example: 'Example: A buyer asks about availability on WhatsApp; details are collected before the listing advisor is alerted.'
   },
   {
     priority: true,
     title: 'Local service businesses',
-    body: 'Automate quote requests, booking inquiries, service questions, and customer follow-ups for high-message-volume teams.',
+    body: 'Collect quote details—service type, location, photos—so your team replies with accurate next steps, not repeat questions.',
     example: 'Example: Quote requests include service type, location, and photos so your team replies with accurate next steps, not repeat questions.'
   },
   {
     title: 'E-commerce',
-    body: 'Support product questions, order-related inquiries, return guidance, and routine customer service requests.',
+    body: 'Handle product and order questions on WhatsApp and bring structured details before a person handles exceptions.',
     example: 'Example: Order-status questions on WhatsApp pull structured details before a human steps in for exceptions.'
   },
   {
     title: 'Education and training',
-    body: 'Answer program questions, qualify student or client interest, guide enrollment inquiries, and automate follow-up.',
-    example: 'Example: Program FAQs and intake questions run on chat while enrollment-ready leads land in your CRM with notes.'
+    body: 'Answer program FAQs, qualify interest, and land enrollment-ready leads in your CRM with notes.',
+    example: 'Example: Program FAQs run on chat while enrollment-ready leads land in your CRM with notes.'
   },
   {
     title: 'Financial and advisory services',
-    body: 'Improve inquiry handling, appointment requests, client intake, and customer communication with human oversight.',
+    body: 'Handle general service questions consistently; route sensitive or compliance topics to a human reviewer.',
     example: 'Example: General service questions are handled consistently; sensitive or compliance-related topics route to a human reviewer.'
   }
 ]
 
 const trustPoints = [
-  ['SMB-focused implementation', 'Solutions are designed for growing businesses that need practical value without enterprise-level complexity.'],
-  ['Business-first design', 'We start with customer journeys, operational challenges, and business goals before recommending technology.'],
-  ['Human-supervised AI', 'AI supports your team while escalation, review, and judgment remain available when needed.'],
-  ['Integration-aware solutions', 'We consider how AI fits with your existing channels, workflows, CRM, and customer communication tools.'],
-  ['Outcome-oriented delivery', 'Every solution connects to a business outcome such as better lead handling, support consistency, or reduced manual work.'],
-  ['Continuous improvement', 'We help refine flows, responses, and automations as your business learns what works best.']
+  ['Built for growing businesses', 'Practical help without enterprise-level complexity or long consulting projects.'],
+  ['Business first', 'We start with how customers reach you and what your team needs—not with a technology pitch.'],
+  ['Human-supervised AI', 'AI supports your team while escalation, review, and judgment stay available when needed.'],
+  ['Fits your existing tools', 'We connect WhatsApp, chat, CRM, and alerts to how you already work.'],
+  ['Tied to real outcomes', 'Every project links to faster replies, cleaner follow-up, or less repeat work.'],
+  ['Improves after launch', 'We review real conversations and adjust answers and routes over time.']
 ]
 
 const proofHighlights = [
   ['Under 15 minutes', 'Typical first-response improvement on WhatsApp and chat after launch.'],
-  ['Structured intake', 'Lead details captured before your team picks up the conversation.'],
+  ['Clear capture upfront', 'Lead details collected before your team picks up the conversation.'],
   ['Human oversight', 'Escalation paths keep your team in control of important decisions.']
 ]
 
 const faq = [
-  ['What does DBX Solutions do?', 'DBX helps SMBs design, connect, monitor, and improve AI-assisted customer conversation systems around real business workflows.'],
-  ['Can this work with WhatsApp?', 'Yes. WhatsApp can be part of the channel mix along with web chat, SMS, forms, and email, depending on your setup.'],
-  ['Can humans take over conversations?', 'Yes. DBX designs escalation paths so your team can review, respond, or take over when a conversation needs human judgment.'],
-  ['How long does implementation take?', 'Timing depends on scope, channels, and integrations. Many businesses start with one focused use case, then expand after launch.'],
-  ['How are AI responses controlled?', 'Agentic AI is built around approved business information, clear rules, escalation paths, and ongoing quality review.'],
-  ['Can DBX connect with our existing tools?', 'In many cases, yes. DBX can connect conversations with CRMs, calendars, support systems, forms, notifications, and workflow tools.'],
+  ['What does DBX Solutions do?', 'DBX helps growing businesses reply faster on WhatsApp, qualify leads, reduce repeat questions, and connect conversations to the tools your team already uses.'],
+  ['Can this work with WhatsApp?', 'Yes. WhatsApp can be part of the mix along with web chat, SMS, forms, and email, depending on your setup.'],
+  ['Can humans take over conversations?', 'Yes. DBX designs escalation paths so your team can review, respond, or take over when judgment matters.'],
+  ['How long does implementation take?', 'Timing depends on scope and integrations. Many businesses start with one focused use case, then expand after launch.'],
+  ['How are AI responses controlled?', 'Replies are built from approved business information, clear rules, escalation paths, and ongoing review of real chats.'],
+  ['Can DBX connect with our existing tools?', 'In many cases, yes. DBX can connect conversations with CRMs, calendars, support tools, forms, and team alerts.'],
   ['Will AI replace our customer service team?', 'No. The goal is to support your team, reduce repetitive work, and keep people focused on higher-value customer needs.']
 ]
 
@@ -269,8 +270,8 @@ const pages = {
       headline:
         'Respond faster on WhatsApp and connect every conversation to your team—without hiring more staff.',
       body:
-        'DBX implements and manages agentic AI for growing businesses—systems that respond, capture lead details, trigger follow-up in your CRM or team, and escalate when judgment matters. Not a traditional chatbot that only answers FAQs.',
-      primary: 'Book a Free Consultation',
+        'DBX replies on WhatsApp, captures lead details, updates your CRM or team, and brings people in when judgment matters—not a FAQ-only chatbot.',
+      primary: 'Book a Consultation',
       secondary: 'See How It Works',
       secondaryHref: '#process'
     },
@@ -289,22 +290,22 @@ const pages = {
         final: true,
         title: 'Ready to improve WhatsApp response and lead follow-up?',
         body:
-          'Book a free consultation. We will review your channels, identify the first workflow to improve, and outline three practical agentic AI opportunities for your business.',
+          'Book a consultation. We will review your channels, identify the first improvement to make, and outline three practical next steps for your business.',
         note: 'Serving businesses remotely across the U.S. and Latin America.',
-        primary: 'Book a Free Consultation'
+        primary: 'Book a Consultation'
       }
     ]
   },
   solutionsPage: {
     title: 'DBX Solutions | WhatsApp & Customer Experience Solutions',
     description:
-      'Practical solutions for WhatsApp response, lead qualification, support automation, workflow integration, and connected follow-up.',
+      'Practical help for WhatsApp replies, lead qualification, repeat questions, and connected follow-up for growing businesses.',
     hero: {
       eyebrow: 'Solutions',
-      headline: 'Practical solutions for WhatsApp, intake, and connected follow-up',
+      headline: 'Practical help for WhatsApp, lead capture, and follow-up',
       body:
-        'DBX helps growing businesses turn WhatsApp and other customer channels into faster responses, clearer lead intake, and workflows your team can act on—without adding headcount.',
-      primary: 'Book a Free Consultation',
+        'DBX helps growing businesses turn WhatsApp and other channels into faster replies, clearer lead capture, and next steps your team can act on—without hiring more staff.',
+      primary: 'Book a Consultation',
       secondary: 'View Services',
       secondaryHref: 'services/'
     },
@@ -312,9 +313,9 @@ const pages = {
       { type: 'solutionsPage' },
       {
         type: 'cta',
-        title: 'Not sure where AI fits first?',
-        body: 'Start with one customer journey, one workflow, and one measurable business outcome.',
-        note: 'We will help identify the practical opportunities before recommending technology.',
+        title: 'Not sure what to fix first on WhatsApp?',
+        body: 'Start with one channel, one repeated question, and one follow-up gap.',
+        note: 'We will help identify practical opportunities before recommending technology.',
         secondary: 'View Services',
         secondaryHref: 'services/'
       }
@@ -323,13 +324,13 @@ const pages = {
   servicesPage: {
     title: 'DBX Solutions | AI Services for Growing Businesses',
     description:
-      'Services that help businesses move from AI interest to practical implementation around WhatsApp, customer experience, and workflow automation.',
+      'Services that help businesses improve WhatsApp, customer conversations, and day-to-day follow-up—with ongoing support after launch.',
     hero: {
       eyebrow: 'Services',
       headline: 'Services that make WhatsApp and customer AI practical',
       body:
-        'From agentic AI on WhatsApp and chat to CRM integration and ongoing optimization—DBX implements services around how your team already works.',
-      primary: 'Book a Free Consultation',
+        'From WhatsApp and chat replies to CRM sync and ongoing support after launch—DBX implements around how your team already works.',
+      primary: 'Book a Consultation',
       secondary: 'Explore Solutions',
       secondaryHref: 'solutions/'
     },
@@ -337,9 +338,9 @@ const pages = {
       { type: 'services', full: true },
       {
         type: 'cta',
-        title: 'Not sure which service fits your business?',
-        body: 'Book a consultation and we will help identify where AI can create the most practical value.',
-        note: 'The first step is clarity, not complexity.',
+        title: 'Want a clear starting point?',
+        body: 'Book a consultation and we will map the first conversation or follow-up to improve on your channels.',
+        note: 'Most teams start with one channel, not a big project.',
         secondary: 'Explore Solutions',
         secondaryHref: 'solutions/'
       }
@@ -354,7 +355,7 @@ const pages = {
       headline: 'Where WhatsApp and customer conversations drive revenue',
       body:
         'DBX helps growing businesses in service-heavy sectors respond faster on WhatsApp, qualify inquiries, and keep follow-up connected to the tools teams already use.',
-      primary: 'Book a Free Consultation',
+      primary: 'Book a Consultation',
       secondary: 'View Services',
       secondaryHref: 'services/'
     },
@@ -362,15 +363,15 @@ const pages = {
       { type: 'industries', full: true },
       {
         type: 'note',
-        title: 'Responsible AI for regulated industries',
+        title: 'Regulated sectors',
         body:
-          'For healthcare, financial services, legal services, insurance, and other regulated industries, AI should support communication and workflow efficiency. It should not replace professional advice, compliance review, clinical judgment, legal judgment, or required human oversight.'
+          'For healthcare, financial services, legal, insurance, and other regulated industries, AI should support communication efficiency—not replace professional advice, compliance review, clinical judgment, legal judgment, or required human oversight. Read our Responsible AI Policy for more detail.'
       },
       {
         type: 'cta',
-        title: 'See how AI can support your customer journey.',
-        body: 'Bring your current customer questions, channels, and workflow challenges. We will help map practical next steps.',
-        note: 'Designed around your business, not a generic automation template.',
+        title: 'See how WhatsApp follow-up could work in your sector',
+        body: 'Bring your channels, common questions, and follow-up challenges. We will help map practical next steps.',
+        note: 'Designed around your business, not a generic template.',
         secondary: 'View Services',
         secondaryHref: 'services/'
       }
@@ -385,7 +386,7 @@ const pages = {
       headline: 'Helping growing businesses turn AI into better customer experiences',
       body:
         'DBX Solutions was built to help small and mid-sized businesses adopt AI in a practical, human-centered, and business-focused way—with WhatsApp and customer channels at the center.',
-      primary: 'Book a Free Consultation',
+      primary: 'Book a Consultation',
       secondary: 'Contact Us',
       secondaryHref: 'contact/'
     },
@@ -396,29 +397,29 @@ const pages = {
           {
             title: 'Our mission',
             body:
-              'Our mission is to make practical customer experience automation accessible for growing businesses. We help companies identify where agentic AI creates meaningful operational value, then design and implement solutions that fit their customer journey, tools, and team capacity.'
+              'We make practical customer communication help accessible for growing businesses. We find where faster replies and cleaner follow-up would help most, then design and implement around your tools and team capacity.'
           },
           {
             title: 'Our approach',
             body:
-              'We start with the business problem before choosing the technology. That means understanding customer interactions, internal workflows, current systems, and the outcomes that matter most. From there, we design systems that are clear, manageable, and built to improve over time.'
+              'We start with the business problem before choosing technology. That means understanding how customers reach you, what your team repeats daily, and the outcomes that matter—then building something clear that improves over time.'
           }
         ]
       },
       {
         type: 'values',
         items: [
-          ['Practical Over Complicated', 'We focus on AI use cases that solve real business problems.'],
-          ['Human-Centered by Design', 'AI should support better customer and team experiences, not create confusion.'],
-          ['Built Around Your Operations', 'Solutions should fit your workflows, tools, and customer journey.'],
-          ['Outcome-Focused', 'Every implementation should connect to a measurable business goal.'],
-          ['Designed to Evolve', 'AI systems improve through testing, feedback, and continuous optimization.']
+          ['We keep it practical', 'We focus on use cases that solve real business problems.'],
+          ['People stay in the loop', 'AI should support customers and your team—not create confusion.'],
+          ['Built around how you work', 'Solutions should fit your tools and daily routines.'],
+          ['Tied to a real goal', 'Every implementation should connect to a measurable business outcome.'],
+          ['Improves after launch', 'We review real chats and adjust answers and routes over time.']
         ]
       },
       {
         type: 'cta',
         title: 'Want to see how this applies to your business?',
-        body: 'Book a free consultation to review your channels, workflows, and the first practical opportunity to improve.',
+        body: 'Book a consultation to review your channels and the first practical improvement to make.',
         note: 'No pressure—just a focused conversation about what would help your team most.',
         secondary: 'See How It Works',
         secondaryHref: '#process'
@@ -433,8 +434,8 @@ const pages = {
       eyebrow: 'Data handling',
       headline: 'Data Handling Notice',
       body:
-        'DBX designs AI workflows around approved business information, controlled access, and clear limits on what systems process and store.',
-      primary: 'Book a Free Consultation',
+        'DBX designs customer flows around approved business information, controlled access, and clear limits on what systems process and store. For website visitor data, see our Privacy Policy.',
+      primary: 'Book a Consultation',
       secondary: 'Contact Us',
       secondaryHref: 'contact/'
     },
@@ -443,14 +444,14 @@ const pages = {
         type: 'note',
         title: 'Our approach',
         body:
-          'DBX Solutions builds data handling practices around responsible use of customer information, business-specific knowledge sources, controlled access, and secure integration planning. Formal policy language may be updated as implementations and vendor requirements evolve.'
+          'DBX Solutions builds data handling practices for client implementations—approved content sources, controlled access, and secure integration planning. This notice covers project work, not website privacy (see Privacy Policy).'
       },
       {
         type: 'policyList',
         title: 'What we prioritize',
         items: [
           'Using approved business content as the source for customer-facing answers',
-          'Limiting access to systems and data required for each workflow',
+          'Limiting access to systems and data required for each customer flow',
           'Designing integrations so useful context reaches your CRM or team—not open-ended data exposure',
           'Documenting what is processed, stored, and retained per project scope',
           'Aligning with your privacy policy, SMS terms, and industry requirements where applicable'
@@ -466,8 +467,8 @@ const pages = {
       eyebrow: 'Responsible AI',
       headline: 'Responsible AI Policy',
       body:
-        'DBX implements agentic AI with clear escalation paths, approved business information, and human review—not unconstrained automation.',
-      primary: 'Book a Free Consultation',
+        'DBX implements customer-facing AI with clear escalation paths, approved business information, and human review—not unconstrained automation.',
+      primary: 'Book a Consultation',
       secondary: 'Contact Us',
       secondaryHref: 'contact/'
     },
@@ -499,8 +500,8 @@ const pages = {
       eyebrow: 'Security roadmap',
       headline: 'Security Roadmap',
       body:
-        'DBX aligns operations with recognized security and responsible AI practices. Items below are roadmap or readiness work unless explicitly marked complete.',
-      primary: 'Book a Free Consultation',
+        'DBX aligns operations with recognized security practices. Items below are roadmap or readiness work unless explicitly marked complete. We document planned vs. completed work so you know what is in progress.',
+      primary: 'Book a Consultation',
       secondary: 'Contact Us',
       secondaryHref: 'contact/'
     },
@@ -528,13 +529,13 @@ const pages = {
   contactPage: {
     title: 'DBX Solutions | Contact',
     description:
-      'Book a consultation with DBX Solutions to review WhatsApp, lead intake, support automation, and practical AI opportunities for your business.',
+      'Book a consultation with DBX Solutions to review WhatsApp, lead capture, support automation, and practical AI opportunities for your business.',
     hero: {
       eyebrow: 'Contact',
       headline: 'Let’s review where WhatsApp and customer conversations are costing you time or leads',
       body:
-        'Book on the calendar for the fastest response, or send a short request below. We will help identify the most practical first workflow to improve.',
-      primary: 'Book a Free Consultation',
+        'Book on the calendar for the fastest response, or send a short request below. We will help identify the most practical first improvement to make.',
+      primary: 'Book a Consultation',
       secondary: 'Email Us',
       secondaryHref: `mailto:${CONTACT_EMAIL}`
     },
@@ -564,7 +565,7 @@ function route(path) {
   return href(path || '')
 }
 
-function renderActions(primaryLabel = 'Book a Free Consultation', secondaryLabel, secondaryHref) {
+function renderActions(primaryLabel = 'Book a Consultation', secondaryLabel, secondaryHref) {
   const primary = route('CALENDAR_URL')
   return `
     <div class="actions">
@@ -594,7 +595,7 @@ function renderHeader(pageKey) {
       </nav>
       <div class="header-actions">
         ${renderLangToggle(getLocale())}
-        <a class="btn btn-primary header-book" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">Book a Free Consultation</a>
+        <a class="btn btn-primary header-book" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">Book a Consultation</a>
       </div>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
         <span class="sr-only">Toggle navigation</span>
@@ -761,14 +762,14 @@ function renderValuePoints() {
 }
 
 const pageSignals = {
-  solutionsPage: 'WhatsApp, intake, and follow-up workflows.',
+  solutionsPage: 'WhatsApp replies, lead capture, and follow-up.',
   servicesPage: 'Implementation tied to your channels and CRM.',
-  industriesPage: 'Sector examples—not generic automation.',
-  aboutPage: 'Practical AI with human oversight.',
+  industriesPage: 'Sector examples—not one-size-fits-all templates.',
+  aboutPage: 'Practical help with people in the loop.',
   contactPage: 'Calendar for speed, form for a short note.',
-  dataHandlingPage: 'Approved data sources and controlled access.',
+  dataHandlingPage: 'How we handle data in client projects.',
   responsibleAiPage: 'Escalation paths and clear AI limits.',
-  securityRoadmapPage: 'Roadmap items—not claimed certifications.'
+  securityRoadmapPage: 'Planned work—not claimed certifications.'
 }
 
 function renderHero(page, pageKey) {
@@ -801,7 +802,7 @@ function renderHero(page, pageKey) {
 }
 
 function renderPageSignal(label, pageKey) {
-  const message = pageSignals[pageKey] || 'Practical AI mapped to your customer journey.'
+  const message = pageSignals[pageKey] || 'Practical help mapped to how customers reach you.'
   return `
     <aside class="page-signal" aria-label="${label} visual summary">
       <span>${label}</span>
@@ -923,7 +924,7 @@ function renderSolutionVisual() {
         </div>
         <div class="solution-node solution-node-hub">
           <span class="solution-node-dot" aria-hidden="true"></span>
-          <span>DBX handles intake</span>
+          <span>DBX captures what they need</span>
         </div>
         <div class="solution-connector solution-connector-down" aria-hidden="true"></div>
         <div class="solution-tools">
@@ -1109,7 +1110,7 @@ function renderBenefits() {
       ${sectionHeading(
         'Business Impact',
         'Operational improvements your team and customers can feel.',
-        'DBX focuses on business outcomes that make customer communication clearer, follow-up easier, and make support more scalable.'
+        'DBX focuses on outcomes your team and customers can feel—clearer replies, easier follow-up, and less repeat work.'
       )}
       ${renderSimpleCards(benefits, 'benefit-grid')}
     </section>
@@ -1122,7 +1123,7 @@ function renderProcess() {
       ${sectionHeading(
         'Our Process',
         'A simple path from AI idea to business impact',
-        'DBX guides each project through a clear, low-risk process that starts with your customer journey and ends with ongoing operational improvement.'
+        'DBX guides each project through a clear, low-risk path—from how customers reach you to ongoing improvement after launch.'
       )}
       <div class="process-track">
         ${processSteps
@@ -1162,7 +1163,7 @@ function renderIndustries(full = false) {
       ${sectionHeading(
         'Industries',
         'Focused on SMB sectors where conversations drive revenue and service quality.',
-        'DBX is especially useful for businesses that depend on fast inquiry handling, clear intake, reliable follow-up, and repeatable customer support.'
+        'DBX is especially useful for businesses that depend on fast replies, clear capture, reliable follow-up, and consistent answers.'
       )}
       <div class="industry-group">
         <h3>High-priority SMB sectors</h3>
@@ -1182,8 +1183,8 @@ function renderTrust() {
     <section id="trust" class="trust-section">
       ${sectionHeading(
         'Why DBX Solutions',
-        'A practical partner for customer experience systems.',
-        'We do not just launch agentic AI. We design, connect, monitor, and improve customer experience systems around your real business operations.'
+        'A practical partner for growing businesses—not a one-time setup shop.',
+        'We stay with you after launch—reviewing chats, adjusting answers, and improving follow-up around how your business actually runs.'
       )}
       ${renderSimpleCards(trustPoints, 'trust-grid')}
     </section>
@@ -1215,7 +1216,7 @@ function renderProof() {
       ${sectionHeading(
         'Results',
         'Practical improvements businesses can measure',
-        'DBX focuses on measurable outcomes—response speed, cleaner intake, and follow-up your team can use.'
+        'DBX focuses on measurable outcomes—response speed, clearer capture, and follow-up your team can use.'
       )}
       <div class="proof-panel">
         <ul class="proof-outcomes" aria-label="Typical outcomes after launch">
@@ -1235,7 +1236,7 @@ function renderProof() {
 }
 
 function renderCta(block) {
-  const primary = block.primary || 'Book a Free Consultation'
+  const primary = block.primary || 'Book a Consultation'
   const secondary = block.secondary || 'Explore Solutions'
   const secondaryHref = block.secondaryHref || 'solutions/'
   return `
@@ -1273,20 +1274,38 @@ function renderRoadmap(block) {
 }
 
 function renderSolutionsPage() {
+  const solutionItems = services.slice(0, 5)
   return `
-    <section id="solution-categories">
+    <section id="what-we-help-with">
       ${sectionHeading(
-        'Solution Categories',
-        'Five ways DBX Solutions turns customer communication into smoother operations',
-        'Each solution starts with a real business workflow, then applies AI where it improves speed, consistency, visibility, or follow-up.'
+        'What we help with',
+        'Five practical ways to improve WhatsApp and follow-up',
+        'Each starts with a real customer moment—not a technology catalog.'
       )}
-      ${renderSimpleCards([
-        ['Agentic AI for Customers', 'Agentic AI across WhatsApp, web chat, SMS, and email for service inquiries, intake, appointments, and follow-up.'],
-        ['Lead Qualification Automation', 'Ask qualifying questions, categorize inquiries, route leads to the right person, trigger follow-up workflows, and connect with CRM records.'],
-        ['Customer Support Automation', 'Support intake, common issue guidance, ticket routing, knowledge base assistance, and escalation to human support.'],
-        ['Workflow and CRM Integration', 'CRM updates, internal notifications, task creation, lead routing, booking workflows, and support handoffs.'],
-        ['AI Strategy and Implementation', 'AI opportunity assessment, customer journey mapping, automation planning, tool selection support, and an implementation roadmap.']
-      ])}
+      <div class="services-panel">
+        ${renderServicesVisual()}
+        <ul class="services-stages">
+          ${solutionItems
+            .map(
+              (service) => `
+                <li class="services-stage ${service.core ? 'services-stage-core' : ''}">
+                  <span class="services-stage-num" aria-hidden="true">${service.icon}</span>
+                  <div class="services-stage-content">
+                    <div class="services-stage-head">
+                      <strong>${service.title}</strong>
+                      ${service.badge ? `<span class="services-stage-badge">${service.badge}</span>` : ''}
+                    </div>
+                    <p>${service.body}</p>
+                    <div class="services-stage-chips">
+                      <span class="services-chip"><em>Good if you</em> ${service.goodIf}</span>
+                      <span class="services-chip services-chip-outcome"><em>What changes</em> ${service.outcome}</span>
+                    </div>
+                  </div>
+                </li>`
+            )
+            .join('')}
+        </ul>
+      </div>
     </section>
   `
 }
@@ -1324,21 +1343,22 @@ function renderContact() {
     ['phone', 'Phone or WhatsApp', 'tel', '+1 (555) 000-0000']
   ]
   const options = [
-    'Customer response times',
-    'Lead qualification',
-    'Customer support automation',
-    'Workflow integration',
-    'AI strategy',
-    'Not sure yet'
+    'Slow replies on WhatsApp',
+    'Leads not followed up',
+    'Same questions all day',
+    'Info stuck in chats',
+    'Not sure where to start'
   ]
+  const privacyHref = href('privacy-policy/')
   return `
     <section id="contact" class="contact-layout">
       <div>
         ${sectionHeading(
-          'Request Consultation',
+          'Book a Consultation',
           'Book a consultation or send a quick request.',
           'Prefer the fastest path? Use the calendar. Only need a short note? The form takes under a minute.'
         )}
+        <p class="contact-privacy-notice">By submitting this form, you agree that DBX Solutions LLC may process your information to respond to your request, as described in our <a href="${privacyHref}">Privacy Policy</a>. SMS consent applies only if you provide a phone number and opt in.</p>
         <div class="contact-options">
           <a href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">Book directly on the calendar</a>
           <a href="mailto:${CONTACT_EMAIL}">Email ${CONTACT_EMAIL}</a>
@@ -1363,8 +1383,8 @@ function renderContact() {
           <textarea id="message" name="message" rows="4" placeholder="Share your main channel, common questions, or follow-up challenge."></textarea>
         </label>
         ${smsConsentCheckboxHtml(href('privacy-policy/'), href('sms-terms/'), 'Please confirm SMS consent preferences before submitting.', getLocale())}
-        <button class="btn btn-primary" type="submit">Request Consultation</button>
-        <p class="form-confirmation" hidden>Thank you. Your request has been captured for follow-up.</p>
+        <button class="btn btn-primary" type="submit">Book a Consultation</button>
+        <p class="form-confirmation" hidden>Thank you. We received your request and will follow up soon.</p>
       </form>
     </section>
   `
@@ -1397,8 +1417,8 @@ function renderFooter() {
     <footer>
       <div>
         <a href="${href('')}" class="footer-logo"><img src="${href('logo.png')}" alt="DBX Solutions" /></a>
-        <p>DBX Solutions helps growing businesses turn WhatsApp and customer conversations into faster responses, qualified leads, and connected follow-up workflows.</p>
-        <strong>Practical AI for customer experience and operations.</strong>
+        <p>DBX Solutions helps growing businesses reply faster on WhatsApp, qualify leads, and keep follow-up connected to the tools teams already use.</p>
+        <strong>Practical help for customer conversations and operations.</strong>
       </div>
       <nav aria-label="Footer navigation">
         ${nav.map((item) => `<a href="${href(item.path)}">${item.label}</a>`).join('')}
@@ -1409,6 +1429,7 @@ function renderFooter() {
         <a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>
         <a href="https://www.linkedin.com/in/ricardo-de-biase" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <span>Serving SMBs remotely across the U.S. and Latin America.</span>
+        <p class="footer-cookie-note">We use cookies and chat tools to improve your experience. See our <a href="${href('privacy-policy/')}">Privacy Policy</a>.</p>
       </div>
     </footer>
   `
@@ -1446,13 +1467,21 @@ function bindInteractions(app, pageKey) {
 
     if (consentError) consentError.hidden = true
 
-    const subject = encodeURIComponent(`Consultation request: ${data.get('goal') || 'General'}`)
+    const locale = getLocale()
+    const mailLabels =
+      locale === 'es'
+        ? { subject: 'Solicitud de consulta', name: 'Nombre', email: 'Correo', phone: 'Teléfono/WhatsApp', goal: 'Objetivo', none: 'No indicado' }
+        : locale === 'pt'
+          ? { subject: 'Solicitação de consulta', name: 'Nome', email: 'E-mail', phone: 'Telefone/WhatsApp', goal: 'Objetivo', none: 'Não informado' }
+          : { subject: 'Consultation request', name: 'Name', email: 'Email', phone: 'Phone/WhatsApp', goal: 'Goal', none: 'Not provided' }
+
+    const subject = encodeURIComponent(`${mailLabels.subject}: ${data.get('goal') || 'General'}`)
     const body = encodeURIComponent(
       [
-        `Name: ${data.get('name') || ''}`,
-        `Email: ${data.get('email') || ''}`,
-        `Phone/WhatsApp: ${phone || 'Not provided'}`,
-        `Goal: ${data.get('goal') || ''}`,
+        `${mailLabels.name}: ${data.get('name') || ''}`,
+        `${mailLabels.email}: ${data.get('email') || ''}`,
+        `${mailLabels.phone}: ${phone || mailLabels.none}`,
+        `${mailLabels.goal}: ${data.get('goal') || ''}`,
         '',
         String(data.get('message') || '')
       ].join('\n')
@@ -1465,6 +1494,18 @@ function bindInteractions(app, pageKey) {
   })
 }
 
+const pagePaths = {
+  home: '',
+  solutionsPage: 'solutions/',
+  servicesPage: 'services/',
+  industriesPage: 'industries/',
+  aboutPage: 'about/',
+  contactPage: 'contact/',
+  dataHandlingPage: 'data-handling-notice/',
+  responsibleAiPage: 'responsible-ai-policy/',
+  securityRoadmapPage: 'security-roadmap/'
+}
+
 export function mountPage(pageKey) {
   const app = document.querySelector('#app')
   const page = pages[pageKey]
@@ -1473,6 +1514,7 @@ export function mountPage(pageKey) {
 
   document.documentElement.lang = getHtmlLang(locale)
   setMeta(page)
+  updateHreflang(pagePaths[pageKey] || '')
   document.title = translateText(document.title, locale)
   const description = document.querySelector('meta[name="description"]')
   if (description) description.setAttribute('content', translateText(description.getAttribute('content'), locale))
@@ -1484,7 +1526,7 @@ export function mountPage(pageKey) {
         ${page.blocks.map(renderBlock).join('')}
       </main>
       ${renderFooter()}
-      <a class="mobile-sticky-cta" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">Book a Free Consultation</a>
+      <a class="mobile-sticky-cta" href="${CALENDAR_URL}" target="_blank" rel="noopener noreferrer">${translateText('Book a Consultation', locale)}</a>
     </div>
   `
   app.innerHTML = translateHtml(html, locale)

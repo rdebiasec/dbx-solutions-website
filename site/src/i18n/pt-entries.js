@@ -1,5 +1,393 @@
 export const ptEntries = [
   [
+    "Answers from your real info",
+    "Respostas com suas informações reais"
+  ],
+  [
+    "Replies use your prices, hours, and services—not generic guesses.",
+    "Respostas com seus preços, horários e serviços—não suposições genéricas."
+  ],
+  [
+    "WhatsApp, chat, and email together",
+    "WhatsApp, chat e e-mail juntos"
+  ],
+  [
+    "Meet customers on the channels they already use.",
+    "Atenda nos canais que seus clientes já usam."
+  ],
+  [
+    "Your CRM stays updated",
+    "Seu CRM permanece atualizado"
+  ],
+  [
+    "What they said shows up in your tools without retyping.",
+    "O que disseram aparece nas suas ferramentas sem redigitar."
+  ],
+  [
+    "Your team steps in when it matters",
+    "Sua equipe entra quando importa"
+  ],
+  [
+    "People take over for judgment calls and closing.",
+    "Pessoas assumem decisões importantes e fechamentos."
+  ],
+  [
+    "Conversation details often stay separate from the CRM, calendar, support queue, or your team's daily work.",
+    "Os detalhes da conversa ficam separados do CRM, calendário, fila de suporte ou do trabalho diário da sua equipe."
+  ],
+  [
+    "More conversations without hiring first",
+    "Mais conversas sem contratar antes"
+  ],
+  [
+    "Handle more routine messages while your team focuses on higher-value work.",
+    "Atenda mais mensagens rotineiras enquanto sua equipe foca em trabalho de maior valor."
+  ],
+  [
+    "We review how customers reach you, the tools you use, repeat questions, and what outcomes matter most.",
+    "Analisamos como os clientes chegam até você, as ferramentas que usa, perguntas repetidas e quais resultados importam."
+  ],
+  [
+    "Map where replies slow down",
+    "Mapear onde as respostas demoram"
+  ],
+  [
+    "Pick business priorities",
+    "Definir prioridades do negócio"
+  ],
+  [
+    "We map replies, handoffs, and connections to your CRM or team—aligned with how you already work.",
+    "Mapeamos respostas, transferências e conexões com seu CRM ou equipe—alinhados à forma como você já trabalha."
+  ],
+  [
+    "Set up handoff rules",
+    "Definir regras de transferência"
+  ],
+  [
+    "Plan team alerts",
+    "Planejar alertas para a equipe"
+  ],
+  [
+    "We build, test, and launch on your channels using your existing tools and guidelines.",
+    "Construímos, testamos e lançamos nos seus canais com suas ferramentas e diretrizes."
+  ],
+  [
+    "Set up WhatsApp and chat replies",
+    "Configurar respostas no WhatsApp e chat"
+  ],
+  [
+    "We review real conversations, improve answers, and refine follow-up as your business changes.",
+    "Revisamos conversas reais, melhoramos respostas e refinamos o acompanhamento conforme seu negócio muda."
+  ],
+  [
+    "Spot new opportunities",
+    "Identificar novas oportunidades"
+  ],
+  [
+    "Capture project scope on WhatsApp, qualify inquiries faster, and hand off to the right advisor with context.",
+    "Capture o escopo do projeto no WhatsApp, qualifique consultas mais rápido e encaminhe ao assessor certo com contexto."
+  ],
+  [
+    "Answer after-hours questions about hours and services, guide booking inquiries, and escalate urgent cases to staff.",
+    "Responda perguntas fora do horário, oriente reservas e escale casos urgentes para a equipe."
+  ],
+  [
+    "Qualify buyers and sellers on WhatsApp, answer property FAQs, and alert the listing advisor with budget and timing.",
+    "Qualifique compradores e vendedores no WhatsApp, responda FAQs e alerte o assessor com orçamento e prazos."
+  ],
+  [
+    "Collect quote details—service type, location, photos—so your team replies with accurate next steps, not repeat questions.",
+    "Colete dados de orçamento—tipo de serviço, local, fotos—para sua equipe responder com próximos passos claros."
+  ],
+  [
+    "Handle product and order questions on WhatsApp and bring structured details before a person handles exceptions.",
+    "Atenda perguntas de produtos e pedidos no WhatsApp e organize detalhes antes de uma pessoa tratar exceções."
+  ],
+  [
+    "Answer program FAQs, qualify interest, and land enrollment-ready leads in your CRM with notes.",
+    "Responda FAQs do programa, qualifique interesse e leve leads prontos para matrícula ao CRM com anotações."
+  ],
+  [
+    "Handle general service questions consistently; route sensitive or compliance topics to a human reviewer.",
+    "Responda perguntas gerais com consistência; encaminhe temas sensíveis ou de conformidade a uma pessoa."
+  ],
+  [
+    "Built for growing businesses",
+    "Feito para negócios em crescimento"
+  ],
+  [
+    "Practical help without enterprise-level complexity or long consulting projects.",
+    "Ajuda prática sem complexidade empresarial nem projetos longos de consultoria."
+  ],
+  [
+    "Business first",
+    "O negócio em primeiro lugar"
+  ],
+  [
+    "We start with how customers reach you and what your team needs—not with a technology pitch.",
+    "Começamos por como os clientes chegam até você e o que sua equipe precisa—não por um discurso tecnológico."
+  ],
+  [
+    "Fits your existing tools",
+    "Encaixa nas suas ferramentas atuais"
+  ],
+  [
+    "We connect WhatsApp, chat, CRM, and alerts to how you already work.",
+    "Conectamos WhatsApp, chat, CRM e alertas à forma como você já trabalha."
+  ],
+  [
+    "Tied to real outcomes",
+    "Vinculado a resultados reais"
+  ],
+  [
+    "Every project links to faster replies, cleaner follow-up, or less repeat work.",
+    "Cada projeto aponta para respostas mais rápidas, acompanhamento mais limpo ou menos trabalho repetido."
+  ],
+  [
+    "Improves after launch",
+    "Melhora após o lançamento"
+  ],
+  [
+    "We review real conversations and adjust answers and routes over time.",
+    "Revisamos conversas reais e ajustamos respostas e rotas ao longo do tempo."
+  ],
+  [
+    "Clear capture upfront",
+    "Captura clara desde o início"
+  ],
+  [
+    "DBX helps growing businesses reply faster on WhatsApp, qualify leads, reduce repeat questions, and connect conversations to the tools your team already uses.",
+    "A DBX ajuda negócios em crescimento a responder mais rápido no WhatsApp, qualificar leads, reduzir perguntas repetidas e conectar conversas às ferramentas que sua equipe já usa."
+  ],
+  [
+    "Replies are built from approved business information, clear rules, escalation paths, and ongoing review of real chats.",
+    "As respostas usam informações aprovadas do negócio, regras claras, caminhos de escalonamento e revisão contínua de conversas reais."
+  ],
+  [
+    "DBX can connect conversations with CRMs, calendars, support tools, forms, and team alerts.",
+    "A DBX pode conectar conversas com CRMs, calendários, ferramentas de suporte, formulários e alertas da equipe."
+  ],
+  [
+    "DBX replies on WhatsApp, captures lead details, updates your CRM or team, and brings people in when judgment matters—not a FAQ-only chatbot.",
+    "A DBX responde no WhatsApp, captura dados do lead, atualiza seu CRM ou equipe e traz pessoas quando o julgamento humano importa—não é um chatbot só de FAQ."
+  ],
+  [
+    "Book a consultation. We will review your channels, identify the first improvement to make, and outline three practical next steps for your business.",
+    "Agende uma consulta. Analisaremos seus canais, identificaremos a primeira melhoria e delinearemos três próximos passos práticos para seu negócio."
+  ],
+  [
+    "Practical help for WhatsApp replies, lead qualification, repeat questions, and connected follow-up for growing businesses.",
+    "Ajuda prática para respostas no WhatsApp, qualificação de leads, perguntas repetidas e acompanhamento conectado."
+  ],
+  [
+    "Practical help for WhatsApp, lead capture, and follow-up",
+    "Ajuda prática para WhatsApp, captura de leads e acompanhamento"
+  ],
+  [
+    "DBX helps growing businesses turn WhatsApp and other channels into faster replies, clearer lead capture, and next steps your team can act on—without hiring more staff.",
+    "A DBX ajuda negócios em crescimento a obter respostas mais rápidas, captura mais clara e próximos passos que sua equipe pode executar—sem contratar mais pessoas."
+  ],
+  [
+    "Not sure what to fix first on WhatsApp?",
+    "Não sabe o que corrigir primeiro no WhatsApp?"
+  ],
+  [
+    "Start with one channel, one repeated question, and one follow-up gap.",
+    "Comece com um canal, uma pergunta repetida e uma lacuna de acompanhamento."
+  ],
+  [
+    "Services that help businesses improve WhatsApp, customer conversations, and day-to-day follow-up—with ongoing support after launch.",
+    "Serviços para melhorar WhatsApp, conversas com clientes e acompanhamento diário—com suporte contínuo após o lançamento."
+  ],
+  [
+    "From WhatsApp and chat replies to CRM sync and ongoing support after launch—DBX implements around how your team already works.",
+    "De respostas no WhatsApp e chat à sincronização com CRM e suporte contínuo—a DBX implementa conforme sua equipe já trabalha."
+  ],
+  [
+    "Want a clear starting point?",
+    "Quer um ponto de partida claro?"
+  ],
+  [
+    "Book a consultation and we will map the first conversation or follow-up to improve on your channels.",
+    "Agende uma consulta e mapearemos a primeira conversa ou acompanhamento a melhorar nos seus canais."
+  ],
+  [
+    "Most teams start with one channel, not a big project.",
+    "A maioria começa com um canal, não com um projeto grande."
+  ],
+  [
+    "Regulated sectors",
+    "Setores regulados"
+  ],
+  [
+    "For healthcare, financial services, legal, insurance, and other regulated industries, AI should support communication efficiency—not replace professional advice, compliance review, clinical judgment, legal judgment, or required human oversight. Read our Responsible AI Policy for more detail.",
+    "Em saúde, finanças, jurídico, seguros e outros setores regulados, a IA deve apoiar a comunicação—não substituir assessoria profissional, conformidade, julgamento clínico ou jurídico, nem supervisão humana exigida. Leia nossa Política de IA Responsável."
+  ],
+  [
+    "See how WhatsApp follow-up could work in your sector",
+    "Veja como o acompanhamento no WhatsApp pode funcionar no seu setor"
+  ],
+  [
+    "Bring your channels, common questions, and follow-up challenges. We will help map practical next steps.",
+    "Traga seus canais, perguntas frequentes e desafios de acompanhamento. Ajudamos a mapear próximos passos práticos."
+  ],
+  [
+    "Designed around your business, not a generic template.",
+    "Projetado para seu negócio, não um modelo genérico."
+  ],
+  [
+    "We make practical customer communication help accessible for growing businesses. We find where faster replies and cleaner follow-up would help most, then design and implement around your tools and team capacity.",
+    "Tornamos acessível ajuda prática em comunicação com clientes. Identificamos onde respostas mais rápidas e acompanhamento mais limpo mais ajudam e projetamos conforme suas ferramentas e capacidade da equipe."
+  ],
+  [
+    "We start with the business problem before choosing technology. That means understanding how customers reach you, what your team repeats daily, and the outcomes that matter—then building something clear that improves over time.",
+    "Começamos pelo problema do negócio antes de escolher tecnologia: como os clientes chegam, o que sua equipe repete diariamente e quais resultados importam—depois construímos algo claro que melhora com o tempo."
+  ],
+  [
+    "We keep it practical",
+    "Mantemos o foco prático"
+  ],
+  [
+    "People stay in the loop",
+    "As pessoas permanecem no controle"
+  ],
+  [
+    "Built around how you work",
+    "Feito conforme você trabalha"
+  ],
+  [
+    "Tied to a real goal",
+    "Vinculado a um objetivo real"
+  ],
+  [
+    "We review real chats and adjust answers and routes over time.",
+    "Revisamos conversas reais e ajustamos respostas e rotas ao longo do tempo."
+  ],
+  [
+    "Book a consultation to review your channels and the first practical improvement to make.",
+    "Agende uma consulta para revisar seus canais e a primeira melhoria prática."
+  ],
+  [
+    "DBX designs customer flows around approved business information, controlled access, and clear limits on what systems process and store. For website visitor data, see our Privacy Policy.",
+    "A DBX projeta fluxos com informações aprovadas, acesso controlado e limites claros. Para dados de visitantes do site, consulte nossa Política de Privacidade."
+  ],
+  [
+    "DBX Solutions builds data handling practices for client implementations—approved content sources, controlled access, and secure integration planning. This notice covers project work, not website privacy (see Privacy Policy).",
+    "A DBX define práticas de tratamento de dados em implementações para clientes—fontes aprovadas, acesso controlado e integração segura. Este aviso cobre projetos, não a privacidade do site (ver Política de Privacidade)."
+  ],
+  [
+    "Limiting access to systems and data required for each customer flow",
+    "Limitar o acesso a sistemas e dados necessários para cada fluxo com o cliente"
+  ],
+  [
+    "DBX implements customer-facing AI with clear escalation paths, approved business information, and human review—not unconstrained automation.",
+    "A DBX implementa IA voltada ao cliente com caminhos de escalonamento, informações aprovadas e revisão humana—não automação sem limites."
+  ],
+  [
+    "DBX aligns operations with recognized security practices. Items below are roadmap or readiness work unless explicitly marked complete. We document planned vs. completed work so you know what is in progress.",
+    "A DBX alinha operações a práticas de segurança reconhecidas. Os itens abaixo são trabalho planejado ou em andamento, salvo indicação em contrário."
+  ],
+  [
+    "What we help with",
+    "No que ajudamos"
+  ],
+  [
+    "Five practical ways to improve WhatsApp and follow-up",
+    "Cinco formas práticas de melhorar WhatsApp e acompanhamento"
+  ],
+  [
+    "Each starts with a real customer moment—not a technology catalog.",
+    "Cada uma começa com um momento real do cliente—não um catálogo tecnológico."
+  ],
+  [
+    "By submitting this form, you agree that DBX Solutions LLC may process your information to respond to your request, as described in our Privacy Policy. SMS consent applies only if you provide a phone number and opt in.",
+    "Ao enviar este formulário, você concorda que a DBX Solutions LLC pode tratar suas informações para responder sua solicitação, conforme nossa Política de Privacidade. O consentimento SMS aplica-se somente se você informar telefone e marcar a opção."
+  ],
+  [
+    "Slow replies on WhatsApp",
+    "Respostas lentas no WhatsApp"
+  ],
+  [
+    "Leads not followed up",
+    "Leads sem acompanhamento"
+  ],
+  [
+    "Same questions all day",
+    "As mesmas perguntas o dia todo"
+  ],
+  [
+    "Info stuck in chats",
+    "Informação presa nas conversas"
+  ],
+  [
+    "Not sure where to start",
+    "Não sei por onde começar"
+  ],
+  [
+    "Thank you. We received your request and will follow up soon.",
+    "Obrigado. Recebemos sua solicitação e entraremos em contato em breve."
+  ],
+  [
+    "DBX Solutions helps growing businesses reply faster on WhatsApp, qualify leads, and keep follow-up connected to the tools teams already use.",
+    "A DBX ajuda negócios em crescimento a responder mais rápido no WhatsApp, qualificar leads e manter o acompanhamento conectado às ferramentas que as equipes já usam."
+  ],
+  [
+    "Practical help for customer conversations and operations.",
+    "Ajuda prática para conversas com clientes e operações."
+  ],
+  [
+    "We use cookies and chat tools to improve your experience. See our",
+    "Usamos cookies e ferramentas de chat para melhorar sua experiência. Consulte nossa"
+  ],
+  [
+    "DBX captures what they need",
+    "A DBX captura o que precisam"
+  ],
+  [
+    "We stay with you after launch—reviewing chats, adjusting answers, and improving follow-up around how your business actually runs.",
+    "Ficamos com você após o lançamento—revisando conversas, ajustando respostas e melhorando o acompanhamento conforme seu negócio opera."
+  ],
+  [
+    "A practical partner for growing businesses—not a one-time setup shop.",
+    "Um parceiro prático para negócios em crescimento—não uma configuração única."
+  ],
+  [
+    "DBX focuses on measurable outcomes—response speed, clearer capture, and follow-up your team can use.",
+    "A DBX foca em resultados mensuráveis—velocidade de resposta, captura mais clara e acompanhamento que sua equipe pode usar."
+  ],
+  [
+    "DBX guides each project through a clear, low-risk path—from how customers reach you to ongoing improvement after launch.",
+    "A DBX guia cada projeto por um caminho claro e de baixo risco—de como os clientes chegam até a melhoria contínua após o lançamento."
+  ],
+  [
+    "DBX is especially useful for businesses that depend on fast replies, clear capture, reliable follow-up, and consistent answers.",
+    "A DBX é especialmente útil para negócios que dependem de respostas rápidas, captura clara, acompanhamento confiável e respostas consistentes."
+  ],
+  [
+    "WhatsApp replies, lead capture, and follow-up.",
+    "Respostas no WhatsApp, captura de leads e acompanhamento."
+  ],
+  [
+    "Sector examples—not one-size-fits-all templates.",
+    "Exemplos por setor—não modelos únicos para todos."
+  ],
+  [
+    "Practical help with people in the loop.",
+    "Ajuda prática com pessoas no controle."
+  ],
+  [
+    "How we handle data in client projects.",
+    "Como tratamos dados em projetos com clientes."
+  ],
+  [
+    "Planned work—not claimed certifications.",
+    "Trabalho planejado—não certificações declaradas."
+  ],
+  [
+    "Practical help mapped to how customers reach you.",
+    "Ajuda prática conforme como os clientes chegam até você."
+  ],
+  [
     "Home",
     "Início"
   ],
@@ -25,7 +413,7 @@ export const ptEntries = [
   ],
   [
     "Book a Consultation",
-    "Marque uma consulta"
+    "Agendar consulta"
   ],
   [
     "Book a Free Consultation",
@@ -57,7 +445,7 @@ export const ptEntries = [
   ],
   [
     "Email Us",
-    "Envie-nos um e-mail"
+    "Envie e-mail"
   ],
   [
     "Next Step",
@@ -461,11 +849,11 @@ export const ptEntries = [
   ],
   [
     "What are you looking to improve?",
-    "O que você busca melhorar?"
+    "O que você quer melhorar?"
   ],
   [
     "Select one",
-    "Selecione um"
+    "Selecione uma"
   ],
   [
     "Customer response times",
@@ -489,7 +877,7 @@ export const ptEntries = [
   ],
   [
     "Book directly on the calendar",
-    "Reserve diretamente no calendário"
+    "Agende diretamente no calendário"
   ],
   [
     "Thank you. Your request has been captured for follow-up.",
@@ -708,8 +1096,8 @@ export const ptEntries = [
     "Vamos analisar onde as conversas do WhatsApp e dos clientes estão custando tempo ou leads"
   ],
   [
-    "Book on the calendar for the fastest response, or send a short request below. We will help identify the most practical first workflow to improve.",
-    "Reserve no calendário para obter uma resposta mais rápida ou envie uma breve solicitação abaixo. Ajudaremos a identificar o primeiro fluxo de trabalho mais prático a ser melhorado."
+    "Book on the calendar for the fastest response, or send a short request below. We will help identify the most practical first improvement to make.",
+    "Agende no calendário para resposta mais rápida ou envie uma solicitação breve abaixo. Ajudaremos a identificar a primeira melhoria prática."
   ],
   [
     "DBX Solutions helps growing businesses turn WhatsApp and customer conversations into faster responses, qualified leads, and connected follow-up workflows.",
@@ -1661,7 +2049,7 @@ export const ptEntries = [
   ],
   [
     "Services that make WhatsApp and customer AI practical",
-    "Serviços que tornam prático o WhatsApp e a IA do cliente"
+    "Serviços que tornam práticos WhatsApp e IA para clientes"
   ],
   [
     "From agentic AI on WhatsApp and chat to CRM integration and ongoing optimization—DBX implements services around how your team already works.",
@@ -1669,19 +2057,19 @@ export const ptEntries = [
   ],
   [
     "Where WhatsApp and customer conversations drive revenue",
-    "Onde o WhatsApp e as conversas com os clientes geram receita"
+    "Onde conversas no WhatsApp impulsionam receita"
   ],
   [
     "DBX helps growing businesses in service-heavy sectors respond faster on WhatsApp, qualify inquiries, and keep follow-up connected to the tools teams already use.",
-    "A DBX ajuda empresas em crescimento em setores com muitos serviços a responder mais rapidamente no WhatsApp, qualificar consultas e manter o acompanhamento conectado às ferramentas que as equipes já usam."
+    "A DBX ajuda negócios em crescimento em setores de serviços a responder mais rápido no WhatsApp, qualificar consultas e manter o acompanhamento conectado às ferramentas da equipe."
   ],
   [
     "Helping growing businesses turn AI into better customer experiences",
-    "Ajudando empresas em crescimento a transformar IA em melhores experiências para o cliente"
+    "Ajudar negócios em crescimento a transformar IA em melhores experiências do cliente"
   ],
   [
     "DBX Solutions was built to help small and mid-sized businesses adopt AI in a practical, human-centered, and business-focused way—with WhatsApp and customer channels at the center.",
-    "A DBX Solutions foi criada para ajudar pequenas e médias empresas a adotar a IA de uma forma prática, centrada no ser humano e nos negócios, com o WhatsApp e os canais do cliente no centro."
+    "A DBX Solutions foi criada para ajudar pequenas e médias empresas a adotar IA de forma prática, centrada nas pessoas e no negócio—com WhatsApp e canais de clientes no centro."
   ],
   [
     "Want to see how this applies to your business?",
@@ -1693,7 +2081,7 @@ export const ptEntries = [
   ],
   [
     "No pressure—just a focused conversation about what would help your team most.",
-    "Sem pressão – apenas uma conversa focada sobre o que mais ajudaria sua equipe."
+    "Sem pressão—apenas uma conversa focada no que mais ajudaria sua equipe."
   ],
   [
     "DBX focuses on measurable outcomes—response speed, cleaner intake, and follow-up your team can use.",
@@ -1721,7 +2109,7 @@ export const ptEntries = [
   ],
   [
     "Implementation tied to your channels and CRM.",
-    "Implementação atrelada aos seus canais e CRM."
+    "Implementação ligada aos seus canais e CRM."
   ],
   [
     "Sector examples—not generic automation.",
@@ -1729,7 +2117,7 @@ export const ptEntries = [
   ],
   [
     "Calendar for speed, form for a short note.",
-    "Calendário para velocidade, formulário para uma nota curta."
+    "Calendário para rapidez, formulário para uma nota breve."
   ],
   [
     "Approved data sources and controlled access.",
@@ -1777,11 +2165,11 @@ export const ptEntries = [
   ],
   [
     "Roadmap / In progress",
-    "Roteiro / Em andamento"
+    "Plano / Em andamento"
   ],
   [
     "Security and compliance roadmap",
-    "Roteiro de segurança e conformidade"
+    "Plano de segurança e conformidade"
   ],
   [
     "By checking this box, you provide express written consent to receive SMS communications from DBX Solutions LLC related to appointments, services, and support. Message frequency varies. Message and data rates may apply. Consent is not a condition of purchase. Reply STOP to opt out and HELP for help. See Privacy Policy and SMS Terms.",
@@ -2117,7 +2505,7 @@ export const ptEntries = [
   ],
   [
     "Review real chats",
-    "Revisamos conversas reais"
+    "Revisar conversas reais"
   ],
   [
     "Catch confusing replies or bad handoffs before they cost you sales.",
@@ -2150,5 +2538,229 @@ export const ptEntries = [
   [
     "Ongoing support cycle from launch to improvement",
     "Ciclo de acompanhamento contínuo do lançamento à melhoria"
+  ],
+  [
+    "Design conversation flows",
+    "Projetar fluxos de conversa"
+  ],
+  [
+    "Improve responses and routes",
+    "Melhorar respostas e rotas"
+  ],
+  [
+    "Adjust handoff rules",
+    "Ajustar regras de transferência"
+  ],
+  [
+    "Example: A firm collects scope and timeline on WhatsApp, then routes qualified inquiries to the right advisor with full context.",
+    "Exemplo: Um escritório coleta escopo e prazos no WhatsApp e encaminha consultas qualificadas ao assessor certo com contexto completo."
+  ],
+  [
+    "Example: A buyer asks about availability on WhatsApp; details are collected before the listing advisor is alerted.",
+    "Exemplo: Um comprador pergunta disponibilidade no WhatsApp; os detalhes são coletados antes de alertar o assessor do imóvel."
+  ],
+  [
+    "Example: Program FAQs run on chat while enrollment-ready leads land in your CRM with notes.",
+    "Exemplo: FAQs do programa rodam no chat enquanto leads prontos para matrícula chegam ao seu CRM com anotações."
+  ],
+  [
+    "AI supports your team while escalation, review, and judgment stay available when needed.",
+    "A IA apoia sua equipe enquanto escalonamento, revisão e julgamento humano permanecem disponíveis quando necessário."
+  ],
+  [
+    "Lead details collected before your team picks up the conversation.",
+    "Dados do lead coletados antes da sua equipe assumir a conversa."
+  ],
+  [
+    "Yes. WhatsApp can be part of the mix along with web chat, SMS, forms, and email, depending on your setup.",
+    "Sim. O WhatsApp pode fazer parte do conjunto junto com chat web, SMS, formulários e e-mail, conforme sua configuração."
+  ],
+  [
+    "Yes. DBX designs escalation paths so your team can review, respond, or take over when judgment matters.",
+    "Sim. A DBX projeta caminhos de escalonamento para sua equipe revisar, responder ou assumir quando o julgamento humano importa."
+  ],
+  [
+    "Timing depends on scope and integrations. Many businesses start with one focused use case, then expand after launch.",
+    "O prazo depende do escopo e das integrações. Muitos negócios começam com um caso de uso focado e expandem após o lançamento."
+  ],
+  [
+    "In many cases, yes. DBX can connect conversations with CRMs, calendars, support tools, forms, and team alerts.",
+    "Em muitos casos, sim. A DBX pode conectar conversas com CRMs, calendários, ferramentas de suporte, formulários e alertas da equipe."
+  ],
+  [
+    "We focus on use cases that solve real business problems.",
+    "Focamos em casos de uso que resolvem problemas reais do negócio."
+  ],
+  [
+    "AI should support customers and your team—not create confusion.",
+    "A IA deve apoiar clientes e sua equipe — não criar confusão."
+  ],
+  [
+    "Solutions should fit your tools and daily routines.",
+    "As soluções devem se encaixar nas suas ferramentas e rotinas diárias."
+  ],
+  [
+    "Every implementation should connect to a measurable business outcome.",
+    "Cada implementação deve se conectar a um resultado de negócio mensurável."
+  ],
+  [
+    "How we approach practical AI adoption",
+    "Como abordamos a adoção prática de IA"
+  ],
+  [
+    "Please confirm SMS consent preferences before submitting.",
+    "Confirme suas preferências de consentimento SMS antes de enviar."
+  ],
+  [
+    "DBX Solutions | WhatsApp & Customer Experience Solutions",
+    "DBX Solutions | Soluções de WhatsApp e experiência do cliente"
+  ],
+  [
+    "DBX Solutions | AI Services for Growing Businesses",
+    "DBX Solutions | Serviços de IA para negócios em crescimento"
+  ],
+  [
+    "DBX Solutions | AI Customer Experience by Industry",
+    "DBX Solutions | Experiência do cliente com IA por setor"
+  ],
+  [
+    "DBX Solutions | About",
+    "DBX Solutions | Sobre"
+  ],
+  [
+    "DBX Solutions | Data Handling Notice",
+    "DBX Solutions | Aviso de tratamento de dados"
+  ],
+  [
+    "DBX Solutions | Responsible AI Policy",
+    "DBX Solutions | Política de IA responsável"
+  ],
+  [
+    "DBX Solutions | Security Roadmap",
+    "DBX Solutions | Plano de segurança"
+  ],
+  [
+    "DBX Solutions | Contact",
+    "DBX Solutions | Contato"
+  ],
+  [
+    "Customer experience and WhatsApp automation for service businesses, clinics, real estate teams, local services, and more.",
+    "Experiência do cliente e automação no WhatsApp para empresas de serviços, clínicas, imobiliárias, serviços locais e mais."
+  ],
+  [
+    "DBX Solutions helps growing businesses turn AI into better customer experiences through practical, human-centered implementation.",
+    "A DBX Solutions ajuda negócios em crescimento a transformar IA em melhores experiências do cliente com implementação prática e centrada nas pessoas."
+  ],
+  [
+    "How DBX Solutions approaches customer and business data in AI implementations, integrations, and ongoing operations.",
+    "Como a DBX Solutions aborda dados de clientes e do negócio em implementações de IA, integrações e operações contínuas."
+  ],
+  [
+    "How DBX Solutions applies human oversight, escalation paths, and approved business information in customer-facing AI.",
+    "Como a DBX Solutions aplica supervisão humana, caminhos de escalonamento e informações aprovadas do negócio em IA voltada ao cliente."
+  ],
+  [
+    "DBX Solutions security and compliance roadmap—presented as readiness work, not completed certifications unless formally obtained.",
+    "Plano de segurança e conformidade da DBX Solutions—apresentado como trabalho de preparação, não certificações concluídas salvo obtenção formal."
+  ],
+  [
+    "Book a consultation with DBX Solutions to review WhatsApp, lead capture, support automation, and practical AI opportunities for your business.",
+    "Agende uma consulta com a DBX Solutions para revisar WhatsApp, captura de leads, automação de suporte e oportunidades práticas de IA para seu negócio."
+  ],
+  [
+    "Our mission",
+    "Nossa missão"
+  ],
+  [
+    "About DBX Solutions",
+    "Sobre a DBX Solutions"
+  ],
+  [
+    "We will help identify practical opportunities before recommending technology.",
+    "Ajudaremos a identificar oportunidades práticas antes de recomendar tecnologia."
+  ],
+  [
+    "Using approved business content as the source for customer-facing answers",
+    "Usar conteúdo aprovado do negócio como fonte para respostas ao cliente"
+  ],
+  [
+    "Designing integrations so useful context reaches your CRM or team—not open-ended data exposure",
+    "Projetar integrações para que contexto útil chegue ao CRM ou equipe—não exposição aberta de dados"
+  ],
+  [
+    "Documenting what is processed, stored, and retained per project scope",
+    "Documentar o que é processado, armazenado e retido conforme o escopo do projeto"
+  ],
+  [
+    "Aligning with your privacy policy, SMS terms, and industry requirements where applicable",
+    "Alinhar com sua política de privacidade, termos SMS e requisitos do setor quando aplicável"
+  ],
+  [
+    "Accuracy and clarity over speed alone",
+    "Precisão e clareza acima de apenas velocidade"
+  ],
+  [
+    "Human escalation for sensitive, uncertain, or high-stakes requests",
+    "Escalonamento humano para solicitações sensíveis, incertas ou de alto impacto"
+  ],
+  [
+    "Clear limits on what AI can answer or act on",
+    "Limites claros sobre o que a IA pode responder ou fazer"
+  ],
+  [
+    "Transparent use of approved business information",
+    "Uso transparente de informações aprovadas do negócio"
+  ],
+  [
+    "Continuous improvement based on real customer interactions",
+    "Melhoria contínua baseada em interações reais com clientes"
+  ],
+  [
+    "For healthcare, financial services, legal, insurance, and other regulated contexts, AI supports communication and workflow efficiency. It does not replace professional advice, compliance review, clinical judgment, legal judgment, or required human oversight.",
+    "Em saúde, finanças, jurídico, seguros e outros contextos regulados, a IA apoia comunicação e eficiência operacional. Não substitui assessoria profissional, revisão de conformidade, julgamento clínico ou jurídico, nem supervisão humana exigida."
+  ],
+  [
+    "Regulated industries",
+    "Setores regulados"
+  ],
+  [
+    "These items reflect planned or in-progress alignment work—not claims of completed certification unless formally obtained.",
+    "Estes itens refletem trabalho planejado ou em andamento—não alegações de certificação concluída salvo obtenção formal."
+  ],
+  [
+    "SOC 2 Type I readiness",
+    "Preparação SOC 2 Tipo I"
+  ],
+  [
+    "SOC 2 Type II future readiness",
+    "Preparação futura SOC 2 Tipo II"
+  ],
+  [
+    "ISO/IEC 27001 alignment",
+    "Alinhamento ISO/IEC 27001"
+  ],
+  [
+    "Data Processing Agreement readiness",
+    "Preparação de acordo de tratamento de dados"
+  ],
+  [
+    "Privacy Policy and Terms of Service",
+    "Política de Privacidade e Termos de Serviço"
+  ],
+  [
+    "Internal data handling procedures",
+    "Procedimentos internos de tratamento de dados"
+  ],
+  [
+    "Responsible AI usage policy",
+    "Política de uso responsável de IA"
+  ],
+  [
+    "Vendor security review process",
+    "Processo de revisão de segurança de fornecedores"
+  ],
+  [
+    "Certifications listed here are roadmap items only. DBX Solutions does not claim completed certification unless formally obtained and published.",
+    "As certificações listadas são itens de plano apenas. A DBX Solutions não declara certificação concluída salvo obtenção e publicação formal."
   ]
 ]

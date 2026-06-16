@@ -1,25 +1,27 @@
+/**
+ * Pre-build i18n check. Live copy source: site-app.js + i18n-runtime.js + pt-entries.js.
+ * Legacy content.en.json / content.es.json are archived — not required for build.
+ */
 import { promises as fs } from 'node:fs'
 import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const ROOT = new URL('../src/i18n', import.meta.url)
-const enPath = path.join(ROOT.pathname, 'content.en.json')
-const esPath = path.join(ROOT.pathname, 'content.es.json')
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const siteRoot = path.join(__dirname, '..')
 
-async function ensureFiles() {
+const required = [
+  'src/site-app.js',
+  'src/i18n-runtime.js',
+  'src/i18n/pt-entries.js'
+]
+
+for (const rel of required) {
+  const full = path.join(siteRoot, rel)
   try {
-    await fs.access(enPath)
+    await fs.access(full)
   } catch {
-    throw new Error('Missing English content file at src/i18n/content.en.json')
-  }
-
-  try {
-    await fs.access(esPath)
-  } catch {
-    console.warn('Missing Spanish content; copying from English as fallback.')
-    const en = await fs.readFile(enPath, 'utf-8')
-    await fs.writeFile(esPath, en)
+    throw new Error(`Missing required i18n source: ${rel}`)
   }
 }
 
-await ensureFiles()
-
+console.log('i18n prebuild OK (site-app.js + runtime catalogs)')

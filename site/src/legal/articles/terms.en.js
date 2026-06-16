@@ -1,18 +1,18 @@
 import {
   COMPANY_LEGAL_NAME,
-  LEGAL_EFFECTIVE_DATE,
+  getLegalEffectiveDate,
   href,
   legalContactBlockHtml
-} from './constants.js'
+} from '../constants.js'
 
-export function getTermsArticleHtml() {
+export default function termsEn() {
   const privacyHref = href('privacy-policy/')
   const smsTermsHref = href('sms-terms/')
 
   return `
     <h1>Terms of Service</h1>
-    <p class="legal-effective"><strong>Effective Date: ${LEGAL_EFFECTIVE_DATE}</strong></p>
-    <p>These Terms of Service ("Terms") govern your access to and use of the website of ${COMPANY_LEGAL_NAME} ("DBX Solutions," "we," "our," or "us") and related materials.</p>
+    <p class="legal-effective"><strong>Effective Date: ${getLegalEffectiveDate('en')}</strong></p>
+    <p>These Terms of Service ("Terms") govern your access to and use of the website of ${COMPANY_LEGAL_NAME}, a Florida limited liability company ("DBX Solutions," "we," "our," or "us") and related materials.</p>
     <p>By accessing or using this website, you agree to these Terms. If you do not agree, you should not use this website.</p>
 
     <h2>1. Website Purpose</h2>

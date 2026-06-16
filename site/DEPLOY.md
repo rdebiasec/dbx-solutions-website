@@ -39,17 +39,11 @@ The project is fully static—no server-side dependencies are required.
 
 ## Localization Workflow
 
-- All copy lives under `src/i18n/content.en.json` (English) and `src/i18n/content.es.json` (Spanish). Update the English file first; the UI renders from whichever locale is active.
-- To generate/update Spanish strings automatically, supply Google Cloud credentials and run:
-  ```bash
-  export GOOGLE_PROJECT_ID="your-project-id"
-  export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account.json"
-  npm install @google-cloud/translate   # required once if you want API support
-  npm run i18n:translate
-  ```
-  If the credentials or dependency are missing, the script falls back silently—just edit `content.es.json` manually.
-- During `npm run build`, `scripts/i18n-build.mjs` ensures both locale files exist; if Spanish is missing it copies English as a placeholder so the site still builds.
-- At runtime, the site hydrates copy from the locale JSON, and visitors can switch languages via the header toggle (preference persists in `localStorage`).
+- **Live copy source:** [`src/site-app.js`](src/site-app.js) (English strings). Spanish and Portuguese use exact-string replacement via [`src/i18n-runtime.js`](src/i18n-runtime.js) and [`src/i18n/pt-entries.js`](src/i18n/pt-entries.js).
+- **Legacy (archived):** `src/i18n/content.en.json` and `content.es.json` under `src/i18n/archive/` are **not** used at runtime. Do not edit them for production copy.
+- During `npm run build`, `scripts/i18n-build.mjs` verifies `site-app.js` and runtime catalogs exist.
+- Visitors switch languages via header flag buttons; preference persists in `localStorage` (`dbx-locale`).
+- Audit missing translations: `node scripts/audit-i18n.mjs`. Audit CTAs: `npm run audit:ctas`.
 
 ## Responsive Testing
 

@@ -1,6 +1,6 @@
 /**
- * Prints a CTA / booking-string inventory from locale JSON and compares
- * social proof lists. Run: npm run audit:ctas
+ * CTA audit against live copy in site-app.js.
+ * Run: npm run audit:ctas
  */
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
@@ -8,70 +8,32 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.join(__dirname, '..')
+const src = readFileSync(path.join(root, 'src', 'site-app.js'), 'utf8')
 
-const readJson = (name) =>
-  JSON.parse(readFileSync(path.join(root, 'src', 'i18n', name), 'utf8'))
+const preferred = 'Book a Consultation'
+const deprecated = ['Book a Free Consultation', 'Request Consultation']
 
-const bookingRe = /book|schedule|calendar|30\s*min|pick a time|call|reserv|agenda/i
+const bookingRe = /book|schedule|calendar|consultation|reserv|agenda|solicit/i
+const lines = src.split('\n')
 
-function collectStrings(obj, prefix = '', out = []) {
-  if (obj === null || obj === undefined) return out
-  if (typeof obj === 'string') {
-    if (bookingRe.test(obj)) out.push({ key: prefix, value: obj })
-    return out
+console.log('=== Booking / consultation strings in site-app.js ===\n')
+lines.forEach((line, i) => {
+  if (bookingRe.test(line) && (line.includes("'") || line.includes('`'))) {
+    const num = i + 1
+    const bad = deprecated.find((d) => line.includes(d))
+    const mark = bad ? ' ⚠️  non-standard' : line.includes(preferred) ? ' ✓' : ''
+    console.log(`L${num}${mark}: ${line.trim().slice(0, 100)}`)
   }
-  if (Array.isArray(obj)) {
-    obj.forEach((item, i) => collectStrings(item, `${prefix}[${i}]`, out))
-    return out
-  }
-  if (typeof obj === 'object') {
-    for (const [k, v] of Object.entries(obj)) {
-      const p = prefix ? `${prefix}.${k}` : k
-      collectStrings(v, p, out)
-    }
-  }
-  return out
-}
-
-function setOverlap(a, b) {
-  const A = new Set(a)
-  const B = new Set(b)
-  const inter = [...A].filter((x) => B.has(x))
-  return { onlyA: [...A].filter((x) => !B.has(x)), onlyB: [...B].filter((x) => !A.has(x)), intersection: inter }
-}
-
-const en = readJson('content.en.json')
-const es = readJson('content.es.json')
-
-console.log('=== Booking-related strings (EN) ===\n')
-collectStrings(en).forEach(({ key, value }) => {
-  console.log(`${key}\n  → ${value.slice(0, 120)}${value.length > 120 ? '…' : ''}`)
 })
 
-const trustList = en.trust?.industries || []
-const marqueeList = en.proof?.marquee || []
-const socialList = en.socialProof?.clients || []
+const freeCount = (src.match(/Book a Free Consultation/g) || []).length
+const requestCount = (src.match(/Request Consultation/g) || []).length
+const preferredCount = (src.match(/Book a Consultation/g) || []).length
 
-console.log('\n=== Social proof list overlap (trust.industries vs proof.marquee) ===\n')
-if (marqueeList.length) {
-  const { intersection, onlyA, onlyB } = setOverlap(trustList, marqueeList)
-  console.log(`trust only (${onlyA.length}):`, onlyA.join('; ') || '(none)')
-  console.log(`marquee only (${onlyB.length}):`, onlyB.join('; ') || '(none)')
-  console.log(`both (${intersection.length}):`, intersection.join('; ') || '(none)')
-} else {
-  console.log('proof.marquee empty or missing — marquee deduped in UI.')
-}
+console.log('\n=== Summary ===')
+console.log(`"Book a Consultation": ${preferredCount}`)
+console.log(`"Book a Free Consultation": ${freeCount} (target: 0)`)
+console.log(`"Request Consultation": ${requestCount} (target: 0)`)
+console.log('\nHeader, sticky, and renderActions default should use "Book a Consultation".\n')
 
-if (socialList.length) {
-  console.log('\nsocialProof.clients count:', socialList.length)
-}
-
-console.log('\n=== Static targets in main.js (verify in source) ===')
-console.log('- Header CTA: #contact (Contact)')
-console.log('- Hero primary: CALENDAR_URL')
-console.log('- SMB primary: #contact (Get SMB Pricing)')
-console.log('- Mid-page strip: #contact')
-console.log('- Proof footer CTA: removed')
-console.log('- Sticky: CALENDAR_URL')
-console.log('- Contact card: CALENDAR_URL')
-console.log('\nCalendar URL surfaces on page: hero, sticky, contact = 3.\n')
+process.exit(freeCount + requestCount > 0 ? 1 : 0)

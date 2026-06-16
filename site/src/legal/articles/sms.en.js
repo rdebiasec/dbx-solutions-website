@@ -1,17 +1,17 @@
 import {
   COMPANY_LEGAL_NAME,
-  LEGAL_EFFECTIVE_DATE,
+  getLegalEffectiveDate,
   href,
   legalContactBlockHtml
-} from './constants.js'
+} from '../constants.js'
 
-export function getSmsTermsArticleHtml() {
+export default function smsEn() {
   const privacyHref = href('privacy-policy/')
 
   return `
     <h1>SMS Terms</h1>
-    <p class="legal-effective"><strong>Effective Date: ${LEGAL_EFFECTIVE_DATE}</strong></p>
-    <p>These SMS Terms describe how ${COMPANY_LEGAL_NAME} ("DBX Solutions," "we," "our," or "us") communicates with individuals by text message in connection with business inquiries, consultations, and services.</p>
+    <p class="legal-effective"><strong>Effective Date: ${getLegalEffectiveDate('en')}</strong></p>
+    <p>These SMS Terms describe how ${COMPANY_LEGAL_NAME}, a Florida limited liability company ("DBX Solutions," "we," "our," or "us"), communicates with individuals by <strong>automated text messages</strong> in connection with business inquiries, consultations, and services.</p>
 
     <h2>1. Program Description</h2>
     <p>If you provide your mobile number and opt in where required, you may receive SMS messages from DBX Solutions related to your interaction with our business.</p>
@@ -25,7 +25,8 @@ export function getSmsTermsArticleHtml() {
     <p>We do not send unsolicited messages or use purchased, rented, or third-party contact lists.</p>
 
     <h2>2. Opt-In and Consent</h2>
-    <p>You provide consent to receive SMS messages by submitting your phone number through our website or other communication channels and, where applicable, selecting an opt-in checkbox.</p>
+    <p>By checking the SMS consent checkbox on our website (or otherwise providing your mobile number and affirming consent where required), you provide <strong>prior express written consent</strong> as defined under the U.S. Telephone Consumer Protection Act (TCPA) and the Florida Telemarketing Act (FTSA) to receive <strong>automated text messages</strong> from DBX Solutions at the number you provide.</p>
+    <p>You provide consent to receive SMS messages by submitting your phone number through our website or other communication channels and, where applicable, selecting the opt-in checkbox. Electronic signatures and electronic consent under the U.S. E-SIGN Act satisfy the written consent requirement when you check the consent box.</p>
     <p>Consent is not a condition of purchase.</p>
 
     <h2>3. Message Frequency</h2>
