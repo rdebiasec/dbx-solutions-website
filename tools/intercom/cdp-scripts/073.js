@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/pt/05-about.md","category":"site","locale":"pt","title":"[PT] Site — Sobre","description":"site / pt / 05-about","content":"# Sobre\n\n## SEO\n\n- **Title:** DBX Soluções | Sobre\n- **Description:** DBX Soluções helps growing businesses turn AI into better customer experiences through practical, human-centered implementation.\n\n## Hero\n\n**Eyebrow:** Sobre DBX Soluções  \n**Headline:** Ajudar negócios em crescimento a transformar IA em melhores experiências do cliente  \n**Body:** DBX Soluções was built to help small and mid-sized businesses adopt AI in a practical, human-centered, and business-focused way—with WhatsApp and customer channels at the center.\n\n**Primary CTA:** Agendar uma consulta  \n**Secondary CTA:** Fale conosco → `/contact/`\n\n---\n\n## Nossa missão\n\nTornamos acessível ajuda prática em comunicação com clientes. Identificamos onde respostas mais rápidas e acompanhamento mais limpo mais ajudam e projetamos conforme suas ferramentas e capacidade da equipe.\n\n## Nossa abordagem\n\nComeçamos pelo problema do negócio antes de escolher tecnologia: como os clientes chegam, o que sua equipe repete diariamente e quais resultados importam—depois construímos algo claro que melhora com o tempo.\n\n---\n\n## Values\n\n**Eyebrow:** Values  \n**Title:** Como abordamos a adoção prática de IA\n\n1. **Mantemos o foco prático** — Focamos em casos de uso que resolvem problemas reais do negócio.\n2. **As pessoas permanecem no controle** — A IA deve apoiar clientes e sua equipe — não criar confusão.\n3. **Feito conforme você trabalha** — Soluções should fit your tools and daily routines.\n4. **Vinculado a um objetivo real** — Cada implementação deve se conectar a um resultado de negócio mensurável.\n5. **Melhora após o lançamento** — Revisamos conversas reais e ajustamos respostas e rotas ao longo do tempo.\n\n---\n\n## CTA\n\n**Eyebrow:** Comece de forma prática  \n**Title:** Quer ver como isso se aplica ao seu negócio?\n\n**Body:** Agende uma consulta para revisar seus canais e a primeira melhoria prática.\n\n**Note:** Sem pressão—apenas uma conversa focada no que mais ajudaria sua equipe.\n\n**Primary CTA:** Agendar uma consulta  \n**Secondary CTA:** Veja como funciona → `#process`\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

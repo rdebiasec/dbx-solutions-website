@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/kb/pt/sections/10-legal-data-handling.md","category":"kb","locale":"pt","title":"[PT] KB — Aviso de Tratamento de Dados","description":"kb / pt / 10-legal-data-handling","content":"# Perguntas por seção — Aviso de Tratamento de Dados\n\n**KB ID:** `kb.data`  \n**Source:** `content/pt/10-legal-data-handling.md`  \n**Site:** `/data-handling-notice/`\n\n---\n\n## Escopo\n\n**P: Para que serve o Aviso de Tratamento de Dados?**  \n**R:** Para explicar como tratamos dados de clientes e dados de negócio em **projetos de clientes** — implementações, integrações e operação contínua. A privacidade de visitantes do site está na Política de Privacidade.\n\n**P: Isso é a mesma coisa que a Política de Privacidade?**  \n**R:** É relacionado, mas diferente. Política de Privacidade = visitantes do site. Aviso de Tratamento de Dados = como desenhamos práticas de dados nos projetos que construímos para clientes.\n\n---\n\n## Nossa abordagem\n\n**P: Como vocês tratam dados no trabalho com clientes?**  \n**R:** Usamos conteúdo de negócio aprovado como base para respostas, limitamos o acesso ao necessário em cada fluxo, desenhamos integrações para enviar contexto útil ao seu time — sem exposição aberta, documentamos o que é processado em cada projeto e alinhamos com suas políticas e regras do setor quando aplicável.\n\n**P: Vocês usam dados aleatórios da internet para responder clientes?**  \n**R:** Não — respostas para clientes vêm de informações de negócio aprovadas e controladas por você.\n\n**P: Quem pode acessar dados em um projeto?**  \n**R:** Apenas o necessário para cada fluxo de cliente — desenhamos tudo com acesso controlado.\n\n---\n\n## Para prospects\n\n**P: Se contratarmos vocês, vão processar dados dos nossos clientes?**  \n**R:** O escopo é definido por projeto. Documentamos o que será processado, armazenado e retido em cada contratação.\n\n**P: Vocês conseguem alinhar com nossa política de privacidade?**  \n**R:** Sim — buscamos alinhar com sua política de privacidade, termos de SMS e requisitos do setor quando aplicável.\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

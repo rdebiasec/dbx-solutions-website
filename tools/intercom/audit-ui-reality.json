@@ -1,0 +1,366 @@
+{
+  "checkedAt": "2026-06-16T23:44:43.324Z",
+  "trackerClaim": "10/84",
+  "manifestTotal": 84,
+  "intercomArticlesLive": 17,
+  "intercomWebsiteSyncLive": 12,
+  "prefixCounts": {
+    "[EN]": 0,
+    "[ES]": 3,
+    "[PT]": 0,
+    "FAQ": 0,
+    "Index": 0,
+    "Site —": 1,
+    "Untitled": 0
+  },
+  "uniqueBracketTitlesFound": 3,
+  "uniqueTitles": [
+    "[ ES ] KB â Global â NavegaciÃ³n y contacto",
+    "[ ES ] KB — Inicio — Hero, desafío, soluciones y FAQ",
+    "[ES] Site — Industrias — Copia completa de la página"
+  ],
+  "missingFromSearch": [
+    {
+      "index": 0,
+      "title": "[EN] KB — Global — Navigation & Contact"
+    },
+    {
+      "index": 1,
+      "title": "[EN] KB — Home — Hero, Challenge, Solutions, FAQ"
+    },
+    {
+      "index": 2,
+      "title": "[EN] KB — Solutions — What We Help With"
+    },
+    {
+      "index": 3,
+      "title": "[EN] KB — Services — Full Service List"
+    },
+    {
+      "index": 4,
+      "title": "[EN] KB — Industries — Sectors & Examples"
+    },
+    {
+      "index": 5,
+      "title": "[EN] KB — About — Mission, Values & Approach"
+    },
+    {
+      "index": 6,
+      "title": "[EN] KB — Contact — Consultation & Form"
+    },
+    {
+      "index": 7,
+      "title": "[EN] Legal — Privacy Policy FAQ"
+    },
+    {
+      "index": 8,
+      "title": "[EN] Legal — Terms of Service FAQ"
+    },
+    {
+      "index": 9,
+      "title": "[EN] Legal — SMS Terms FAQ"
+    },
+    {
+      "index": 10,
+      "title": "[EN] Legal — Data Handling Notice FAQ"
+    },
+    {
+      "index": 11,
+      "title": "[EN] Legal — Responsible AI Policy FAQ"
+    },
+    {
+      "index": 12,
+      "title": "[EN] Legal — Security Roadmap FAQ"
+    },
+    {
+      "index": 13,
+      "title": "[ES] KB — Global — Navegación y contacto"
+    },
+    {
+      "index": 14,
+      "title": "[ES] KB — Inicio — Hero, desafío, soluciones y FAQ"
+    },
+    {
+      "index": 15,
+      "title": "[ES] KB — Soluciones — En qué ayudamos"
+    },
+    {
+      "index": 16,
+      "title": "[ES] KB — Servicios — Lista completa de servicios"
+    },
+    {
+      "index": 17,
+      "title": "[ES] KB — Industrias — Sectores y ejemplos"
+    },
+    {
+      "index": 18,
+      "title": "[ES] KB — Sobre Nosotros — Misión, valores y enfoque"
+    },
+    {
+      "index": 19,
+      "title": "[ES] KB — Contacto — Consulta y formulario"
+    },
+    {
+      "index": 20,
+      "title": "[ES] Legal — FAQ Política de Privacidad"
+    },
+    {
+      "index": 21,
+      "title": "[ES] Legal — FAQ Términos de Servicio"
+    },
+    {
+      "index": 22,
+      "title": "[ES] Legal — FAQ Términos de SMS"
+    },
+    {
+      "index": 23,
+      "title": "[ES] Legal — FAQ Manejo de Datos"
+    },
+    {
+      "index": 24,
+      "title": "[ES] Legal — FAQ IA Responsable"
+    },
+    {
+      "index": 25,
+      "title": "[ES] Legal — FAQ Hoja de Ruta de Seguridad"
+    },
+    {
+      "index": 26,
+      "title": "[PT] KB — Global — Navegação e contato"
+    },
+    {
+      "index": 27,
+      "title": "[PT] KB — Início — Hero, desafio, soluções e FAQ"
+    },
+    {
+      "index": 28,
+      "title": "[PT] KB — Soluções — No que ajudamos"
+    },
+    {
+      "index": 29,
+      "title": "[PT] KB — Serviços — Lista completa de serviços"
+    },
+    {
+      "index": 30,
+      "title": "[PT] KB — Setores — Setores e exemplos"
+    },
+    {
+      "index": 31,
+      "title": "[PT] KB — Sobre — Missão, valores e abordagem"
+    },
+    {
+      "index": 32,
+      "title": "[PT] KB — Contato — Consulta e formulário"
+    },
+    {
+      "index": 33,
+      "title": "[PT] Legal — FAQ Política de Privacidade"
+    },
+    {
+      "index": 34,
+      "title": "[PT] Legal — FAQ Termos de Serviço"
+    },
+    {
+      "index": 35,
+      "title": "[PT] Legal — FAQ Termos de SMS"
+    },
+    {
+      "index": 36,
+      "title": "[PT] Legal — FAQ Tratamento de Dados"
+    },
+    {
+      "index": 37,
+      "title": "[PT] Legal — FAQ IA Responsável"
+    },
+    {
+      "index": 38,
+      "title": "[PT] Legal — FAQ Roadmap de Segurança"
+    },
+    {
+      "index": 39,
+      "title": "[EN] FAQ — Customer Questions (All Topics)"
+    },
+    {
+      "index": 40,
+      "title": "[ES] FAQ — Preguntas de clientes (todos los temas)"
+    },
+    {
+      "index": 41,
+      "title": "[PT] FAQ — Perguntas de clientes (todos os temas)"
+    },
+    {
+      "index": 42,
+      "title": "[EN] Site — Global — Navigation, Footer & Contact"
+    },
+    {
+      "index": 43,
+      "title": "[EN] Site — Home — Full Page Copy"
+    },
+    {
+      "index": 44,
+      "title": "[EN] Site — Solutions — Full Page Copy"
+    },
+    {
+      "index": 45,
+      "title": "[EN] Site — Services — Full Page Copy"
+    },
+    {
+      "index": 46,
+      "title": "[EN] Site — Industries — Full Page Copy"
+    },
+    {
+      "index": 47,
+      "title": "[EN] Site — About — Full Page Copy"
+    },
+    {
+      "index": 48,
+      "title": "[EN] Site — Contact — Full Page Copy"
+    },
+    {
+      "index": 49,
+      "title": "[EN] Site — Privacy Policy — Full Page Copy"
+    },
+    {
+      "index": 50,
+      "title": "[EN] Site — Terms of Service — Full Page Copy"
+    },
+    {
+      "index": 51,
+      "title": "[EN] Site — SMS Terms — Full Page Copy"
+    },
+    {
+      "index": 52,
+      "title": "[EN] Site — Data Handling Notice — Full Page Copy"
+    },
+    {
+      "index": 53,
+      "title": "[EN] Site — Responsible AI Policy — Full Page Copy"
+    },
+    {
+      "index": 54,
+      "title": "[EN] Site — Security Roadmap — Full Page Copy"
+    },
+    {
+      "index": 55,
+      "title": "[ES] Site — Global — Navegación, footer y contacto"
+    },
+    {
+      "index": 56,
+      "title": "[ES] Site — Inicio — Copia completa de la página"
+    },
+    {
+      "index": 57,
+      "title": "[ES] Site — Soluciones — Copia completa de la página"
+    },
+    {
+      "index": 58,
+      "title": "[ES] Site — Servicios — Copia completa de la página"
+    },
+    {
+      "index": 60,
+      "title": "[ES] Site — Nosotros — Copia completa de la página"
+    },
+    {
+      "index": 61,
+      "title": "[ES] Site — Contacto — Copia completa de la página"
+    },
+    {
+      "index": 62,
+      "title": "[ES] Site — Política de Privacidad — Copia completa de la página"
+    },
+    {
+      "index": 63,
+      "title": "[ES] Site — Términos de Servicio — Copia completa de la página"
+    },
+    {
+      "index": 64,
+      "title": "[ES] Site — Términos SMS — Copia completa de la página"
+    },
+    {
+      "index": 65,
+      "title": "[ES] Site — Aviso de Manejo de Datos — Copia completa de la página"
+    },
+    {
+      "index": 66,
+      "title": "[ES] Site — Política de IA Responsable — Copia completa de la página"
+    },
+    {
+      "index": 67,
+      "title": "[ES] Site — Hoja de Ruta de Seguridad — Copia completa de la página"
+    },
+    {
+      "index": 68,
+      "title": "[PT] Site — Global — Navegação, rodapé e contato"
+    },
+    {
+      "index": 69,
+      "title": "[PT] Site — Início — Cópia completa da página"
+    },
+    {
+      "index": 70,
+      "title": "[PT] Site — Soluções — Cópia completa da página"
+    },
+    {
+      "index": 71,
+      "title": "[PT] Site — Serviços — Cópia completa da página"
+    },
+    {
+      "index": 72,
+      "title": "[PT] Site — Setores — Cópia completa da página"
+    },
+    {
+      "index": 73,
+      "title": "[PT] Site — Sobre — Cópia completa da página"
+    },
+    {
+      "index": 74,
+      "title": "[PT] Site — Contato — Cópia completa da página"
+    },
+    {
+      "index": 75,
+      "title": "[PT] Site — Política de Privacidade — Cópia completa da página"
+    },
+    {
+      "index": 76,
+      "title": "[PT] Site — Termos de Serviço — Cópia completa da página"
+    },
+    {
+      "index": 77,
+      "title": "[PT] Site — Termos SMS — Cópia completa da página"
+    },
+    {
+      "index": 78,
+      "title": "[PT] Site — Aviso de Tratamento de Dados — Cópia completa da página"
+    },
+    {
+      "index": 79,
+      "title": "[PT] Site — Política de IA Responsável — Cópia completa da página"
+    },
+    {
+      "index": 80,
+      "title": "[PT] Site — Roteiro de Segurança — Cópia completa da página"
+    },
+    {
+      "index": 81,
+      "title": "[EN] Index — DBX Solutions — Knowledge Base Map"
+    },
+    {
+      "index": 82,
+      "title": "[EN] Index — DBX Solutions — Contenido del sitio web"
+    },
+    {
+      "index": 83,
+      "title": "[EN] Index — Customer FAQs — Index"
+    }
+  ],
+  "gap": 81,
+  "helpCenterCollections": "English (General) created via setup wizard; Español/Português locales not yet added — HC still Not live",
+  "corruptTitlesStillPresent": [
+    "[ ES ] KB â Global â NavegaciÃ³n y contacto",
+    "[ ES ] KB — Inicio — Hero, desafío, soluciones y FAQ"
+  ],
+  "emptyDrafts": [
+    "18504283 (Untitled, Not live — delete pending)",
+    "18504314, 18504319 (failed publish attempts)"
+  ]
+}

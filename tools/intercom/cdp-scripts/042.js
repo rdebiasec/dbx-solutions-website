@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/en/00-global.md","category":"site","locale":"en","title":"[EN] Site — Global — Navigation, Footer & Contact","description":"site / en / 00-global","content":"# Global — Navigation, Footer & Contact\n\n## Site metadata\n\n- **URL:** https://dbx-solutions.com\n- **Company:** DBX Solutions LLC (Florida limited liability company)\n- **Contact email:** contact@dbx-solutions.com\n- **Phone:** +1 (321) 287-4509\n- **LinkedIn:** https://www.linkedin.com/in/ricardo-de-biase\n- **Booking calendar:** Google Calendar appointments (Book a Consultation)\n\n## Primary navigation\n\n| Label | Path |\n|-------|------|\n| Home | `/` |\n| Solutions | `/solutions/` |\n| Services | `/services/` |\n| Industries | `/industries/` |\n| About | `/about/` |\n| Contact | `/contact/` |\n\n## Legal navigation\n\n| Label | Path |\n|-------|------|\n| Privacy Policy | `/privacy-policy/` |\n| Terms of Service | `/terms-of-service/` |\n| SMS Terms | `/sms-terms/` |\n| Data Handling Notice | `/data-handling-notice/` |\n| Responsible AI Policy | `/responsible-ai-policy/` |\n| Security Roadmap | `/security-roadmap/` |\n\n## Global CTAs\n\n- **Primary CTA (header & mobile sticky):** Book a Consultation\n- **Languages supported:** English (EN), Español (ES), Português (PT)\n\n## Footer\n\n**Tagline:** DBX Solutions helps growing businesses reply faster on WhatsApp, qualify leads, and keep follow-up connected to the tools teams already use.\n\n**Subtitle:** Practical help for customer conversations and operations.\n\n**Service area:** Serving SMBs remotely across the U.S. and Latin America.\n\n**Cookie notice:** We use cookies and chat tools to improve your experience. See our Privacy Policy.\n\n## Page signals (secondary pages)\n\n| Page | Signal text |\n|------|-------------|\n| Solutions | WhatsApp replies, lead capture, and follow-up. |\n| Services | Implementation tied to your channels and CRM. |\n| Industries | Sector examples—not one-size-fits-all templates. |\n| About | Practical help with people in the loop. |\n| Contact | Calendar for speed, form for a short note. |\n| Data Handling | How we handle data in client projects. |\n| Responsible AI | Escalation paths and clear AI limits. |\n| Security Roadmap | Planned work—not claimed certifications. |\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

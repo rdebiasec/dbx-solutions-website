@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/en/05-about.md","category":"site","locale":"en","title":"[EN] Site — About","description":"site / en / 05-about","content":"# About\n\n## SEO\n\n- **Title:** DBX Solutions | About\n- **Description:** DBX Solutions helps growing businesses turn AI into better customer experiences through practical, human-centered implementation.\n\n## Hero\n\n**Eyebrow:** About DBX Solutions  \n**Headline:** Helping growing businesses turn AI into better customer experiences  \n**Body:** DBX Solutions was built to help small and mid-sized businesses adopt AI in a practical, human-centered, and business-focused way—with WhatsApp and customer channels at the center.\n\n**Primary CTA:** Book a Consultation  \n**Secondary CTA:** Contact Us → `/contact/`\n\n---\n\n## Our mission\n\nWe make practical customer communication help accessible for growing businesses. We find where faster replies and cleaner follow-up would help most, then design and implement around your tools and team capacity.\n\n## Our approach\n\nWe start with the business problem before choosing technology. That means understanding how customers reach you, what your team repeats daily, and the outcomes that matter—then building something clear that improves over time.\n\n---\n\n## Values\n\n**Eyebrow:** Values  \n**Title:** How we approach practical AI adoption\n\n1. **We keep it practical** — We focus on use cases that solve real business problems.\n2. **People stay in the loop** — AI should support customers and your team—not create confusion.\n3. **Built around how you work** — Solutions should fit your tools and daily routines.\n4. **Tied to a real goal** — Every implementation should connect to a measurable business outcome.\n5. **Improves after launch** — We review real chats and adjust answers and routes over time.\n\n---\n\n## CTA\n\n**Eyebrow:** Start Practical  \n**Title:** Want to see how this applies to your business?\n\n**Body:** Book a consultation to review your channels and the first practical improvement to make.\n\n**Note:** No pressure—just a focused conversation about what would help your team most.\n\n**Primary CTA:** Book a Consultation  \n**Secondary CTA:** See How It Works → `#process`\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

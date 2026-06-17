@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/kb/en/sections/02-solutions.md","category":"kb","locale":"en","title":"[EN] KB — Solutions","description":"kb / en / 02-solutions","content":"# Section Q&A — Solutions\n\n**KB ID:** `kb.solutions`  \n**Source:** `content/en/02-solutions.md`  \n**Site:** `/solutions/`\n\n---\n\n## Page hero\n\n**Q: What is the Solutions page for?**  \nA: It explains practical ways to improve WhatsApp, lead capture, and follow-up—turning messages into faster replies and next steps your team can act on.\n\n**Q: Who is this page written for?**  \nA: Growing businesses that get inquiries but want clearer capture and follow-up without hiring more staff.\n\n---\n\n## What we help with (five areas)\n\n**Q: How many solution areas do you list on this page?**  \nA: Five practical ways—each starts from a real customer moment, not a technology catalog.\n\n**Q: What is solution #1 — Reply on WhatsApp and chat?**  \nA: Answer common questions fast, even after hours. Your team takes over when a person needs to decide. Good if customers write you and answers take too long.\n\n**Q: What is solution #2 — Sort leads before follow-up?**  \nA: Ask the right questions first so your team calls back with context. Good if inquiries feel messy.\n\n**Q: What is solution #3 — Repeat questions?**  \nA: Common support questions get a consistent answer; tricky cases go to a person. Good if your team answers the same things all day.\n\n**Q: What is solution #4 — Update records without retyping?**  \nA: What the customer said shows up in your customer system, calendar, or team alerts automatically. Good if info stays stuck in chats.\n\n**Q: What is solution #5 — Where to start with AI?**  \nA: We look at how customers reach you and pick practical first steps—not a big vague project. Good if you want AI help but do not know what to do first.\n\n---\n\n## Page CTA\n\n**Q: What if I am not sure what to fix first on WhatsApp?**  \nA: Start with one channel, one repeated question, and one follow-up gap. We help identify practical opportunities before recommending technology.\n\n**Q: How do I move from Solutions to next step?**  \nA: Book a consultation or view the Services page for full implementation detail.\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

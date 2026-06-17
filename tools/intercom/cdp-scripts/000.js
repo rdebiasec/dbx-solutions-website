@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/kb/en/sections/00-global.md","category":"kb","locale":"en","title":"[EN] KB — Global","description":"kb / en / 00-global","content":"# Section Q&A — Global\n\n**KB ID:** `kb.global`  \n**Source:** `content/en/00-global.md`  \n**Site:** All pages (header, footer, nav)\n\n---\n\n## Navigation & site\n\n**Q: What pages are on your website?**  \nA: Home, Solutions, Services, Industries, About, and Contact. Legal pages include Privacy Policy, Terms of Service, SMS Terms, Data Handling Notice, Responsible AI Policy, and Security Roadmap.\n\n**Q: What languages is the site available in?**  \nA: English, Spanish, and Portuguese. Use the language toggle in the header.\n\n**Q: What is the main action button on the site?**  \nA: \"Book a Consultation\" — it opens our calendar to schedule a call.\n\n**Q: Where is DBX Solutions located?**  \nA: DBX Solutions LLC is a Florida company. We serve SMBs remotely across the U.S. and Latin America.\n\n---\n\n## Contact (global)\n\n**Q: How do I reach you?**  \nA: Email contact@dbx-solutions.com, call +1 (321) 287-4509, or book via the calendar on the site.\n\n**Q: Is there a LinkedIn profile?**  \nA: Yes — linkedin.com/in/ricardo-de-biase\n\n**Q: What is your website URL?**  \nA: https://dbx-solutions.com\n\n---\n\n## Footer\n\n**Q: What does DBX do (short version)?**  \nA: We help growing businesses reply faster on WhatsApp, qualify leads, and keep follow-up connected to the tools teams already use.\n\n**Q: Do you use cookies?**  \nA: Yes, we use cookies and chat tools to improve your experience. Details are in our Privacy Policy.\n\n---\n\n## Page summaries (when someone lands on a subpage)\n\n**Q: What is the Solutions page about?**  \nA: Practical help for WhatsApp replies, lead capture, and follow-up.\n\n**Q: What is the Services page about?**  \nA: How we implement help on your channels and connect to your customer tools.\n\n**Q: What is the Industries page about?**  \nA: Examples by sector—not one generic template for everyone.\n\n**Q: What is the About page about?**  \nA: Who we are and how we work—with people staying in the loop.\n\n**Q: What is the Contact page about?**  \nA: Book on the calendar for speed, or send a short form.\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

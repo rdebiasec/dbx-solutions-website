@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/kb/en/sections/08-legal-terms.md","category":"kb","locale":"en","title":"[EN] KB — Terms of Service","description":"kb / en / 08-legal-terms","content":"# Section Q&A — Terms of Service\n\n**KB ID:** `kb.terms`  \n**Source:** `content/en/08-legal-terms.md`  \n**Site:** `/terms-of-service/`\n\n---\n\n## Overview\n\n**Q: What are your Terms of Service?**  \nA: Rules for using the DBX Solutions website and related materials. By using the site, you agree to them.\n\n---\n\n## Website purpose\n\n**Q: Is the website a binding contract for services?**  \nA: No. The site is informational. It is not a binding offer, results guarantee, legal/financial advice, or a formal client relationship. Services require a separate written agreement.\n\n**Q: Does filling out the contact form make me a client?**  \nA: No. A client relationship starts only with a signed agreement between you and DBX Solutions.\n\n---\n\n## Results & accuracy\n\n**Q: Do you guarantee results shown on the site?**  \nA: No. Examples and metrics are informational. Real results vary by your systems, data, processes, team adoption, and project scope.\n\n**Q: Can content on the site change?**  \nA: Yes—we may update or remove content anytime without notice.\n\n---\n\n## Acceptable use\n\n**Q: What am I not allowed to do on the site?**  \nA: Break laws, try unauthorized access, interfere with security, submit false info, or scrape/copy content beyond normal business evaluation.\n\n---\n\n## Liability & law\n\n**Q: Who owns the website content?**  \nA: DBX Solutions or its licensors. You may use it for internal evaluation only—not broad redistribution without written consent.\n\n**Q: What if something goes wrong using the site?**  \nA: The site is provided \"as is.\" To the extent allowed by law, DBX is not liable for indirect damages like lost data, revenue, or reliance on site content.\n\n**Q: What law applies?**  \nA: Florida law and applicable U.S. law. Disputes go to Florida courts unless agreed otherwise in writing.\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

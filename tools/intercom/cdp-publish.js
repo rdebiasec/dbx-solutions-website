@@ -1,0 +1,1 @@
+(() => { const btn=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish'); if(!btn) return {ok:false,err:'no btn'}; if(btn.disabled) return {ok:false,err:'disabled'}; btn.click(); return {ok:true}; })()

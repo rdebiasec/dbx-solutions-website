@@ -1,0 +1,22 @@
+{
+  "uploadedThisRun": [],
+  "failures": [
+    {
+      "index": 32,
+      "error": "publish-s1: no enabled Publish during split run (later marked uploaded)"
+    },
+    {
+      "index": 28,
+      "error": "publish-s1 race during parallel fill (later marked uploaded)"
+    },
+    {
+      "index": 39,
+      "error": "Error: Authentication required. Please run 'cursor agent login' first, or set CURSOR_API_KEY environment variable.\n"
+    },
+    {
+      "index": 40,
+      "error": "Error: Authentication required. Please run 'cursor agent login' first, or set CURSOR_API_KEY environment variable.\n"
+    }
+  ],
+  "progressCount": 74
+}

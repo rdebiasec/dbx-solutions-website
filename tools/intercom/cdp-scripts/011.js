@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/kb/en/sections/11-legal-responsible-ai.md","category":"kb","locale":"en","title":"[EN] KB — Responsible AI Policy","description":"kb / en / 11-legal-responsible-ai","content":"# Section Q&A — Responsible AI Policy\n\n**KB ID:** `kb.responsible-ai`  \n**Source:** `content/en/11-legal-responsible-ai.md`  \n**Site:** `/responsible-ai-policy/`\n\n---\n\n## Overview\n\n**Q: What is your Responsible AI Policy?**  \nA: How we build customer-facing AI with human oversight, approved business information, and clear limits—not unconstrained automation.\n\n---\n\n## Working principles\n\n**Q: What principles guide your AI?**  \nA: (1) Accuracy and clarity over speed alone, (2) Human escalation for sensitive or uncertain requests, (3) Clear limits on what AI can answer or do, (4) Transparent use of approved business info, (5) Continuous improvement from real conversations.\n\n**Q: Can the AI answer anything?**  \nA: No—we set clear limits. Uncertain or high-stakes requests go to people on your team.\n\n**Q: Is speed more important than being right?**  \nA: We prioritize being accurate and clear—not just replying fast with wrong info.\n\n---\n\n## Humans & escalation\n\n**Q: When does a human get involved?**  \nA: For sensitive topics, uncertain situations, high-stakes decisions, and whenever your rules say a person should take over.\n\n**Q: Will AI make final decisions for my business?**  \nA: No—it supports communication and workflow. Judgment and closing stay with your team.\n\n---\n\n## Regulated industries\n\n**Q: Can clinics, lawyers, or financial firms use this?**  \nA: AI can help with routine communication and efficiency. It does **not** replace professional advice, compliance review, clinical judgment, legal judgment, or required human oversight.\n\n**Q: Who handles compliance-sensitive questions?**  \nA: Your human reviewers—not unchecked automation.\n\n---\n\n## Improvement\n\n**Q: Does the AI learn from mistakes?**  \nA: We improve based on real customer interactions and ongoing review—not set-and-forget.\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

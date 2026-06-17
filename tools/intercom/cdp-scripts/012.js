@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/kb/en/sections/12-legal-security-roadmap.md","category":"kb","locale":"en","title":"[EN] KB — Security Roadmap","description":"kb / en / 12-legal-security-roadmap","content":"# Section Q&A — Security Roadmap\n\n**KB ID:** `kb.security`  \n**Source:** `content/en/12-legal-security-roadmap.md`  \n**Site:** `/security-roadmap/`\n\n---\n\n## Overview\n\n**Q: What is the Security Roadmap page?**  \nA: An honest view of security and compliance work—what is planned or in progress, not claimed as finished unless formally obtained.\n\n**Q: Are you SOC 2 certified today?**  \nA: SOC 2 Type I and Type II appear on our roadmap as readiness work—not as completed certification unless we have formally obtained and published it.\n\n---\n\n## Roadmap items\n\n**Q: What is on your security roadmap?**  \nA: SOC 2 Type I readiness, SOC 2 Type II future readiness, ISO/IEC 27001 alignment, Data Processing Agreement readiness, Privacy Policy and Terms, internal data handling procedures, Responsible AI policy, and vendor security review process.\n\n**Q: Why list things that are not done yet?**  \nA: So you know what is planned vs. complete. We document in progress work transparently.\n\n---\n\n## For prospects\n\n**Q: Is my data secure if you are still working on certifications?**  \nA: We align operations with recognized practices and use reasonable safeguards. Certifications on the roadmap are goals—we do not claim badges we have not earned.\n\n**Q: Can we get a DPA?**  \nA: Data Processing Agreement readiness is on our roadmap. Ask in a consultation for current status.\n\n**Q: Do you review vendor security?**  \nA: Yes—a vendor security review process is part of our roadmap and operations approach.\n\n---\n\n## Disclaimer\n\n**Q: Should I treat roadmap items as completed certifications?**  \nA: No. Certifications listed are roadmap items only unless we explicitly state they have been formally obtained and published.\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

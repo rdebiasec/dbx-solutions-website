@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/kb/pt/sections/12-legal-security-roadmap.md","category":"kb","locale":"pt","title":"[PT] KB — Roadmap de Segurança","description":"kb / pt / 12-legal-security-roadmap","content":"# Perguntas por seção — Roadmap de Segurança\n\n**KB ID:** `kb.security`  \n**Source:** `content/pt/12-legal-security-roadmap.md`  \n**Site:** `/security-roadmap/`\n\n---\n\n## Visão geral\n\n**P: O que é a página de Roadmap de Segurança?**  \n**R:** É uma visão transparente do trabalho de segurança e conformidade — o que está planejado ou em andamento, sem dizer que está concluído antes da obtenção formal.\n\n**P: Vocês têm certificação SOC 2 hoje?**  \n**R:** SOC 2 Type I e Type II aparecem no roadmap como trabalho de prontidão — não como certificação concluída, a menos que tenha sido formalmente obtida e publicada.\n\n---\n\n## Itens do roadmap\n\n**P: O que está no roadmap de segurança?**  \n**R:** Prontidão para SOC 2 Type I, prontidão futura para SOC 2 Type II, alinhamento com ISO/IEC 27001, prontidão para Data Processing Agreement, Política de Privacidade e Termos, procedimentos internos de tratamento de dados, política de IA responsável e processo de revisão de segurança de fornecedores.\n\n**P: Por que listar itens que ainda não foram concluídos?**  \n**R:** Para deixar claro o que está planejado e o que está concluído. Documentamos o trabalho em andamento com transparência.\n\n---\n\n## Para prospects\n\n**P: Meus dados estão seguros se vocês ainda estão trabalhando em certificações?**  \n**R:** Alinhamos as operações a práticas reconhecidas e usamos medidas de proteção razoáveis. As certificações no roadmap são metas — não alegamos selos que ainda não conquistamos.\n\n**P: Podemos receber um DPA?**  \n**R:** A prontidão para Data Processing Agreement está no nosso roadmap. Pergunte na consulta para saber o status atual.\n\n**P: Vocês revisam a segurança de fornecedores?**  \n**R:** Sim — o processo de revisão de segurança de fornecedores faz parte do nosso roadmap e da nossa abordagem operacional.\n\n---\n\n## Aviso\n\n**P: Devo tratar itens do roadmap como certificações concluídas?**  \n**R:** Não. As certificações listadas são apenas itens de roadmap, a menos que informemos explicitamente que foram formalmente obtidas e publicadas.\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

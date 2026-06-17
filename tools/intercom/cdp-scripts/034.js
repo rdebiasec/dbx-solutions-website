@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/kb/pt/sections/08-legal-terms.md","category":"kb","locale":"pt","title":"[PT] KB — Termos de Serviço","description":"kb / pt / 08-legal-terms","content":"# Perguntas por seção — Termos de Serviço\n\n**KB ID:** `kb.terms`  \n**Source:** `content/pt/08-legal-terms.md`  \n**Site:** `/terms-of-service/`\n\n---\n\n## Visão geral\n\n**P: O que são os Termos de Serviço de vocês?**  \n**R:** São as regras de uso do site da DBX Solutions e dos materiais relacionados. Ao usar o site, você concorda com esses termos.\n\n---\n\n## Finalidade do site\n\n**P: O site é um contrato vinculante de serviços?**  \n**R:** Não. O site tem caráter informativo. Não é oferta vinculante, garantia de resultados, aconselhamento jurídico/financeiro nem relação formal de cliente. Os serviços exigem acordo escrito separado.\n\n**P: Preencher o formulário de contato me torna cliente?**  \n**R:** Não. A relação de cliente começa apenas com um contrato assinado entre você e a DBX Solutions.\n\n---\n\n## Resultados e precisão\n\n**P: Vocês garantem os resultados mostrados no site?**  \n**R:** Não. Exemplos e métricas são informativos. Os resultados reais variam conforme seus sistemas, dados, processos, adoção da equipe e escopo do projeto.\n\n**P: O conteúdo do site pode mudar?**  \n**R:** Sim — podemos atualizar ou remover conteúdo a qualquer momento, sem aviso prévio.\n\n---\n\n## Uso aceitável\n\n**P: O que não posso fazer no site?**  \n**R:** Descumprir leis, tentar acesso não autorizado, interferir na segurança, enviar informações falsas ou raspar/copiar conteúdo além de uma avaliação comercial normal.\n\n---\n\n## Responsabilidade e lei aplicável\n\n**P: Quem é dono do conteúdo do site?**  \n**R:** A DBX Solutions ou seus licenciadores. Você pode usar para avaliação interna apenas — sem redistribuição ampla sem consentimento por escrito.\n\n**P: E se algo der errado ao usar o site?**  \n**R:** O site é fornecido \"as is\". Na extensão permitida por lei, a DBX não responde por danos indiretos, como perda de dados, receita ou decisões baseadas no conteúdo do site.\n\n**P: Qual lei se aplica?**  \n**R:** Lei da Flórida e legislação dos EUA aplicável. Disputas vão para os tribunais da Flórida, salvo acordo escrito em contrário.\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

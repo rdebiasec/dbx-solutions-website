@@ -1,0 +1,7 @@
+{
+  "publishedThisRun": 2,
+  "failures": [
+    {"index": 33, "error": "pubRes step 3 no confirm publish (may have published via parallel run)"}
+  ],
+  "startedAt": "2026-06-16T03:47:23.261Z"
+}

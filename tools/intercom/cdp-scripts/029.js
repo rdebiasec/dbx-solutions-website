@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/kb/pt/sections/03-services.md","category":"kb","locale":"pt","title":"[PT] KB — Serviços","description":"kb / pt / 03-services","content":"# Perguntas por seção — Serviços\n\n**KB ID:** `kb.services`  \n**Source:** `content/pt/03-services.md`  \n**Site:** `/services/`\n\n---\n\n## Hero da página\n\n**P: Sobre o que é a página de Serviços?**  \n**R:** Sobre como tornamos o atendimento no WhatsApp e em outros canais algo prático — das respostas no chat à integração com suas ferramentas e ao suporte depois do lançamento.\n\n**P: Qual a diferença entre Serviços e Soluções?**  \n**R:** Soluções explica *o que* ajudamos a resolver; Serviços mostra *como implementamos* isso no jeito que seu time já trabalha.\n\n---\n\n## Jornada do cliente (fluxo visual)\n\n**P: Qual é a jornada mostrada na página de Serviços?**  \n**R:** O cliente escreve para você → a DBX responde → você recebe os detalhes → suas ferramentas são atualizadas → seu time conclui o atendimento.\n\n---\n\n## Os seis serviços (detalhe completo)\n\n**P: Liste todos os serviços da página.**  \n**R:** (1) Responder no WhatsApp e chat, (2) Organizar leads antes do follow-up, (3) Tratar perguntas repetidas, (4) Atualizar CRM sem redigitar, (5) Entender por onde começar com IA, (6) Melhorar continuamente junto com você.\n\n**P: Quais serviços têm selo \"Start here\"?**  \n**R:** Respostas no WhatsApp/chat e organização de leads.\n\n**P: O que inclui o serviço contínuo (\"We run it with you\")?**  \n**R:** Depois do lançamento, revisamos conversas reais e fazemos ajustes para manter tudo útil — não é uma configuração única que fica desatualizada.\n\n**P: A maioria dos clientes contrata os seis de uma vez?**  \n**R:** Normalmente não. A maioria começa com um canal ou um problema específico, sem projeto grande.\n\n---\n\n## CTA da página\n\n**P: Quero um ponto de partida claro — o que vocês recomendam?**  \n**R:** Agende uma consulta. Mapeamos a primeira conversa ou etapa de follow-up para melhorar nos seus canais.\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

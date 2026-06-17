@@ -1,0 +1,29 @@
+{
+  "_meta": {
+    "checkedAt": "2026-06-16T23:45:00.000Z",
+    "articlesLive": 17,
+    "websiteSyncLive": 12,
+    "helpCenterCollections": "English (General) created via setup wizard; Español/Português locales not yet added — HC still Not live",
+    "emptyDrafts": ["18504283 (Untitled, Not live — delete pending)", "18504314, 18504319 (failed publish attempts)"]
+  },
+  "[EN]": {
+    "heading": "0 results (UI search on native_content=false)",
+    "titles": []
+  },
+  "[ES]": {
+    "heading": "partial — corrupt + Inicio found in prior session",
+    "titles": [
+      "[ ES ] KB â Global â NavegaciÃ³n y contacto",
+      "[ ES ] KB — Inicio — Hero, desafío, soluciones y FAQ",
+      "[ES] Site — Industrias — Copia completa de la página"
+    ]
+  },
+  "[PT]": {
+    "heading": "sparse",
+    "titles": []
+  },
+  "FAQ": { "titles": [] },
+  "Index": { "titles": [] },
+  "Site —": { "titles": ["[ES] Site — Industrias — Copia completa de la página"] },
+  "Untitled": { "titles": [] }
+}

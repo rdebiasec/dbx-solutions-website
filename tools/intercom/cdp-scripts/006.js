@@ -1,0 +1,16 @@
+(() => {
+  const data = {"path":"/Users/ricardodebiase/Documents/dbx-solutions-website/content/kb/en/sections/06-contact.md","category":"kb","locale":"en","title":"[EN] KB — Contact","description":"kb / en / 06-contact","content":"# Section Q&A — Contact\n\n**KB ID:** `kb.contact`  \n**Source:** `content/en/06-contact.md`  \n**Site:** `/contact/`\n\n---\n\n## Page hero\n\n**Q: What should I contact you about?**  \nA: Where WhatsApp and customer conversations are costing you time or leads—we help identify the most practical first improvement.\n\n**Q: What is the fastest way to get a response?**  \nA: Book directly on the calendar. The form works for a short note if you prefer.\n\n---\n\n## Consultation options\n\n**Q: How do I book a consultation?**  \nA: Use the Google Calendar link on the site, or email contact@dbx-solutions.com.\n\n**Q: What happens when I submit the contact form?**  \nA: The form opens your email client with your details (mailto flow). We follow up after we receive it.\n\n**Q: What fields are on the form?**  \nA: Name, business email (required), phone or WhatsApp, what you want to improve (required dropdown), optional message.\n\n**Q: What can I select under \"What are you looking to improve?\"**  \nA: Slow replies on WhatsApp, leads not followed up, same questions all day, info stuck in chats, or not sure where to start.\n\n---\n\n## SMS on contact form\n\n**Q: Do I have to agree to SMS to submit the form?**  \nA: Only if you enter a phone number—you must check the SMS consent box in that case. Otherwise it is not required.\n\n**Q: What does the SMS consent checkbox say?**  \nA: You agree to automated texts from DBX about appointments, services, and support. Reply STOP to opt out, HELP for help. Message/data rates may apply. Consent is not required to buy.\n\n---\n\n## Privacy on contact\n\n**Q: What happens to my form data?**  \nA: By submitting, you agree DBX may process your information to respond, as described in the Privacy Policy. The form sends by email and is not stored on our servers.\n\n---\n\n## Pricing\n\n**Q: How much does it cost?**  \nA: Pricing is not listed on the site. Scope and cost depend on your situation—we discuss that in a consultation after understanding your channels and goals.\n"};
+  const title = document.querySelector('textarea[placeholder="Untitled public article"]');
+  const desc = document.querySelector('textarea[placeholder="Describe your article to help it get found"]');
+  const body = document.querySelector('[role="textbox"]');
+  if (!title || !body) return {ok:false, err:'missing fields'};
+  title.value = data.title;
+  title.dispatchEvent(new Event('input', {bubbles:true}));
+  title.dispatchEvent(new Event('change', {bubbles:true}));
+  if (desc) { desc.value = data.description; desc.dispatchEvent(new Event('input', {bubbles:true})); }
+  body.focus(); body.innerHTML='';
+  for (const line of data.content.split('\n')) { const p=document.createElement('p'); p.textContent=line||' '; body.appendChild(p); }
+  body.dispatchEvent(new Event('input', {bubbles:true}));
+  const pub=[...document.querySelectorAll('button')].find(b=>b.textContent.trim()==='Publish');
+  return {ok:true, title:title.value, bodyLen:body.innerText.length, publishDisabled: pub?.disabled};
+})()

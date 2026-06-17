@@ -1,0 +1,65 @@
+{
+  "publishedThisRun": 50,
+  "failures": [
+    {
+      "index": 32,
+      "error": "publish-s1 race (later uploaded)"
+    },
+    {
+      "index": 28,
+      "error": "publish-s1 race (later uploaded)"
+    },
+    {
+      "index": 39,
+      "error": "cursor agent auth required for subprocess upload"
+    },
+    {
+      "index": 50,
+      "error": {
+        "result": {
+          "type": "object",
+          "value": {
+            "fill": {
+              "bodyLen": 4698,
+              "ok": true,
+              "publishDisabled": false,
+              "title": "[EN] Site — Terms of Service — Full Page Copy"
+            },
+            "ok": true,
+            "phase": "publish",
+            "pub": {
+              "ok": true,
+              "step": "done"
+            },
+            "title": "[EN] Site — Terms of Service — Full Page Copy"
+          }
+        }
+      }
+    },
+    {
+      "index": 40,
+      "error": {
+        "result": {
+          "type": "undefined"
+        }
+      }
+    },
+    {
+      "index": 82,
+      "error": {
+        "contextDestroyed": true,
+        "phase": "publish"
+      }
+    }
+  ],
+  "pending7to83": [
+    40,
+    49,
+    50,
+    81,
+    82
+  ],
+  "startedAt": "2026-06-16T03:21:00.000Z",
+  "updatedAt": "2026-06-16T04:05:00.000Z",
+  "note": "72/84 uploaded. Use run-split-upload.mjs + fill-only for large bodies; publish-s2 polls for Next enabled."
+}

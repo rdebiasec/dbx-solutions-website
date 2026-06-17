@@ -1,0 +1,12 @@
+{
+  "sessionStarted": "2026-06-16T03:35:00.000Z",
+  "publishedThisSession": [16, 24, 25, 26],
+  "failures": [
+    {
+      "index": 28,
+      "attempts": 2,
+      "error": "fill: missing body (editor not ready / execution context destroyed)"
+    }
+  ],
+  "note": "Indices 27-28, 51-56 may have been completed by parallel session; 28 fill failed here but is in progress.uploaded."
+}
