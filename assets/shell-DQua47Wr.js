@@ -1,4 +1,4 @@
-import{a as r,g as n,l as t,h as i}from"./constants-DkjYvpf9.js";import{a as h,u as v,g,b as y,r as b,c as S,i as d,h as w,e as P,s as T,d as q}from"./consent-CgNdn57c.js";function D(){return`
+import{a as r,g as n,l as t,h as i}from"./constants-DkjYvpf9.js";import{a as h,u as v,g,b as y,r as b,c as S,i as d,h as w,e as P,s as T,d as q}from"./consent-BP5DC15a.js";function D(){return`
     <h1>Privacy Policy</h1>
     <p class="legal-effective"><strong>Effective Date: ${n("en")}</strong></p>
     <p>${r}, a Florida limited liability company ("DBX Solutions," "we," "our," or "us"), provides customer experience, automation, and AI-related advisory and implementation services for businesses. We respect your privacy and are committed to handling personal information responsibly.</p>
