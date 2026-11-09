@@ -73,7 +73,6 @@ export default defineConfig(({ command, mode }) => {
           industries: resolve(__dirname, 'industries/index.html'),
           security: resolve(__dirname, 'security/index.html'),
           packages: resolve(__dirname, 'packages/index.html'),
-          labs: resolve(__dirname, 'labs/index.html'),
           process: resolve(__dirname, 'process/index.html'),
           about: resolve(__dirname, 'about/index.html'),
           contact: resolve(__dirname, 'contact/index.html'),
