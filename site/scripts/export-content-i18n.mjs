@@ -18,7 +18,7 @@ const runtimePath = path.join(root, 'site/src/i18n-runtime.js')
 const runtimeSource = fs.readFileSync(runtimePath, 'utf8')
 const esMatch = runtimeSource.match(/const esEntries = (\[[\s\S]*?\n\])\s*\n/)
 if (!esMatch) throw new Error('Could not parse esEntries from i18n-runtime.js')
-const esEntries = eval(esMatch[1])
+const esEntries = JSON.parse(esMatch[1])
 
 const OFFICIAL_LEGAL = ['07-legal-privacy.md', '08-legal-terms.md', '09-legal-sms.md']
 

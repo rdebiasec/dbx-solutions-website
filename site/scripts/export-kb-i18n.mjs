@@ -16,7 +16,7 @@ const runtimePath = path.join(root, 'site/src/i18n-runtime.js')
 const runtimeSource = fs.readFileSync(runtimePath, 'utf8')
 const esMatch = runtimeSource.match(/const esEntries = (\[[\s\S]*?\n\])\s*\n/)
 if (!esMatch) throw new Error('Could not parse esEntries')
-const esEntries = eval(esMatch[1])
+const esEntries = JSON.parse(esMatch[1])
 
 const meta = {
   es: {

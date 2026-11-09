@@ -10,6 +10,7 @@
     "build:gh-pages": "npm run build:static",
     "preview": "vite preview",
     "audit:ctas": "node scripts/audit-ctas.mjs",
+    "audit:release": "node scripts/audit-release.mjs && npm run audit:ctas && npm run build",
     "i18n:translate": "node scripts/translate.mjs",
     "predeploy": "npm run build:gh-pages",
     "deploy": "gh-pages -d dist"
